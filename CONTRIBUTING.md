@@ -9,11 +9,11 @@ Organization members should clone this repo, instead of working from a fork:
 
         git clone git@github.com:tomeshnet/tomeshnet.github.io.git
 
-2. Create a new branch for the changes you want to work on. Chose a topic for your branch name that reflects the change:
+2. Create a new branch for the changes you want to work on. Choose a topic for your branch name that reflects the change:
 
         git checkout -b <branch-name>
 
-3. Create or modify the files you to make your changes. If you want to show other people work that isn't ready to merge in, commit your changes then [create a pull request (PR)](https://github.com/tomeshnet/tomeshnet.github.io/pull/new/master) with __WIP__ in the title.
+3. Create or modify the files with your changes. If you want to show other people work that isn't ready to merge in, commit your changes then [create a pull request (PR)](https://github.com/tomeshnet/tomeshnet.github.io/pull/new/master) with __WIP__ in the title.
 
 4. Once your changes are ready for final review, commit your changes then [create or modify your PR](https://github.com/tomeshnet/tomeshnet.github.io/pull/new/master).
 

@@ -2,7 +2,7 @@
 Website for Toronto Mesh
 
 # Getting Involved
-We are still in the early stages and would love to involvement from a wider variety of people!
+We are still in the early stages and would love involvement from more people!
 If you notice any errors or would like to submit changes or add content to our website please see the [Contributing Guidelines](https://github.com/tomeshnet/tomeshnet.github.io/blob/master/CONTRIBUTING.md) below.
 
 In addition, you can provide feedback by:
