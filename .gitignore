@@ -1,3 +1,7 @@
+# Jekyll Related
 _site/
 .sass-cache/
 .jekyll-metadata
+
+# OS X sorry
+.DS_Store
