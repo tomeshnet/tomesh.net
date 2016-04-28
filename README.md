@@ -1,5 +1,22 @@
-# tomeshnet.github.io
-Website for Toronto Mesh
+# tomesh.net
+Website for Toronto Mesh.
+
+## Usage
+
+### 1. Install dependencies
+
+Install the Jekyll gem:
+
+```bash
+$ gem install jekyll
+```
+**Windows users:** [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows)
+
+### 2. Running locally
+
+```bash
+$ jekyll serve
+```
 
 # Getting Involved
 We are still in the early stages and would love involvement from more people!
