@@ -10,7 +10,7 @@ Install the Jekyll gem:
 ```bash
 $ gem install jekyll
 ```
-**Windows users:** [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows)
+**Windows users:** [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)
 
 ### 2. Running locally
 
