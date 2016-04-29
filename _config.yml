@@ -14,7 +14,7 @@ description: >
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tomesh.net" # the base hostname & protocol for your site
-github_username:  tomeshnet
+github_username: tomeshnet
 
 # Build settings
 markdown: kramdown
