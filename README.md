@@ -25,3 +25,11 @@ $ gem install jekyll
 ```bash
 $ jekyll serve
 ```
+
+A development server will run at `http://localhost:4000/`
+
+## Deployment
+
+Commits and merges into `master` will be deployed automatically to the production web server through webhook posts from GitHub.
+
+[jekyll-hook](https://github.com/developmentseed/jekyll-hook) listens for incoming webhook posts from GitHub and runs `jekyll build`.
