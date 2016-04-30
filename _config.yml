@@ -8,10 +8,7 @@ sass:
 # Site settings
 title: Toronto Mesh
 email: hi@tomesh.net
-description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: We are building a mesh network in Toronto.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tomesh.net" # the base hostname & protocol for your site
 github_username: tomeshnet
