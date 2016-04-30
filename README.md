@@ -3,7 +3,7 @@ Website for Toronto Mesh.
 
 ## Getting Involved
 We are still in the early stages and would love involvement from more people!
-If you notice any errors or would like to submit changes or add content to our website please see our [Contributing Guidelines](https://github.com/tomeshnet/tomeshnet.github.io/blob/master/CONTRIBUTING.md).
+If you notice any errors or would like to submit changes or add content to our website please see our [Contributing Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md).
 
 In addition, you can provide feedback by:
 * adding a comment to the [issue tracker](https://github.com/tomeshnet/tomeshnet.github.io/issues).
