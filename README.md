@@ -7,7 +7,7 @@ If you notice any errors or would like to submit changes or add content to our w
 
 In addition, you can provide feedback by:
 * adding a comment to the [issue tracker](https://github.com/tomeshnet/tomeshnet.github.io/issues).
-* speaking with us on the `#torontomesh` channel in [CivicTechTO](http://civictech.ca/)'s slack ([get an invite](https://civictechto-slack-invite.herokuapp.com/))
+* speaking with us on the `#tomesh` channel in [CivicTechTO](http://civictech.ca/)'s slack ([get an invite](https://civictechto-slack-invite.herokuapp.com/))
 
 ## Development
 
