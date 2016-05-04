@@ -1,0 +1,7 @@
+Join us for a **mesh.101 workshop** this Thursday! We will spend 30 minutes demystifying networking and mesh concepts, cover how to set up the our Raspberry Pi-based reference node, dive into the hardware and software, and discuss why we made certain technology choices and implications to access to our information. We will then move into a one-hour unstructured time where we will play with the mesh devices and discuss specific topics that come up.
+
+The workshop assumes no prior networking or programming knowledge, all are welcome and Robarts is an accessible space.
+
+Thursday **May 5, 2016, 8:30 pm**  
+**Semaphore Demo Room** (1st flr), Robarts, 130 St. George Street  
+OpenStreetMap [directions](http://osm.org/go/ZX6Bw_XP--?m=&way=7991747)
