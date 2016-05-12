@@ -15,3 +15,6 @@ github_username: tomeshnet
 
 # Build settings
 markdown: kramdown
+
+# Excluded folders
+exclude: [scripts]

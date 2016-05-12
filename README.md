@@ -11,7 +11,7 @@ In addition, you can provide feedback by:
 
 ## Development
 
-### 1. Install dependencies
+### 1. Install Dependencies
 
 Install the Jekyll gem:
 
@@ -20,7 +20,7 @@ $ gem install jekyll
 ```
 **Windows users:** [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)
 
-### 2. Running locally
+### 2. Running Locally
 
 ```bash
 $ jekyll serve
@@ -33,3 +33,7 @@ A development server will run at `http://localhost:4000/`
 Commits and merges into `master` will be deployed automatically to the production web server through webhook posts from GitHub.
 
 [jekyll-hook](https://github.com/developmentseed/jekyll-hook) listens for incoming webhook posts from GitHub and runs `jekyll build`.
+
+### Daily Builds
+
+A cron task runs `jekyll build` daily at midnight. The build task can be found in the [scripts directory](https://github.com/tomeshnet/tomesh.net/blob/master/scripts/tomesh-build.sh). The cron task can be edited with `sudo crontab -e`
