@@ -36,4 +36,4 @@ Commits and merges into `master` will be deployed automatically to the productio
 
 ### Daily Builds
 
-A cron task runs `jekyll build` daily at midnight. The build task can be found in the [scripts directory](https://github.com/tomeshnet/tomesh.net/blob/master/scripts/tomesh-build.sh). The cron task can be edited with `sudo crontab -e`
+A cron task runs `jekyll build` daily at midnight. The build task can be found in the [scripts directory](scripts/tomesh-build.sh). The cron task can be edited with `sudo crontab -e`
