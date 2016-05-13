@@ -5,19 +5,22 @@ title: Toronto Mesh
 
 <div class="home">
   <div class="intro-header">
-    <div class="intro-message">
       <h2>We are building a mesh network in Toronto.</h2>
+    <div class="intro-message">
       {% capture vision %}{% include vision.md %}{% endcapture %}
       {{ vision | markdownify }}
-    </div>
+    </div> <!-- /.intro-message -->
   </div>
   <!-- /.intro-header -->
 
   <div class="banner">
     <h2>Come Say Hi</h2>
-    <a href="https://civictechto-slack-invite.herokuapp.com/" class="btn btn-default btn-lg">
-      <span class="icon icon--slack">{% include icon-slack.svg %}</span>
+    <p><a href="https://civictechto-slack-invite.herokuapp.com/" class="btn btn-default btn-lg">
+      <i class="icon fa fa-slack" aria-hidden="true"></i>
       <span class="service-name">#tomesh on CivicTechTO slack</span>
-    </a>
+    </a></p>
+    {% if site.email %}
+      <p>{% include icon-email.html %}</p>
+    {% endif %}
   </div>
 </div>

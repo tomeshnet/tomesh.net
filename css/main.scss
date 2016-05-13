@@ -45,3 +45,13 @@ $on-laptop:        800px;
 @import "fonts";
 @import "base";
 @import "layout";
+@import "font-awesome";
+
+// announcement
+
+.announcement {
+  background-color: #fffbcc;
+  color: #555;
+  font-size: 0.8em;
+  padding: 10px 10px;
+}
