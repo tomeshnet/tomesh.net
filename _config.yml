@@ -13,5 +13,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tomesh.net" # the base hostname & protocol for your site
 github_username: tomeshnet
 
+# Collections
+collections:
+  announcements:
+    output: false
+
 # Build settings
 markdown: kramdown
