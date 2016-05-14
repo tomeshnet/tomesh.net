@@ -6,6 +6,19 @@ title: Toronto Mesh
 <div class="home">
   <div class="intro-header">
       <h2>We are building a mesh network in Toronto.</h2>
+    {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
+    {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
+    {% for announcement in site.announcements reversed %}
+      {% capture announceyear %}{{announcement.dateUntil | date: '%Y'}}{% endcapture %}
+      {% capture announceday %}{{announcement.dateUntil | date: '%j'}}{% endcapture %}
+      {% assign announceday = announceday | plus: 0 %}
+      {% assign nowday = nowday | minus: 2 %}
+      {% if announceyear > nowyear or announceday >= nowday and announceyear >= nowyear %}
+        <div class ="announcement">
+          {{announcement.output}}
+        </div> <!-- /.announcement -->
+      {% endif %}
+    {% endfor %}
     <div class="intro-message">
       {% capture vision %}{% include vision.md %}{% endcapture %}
       {{ vision | markdownify }}
