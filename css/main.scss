@@ -43,9 +43,10 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "normalize";
 @import "fonts";
+@import "font-awesome";
 @import "base";
 @import "layout";
-@import "font-awesome";
+@import "notices";
 
 // announcement
 
