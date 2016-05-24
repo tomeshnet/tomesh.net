@@ -8,6 +8,7 @@ $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$base-margin-bottom: 0.8rem;
 
 $spacing-unit:     30px;
 
@@ -47,11 +48,48 @@ $on-laptop:        800px;
 @import "layout";
 @import "font-awesome";
 
-// announcement
+/* Additional Toronto Mesh Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1rem;
+  margin-bottom: $base-margin-bottom;
+}
 
+h1 { font-size: 3.0rem; line-height: $base-line-height }
+h2 { font-size: 2.7rem; line-height: $base-line-height }
+h3 { font-size: 2.5rem; line-height: $base-line-height }
+h4 { font-size: 2.0rem; line-height: $base-line-height }
+h5 { font-size: 1.5rem; line-height: $base-line-height }
+h6 { font-size: 1.1rem; line-height: $base-line-height }
+
+// Headings -  Larger than phablet (adjusted from skeleton)
+@media (min-width: $on-palm) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.9rem; }
+  h3 { font-size: 2.5rem; }
+  h4 { font-size: 2.2rem; }
+  h5 { font-size: 1.7rem; }
+  h6 { font-size: 1.2rem; }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $base-margin-bottom;
+}
+
+// Announcements
 .announcement {
   background-color: #fffbcc;
   color: #555;
-  font-size: 0.8em;
+  font-size: $small-font-size;
   padding: 10px 10px;
+}
+
+// Lists
+ol, ul {
+  line-height: 1.5rem;
+  padding-left: $spacing-unit;
+  margin-top: 0;
+  margin-bottom: $base-margin-bottom;
 }
