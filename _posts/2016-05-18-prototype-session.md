@@ -3,7 +3,7 @@ title: Mesh Prototype Work Session
 text: Join us at our work-session for the Maker Festival prototype.
 location: Bahen Centre, 40 St. George Street
 locationMap: http://osm.org/go/ZX6ByArmB?m=&way=141691917
-date: 2015-05-18
+date: 2016-05-18
 startTime: '17:30'
 endTime: '20:30'
 ---
