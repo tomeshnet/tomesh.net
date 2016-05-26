@@ -43,15 +43,21 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "normalize";
 @import "fonts";
+@import "font-awesome";
 @import "base";
 @import "layout";
-@import "font-awesome";
 
-// announcement
+// Announcements
 
 .announcement {
   background-color: #fffbcc;
   color: #555;
   font-size: 0.8em;
   padding: 10px 10px;
+}
+
+// Notices
+
+.notice {
+  margin: 4em 0;
 }
