@@ -20,6 +20,7 @@ collections:
 
 # Build settings
 markdown: kramdown
+future: true # for events set in the future to show up
 
 # Excluded folders
 exclude: [scripts]
