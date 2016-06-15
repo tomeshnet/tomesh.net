@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Networks: From the Internet to tomesh.net"
+slug: intro-to-networks
 text: "Through hands-on activities and play we will cover introductory networking concepts and how networks like the internet operate."
 location: Semaphore Studio 307, Claude T. Bissel, 140 St. George Street  
 locationMap: http://osm.org/go/ZX6Bw~WNh--?m=
