@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Introduction to Networks: From the Internet to tomesh.net'
 slug: intro-to-networks
 text: 'Through hands-on activities and play we will cover introductory networking concepts and how networks like the internet operate'
