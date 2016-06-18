@@ -1,4 +1,4 @@
-Internet service is currently sold as a black-box to most of us. We are building a community-owned infrastructure that gives all its users:
+Internet service is currently a black-box to most of its users. We are building a community-owned infrastructure that gives us:
 
 - **agency** to make important decisions about their privacy
 - **autonomy** to access information in an uncontrolled/free manner
