@@ -1,19 +1,25 @@
-<footer class="site-footer">
+<footer>
   <div class="container">
-    <div class="footer-col-container">
-      <div class="footer-col">
-        {% if site.github_username %}
-        <p>
-          {% include icon-github.html username=site.github_username %}
-        </p>
-        {% endif %}
+    <h2>Come Say Hi</h2>
+    <p><a href="https://civictechto-slack-invite.herokuapp.com/" class="btn btn-default btn-lg">
+      <i class="icon fa fa-slack" aria-hidden="true"></i>
+      <span class="service-name">#tomesh on CivicTechTO slack</span>
+    </a></p>
 
-        {% if site.twitter_username %}
-        <p>
-          {% include icon-twitter.html username=site.twitter_username %}
-        </p>
-        {% endif %}
-      </div>
-    </div>
+    {% if site.email %}
+      <p>{% include icon-email.html %}</p>
+    {% endif %}
+
+    {% if site.github_username %}
+    <p>
+      {% include icon-github.html username=site.github_username %}
+    </p>
+    {% endif %}
+
+    {% if site.twitter_username %}
+    <p>
+      {% include icon-twitter.html username=site.twitter_username %}
+    </p>
+    {% endif %}
   </div>
 </footer>

@@ -20,9 +20,9 @@
 @import "variables";
 @import "skeleton";
 @import "fonts";
+@import "font-awesome";
 @import "base";
 @import "layout";
-@import "font-awesome";
 
 /* Additional Toronto Mesh Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -68,4 +68,10 @@ ol, ul {
   padding-left: $spacing-unit;
   margin-top: 0;
   margin-bottom: $base-margin-bottom;
+}
+
+// Notices
+
+.notice {
+  margin: 4em 0;
 }
