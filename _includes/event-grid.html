@@ -3,33 +3,31 @@
       <h2>Events</h2>
       <a href="#" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Visit our Calendar</a>
       <h4>Upcoming</h4>
-      <div class="container">
-          <div class="row">
-              {% assign isEvent = 0 %}
-              {% for post in site.posts reversed %}
-                {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
-                {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
-                {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
-                {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
-                {% assign postday = postday | plus: 0 %}
-                {% assign nowday = nowday | minus: 2 %}
-                {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
-                  {% assign isEvent = 1 %}
-                  <div class="four columns event-item">
-                      <a href="{{ post.url }}" class="event-title"><strong>{{ post.title }}</strong></a>
-                      <div class="event-time"><strong>{{post.startTime | date:"%R "}}</strong> {{ post.date | date: "%-d %B %Y"}}</div>
-                      <a href="{{ post.url }}" class="event-caption">{{ post.text }}</a>
-                      {{ post.location }}
-                  </div>
-                {% endif %}
-              {% endfor %}
-          </div>
-          <div class="row">
-              {% if isEvent == 0 %}
-                <p>No upcoming events.<br />
-                  <a href="mailto:{{ site.email }}">If you are interested doing something get in touch!</a>
-                </p>
-              {% endif %}
-          </div>
+      <div class="row">
+          {% assign isEvent = 0 %}
+          {% for post in site.posts reversed %}
+            {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
+            {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
+            {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
+            {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
+            {% assign postday = postday | plus: 0 %}
+            {% assign nowday = nowday | minus: 2 %}
+            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
+              {% assign isEvent = 1 %}
+              <div class="four columns event-item">
+                  <a href="{{ post.url }}" class="event-title"><strong>{{ post.title }}</strong></a>
+                  <div class="event-time"><strong>{{post.startTime | date:"%R "}}</strong> {{ post.date | date: "%-d %B %Y"}}</div>
+                  <a href="{{ post.url }}" class="event-caption">{{ post.text }}</a>
+                  {{ post.location }}
+              </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+      <div class="row">
+          {% if isEvent == 0 %}
+            <p>No upcoming events.<br />
+              <a href="mailto:{{ site.email }}">If you are interested doing something get in touch!</a>
+            </p>
+          {% endif %}
       </div>
   </section> <!-- /.event-grid -->

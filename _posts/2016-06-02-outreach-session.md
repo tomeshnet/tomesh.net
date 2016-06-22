@@ -1,9 +1,10 @@
 ---
+layout: post
 title: Outreach Work Session
 text: Work-session for Toronto Mesh outreach materials.
 location: College & Ossington
 locationMap: http://osm.org/go/ZX6BNoGot-?m=
-date: 2016-06-02
+date: 2016-12-02
 startTime: '18:30'
 endTime: '21:30'
 ---

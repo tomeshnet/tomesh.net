@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Toronto Mesh Planning Breakout
 text: Join us at our breakout meeting to establish a roadmap!
 location: Semaphore Demo Room (1st flr), Robarts, 130 St. George Street  
