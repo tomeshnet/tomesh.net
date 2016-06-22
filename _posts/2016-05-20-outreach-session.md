@@ -4,7 +4,7 @@ title: Outreach Work Session
 text: Join us at our work-session for Toronto Mesh outreach.
 location:
 locationMap: http://osm.org/go/ZX6BNoGot-?m=
-date: 2016-12-20
+date: 2016-05-20
 startTime: '18:30'
 endTime: '21:30'
 ---
