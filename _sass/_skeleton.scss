@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -158,9 +158,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: $brand-color; }
 a:hover {
-  color: #0FA0CE; }
+  color: darken($brand-color, 15%); }
 
 
 /* Buttons
@@ -300,8 +300,6 @@ ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
 
 
 /* Code

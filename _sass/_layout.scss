@@ -1,3 +1,5 @@
+// Site header
+
 .site-title {
   margin-bottom: 0;
 
@@ -7,9 +9,33 @@
   }
 }
 
+// Site sections
+
+.site-section {
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
 // Site footer
+
+.site-footer {
+  margin: 2em 0;
+}
 
 .contact-list,
 .social-media-list {
   list-style: none;
+}
+
+// Post header
+
+.post-header {
+  margin-bottom: 2em;
+}
+
+// Notices
+
+.notice {
+  margin: 4em 0;
 }
