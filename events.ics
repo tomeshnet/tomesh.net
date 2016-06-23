@@ -1,0 +1,25 @@
+---
+layout: none
+---
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID://Toronto Mesh/Events//NONSGML v1.0//EN
+NAME:Toronto Mesh Events
+TIMEZONE-ID:America/New_York
+X-WR-TIMEZONE:America/New_York
+X-WR-CALNAME:Toronto Mesh Events
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+METHOD:PUBLISH
+{% for post in site.posts limit:20 %}BEGIN:VEVENT
+UID:{{ post.date | date: "%Y%m%d" }}@tomesh.net
+ORGANIZER;CN="Toronto Mesh":MAILTO:hello@tomesh.net
+LOCATION:{{ post.location }}
+SUMMARY:{{ post.title }}
+URL:https://tomesh.net{{ post.url|strip }}
+DESCRIPTION;ALTREP="{{ post.text|strip }}":{{ post.text|strip }}
+DTSTART;TZID=America/New_York:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
+DTEND;TZID=America/New_York:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
+DTSTAMP;TZID=America/New_York:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
+END:VEVENT
+{% endfor %}END:VCALENDAR
