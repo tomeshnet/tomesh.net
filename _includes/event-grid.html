@@ -1,5 +1,5 @@
 <!-- Event Grid Section -->
-  <section id="event-grid">
+  <section id="event-grid" class="site-section">
       <h2>Events</h2>
       <a href="#" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Visit our Calendar</a>
       <h4>Upcoming</h4>
@@ -14,11 +14,11 @@
             {% assign nowday = nowday | minus: 2 %}
             {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
               {% assign isEvent = 1 %}
-              <div class="four columns event-item">
-                  <a href="{{ post.url }}" class="event-title"><strong>{{ post.title }}</strong></a>
-                  <div class="event-time"><strong>{{post.startTime | date:"%R "}}</strong> {{ post.date | date: "%-d %B %Y"}}</div>
-                  <a href="{{ post.url }}" class="event-caption">{{ post.text }}</a>
-                  {{ post.location }}
+              <div class="six columns event-item">
+                <h2 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="event-time"><p>{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong></p></div>
+                <div class="event-location"><p>{{ post.location }}</p></div>
+                <a href="{{ post.url }}" class="event-caption">{{ post.text }}</a>
               </div>
             {% endif %}
           {% endfor %}
