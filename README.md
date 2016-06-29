@@ -1,5 +1,6 @@
 # tomesh.net
-Website for Toronto Mesh.
+Website for [Toronto Mesh](https://www.tomesh.net/) ([https://www.tomesh.net/](https://www.tomesh.net/)), build using [Jekyll](https://jekyllrb.com/), [Font Awesome](http://fontawesome.io/) icons, and [Skeleton](http://getskeleton.com/) CSS.
+
 
 ## Getting Involved
 We are still in the early stages and would love involvement from more people!
@@ -7,7 +8,7 @@ If you notice any errors or would like to submit changes or add content to our w
 
 In addition, you can provide feedback by:
 * adding a comment to the [issue tracker](https://github.com/tomeshnet/tomesh.net/issues).
-* emailing us at [hello@tomesh.net](mailto:hello@tomesh.net) 
+* emailing us at [hello@tomesh.net](mailto:hello@tomesh.net)
 * speaking with us on the `#tomesh` channel in [CivicTechTO](http://civictech.ca/)'s slack ([get an invite](https://civictechto-slack-invite.herokuapp.com/))
 
 ## Development

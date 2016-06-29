@@ -56,17 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 // Links
 
 a {
-  color: $brand-color;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
-  }
 }
 
 
@@ -109,15 +99,6 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
-}
-
-
-// container
-
-.container {
-  max-width: $content-width;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 // Icons
