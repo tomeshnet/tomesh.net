@@ -1,11 +1,9 @@
 <!-- Event Grid Section -->
   <section id="event-grid" class="site-section">
-      <h2>Events</h2>
-      <a href="/events.ics" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Visit our Calendar</a>
-      <h4>Upcoming</h4>
+      <h2>Upcoming Events</h2>
       <div class="row">
           {% assign isEvent = 0 %}
-          {% for post in site.posts reversed %}
+          {% for post in site.posts reversed limit:2 %}
             {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
             {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
@@ -14,12 +12,21 @@
             {% assign nowday = nowday | minus: 2 %}
             {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
               {% assign isEvent = 1 %}
-              <div class="six columns event-item">
-                <h2 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="event-time"><p>{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong></p></div>
-                <div class="event-location"><p>{{ post.location }}</p></div>
-                <a href="{{ post.url }}" class="event-caption">{{ post.text }}</a>
-              </div>
+              <section class="six columns event-item">
+                <header>
+                  <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                  <div class="event-time-location">
+                    <div class="event-meta">
+                      <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
+                      <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong></p></div>
+                    <div class="event-meta">
+                      <i class="icon fa fa-map-marker" aria-hidden="true"></i> 
+                      <p class="event-location">{{ post.location }}</p>
+                    </div>
+                  </div>
+                </header>
+                <div class="event-caption"><p>{{ post.text }}</p></div>
+              </section>
             {% endif %}
           {% endfor %}
       </div>
