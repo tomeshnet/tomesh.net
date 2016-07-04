@@ -20,7 +20,7 @@
                       <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
                       <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong></p></div>
                     <div class="event-meta">
-                      <i class="icon fa fa-map-marker" aria-hidden="true"></i> 
+                      <i class="icon fa fa-map-marker" aria-hidden="true"></i>
                       <p class="event-location">{{ post.location }}</p>
                     </div>
                   </div>
@@ -36,5 +36,8 @@
               <a href="mailto:{{ site.email }}">If you are interested doing something get in touch!</a>
             </p>
           {% endif %}
+      </div>
+      <div class="row">
+        <div class="four columns offset-by-eight"><a href="/events.ics" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Add to Calendar (.ics)</a></div>
       </div>
   </section> <!-- /.event-grid -->
