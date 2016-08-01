@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Outreach Work Session
+slug: outreach-session
 text: Join us at our work-session for Toronto Mesh outreach.
 location:
 locationMap: http://osm.org/go/ZX6BNoGot-?m=
