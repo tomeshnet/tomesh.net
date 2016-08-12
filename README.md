@@ -11,7 +11,7 @@ In addition, you can provide feedback by:
 * speaking with us on the `#tomesh` channel in [CivicTechTO](http://civictech.ca/)'s slack ([get an invite](https://civictechto-slack-invite.herokuapp.com/))
 
 ## License
-All <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tomesh.net website</span> content at <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tomeshnet/tomesh.net/" property="cc:attributionName" rel="cc:attributionURL">github.com/tomeshnet/tomesh.net</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>, the text of which is included in the repository [here](https://github.com/tomeshnet/tomesh.net/blob/master/LICENSE.md).
+All <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tomesh.net website</span> content and documentation at <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tomeshnet/tomesh.net/" property="cc:attributionName" rel="cc:attributionURL">github.com/tomeshnet/tomesh.net</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>, the text of which is included in the repository [here](https://github.com/tomeshnet/tomesh.net/blob/master/LICENSE.md).
 
 ## Development
 
