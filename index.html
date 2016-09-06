@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<section class="intro-header">
-    <h2>We are building a mesh network in Toronto.</h2>
+<!-- Intro Section -->
+<section class="site-section">
+  <h2>We are building a mesh network in Toronto</h2>
+
   {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
   {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
   {% for announcement in site.announcements reversed %}
@@ -17,11 +19,17 @@ layout: default
       </div> <!-- /.announcement -->
     {% endif %}
   {% endfor %}
-  <div class="intro-message">
-    {% capture vision %}{% include vision.md %}{% endcapture %}
-    {{ vision | markdownify }}
-  </div> <!-- /.intro-message -->
-</section>
-<!-- /.intro-header -->
 
-{% include event-grid.html %}
+</section> <!-- /.intro-header -->
+
+<!-- Next Event Section -->
+<section class="site-section">
+  <h2>Check out our Next Event</h2>
+
+<section>
+
+<!-- Call to Action Section -->
+<section class="site-section">
+  <h2>Get Involved with Us</h2>
+
+<section>
