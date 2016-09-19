@@ -1,6 +1,6 @@
 ---
 title: "Virtual Mesh Hack Night"
-dateUntil: 2016-09-22
+dateUntil: 2016-10-06
 ---
 
 Some Toronto Mesh members are connected through a virtual mesh network. This is a transitionary phase where our mesh nodes are connected to one another via an Internet connection instead of a physical line or radio. We are nonetheless able to play with distributed applications as if we are connected through a physical mesh.
