@@ -3,15 +3,18 @@
       <h2>Upcoming Events</h2>
       <div class="row">
           {% assign isEvent = 0 %}
-          {% for post in site.posts reversed limit:2 %}
+          {% assign eventCount = 0 %}
+          {% assign posts = site.posts | reverse %}
+          {% for post in posts %}
             {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
             {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
             {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
             {% assign postday = postday | plus: 0 %}
             {% assign nowday = nowday | minus: 2 %}
-            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
+            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 2 %}
               {% assign isEvent = 1 %}
+              {% assign eventCount = eventCount | plus: 1 %}
               <section class="six columns event-item">
                 <header>
                   <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
