@@ -1,7 +1,15 @@
 // Lists
-ol, ul {
+ol,
+ul {
   list-style-type: disc;
   padding-left: $spacing-unit;
   margin-top: 0;
   margin-bottom: $base-margin-bottom;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }

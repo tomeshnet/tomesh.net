@@ -1,9 +1,16 @@
 // Site header
 
+.site-header {
+  .container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
 .site-title {
-  margin-bottom: 0;
-  position: relative;
-  float: left;
+  margin: 0;
+  flex-grow: 1;
 
   &,
   &:visited {
@@ -14,20 +21,16 @@
 // Site navigation
 
 .nav {
-    padding-top: $base-padding;
-    line-height: $base-line-height;
-    float: right;
-    overflow: hidden;
-}
-
-.nav ul {
+  ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: inline-block;
-}
+  }
 
-.nav li {
+  li {
     display: inline-block;
     padding-right: $base-padding;
+  }
 }
 
 // Site sections

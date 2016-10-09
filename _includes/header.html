@@ -1,14 +1,16 @@
 <header class="site-header">
   <div class="container">
-    <h1 class="site-title"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <h1 class="site-title"><a href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a></h1>
 
-    <ul class="nav">
-    {% for page in site.pages %}
-      {% if page.title and page.title != 'Page Not Found' %}
-      <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-    </ul> <!-- .navbar -->
+    <nav class="nav" role="navigation" aria-label="Primary Menu">
+      <ul>
+      {% for page in site.pages %}
+        {% if page.title and page.title != 'Page Not Found' %}
+        <li><a class="nav-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul> <!-- .nav -->
+    </nav>
 
   </div>
 </header>

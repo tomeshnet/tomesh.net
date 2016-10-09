@@ -1,11 +1,13 @@
 // Basic Styling
 
 html {
-  font-feature-settings: "kern" on, "liga" on, "calt" on;
-  -moz-font-feature-settings: "kern" on, "liga" on, "calt" on;
-  -webkit-font-feature-settings: "kern" on, "liga" on, "calt" on;
-  -ms-font-feature-settings: "kern" on, "liga" on, "calt" on;
-  -o-font-feature-settings: "kern" on, "liga" on, "calt" on;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -34,24 +36,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
-
-// Lists
-
-li {
-  > ul,
-  > ol {
-     margin-bottom: 0;
-  }
-}
-
-
-// Headings
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
-
 
 // Links
 
@@ -98,22 +82,5 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-  }
-}
-
-// Icons
-
-.icon {
-  color: #828282;
-
-  > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-
-    path {
-      fill: $grey-color;
-    }
   }
 }
