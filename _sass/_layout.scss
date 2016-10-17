@@ -1,10 +1,20 @@
 // Site header
 
 .site-header {
+  background-color: #001b4d;
   .container {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+  }
+  a {
+    color: white !important;
+    text-transform: lowercase;
+    font-weight: 350;
+    transition: color 0.3s;
+    &:hover {
+      color: #00BCD4 !important;
+    }
   }
 }
 
