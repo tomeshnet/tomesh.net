@@ -3,68 +3,77 @@ layout: default
 ---
 
 <!-- Intro Section -->
-<section class = "feature">
-  <div class="content">
-    <h1>TO <span>Mesh</span></h1>
-    <p>Building a mesh network in Toronto</p>
-    <a class="button button-primary" href="#">Learn More??</a>
-    <br>
-    <a class="attribution" href="https://dribbble.com/shots/2098174-Nodes-experiment/attachments/378749">Illustration by Gabriel Ghnassia</a>
+<section class = "feature background-tint">
+  <div class="container">
+    <div class="content" role="contentinfo">
+      <h1>TO <span>Mesh</span></h1>
+      <p>Building a mesh network in Toronto</p>
+      <a class="button button-primary" href="#" role="button">Learn More??</a>
+      <br>
+      <a class="attribution" href="https://dribbble.com/shots/2098174-Nodes-experiment/attachments/378749" role="link">Illustration by Gabriel Ghnassia</a>
+    </div>
   </div>
 </section>
 
 
 <!-- <section class="site-section">
 
-  {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
-  {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
-  {% for announcement in site.announcements reversed %}
-    {% capture announceyear %}{{announcement.dateUntil | date: '%Y'}}{% endcapture %}
-    {% capture announceday %}{{announcement.dateUntil | date: '%j'}}{% endcapture %}
-    {% assign announceday = announceday | plus: 0 %}
-    {% assign nowday = nowday | minus: 2 %}
-    {% if announceyear > nowyear or announceday >= nowday and announceyear >= nowyear %}
-      <div class ="announcement">
-        {{announcement.output}}
-      </div>
-    {% endif %}
-  {% endfor %}
+{% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
+{% for announcement in site.announcements reversed %}
+{% capture announceyear %}{{announcement.dateUntil | date: '%Y'}}{% endcapture %}
+{% capture announceday %}{{announcement.dateUntil | date: '%j'}}{% endcapture %}
+{% assign announceday = announceday | plus: 0 %}
+{% assign nowday = nowday | minus: 2 %}
+{% if announceyear > nowyear or announceday >= nowday and announceyear >= nowyear %}
+<div class ="announcement">
+{{announcement.output}}
+</div>
+{% endif %}
+{% endfor %}
 
 </section>  -->
 <!-- About section  -->
+
 <section class="featurette">
-  <div class="row">
-    <div class="six columns">
-      <h1><span class="heading-text">Who are we?</span></h1>
-      <p>We do meshy things with meshy networks and we try not to mesh things up too much!</p>
-      <a class="button button-primary" href="/about">Learn mesh!
-      </a>
-    </div>
-    <div class="six columns">
-      <img src="https://static.pexels.com/photos/24980/pexels-photo-24980.jpg"></img>
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <h1><span class="heading-text">Who are we?</span></h1>
+        <p>We do meshy things with meshy networks and we try not to mesh things up too much!</p>
+        <a class="button button-primary" href="/about" role="button">Learn mesh!
+        </a>
+      </div>
+      <div class="six columns">
+        <img src="https://static.pexels.com/photos/24980/pexels-photo-24980.jpg" alt="space"></img>
+      </div>
     </div>
   </div>
 </section>
 
-<hr>
+
 <!-- get involved section -->
 <section class="featurette">
-  <div class="row">
-    <div class="six columns">
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
 
-      <img src="https://static.pexels.com/photos/24980/pexels-photo-24980.jpg"></img>
-    </div>
-    <div class="six columns">
-      <h1>Get Involved</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-      <a class="button button-primary" href="/get-involved">Get involved</a>
+        <img src="https://static.pexels.com/photos/24980/pexels-photo-24980.jpg" alt="space"></img>
+      </div>
+      <div class="six columns">
+        <h1>Get Involved</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        <a class="button button-primary" href="/get-involved" role="link">Get involved</a>
+      </div>
     </div>
   </div>
 </section>
-<hr>
+
 <!-- Next Event Section -->
 <section class="featurette">
-  <h1>Check Out our Next Event</h1>
-  <p>_PLACEHOLDER: auto-generated blurb from most recent event_</p>
-  <a class="button button-primary" href="#">Check it out</a>
+  <div class="container">
+    <h1>Check Out our Next Event</h1>
+    <p>_PLACEHOLDER: auto-generated blurb from most recent event_</p>
+    <a class="button button-primary" href="#" role="button">Check it out</a>
+  </div>
 </section>

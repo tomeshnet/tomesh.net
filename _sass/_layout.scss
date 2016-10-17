@@ -56,7 +56,7 @@
 .site-footer {
   margin: 2em 0;
   line-height: 1.2em;
-
+  
   .site-footer-cc {
     margin-top: 2rem;
   }
@@ -80,9 +80,13 @@
 }
 
 // Site main feature
-
+.background-tint {
+  background-color: rgba(0, 80, 255, 0.4);
+  background-blend-mode: multiply;
+}
 .feature {
   position: relative;
+  background-image: url(/mesh.png);
   span {
     color: #00BCD4;
   }
@@ -99,19 +103,11 @@
   }
   &:before {
     content: "";
-    background-image: url(/mesh.png);
-    position: absolute;
-    height: 100%;
-    width: 4000px;
-    left: -2000px;
-    z-index: -1;
+
   }
-  &:before {
-    background-color: rgba(0, 200, 255, 0.5);
-    background-blend-mode: multiply;
-  }
+
   & .attribution {
-    color: grey;
+    color: hsl(0,0%, 80%);
     font-size: 80%;
   }
 }
@@ -120,6 +116,9 @@
 
 .featurette {
   padding: 60px 0;
+  &:nth-child(odd) {
+    background-color: hsl(0, 0%, 95%);
+  }
   h1 {
     color: #00BCD4;
   }
