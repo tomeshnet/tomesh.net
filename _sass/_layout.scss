@@ -100,4 +100,20 @@
     background-color: rgba(0, 200, 255, 0.5);
     background-blend-mode: multiply;
   }
+  & .attribution {
+    color: grey;
+    font-size: 80%;
+  }
+}
+
+// Site featurettes
+
+.featurette {
+  padding: 60px 0;
+  h1 {
+    color: #00BCD4;
+  }
+  img {
+    padding: 20px;
+  }
 }
