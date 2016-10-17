@@ -3,8 +3,17 @@ layout: default
 ---
 
 <!-- Intro Section -->
-<section class="site-section">
-  <h2>We are building a mesh network in Toronto</h2>
+<div class = "feature ">
+  <div class="content">
+    <h1>TO <span>Mesh</span></h1>
+    <p>Building a mesh network in Toronto</p>
+    <a class="button button-primary" href="#">Learn More</a>
+
+  </div>
+</div>
+
+
+<!-- <section class="site-section">
 
   {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
   {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
@@ -16,11 +25,11 @@ layout: default
     {% if announceyear > nowyear or announceday >= nowday and announceyear >= nowyear %}
       <div class ="announcement">
         {{announcement.output}}
-      </div> <!-- /.announcement -->
+      </div>
     {% endif %}
   {% endfor %}
 
-</section> <!-- /.intro-header -->
+</section>  -->
 
 <!-- Next Event Section -->
 <section class="site-section">

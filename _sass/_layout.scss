@@ -68,3 +68,36 @@
 .notice {
   margin: 4em 0;
 }
+
+// Site main feature
+
+.feature {
+  position: relative;
+  span {
+    color: #00BCD4;
+  }
+  & .content {
+    padding: 130px 0;
+  }
+  h1 {
+    font-size: 450%;
+    color: white;
+  }
+  p {
+    font-size: 170%;
+    color: white;
+  }
+  &:before {
+    content: "";
+    background-image: url(/mesh.png);
+    position: absolute;
+    height: 100%;
+    width: 4000px;
+    left: -2000px;
+    z-index: -1;
+  }
+  &:before {
+    background-color: rgba(0, 200, 255, 0.5);
+    background-blend-mode: multiply;
+  }
+}
