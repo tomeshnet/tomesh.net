@@ -5,17 +5,17 @@ title: Get Involved
 
 Interested? You can start working with us in a few quick steps:
 
-1. First, come say hi to us on our chat. We host our own chat, anyone can [join or visit as a guest](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
+**1.** First, come say hi to us on our chat. We host our own chat, anyone can [join or visit as a guest](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
 
-    - Join the `#tomesh` channel, and introduce yourself!
+  - Join the `#tomesh` channel, and introduce yourself!
 
-2. Check out our [vision](about {{ # | prepend: site.baseurl }}) and [code of conduct]({{ code-of-conduct | prepend: site.baseurl }})
+**2.** Check out our [vision]({{ site.baseurl }}/about) and [code of conduct]({{ site.baseurl }}/code-of-conduct)
 
-3. Join us at one of our events!
+**3.** Join us at one of our events!
 
-    - Events including meetings and workshops are posted on [our website]({{ events | prepend: site.baseurl }})
+  - Events including meetings and workshops are posted on [our website]({{ site.baseurl }}/events}})
 
-4. If you have an idea or time to help, [work with us]({{ page.url | prepend: site.baseurl }})
+**4.** If you have an idea or time to help, [work with us]({{ page.url | prepend: site.baseurl }})
 
 To see the current status of the Toronto Mesh project, visit our publicly-viewable [Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) and [github account](https://github.com/tomeshnet).
 
@@ -44,6 +44,6 @@ You can contribute to the project in many ways. Start by [creating an account](h
 - When completed, move the card to the **Done** column (typically for a task that leads to a Pull Request in our [Github repositories](https://github.com/tomeshnet/) is usually considered done when reviewed and merged)
 
 ### Contribute to our git Repositories on [github.com/tomeshnet](https://github.com/tomeshnet/)
-We use git, a version control tool, and [Github](https://github.com/tomeshnet/) repositories to work on and publicly host our technical prototypes ([Raspberri Pi](https://github.com/tomeshnet/prototype-cjdns-pi2), [ODROID](https://github.com/tomeshnet/prototype-cjdns-odroidc2)), this [website](https://github.com/tomeshnet/tomesh.net), and keep a record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes.
+We use git, a version control tool, and [Github](https://github.com/tomeshnet/) repositories to work on and publicly host our technical prototypes ([Raspberry Pi](https://github.com/tomeshnet/prototype-cjdns-pi2), [ODROID](https://github.com/tomeshnet/prototype-cjdns-odroidc2)), this [website](https://github.com/tomeshnet/tomesh.net), and keep a record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes.
 
-If you notice any errors, would like to submit changes, or add content, read our [Git workflow](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute to our GitHub repositories
+If you notice any errors, would like to submit changes, or add content, read our [Git workflow](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute to our GitHub repositories.
