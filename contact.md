@@ -3,18 +3,20 @@ layout: page
 title: Contact
 ---
 
-## Come Say Hi!
+Come say hi...
 
-{% include icon-slack.html %}
+- {% include icon-matrix.html %} on our chat
 
 {% if site.email %}
-  {% include icon-email.html %}
+- {% include icon-email.html %} by email
 {% endif %}
 
 {% if site.github_username %}
-  {% include icon-github.html username=site.github_username %}
+- {% include icon-github.html username=site.github_username %} on github
 {% endif %}
 
 {% if site.twitter_username %}
-  {% include icon-twitter.html username=site.twitter_username %}
+- {% include icon-twitter.html username=site.twitter_username %} on twitter
 {% endif %}
+
+We also maintain {% include icon-slack.html %} and {% include icon-irc.html %}
