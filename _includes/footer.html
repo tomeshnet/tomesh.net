@@ -1,7 +1,28 @@
 <footer class="site-footer">
-  <div class="container">
-    <div class="row site-footer-cc">
+
+  <div class="row site-footer-contact">
+    <div class="container">
+      <p>Dont be shy come say hi !</p>
+      <ul>
+        <li>{% include icon-matrix.html %}</li>
+        {% if site.email %}
+        <li>{% include icon-email.html %}</li>
+        {% endif %}
+        {% if site.github_username %}
+        <li>{% include icon-github.html username=site.github_username %}</li>
+        {% endif %}
+        {% if site.twitter_username %}
+        <li>{% include icon-twitter.html username=site.twitter_username %}</li>
+        {% endif %}
+        <li>{% include icon-irc.html %}</li>
+        <li>{% include icon-slack.html %} </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row site-footer-cc">
+    <div class="container">
       <small>&#169; 2016 Toronto Mesh. This website content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a> license.</small></p>
     </div>
   </div>
+</div>
 </footer>

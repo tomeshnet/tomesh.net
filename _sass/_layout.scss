@@ -1,7 +1,7 @@
 // Site header
 
 .site-header {
-  background-color: #001b4d;
+  background-color: black;
   .container {
     display: flex;
     align-items: baseline;
@@ -10,7 +10,7 @@
   a {
     color: white !important;
     text-transform: lowercase;
-    font-weight: 350;
+    font-weight: 600;
     transition: color 0.3s;
     &:hover {
       color: #00BCD4 !important;
@@ -54,11 +54,28 @@
 // Site footer
 
 .site-footer {
-  margin: 2em 0;
+  text-align: center;
+  color: white;
   line-height: 1.2em;
-
+  .site-footer-contact {
+    background-color: #292E37;
+    list-style: none;
+    p {
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      padding: 0 15px;
+    }
+  }
   .site-footer-cc {
-    margin-top: 2rem;
+    background-color: black;
+  }
+  .site-footer-cc, .site-footer-contact {
+    padding: 20px 0;
   }
 }
 
@@ -81,7 +98,7 @@
 
 // Site main feature
 .background-tint {
-  background-color: rgba(0, 80, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
 }
 .feature {
