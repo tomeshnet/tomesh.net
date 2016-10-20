@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-- We are a decentralized grassroots group of volunteers who started tomesh at [CivicTechTO](https://civictech.ca)
+* We are a decentralized grassroots group of volunteers who started tomesh at [CivicTechTO](https://civictech.ca)
 - We have been working on building a community network since early 2016
 - We are based in Toronto with connections to other mesh projects worldwide
 - We are creating a mesh network using off-the-shelf hardware and open-source technology
