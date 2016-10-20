@@ -3,18 +3,12 @@ layout: page
 title: About
 ---
 
-* We are a decentralized grassroots group of volunteers who started tomesh at [CivicTechTO](https://civictech.ca)
-- We have been working on building a community network since early 2016
-- We are based in Toronto with connections to other mesh projects worldwide
-- We are creating a mesh network using off-the-shelf hardware and open-source technology
-- Through building community-owned infrastructure we are hoping to address internet access barriers for people in Toronto
+Based in Toronto, we are a grassroots and decentralized group of volunteers who started Toronto Mesh at [CivicTechTO](https://civictech.ca) in early 2016.  Through building community-owned infrastructure using off-the-shelf hardware and open-source technology, we are hoping to address barriers to internet access in our city. There are many ways that people can [be involved]({{ site.baseurl }}/get-involved).
 
 ## Our Efforts
 
 Over the past 8 months, Toronto Mesh has been working to build a community network using peer-to-peer, decentralized mesh network technology.
 A mesh network consists of routers (or ‘nodes’) spread throughout the city with no single internet service provider or central servers. All nodes cooperate in the distribution of data, serving as a separate and redundant network (description via [NYCmesh](https://nycmesh.net/)).
-
-You can check out a more detailed account of our progress on the [timeline](#).
 
 ## Vision
 
