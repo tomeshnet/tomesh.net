@@ -1,4 +1,4 @@
-// Site header
+// Site navigation
 
 .site-header {
   background-color: black;
@@ -28,27 +28,60 @@
   }
 }
 
-// Site navigation
-
 .nav {
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-
   li {
     display: inline-block;
     padding-right: $base-padding;
   }
 }
 
-// Site sections
 
-.site-section {
-  border-top: 1px solid #eee;
-  margin: 2rem 0;
-  padding: 2rem 0;
+// Site main feature
+.background-tint {
+  background-color: $black-color-transparent;
+  background-blend-mode: multiply;
+}
+.feature {
+  position: relative;
+  background-image: url(/mesh.png);
+  span {
+    color: $blue-color-light;
+  }
+  & .content {
+    padding: 110px 0 30px 0;
+  }
+  h1 {
+    font-size: 450%;
+    color: white;
+  }
+  p {
+    font-size: 170%;
+    color: white;
+  }
+  & .attribution {
+    color: $grey-color-light;
+    font-size: 80%;
+  }
+}
+
+// Site featurettes
+
+.featurette {
+  padding: 60px 0;
+  &:nth-child(odd) {
+    background-color: $grey-color-lighter;
+  }
+  h1 {
+    color: $blue-color-light;
+  }
+  img {
+    padding: 20px;
+  }
 }
 
 // Site footer
@@ -58,7 +91,7 @@
   color: white;
   line-height: 1.2em;
   .site-footer-contact {
-    background-color: #292E37;
+    background-color: $grey-color-gunmetal;
     list-style: none;
     p {
       font-weight: bold;
@@ -79,11 +112,6 @@
   }
 }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-}
-
 // Post header
 
 .post-header {
@@ -94,47 +122,4 @@
 
 .notice {
   margin: 4em 0;
-}
-
-// Site main feature
-.background-tint {
-  background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: multiply;
-}
-.feature {
-  position: relative;
-  background-image: url(/mesh.png);
-  span {
-    color: #00BCD4;
-  }
-  & .content {
-    padding: 110px 0 30px 0;
-  }
-  h1 {
-    font-size: 450%;
-    color: white;
-  }
-  p {
-    font-size: 170%;
-    color: white;
-  }
-  & .attribution {
-    color: hsl(0,0%, 80%);
-    font-size: 80%;
-  }
-}
-
-// Site featurettes
-
-.featurette {
-  padding: 60px 0;
-  &:nth-child(odd) {
-    background-color: hsl(0, 0%, 95%);
-  }
-  h1 {
-    color: #00BCD4;
-  }
-  img {
-    padding: 20px;
-  }
 }

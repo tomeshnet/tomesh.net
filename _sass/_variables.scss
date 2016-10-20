@@ -9,13 +9,19 @@ $base-padding: $base-margin-bottom * 2;
 
 $spacing-unit:     30px;
 
+// site-wide colors
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
+// general colors
 $grey-color:       #828282;
+$grey-color-lighter: hsl(0, 0%, 95%);
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$grey-color-gunmetal: #292E37;
+$blue-color-light: #00BCD4;
+$black-color-transparent: rgba(0, 0, 0, 0.7);
 
 // Width of the content area
 $content-width:    760px;
