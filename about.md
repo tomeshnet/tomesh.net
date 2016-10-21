@@ -7,7 +7,7 @@ Based in Toronto, we are a grassroots and decentralized group of volunteers who 
 
 ## Our Efforts
 
-Over the past 8 months, Toronto Mesh has been working to build a community network using peer-to-peer, decentralized mesh network technology.
+Since January 2016, Toronto Mesh has been working to build a community network using peer-to-peer, decentralized mesh network technology.
 A mesh network consists of routers (or ‘nodes’) spread throughout the city with no single internet service provider or central servers. All nodes cooperate in the distribution of data, serving as a separate and redundant network (description via [NYCmesh](https://nycmesh.net/)).
 
 ## Vision
