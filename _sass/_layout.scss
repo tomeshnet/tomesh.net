@@ -26,6 +26,9 @@
   &:visited {
     color: $grey-color-dark;
   }
+  #site-logo {
+    width: 30px;
+  }
 }
 
 .nav {
@@ -48,7 +51,7 @@
 }
 .feature {
   position: relative;
-  background-image: url(/mesh.png);
+  background-image: url(/images/mesh.png);
   span {
     color: $blue-color-light;
   }
@@ -97,6 +100,7 @@
       font-weight: bold;
     }
     ul {
+      margin-bottom: 0;
       padding-left: 0;
     }
     li {
@@ -111,7 +115,9 @@
     padding: 20px 0;
   }
 }
-
+.post {
+  padding: 40px 0 ;
+}
 // Post header
 
 .post-header {
