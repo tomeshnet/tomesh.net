@@ -27,7 +27,7 @@ exclude: [scripts]
 
 # Events pagination
 paginate: 6
-paginate_path: "events/page:num"
+paginate_path: "events/page-:num"
 
 # Jekyll gems
 gems: [jekyll-paginate]

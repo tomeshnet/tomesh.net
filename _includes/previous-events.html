@@ -3,7 +3,7 @@
       <h2>Previous Events</h2>
       <div class="row">
           {% assign isPrevEvent = 0 %}
-          {% for post in paginator.posts reversed %}
+          {% for post in paginator.posts %}
             {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
             {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
@@ -30,18 +30,18 @@
           {% endfor %}
       </div>
       <div class="row">
-          {% if isPrevEvent == 0 %}
-            <p>No previous events.</p>
-          {% endif %}
+        {% if isPrevEvent == 0 %}
+          <p>No previous events.</p>
+        {% endif %}
       </div>
 
       <!-- Pagination links -->
       <div class="pagination">
         {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="previous button">Previous</a>
+          <a href="{{ paginator.previous_page_path }}" class="previous button">Newer Events</a>
         {% endif %}
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="next button">Next</a>
+          <a href="{{ paginator.next_page_path }}" class="next button">Older Events</a>
         {% endif %}
       </div>
   </section> <!-- /.previous-events -->
