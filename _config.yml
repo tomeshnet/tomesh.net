@@ -24,3 +24,10 @@ future: true # for events set in the future to show up
 
 # Excluded folders
 exclude: [scripts]
+
+# Events pagination
+paginate: 6
+paginate_path: "events/page-:num"
+
+# Jekyll gems
+gems: [jekyll-paginate]
