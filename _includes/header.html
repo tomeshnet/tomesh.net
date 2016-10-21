@@ -13,9 +13,11 @@
     <nav class="nav" role="navigation" aria-label="Primary Menu">
       <ul>
       {% for page in site.pages %}
-        {% if page.title and page.title != 'Page Not Found' %}
-        <li><a class="nav-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        {% endif %}
+        {% unless page.url contains '/events/page' %}
+          {% if page.title and page.title != 'Page Not Found' %}
+            <li><a class="nav-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endunless %}
       {% endfor %}
       </ul> <!-- .nav -->
     </nav>
