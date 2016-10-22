@@ -38,17 +38,18 @@ layout: default
 <section class="featurette">
   <div class="container">
     <div class="row">
-      <div class="six columns">
-        <img src="https://static.pexels.com/photos/24980/pexels-photo-24980.jpg" alt="space" />
+      <div class="three columns">
+        <a href="{{ site.baseurl }}/events" role="link" alt="Toronto Mesh Calendar"><i class="fa fa-calendar fa-5x"></i></a>
       </div>
-      <div class="six columns">
-        <h1>Check out an Event</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-        <a class="button button-primary" href="{{ site.baseurl }}/events" role="link">See More Events</a>
+      <div class="nine columns">
+        <h1>Our Next Event</h1>
+        {% include next-event.html %}
+        <a class="button button-primary" href="{{ site.baseurl }}/events" role="link">More Events</a>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section class="featurette">
