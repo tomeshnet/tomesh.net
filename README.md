@@ -9,13 +9,34 @@ All tomesh.net **code** at <a xmlns:cc="http://creativecommons.org/ns#" href="ht
 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Tomesh.net website</span> **content and documentation** is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 ## Getting Involved
-We are still in the early stages and would love involvement from more people!
+We would love involvement from more people!
 If you notice any errors or would like to submit changes or add content to our website please see our [Contributing Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md).
 
 In addition, you can provide feedback by:
-* adding a comment to the [issue tracker](https://github.com/tomeshnet/tomesh.net/issues).
+* adding a comment to the [issue tracker](https://github.com/tomeshnet/tomesh.net/issues)
 * emailing us at [hello@tomesh.net](mailto:hello@tomesh.net)
-* speaking with us on the `#tomesh` channel in [CivicTechTO](http://civictech.ca/)'s slack ([get an invite](https://civictechto-slack-invite.herokuapp.com/))
+* speaking with us on our chat at [`#tomesh:chat.tomesh.net`](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
+
+## Content
+
+Our website content is primarily written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and the key pages are:
+
+~~~
+Home Page (index.html)
+├── About (about.md)
+├── Events (events.md)
+│   └── <each event has its own page under _posts/>
+├── Get Involved (get-involved.md)
+├── Contact (contact.md)
+└── Code of Conduct (code-of-conduct.md)
+~~~
+
+Much of the content does not change, we primarily add new events.
+
+### Events
+New events are added as new `.md` files in the [`_posts/`](https://github.com/tomeshnet/tomesh.net/tree/master/_posts) directory using an [event template](https://github.com/tomeshnet/tomesh.net/tree/master/_posts/_event-template.md).
+
+We request you copy the template if you are submitting  a new event.
 
 ## Development
 
