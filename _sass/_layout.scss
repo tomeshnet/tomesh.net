@@ -1,5 +1,4 @@
 // Site navigation
-
 .site-header {
   background-color: black;
   .container {
@@ -73,7 +72,6 @@
 }
 
 // Site featurettes
-
 .featurette {
   padding: 60px 0;
   &:nth-child(odd) {
@@ -88,7 +86,6 @@
 }
 
 // Site footer
-
 .site-footer {
   color: white;
   line-height: 1.2em;
@@ -118,14 +115,22 @@
 .post {
   padding: 40px 0 ;
 }
-// Post header
 
+
+// Post header
 .post-header {
   margin-bottom: 1.5em;
 }
 
-// Notices
 
+// Notices
 .notice {
   margin: 4em 0;
+}
+
+
+// Pagination
+.pagination {
+  width: 50%;
+  margin: 0 auto;
 }
