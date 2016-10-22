@@ -1,6 +1,6 @@
 ---
 layout: post
-title: October Reading Group
+title: November Reading Group
 slug: reading-group-nov
 text: Come talk about networks at our monthly reading group.
 location: HackLab.TO
