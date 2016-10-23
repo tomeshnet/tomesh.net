@@ -1,7 +1,7 @@
 // Site navigation
+
 .site-header {
   background-color: $black;
-  min-height: 55px;
   display: flex;
   align-items: center;
   -webkit-font-smoothing: antialiased;
@@ -15,17 +15,26 @@
 
   .nav-item {
     color: $white;
-    transition: color 0.3s ease-in-out;
-    padding-bottom: 15px;
+    transition: color 180ms ease-in-out, background 180ms ease-in-out;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: $base-padding;
 
     &:hover {
       color: $blue-color-light;
-      border-bottom: 3px solid $blue-color-light;
+      background: rgba($white, 0.15);
     }
-  }
 
-  .active {
-    border-bottom: 3px solid $blue-color-light;
+    &:focus {
+      color: $white;
+      background: rgba($white, 0.25);
+    }
+
+    &.active {
+      color: $white;
+      background: rgba($white, 0.3);
+    }
   }
 }
 
@@ -51,18 +60,16 @@
     padding: 0;
     list-style: none;
   }
-
-  li {
-    padding-right: $base-padding;
-  }
 }
 
 
 // Site main feature
+
 .background-tint {
   background-color: $black-color-transparent;
   background-blend-mode: multiply;
 }
+
 .feature {
   position: relative;
   background-image: url(/images/mesh.png);
@@ -101,6 +108,7 @@
 }
 
 // Site footer
+
 .site-footer {
   color: $white;
   line-height: 1.2em;
