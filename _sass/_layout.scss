@@ -1,43 +1,58 @@
 // Site navigation
 .site-header {
-  background-color: black;
+  background-color: $black;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   .container {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
   }
-  a {
-    color: white !important;
-    text-transform: lowercase;
-    font-weight: 600;
-    transition: color 0.3s;
+
+  .nav-item {
+    color: $white;
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 15px;
+
     &:hover {
-      color: #00BCD4 !important;
+      color: $blue-color-light;
+      border-bottom: 3px solid $blue-color-light;
     }
+  }
+
+  .active {
+    border-bottom: 3px solid $blue-color-light;
   }
 }
 
 .site-title {
+  font-size: 1em;
+  font-weight: 700;
   margin: 0;
   flex-grow: 1;
 
-  &,
-  &:visited {
-    color: $grey-color-dark;
+  a {
+    color: $white;
   }
-  #site-logo {
+
+  .site-logo {
     width: 30px;
   }
 }
 
 .nav {
   ul {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
   }
+
   li {
-    display: inline-block;
     padding-right: $base-padding;
   }
 }
@@ -59,11 +74,11 @@
   }
   h1 {
     font-size: 450%;
-    color: white;
+    color: $white;
   }
   p {
     font-size: 170%;
-    color: white;
+    color: $white;
   }
   & .attribution {
     color: $grey-color-light;
@@ -87,31 +102,40 @@
 
 // Site footer
 .site-footer {
-  color: white;
+  color: $white;
   line-height: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   .site-footer-contact {
     text-align: center;
     background-color: $grey-color-gunmetal;
     list-style: none;
+
     p {
       font-weight: bold;
     }
+
     ul {
       margin-bottom: 0;
       padding-left: 0;
     }
+
     li {
       display: inline-block;
       padding: 0 15px;
     }
   }
+
   .site-footer-cc {
-    background-color: black;
+    background-color: $black;
   }
+
   .site-footer-cc, .site-footer-contact {
     padding: 20px 0;
   }
 }
+
 .post {
   padding: 40px 0 ;
 }
