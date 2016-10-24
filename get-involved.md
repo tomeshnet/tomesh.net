@@ -5,9 +5,9 @@ title: Get Involved
 
 Interested? You can start working with us in a few quick steps:
 
-**1.** Come say hi to us on our {% include icon-matrix.html %} chat, anyone can [join or visit as a guest](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
+**1.** Come say hi on our {% include icon-matrix.html %} chat
 
-  - Join the `#tomesh` channel, and introduce yourself!
+  - Join the `#tomesh` channel or visit as a guest, and introduce yourself!
 
 **2.** Check out our [vision]({{ site.baseurl }}/about) and [code of conduct]({{ site.baseurl }}/code-of-conduct)
 
@@ -15,9 +15,11 @@ Interested? You can start working with us in a few quick steps:
 
   - Events include in-person and virtual meetups and workshops
 
-**4.** If you have an idea or time to help, [work with us]({{ page.url | prepend: site.baseurl }})
+**4.** If you have an idea or time to help, [work with us](#work-with-us)
 
   - The current status of the project is tracked on our publicly-viewable [Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) and [GitHub account](https://github.com/tomeshnet)
+
+<a name="work-with-us"></a>
 
 ## How do I work with you?
 
