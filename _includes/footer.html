@@ -1,27 +1,27 @@
 <footer class="site-footer">
+  <div class="container">
 
-  <!-- contact links -->
-  <div class="row site-footer-contact">
-    <div class="container">
-      <ul>
-        <li>{% include icon-matrix.html %}</li>
-        {% if site.email %}
-        <li>{% include icon-email.html %}</li>
-        {% endif %}
-        {% if site.github_username %}
-        <li>{% include icon-github.html username=site.github_username %}</li>
-        {% endif %}
-        {% if site.twitter_username %}
-        <li>{% include icon-twitter.html username=site.twitter_username %}</li>
-        {% endif %}
-      </ul>
+    <div class="row">
+      <!-- contact links -->
+      <div class="twelve columns site-footer-contact">
+        <ul>
+          <li>{% include icon-matrix.html %}</li>
+          {% if site.email %}
+          <li>{% include icon-email.html %}</li>
+          {% endif %}
+          {% if site.github_username %}
+          <li>{% include icon-github.html username=site.github_username %}</li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>{% include icon-twitter.html username=site.twitter_username %}</li>
+          {% endif %}
+        </ul>
+      </div>
+      <!-- copyright info -->
+      <div class="twelve columns site-footer-cc">
+        <p>&#169; 2016 Toronto Mesh. Our <a href="/code-of-conduct/">Code of conduct</a>.<br />This website content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a> license.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- copyright info -->
-  <div class="row site-footer-cc">
-    <div class="container">
-      <small>&#169; 2016 Toronto Mesh. This website content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a> license.</small></p>
-    </div>
   </div>
 </footer>

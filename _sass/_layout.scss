@@ -119,38 +119,42 @@
 // Site footer
 
 .site-footer {
-  color: $white;
-  line-height: 1.2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 3em 0;
+  font-size: 0.85em;
 
   .site-footer-contact {
-    text-align: center;
-    background-color: $grey-color-gunmetal;
-    list-style: none;
-
-    p {
-      font-weight: bold;
-    }
-
     ul {
-      margin-bottom: 0;
-      padding-left: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     li {
-      display: inline-block;
-      padding: 0 15px;
+      margin-right: 2em;
+      padding: 5px 0;
+      position: relative;
+
+      @media (max-width: $content-width) {
+        flex-basis: 50%;
+        margin: 0;
+      }
+    }
+
+    a {
+      color: $grey-color;
+
+      &:hover {
+        color: $grey-color-dark
+      }
     }
   }
 
   .site-footer-cc {
-    background-color: $black;
+    margin-top: 1.5em;
   }
 
-  .site-footer-cc, .site-footer-contact {
-    padding: 20px 0;
-  }
 }
 
 .post {
