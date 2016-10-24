@@ -12,14 +12,10 @@
 
     <nav class="nav" role="navigation" aria-label="Primary Menu">
       <ul>
-      {% assign current = page.url | split: '/' %}
-      {% for page in site.pages %}
-        {% unless page.url contains '/events/page' %}
-          {% if page.title and page.title != 'Page Not Found' %}
-            <li><a class="nav-item {% if page.url contains current[1] %}active{% endif %}" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-          {% endif %}
-        {% endunless %}
-      {% endfor %}
+        <li><a class="nav-item" href="/about">about</a></li>
+        <li><a class="nav-item" href="/get-involved">get involved</a></li>
+        <li><a class="nav-item" href="/events">events</a></li>
+        <li><a class="nav-item" href="/contact">contact</a></li>
       </ul> <!-- .nav -->
     </nav>
 
