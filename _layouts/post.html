@@ -8,10 +8,10 @@ layout: default
       <div class="event-time-location">
         <div class="event-meta">
           <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-          <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong></p></div>
+          <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
         <div class="event-meta">
-          <i class="icon fa fa-map-marker" aria-hidden="true"></i> 
-          <p class="event-location">{{ page.location }}</p>
+          <i class="icon fa fa-map-marker" aria-hidden="true"></i>
+          <p class="event-location"><a href="{{page.locationMap}}" target="_blank">{{ page.location }}</a></p>
         </div>
       </div>
     </header>
@@ -19,4 +19,7 @@ layout: default
       {{ content }}
     </div>
   </article>
+  <div class="row">
+    <a href="{{ site.baseurl }}/events" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Back to Events</a>
+  </div>
 </div>
