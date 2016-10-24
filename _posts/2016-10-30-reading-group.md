@@ -19,3 +19,4 @@ New people are always welcome. Come say hi on on  [#reading-networks:tomesh.net]
 Readings for {{ page.date | date: "%B"}}:
 
 - Raghavan, B., & Hasan, S. (2016). Macroscopically sustainable networking: On internet quines. In _Proceedings of the Second Workshop on Computing Within Limits_. Retrieved from [http://www1.icsi.berkeley.edu/~barath/papers/quine-limits16.pdf](http://www1.icsi.berkeley.edu/~barath/papers/quine-limits16.pdf)
+- Schneier, B. (2016 February). The Internet of Things Will Be the World's Biggest Robot. Retrieved from [https://www.schneier.com/blog/archives/2016/02/the_internet_of_1.html](https://www.schneier.com/blog/archives/2016/02/the_internet_of_1.html)
