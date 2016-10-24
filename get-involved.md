@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Get Involved
+order: 2
 ---
 
 Interested? You can start working with us in a few quick steps:

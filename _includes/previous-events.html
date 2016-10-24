@@ -2,6 +2,7 @@
   <section id="previous-events" class="site-section">
       <h2>Previous Events</h2>
       <div class="row">
+
           {% assign isPrevEvent = 0 %}
           {% for post in paginator.posts %}
             {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
@@ -12,7 +13,7 @@
             {% assign nowday = nowday | minus: 2 %}
             {% if postyear < nowyear or postday <= nowday and postyear <= nowyear %}
               {% assign isPrevEvent = 1 %}
-              <section class="twelve columns event-item">
+              <section class="six columns event-item">
                 <header>
                   <h4 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
                   <div class="event-time-location">
@@ -26,8 +27,10 @@
                   </div>
                 </header>
               </section>
+
             {% endif %}
           {% endfor %}
+
       </div>
       <div class="row">
         {% if isPrevEvent == 0 %}

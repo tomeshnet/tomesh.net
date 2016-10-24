@@ -3,21 +3,30 @@
     <h3 class="site-title">
       <a href="{{ site.baseurl }}/" rel="home">
         {% if page.url == '/' %}
-          <img class="site-logo" src="/images/tomesh-icon.svg" alt="Toronto Mesh Logo" />
+          <img class="site-logo" src="/images/tomesh-icon.svg" />
         {% else %}
           {{ site.title }}
         {% endif %}
       </a>
     </h3>
 
-    <nav class="nav" aria-label="Primary Menu">
+    <nav class="nav" role="navigation" aria-label="Primary Menu">
       <ul>
-        <li><a class="nav-item" href="/about">about</a></li>
-        <li><a class="nav-item" href="/get-involved">get involved</a></li>
-        <li><a class="nav-item" href="/events">events</a></li>
-        <li><a class="nav-item" href="/contact">contact</a></li>
+        {% assign current = page.url | split: '/' %}
+        {% assign sorted_pages = site.pages | sort: "order" %}
+          {% for page in sorted_pages %}
+           {% unless page.url contains '/code-of-conduct' %}
+             {% if page.title and page.title != 'Page Not Found' %}
+               <li>
+                 <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
+                    href="{{page.url}}">
+                    {{page.title}}
+                 </a>
+               </li>
+             {% endif %}
+            {% endunless %}
+        {% endfor %}
       </ul> <!-- .nav -->
     </nav>
-
   </div>
 </header>

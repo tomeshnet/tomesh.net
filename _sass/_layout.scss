@@ -65,13 +65,11 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .site-title {
-    padding: 10px 0;
-    text-align: center;
-  }
-}
 
+.event-item {
+  margin: 0;
+  padding-right: 20px;
+}
 // Site main feature
 
 .background-tint {
@@ -193,4 +191,16 @@
 .pagination {
   width: 50%;
   margin: 0 auto;
+}
+
+// mobile adjustments
+@media screen and (max-width: 500px) {
+  .site-title {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .site-header .container {
+    justify-content: center;
+  }
+
 }
