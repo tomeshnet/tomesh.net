@@ -82,25 +82,40 @@
 .feature {
   position: relative;
   background-image: url(/images/mesh.png);
+  background-size: cover;
+  background-position: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   span {
     color: $blue-color-light;
   }
-  & .content {
-    padding: 110px 0 30px 0;
+
+  .content {
+    padding: 140px 0 30px 0;
   }
   h1 {
     font-size: 450%;
+    margin: 0;
+    line-height: 1em;
     color: $white;
   }
-  p {
+  h2 {
     font-size: 170%;
+    margin: 0 0 1em;
+    font-weight: normal;
     color: $white;
   }
-  & .attribution {
-    color: $grey-color-light;
-    font-size: 80%;
+
+  .attribution {
+    color: rgba($white, 0.5);
+    margin: 1em 0;
+    display: inline-block;
+    font-size: 0.85em;
   }
 }
+
+
 
 // Site featurettes
 .featurette {
