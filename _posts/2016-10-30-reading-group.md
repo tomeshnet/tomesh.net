@@ -10,8 +10,13 @@ startTime: '13:00'
 endTime: '15:00'
 ---
 
-On the last Sunday of every month we meet to talk about network readings. In between we coordinate on  [#reading-networks:tomesh.net](https://chat.tomesh.net/#/room/#reading-networks:tomesh.net).
-
 Join us at [HackLab.TO](https://hacklab.to) for our **inaugural** monthly reading group! For this month we ask each person to select a short article covering some topic related to networks and share it in advance so other people can read. We will determine how we want to organize ourselves and what readings to focus on going forward.
 
-New people are always welcome. Come say hi on our chat, or email us at [{{ site.email }}](mailto:{{ site.email }}), to find out what we will be reading for the month!
+New people are always welcome. Come say hi on on  [#reading-networks:tomesh.net](https://chat.tomesh.net/#/room/#reading-networks:tomesh.net), or email us at [{{ site.email }}](mailto:{{ site.email }}), to find out what we will be reading for the month!
+
+***
+
+Readings for {{ page.date | date: "%B"}}:
+
+- Raghavan, B., & Hasan, S. (2016). Macroscopically sustainable networking: On internet quines. In _Proceedings of the Second Workshop on Computing Within Limits_. Retrieved from [http://www1.icsi.berkeley.edu/~barath/papers/quine-limits16.pdf](http://www1.icsi.berkeley.edu/~barath/papers/quine-limits16.pdf)
+- Schneier, B. (2016 February). The Internet of Things Will Be the World's Biggest Robot. Retrieved from [https://www.schneier.com/blog/archives/2016/02/the_internet_of_1.html](https://www.schneier.com/blog/archives/2016/02/the_internet_of_1.html)
