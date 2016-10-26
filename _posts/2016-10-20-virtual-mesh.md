@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual Mesh Hack Night
-slug: virtual-mesh-hack-night
+slug: virtual-mesh
 text: Join our virtual mesh from anywhere and play with distributed services.
 location: "#virtualmesh:tomesh.net"
 date: 2016-10-20
