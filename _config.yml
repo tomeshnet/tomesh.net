@@ -27,7 +27,7 @@ future: true # for events set in the future to show up
 exclude: [scripts]
 
 # Events pagination
-paginate: 6
+paginate: 8
 paginate_path: "events/page-:num"
 
 # Jekyll gems
