@@ -6,18 +6,15 @@ order: 2
 
 Interested? You can start working with us in a few quick steps:
 
-**1.** Come say hi on our {% include icon-matrix.html %} chat
-
+1. Come say hi on our {% include icon-matrix.html %} chat
   - Join the `#tomesh` channel or visit as a guest, and introduce yourself!
 
-**2.** Check out our [vision]({{ site.baseurl }}/about) and [code of conduct]({{ site.baseurl }}/code-of-conduct)
+2. Check out our [vision]({{ site.baseurl }}/about) and [code of conduct]({{ site.baseurl }}/code-of-conduct)
 
-**3.** Join us at one of our [events]({{ site.baseurl }}/events)!
-
+3. Join us at one of our [events]({{ site.baseurl }}/events)!
   - Events include in-person and virtual meetups and workshops
 
-**4.** If you have an idea or time to help, [work with us](#work-with-us)
-
+4. If you have an idea or time to help, [work with us](#work-with-us)
   - The current status of the project is tracked on our publicly-viewable [Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) and [GitHub account](https://github.com/tomeshnet)
 
 <a name="work-with-us"></a>
