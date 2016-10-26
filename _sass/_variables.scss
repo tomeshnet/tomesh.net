@@ -4,6 +4,7 @@ $base-font-size: 16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$base-heading-line-height: 1.2;
 $base-margin-bottom: 1em;
 $base-padding: $base-margin-bottom * 2;
 
@@ -21,7 +22,6 @@ $grey-color: #666666;
 $grey-color-lighter: hsl(0, 0%, 95%);
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-$grey-color-gunmetal: #292E37;
 $blue-color-light: #00BCD4;
 $black-color-transparent: rgba($black, 0.7);
 
