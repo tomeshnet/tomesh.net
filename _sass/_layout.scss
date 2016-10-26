@@ -1,6 +1,26 @@
+// Events
+
 .event-item {
   margin: 0;
   padding-right: 20px;
+}
+
+.event-time-location {
+  margin-bottom: 1rem;
+
+  .icon {
+    width: 0;
+    margin-right: 1.5em;
+  }
+
+  .event-time {
+    margin-bottom: 0;
+  }
+}
+
+.event-meta {
+  display: flex;
+  margin-bottom: .5em;
 }
 
 // Site main feature
@@ -46,9 +66,8 @@
   }
 }
 
-
-
 // Site featurettes
+
 .featurette {
   padding: 60px 0;
   &:nth-child(odd) {
@@ -62,28 +81,25 @@
   }
 }
 
-
 .post {
   padding: 40px 0 ;
 }
 
-
 // Post header
+
 .post-header {
   margin-bottom: 1.5em;
 }
 
-
 // Notices
+
 .notice {
   margin: 4em 0;
 }
 
-
 // Pagination
+
 .pagination {
   width: 50%;
   margin: 0 auto;
 }
-
-// mobile adjustments
