@@ -1,0 +1,40 @@
+// Site footer
+
+.site-footer {
+  margin: 3em 0;
+  font-size: 0.85em;
+
+  .site-footer-contact {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin-right: 2em;
+      padding: 5px 0;
+      position: relative;
+
+      @media (max-width: $content-width) {
+        flex-basis: 50%;
+        margin: 0;
+      }
+    }
+
+    a {
+      color: $grey-color;
+
+      &:hover {
+        color: $grey-color-dark
+      }
+    }
+  }
+
+  .site-footer-cc {
+    margin-top: 1.5em;
+  }
+
+}
