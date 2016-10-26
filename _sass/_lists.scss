@@ -4,13 +4,17 @@ ul {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: $spacing-unit;
-  margin-top: 0;
   margin-bottom: $base-margin-bottom;
+}
+
+ol {
+  list-style: decimal;
 }
 
 li {
   > ul,
   > ol {
-    margin-bottom: 0;
+    margin: 0 0 $base-margin-bottom;
+    padding-left: $spacing-unit;
   }
 }

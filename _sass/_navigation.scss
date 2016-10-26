@@ -48,7 +48,7 @@
     transition: color 180ms ease-in-out, background 180ms ease-in-out;
     display: inline-flex;
     white-space: nowrap;
-    padding: 0 $base-padding;
+    padding: 0 20px;
 
     &:hover {
       color: $blue-color-light;
