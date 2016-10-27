@@ -108,14 +108,14 @@
 }
 
 .event-time-location {
-  margin-bottom: 1rem;
 
   .icon {
     width: 0;
     margin-right: 1.5em;
   }
 
-  .event-time {
+  .event-time, 
+  .event-location {
     margin-bottom: 0;
   }
 }
@@ -123,6 +123,11 @@
 .event-meta {
   display: flex;
   margin-bottom: .5em;
+}
+
+.events-home-grid {
+  padding: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 // Site main feature
@@ -133,22 +138,21 @@
 }
 
 .feature {
-  position: relative;
-  background-image: url(/images/mesh.png);
+  background-image: url(/images/mesh.jpg);
   background-size: cover;
   background-position: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  span {
-    color: $blue-color-light;
+  a {
+    color: rgba($white, 0.75);
   }
 
   .content {
     padding: 140px 0 30px 0;
   }
   h1 {
-    font-size: 450%;
+    font-size: 360%;
     margin: 0;
     line-height: 1em;
     color: $white;
@@ -161,7 +165,7 @@
   }
 
   .attribution {
-    color: rgba($white, 0.5);
+    color: rgba($white, 0.75);
     margin: 1em 0;
     display: inline-block;
     font-size: 0.85em;
@@ -176,10 +180,28 @@
     background-color: $grey-color-lighter;
   }
   h1 {
-    color: $blue-color-light;
+    font-weight: normal;
+    font-size: 2.7rem;
   }
-  img {
-    padding: 20px;
+}
+
+.featurette-events-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featurette-events-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: $grey-color-light;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    display: none;
   }
 }
 
