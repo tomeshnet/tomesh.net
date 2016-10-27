@@ -17,8 +17,8 @@ body {
   background-color: $background-color;
 }
 
-::-moz-selection { background: yellow; }
-::selection { background: yellow; }
+::-moz-selection { background: $yellow; }
+::selection { background: $yellow; }
 
 
 // Images

@@ -6,6 +6,10 @@
   -moz-osx-font-smoothing: grayscale;
   line-height: 55px;
 
+  @media screen and (max-width: $on-palm) {
+    line-height: 44px;
+  }
+
   a {
     color: $white;
   }
@@ -26,10 +30,6 @@
   margin: 0;
   flex-grow: 1;
   padding: 10px 0;
-
-  .site-logo {
-    width: 30px;
-  }
 
   @media screen and (max-width: $on-palm) {
     text-align: center;
@@ -53,6 +53,10 @@
     display: inline-flex;
     white-space: nowrap;
     padding: 0 20px;
+
+    @media screen and (max-width: $on-palm) {
+      padding: 0 15px;
+    }
 
     &:hover {
       color: $blue-color-light;

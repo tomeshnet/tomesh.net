@@ -41,7 +41,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid $blue-color-light;
   outline: 0; }
 label,
 legend {
