@@ -5,13 +5,15 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "normalize";
 @import "variables";
-@import "skeleton";
 @import "fonts";
 @import "font-awesome";
 @import "base";
 @import "navigation";
 @import "footer";
 @import "layout";
+@import "forms";
+@import "buttons";
+@import "tables";
 @import "announcements";
 @import "typography";
 @import "lists";

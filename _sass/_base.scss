@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -40,7 +41,12 @@ figcaption {
 // Links
 
 a {
+  color: $brand-color;
   text-decoration: none;
+
+  &:hover {
+    color: darken($brand-color, 15%);
+  }
 }
 
 
@@ -59,12 +65,23 @@ blockquote {
   }
 }
 
+// hr
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
+}
+
 
 // Code formatting
 
 pre,
 code {
+  margin: 0 .2rem;
   font-size: 15px;
+  white-space: nowrap;
   border: 1px solid rgba($brand-color, 0.1);
   border-radius: 3px;
   background-color: rgba($brand-color, 0.05);
@@ -79,8 +96,9 @@ pre {
   overflow-x: auto;
 
   > code {
+    display: block;
     border: 0;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 1rem 0;
+    white-space: pre;
   }
 }
