@@ -190,6 +190,11 @@
     font-weight: normal;
     font-size: 2.7rem;
   }
+  img {
+    @media screen and (max-width: $on-palm) {
+      margin: 1em 0;
+    }
+  }
 }
 
 .featurette-events-row {
