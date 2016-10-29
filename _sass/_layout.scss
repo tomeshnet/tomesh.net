@@ -231,9 +231,5 @@
 // Pagination
 
 .pagination {
-  width: 50%;
-  margin: 0 auto;
-  @media screen and (max-width: $on-palm) {
-    width: 100%;
-  }
+  text-align: center;
 }
