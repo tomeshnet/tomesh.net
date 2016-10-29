@@ -1,20 +1,25 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title heading" itemprop="name headline">{{ page.title }}</h1>
-    <div class="event-time-location">
-      <div class="event-meta">
-        <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-        <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong></p></div>
-      <div class="event-meta">
-        <i class="icon fa fa-map-marker" aria-hidden="true"></i> 
-        <p class="event-location">{{ page.location }}</p>
+<div class="container">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title heading" itemprop="name headline">{{ page.title }}</h1>
+      <div class="event-time-location">
+        <div class="event-meta">
+          <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
+          <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
+        <div class="event-meta">
+          <i class="icon fa fa-map-marker" aria-hidden="true"></i>
+          <p class="event-location"><a href="{{page.locationMap}}" target="_blank">{{ page.location }}</a></p>
+        </div>
       </div>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
     </div>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+  </article>
+  <div class="row">
+    <a href="{{ site.baseurl }}/events" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Back to Events</a>
   </div>
-</article>
+</div>

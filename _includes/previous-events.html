@@ -1,0 +1,50 @@
+<!-- Event Grid Section -->
+  <section id="previous-events" class="site-section">
+      <h2>Previous Events</h2>
+      <div class="row">
+
+          {% assign isPrevEvent = 0 %}
+          {% for post in paginator.posts %}
+            {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
+            {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
+            {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
+            {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
+            {% assign postday = postday | plus: 0 %}
+            {% assign nowday = nowday | minus: 2 %}
+            {% if postyear < nowyear or postday <= nowday and postyear <= nowyear %}
+              {% assign isPrevEvent = 1 %}
+              <section class="six columns event-item">
+                <header>
+                  <h4 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                  <div class="event-time-location">
+                    <div class="event-meta">
+                      <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
+                      <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{post.endTime | date:"%-I:%M%P "}}</strong></p></div>
+                    <div class="event-meta">
+                      <i class="icon fa fa-map-marker" aria-hidden="true"></i>
+                      <p class="event-location">{{ post.location }}</p>
+                    </div>
+                  </div>
+                </header>
+              </section>
+
+            {% endif %}
+          {% endfor %}
+
+      </div>
+      <div class="row">
+        {% if isPrevEvent == 0 %}
+          <p>No previous events.</p>
+        {% endif %}
+      </div>
+
+      <!-- Pagination links -->
+      <div class="pagination">
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next button">Older Events</a>
+        {% endif %}
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous button">Newer Events</a>
+        {% endif %}
+      </div>
+  </section> <!-- /.previous-events -->

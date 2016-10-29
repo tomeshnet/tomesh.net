@@ -12,6 +12,7 @@ description: We are building a mesh network in Toronto.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomesh.net" # the base hostname & protocol for your site
 github_username: tomeshnet
+twitter_username: tomeshnet
 
 # Collections
 collections:
@@ -24,3 +25,10 @@ future: true # for events set in the future to show up
 
 # Excluded folders
 exclude: [scripts]
+
+# Events pagination
+paginate: 8
+paginate_path: "events/page-:num"
+
+# Jekyll gems
+gems: [jekyll-paginate]

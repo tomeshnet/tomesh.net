@@ -1,5 +1,32 @@
 <header class="site-header">
   <div class="container">
-    <h1 class="site-title"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <h3 class="site-title">
+      <a href="{{ site.baseurl }}/" rel="home">
+        {% if page.url == '/' %}
+          <img class="site-logo" src="/images/tomesh-icon.svg" alt="{{ site.title }} Logo" //>
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </a>
+    </h3>
+
+    <nav class="nav" role="navigation" aria-label="Primary Menu">
+      <ul>
+        {% assign current = page.url | split: '/' %}
+        {% assign sorted_pages = site.pages | sort: "order" %}
+          {% for page in sorted_pages %}
+           {% unless page.url contains '/events/page'%}
+             {% if page.order > 0 %}
+               <li>
+                 <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
+                    href="{{ page.url }}">
+                    {{ page.title }}
+                 </a>
+               </li>
+             {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ul> <!-- .nav -->
+    </nav>
   </div>
 </header>
