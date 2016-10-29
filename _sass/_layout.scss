@@ -131,6 +131,12 @@
   margin: 0.5em 0;
 }
 
+.events-subscribe-container {
+  @media screen and (max-width: $on-palm) {
+    text-align: center;
+  }
+}
+
 // Site main feature
 
 .background-tint {
