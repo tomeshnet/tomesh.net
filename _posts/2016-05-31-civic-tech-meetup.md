@@ -2,8 +2,8 @@
 layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
-location: Civic Tech TO, The DMZ
-locationMap:
+location: Civic Tech TO, Ryerson DMZ, 10 Dundas St E
+locationMap: http://osm.org/go/ZX6Btl6G_?m=
 attendees: 4
 date: 2016-05-31
 startTime: '19:30'

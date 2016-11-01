@@ -3,7 +3,7 @@ layout: post
 title: Outreach Work Session
 slug: outreach-session
 text: Join us at our work-session for Toronto Mesh outreach.
-location:
+location: College & Ossington
 locationMap: http://osm.org/go/ZX6BNoGot-?m=
 date: 2016-05-20
 startTime: '18:30'

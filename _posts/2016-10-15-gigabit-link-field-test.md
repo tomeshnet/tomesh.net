@@ -3,8 +3,8 @@ layout: post
 title: Gigabit Link Field Test
 slug: gigabit-link-field-test
 text: Prototype gigabit link using a pair of Ubiquiti LiteBeam ac.
-location: Tim Hortons near Tommy Thompson Park
-locationMap: https://www.google.ca/maps/place/Tim+Hortons/@43.6596769,-79.3312397,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb9c427a69e1:0x183e595421b317d5!8m2!3d43.659673!4d-79.329051
+location: Tim Hortons near Tommy Thompson Park, 731 Eastern Ave
+locationMap: http://osm.org/go/ZX6DPddzo-?m=
 date: 2016-10-15
 startTime: '09:00'
 endTime: '15:00'

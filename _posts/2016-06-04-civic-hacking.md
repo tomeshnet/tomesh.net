@@ -3,7 +3,7 @@ layout: post
 title: 'National Day of Civic Hacking hardware hack'
 slug: civic-hardware-hack
 text: 'We are hacking on the Toronto Mesh hardware with Civic Tech Toronto.'
-location: Ryerson University Student Learning Centre (SLC), 341 Yonge St
+location: Ryerson Student Learning Centre (SLC), 341 Yonge St
 locationMap: http://osm.org/go/ZX6BtxOJT?m=
 date: 2016-06-04
 startTime: '10:00'

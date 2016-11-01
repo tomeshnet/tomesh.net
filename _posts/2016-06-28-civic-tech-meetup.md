@@ -2,8 +2,8 @@
 layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
-location: Civic Tech TO, CivicAction
-locationMap:
+location: Civic Tech TO, CivicAction, 800-110 Yonge St
+locationMap: http://osm.org/go/ZX6BssJ39?m=
 attendees: 3
 date: 2016-06-28
 startTime: '19:40'
