@@ -23,30 +23,6 @@
             {% endif %}
           {% endfor %}
       </div>
-      <input id="toggle" type="button" class="button" value="Show All Upcoming Events">
-      <label for="toggle">Hidden Kitten</label>
-      <div id="expand">
-        <section>
-          {% assign isEvent = 0 %}
-          {% assign eventCount = 0 %}
-          {% assign eventPosts = site.posts | reverse %}
-          {% for post in eventPosts %}
-            {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
-            {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
-            {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
-            {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
-            {% assign postday = postday | plus: 0 %}
-            {% assign nowday = nowday | minus: 2 %}
-            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 2 %}
-              {% assign isEvent = 1 %}
-              {% assign eventCount = eventCount | plus: 1 %}
-              <section class="six columns event-item">
-                {% include event.html %}
-              </section>
-            {% endif %}
-          {% endfor %}
-        </section>
-      </div>
 
       <div class="row">
           {% if isEvent == 0 %}
