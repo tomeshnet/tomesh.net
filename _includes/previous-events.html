@@ -15,11 +15,11 @@
               {% assign isPrevEvent = 1 %}
               <section class="six columns event-item">
                 <header>
-                  <h4 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                  <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
                   <div class="event-time-location">
                     <div class="event-meta">
                       <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-                      <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{post.endTime | date:"%-I:%M%P "}}</strong></p></div>
+                      <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, {{post.startTime | date:"%-I:%M%P "}} – {{post.endTime | date:"%-I:%M%P "}}</p></div>
                     <div class="event-meta">
                       <i class="icon fa fa-map-marker" aria-hidden="true"></i>
                       <p class="event-location">{{ post.location }}</p>
@@ -27,7 +27,6 @@
                   </div>
                 </header>
               </section>
-
             {% endif %}
           {% endfor %}
 
