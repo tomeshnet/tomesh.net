@@ -13,8 +13,8 @@
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
             {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
             {% assign postday = postday | plus: 0 %}
-            {% assign nowday = nowday | minus: 2 %}
-            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 2 %}
+            {% assign nowday = nowday | minus: 0 %}
+            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 4 %}
               {% assign isEvent = 1 %}
               {% assign eventCount = eventCount | plus: 1 %}
               <section class="six columns event-item">
