@@ -1,38 +1,29 @@
 <!-- Event Grid Section -->
+{% assign eventPosts = site.posts | reverse %}
+
   <section id="event-grid" class="site-section">
       <h2>Upcoming Events</h2>
+      <!-- Default Events-->
       <div class="row">
           {% assign isEvent = 0 %}
           {% assign eventCount = 0 %}
-          {% assign eventPosts = site.posts | reverse %}
           {% for post in eventPosts %}
             {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
             {% capture postyear %}{{post.date | date: '%Y'}}{% endcapture %}
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
             {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
             {% assign postday = postday | plus: 0 %}
-            {% assign nowday = nowday | minus: 2 %}
-            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 2 %}
+            {% assign nowday = nowday | minus: 0 %}
+            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 4 %}
               {% assign isEvent = 1 %}
               {% assign eventCount = eventCount | plus: 1 %}
               <section class="six columns event-item">
-                <header>
-                  <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                  <div class="event-time-location">
-                    <div class="event-meta">
-                      <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-                      <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, <strong>{{post.startTime | date:"%-I:%M%P "}}</strong></p></div>
-                    <div class="event-meta">
-                      <i class="icon fa fa-map-marker" aria-hidden="true"></i>
-                      <p class="event-location">{{ post.location }}</p>
-                    </div>
-                  </div>
-                </header>
-                <div class="event-caption"><p>{{ post.text }}</p></div>
+                {% include event.html %}
               </section>
             {% endif %}
           {% endfor %}
       </div>
+
       <div class="row">
           {% if isEvent == 0 %}
             <p>No upcoming events.<br />
