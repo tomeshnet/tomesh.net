@@ -11,7 +11,13 @@ layout: default
           <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
         <div class="event-meta">
           <i class="icon fa fa-map-marker" aria-hidden="true"></i>
-          <p class="event-location"><a href="{{page.locationMap}}" target="_blank">{{ page.location }}</a></p>
+          <p class="event-location">
+          {% if page.locationLink %}
+            <a href="{{page.locationLink}}" target="_blank">{{ page.location }}</a>
+          {% else %}
+            {{ page.location }}
+          {% endif %}
+          </p>
         </div>
       </div>
     </header>
