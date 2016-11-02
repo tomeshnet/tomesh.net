@@ -3,7 +3,7 @@ layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
 location: Civic Tech TO, Connected Lab, 370 King St W
-locationMap: http://osm.org/go/ZX6Bjwlll?m=
+locationLink: http://osm.org/go/ZX6Bjwlll?m=
 attendees: 5
 date: 2016-04-12
 startTime: '19:50'

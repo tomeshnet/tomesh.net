@@ -4,7 +4,7 @@ title: Virtual Mesh Hack Night
 slug: virtual-mesh
 text: Join our virtual mesh from anywhere and play with distributed services.
 location: "#virtualmesh:tomesh.net"
-locationUrl: https://chat.tomesh.net/#/room/#virtualmesh:tomesh.net
+locationLink: https://chat.tomesh.net/#/room/#virtualmesh:tomesh.net
 date: 2016-11-17
 startTime: '18:00'
 endTime: '23:00'

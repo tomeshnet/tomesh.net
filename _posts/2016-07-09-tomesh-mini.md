@@ -4,7 +4,7 @@ title: Toronto Mesh Project – tomesh.mini
 slug: tomesh-mini
 text: 'We’re building an interactive game at the Maker Festival Extravaganza to explore how the internet works.'
 location: Toronto Reference Library, 789 Yonge St  
-locationMap: http://osm.org/go/ZX6B8BeDV-?m=&way=28156063
+locationLink: http://osm.org/go/ZX6B8BeDV-?m=&way=28156063
 date: 2016-07-09
 startTime: '09:00'
 endTime: '17:00'

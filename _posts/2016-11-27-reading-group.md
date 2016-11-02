@@ -4,7 +4,7 @@ title: November Reading Group
 slug: reading-group-nov
 text: Come talk about networks at our monthly reading group.
 location: HackLab.TO, 1266 Queen St
-locationMap: http://osm.org/go/ZX6BIWF8Y--?m=
+locationLink: http://osm.org/go/ZX6BIWF8Y--?m=
 date: 2016-11-27
 startTime: '13:00'
 endTime: '15:00'

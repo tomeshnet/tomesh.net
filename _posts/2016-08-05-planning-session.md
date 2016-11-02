@@ -4,7 +4,7 @@ title: Planning and Regroup Session
 slug: planning-session
 text: Planning session for Toronto Mesh.
 location: HackLab.TO, 1266 Queen St
-locationMap: http://osm.org/go/ZX6BIWF8Y--?m=
+locationLink: http://osm.org/go/ZX6BIWF8Y--?m=
 date: 2016-08-05
 startTime: '19:00'
 endTime: '21:00'

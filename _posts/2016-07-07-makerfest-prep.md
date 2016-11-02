@@ -3,7 +3,6 @@ layout: post
 title: Maker Festival Prep
 text: Final preparations for Makerfestival
 location: Udit's
-locationMap:
 date: 2016-07-07
 startTime: '19:00'
 endTime: '21:00'

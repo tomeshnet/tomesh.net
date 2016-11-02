@@ -3,7 +3,7 @@ layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
 location: Civic Tech TO, Ryerson SLC, 341 Yonge St
-locationMap: http://osm.org/go/ZX6BtxOJT?m=
+locationLink: http://osm.org/go/ZX6BtxOJT?m=
 attendees: 5
 date: 2016-05-03
 startTime: '19:30'

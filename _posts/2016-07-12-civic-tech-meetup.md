@@ -3,7 +3,7 @@ layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
 location: Civic Tech TO, Atkinson Foundation, 702-1 Yonge St
-locationMap: http://osm.org/go/ZX6BqWcMb?m=
+locationLink: http://osm.org/go/ZX6BqWcMb?m=
 date: 2016-07-12
 startTime: '18:30'
 endTime: '21:00'

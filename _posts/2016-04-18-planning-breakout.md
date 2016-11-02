@@ -3,7 +3,7 @@ layout: post
 title: Toronto Mesh Planning Breakout
 text: Join us at our breakout meeting to establish a roadmap!
 location: Semaphore Demo Room (1st flr), Robarts, 130 St. George St  
-locationMap: http://osm.org/go/ZX6Bw_XP--?m=
+locationLink: http://osm.org/go/ZX6Bw_XP--?m=
 date: 2016-04-18
 startTime: '18:30'
 endTime: '21:30'
