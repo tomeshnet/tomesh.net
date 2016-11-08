@@ -16,7 +16,7 @@ New people are always welcome. Come say hi on on  [#reading-networks:tomesh.net]
 
 ***
 
-Readings for {{ page.date | date: "%B"}}:
+Readings for {{ page.date | date: "%B"}}, recapped in our [{{ page.date | date: '%B %d, %Y' }} reading group notes](https://github.com/tomeshnet/documents/blob/master/meeting_notes/{{ page.date | date: "%Y%m%d" }}_reading-group.md):
 
 - Ishmael, J., Bury, S., Pezaros, D., & Race, N. (2008). Deploying rural community wireless mesh networks. _IEEE Internet Computing_, _12_(4), 22-29. Retrieved from [http://eprints.gla.ac.uk/34544/1/34544.pdf &nbsp;&nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true"></i>](http://eprints.gla.ac.uk/34544/1/34544.pdf)
 - Koebler, J. (2016 October). The city that was saved by the internet. Retrieved from [https://motherboard.vice.com/read/chattanooga-gigabit-fiber-network](https://motherboard.vice.com/read/chattanooga-gigabit-fiber-network)

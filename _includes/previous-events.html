@@ -10,7 +10,7 @@
             {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
             {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
             {% assign postday = postday | plus: 0 %}
-            {% assign nowday = nowday | minus: 2 %}
+            {% assign nowday = nowday | minus: 1 %}
             {% if postyear < nowyear or postday <= nowday and postyear <= nowyear %}
               {% assign isPrevEvent = 1 %}
               <section class="six columns event-item">
