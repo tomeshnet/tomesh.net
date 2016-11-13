@@ -19,7 +19,7 @@ New people are always welcome. Come say hi on our chat, or email us at [{{ site.
 Readings for {{ page.date | date: "%B"}}:
 
 - Antoniadis, P. (2016, November 8). DIY networking: The path to a more democratic internet. _The Conversation_. Retrieved from [https://theconversation.com/diy-networking-the-path-to-a-more-democratic-internet-67216](https://theconversation.com/diy-networking-the-path-to-a-more-democratic-internet-67216)
-- Kopstein, J. (2014, April 11). How to survive an internet apocalypse. _The Atlantic_.
+- Kopstein, J. (2014, April 11). How to survive an internet apocalypse. _The New Yorker_.
 Retrieved from [http://www.newyorker.com/tech/elements/how-to-survive-an-internet-apocalypse](http://www.newyorker.com/tech/elements/how-to-survive-an-internet-apocalypse)
 - Medina, D., Hoffmann, F., Rossetto, F., & Rokitansky, C. H. (2012). A geographic routing strategy for north atlantic in-flight internet access via airborne mesh networking. _IEEE/ACM Transactions on Networking (TON)_, _20_(4), 1231-1244. Retrieved from [https://pdfs.semanticscholar.org/b6ac/ec90ffb7c1d28e07697676bb29af25a55751.pdf &nbsp;&nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true"></i>](https://pdfs.semanticscholar.org/b6ac/ec90ffb7c1d28e07697676bb29af25a55751.pdf)
 - Winner, L. (1980). Do artifacts have politics?. _Daedalus_, 121-136. Retrieved from [https://transitiontech.ca/pdf/Winner-Do-Artifacts-Have-Politics-1980.pdf &nbsp;&nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true"></i>](https://transitiontech.ca/pdf/Winner-Do-Artifacts-Have-Politics-1980.pdf)
