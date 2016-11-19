@@ -11,10 +11,12 @@
             {% capture postday %}{{post.date | date: '%j'}}{% endcapture %}
             {% assign postday = postday | plus: 0 %}
             {% assign nowday = nowday | minus: 0 %}
-            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear and eventCount < 1 %}
-              {% assign isEvent = 1 %}
-              {% assign eventCount = eventCount | plus: 1 %}
+            {% if postyear > nowyear or postday >= nowday and postyear >= nowyear %}
+              {% if eventCount < 1 %}
+                {% assign isEvent = 1 %}
+                {% assign eventCount = eventCount | plus: 1 %}
                 {% include event.html %}
+              {% endif %}
             {% endif %}
           {% endfor %}
       </div>
