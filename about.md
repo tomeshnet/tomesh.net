@@ -4,7 +4,7 @@ title: About
 order: 1
 ---
 
-Based in Toronto, we are a grassroots and decentralized group of volunteers who started Toronto Mesh at [CivicTechTO](https://civictech.ca) in early 2016.  Through building community-owned infrastructure using off-the-shelf hardware and open-source technology, we are hoping to address barriers to internet access in our city. There are many ways that people can [be involved]({{ site.baseurl }}/get-involved).
+Based in Toronto, we are a grassroots and decentralized group of volunteers who started Toronto Mesh at [CivicTechTO](http://civictech.ca) in early 2016.  Through building community-owned infrastructure using off-the-shelf hardware and open-source technology, we are hoping to address barriers to internet access in our city. There are many ways that people can [be involved]({{ site.baseurl }}/get-involved).
 
 ## Our Efforts
 
