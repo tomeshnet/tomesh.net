@@ -6,7 +6,7 @@ rvm:
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-install: gem install jekyll html-proofer
+install: gem install jekyll jekyll-paginate html-proofer
 
 script: jekyll build && htmlproofer ./_site
 
