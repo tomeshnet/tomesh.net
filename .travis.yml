@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+rvm:
+  - 2.3.1
+
+before_install:
+  - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+install: gem install jekyll html-proofer
+
+script: jekyll build && htmlproofer ./_site
+
+notifications:
+  email: false
