@@ -10,7 +10,7 @@ Interested? You can start working with us in a few quick steps:
   - Create an account to join `#tomesh` and introduce yourself on our `#welcome` channel!
   - If you plan on connecting via a [mobile app](https://riot.im/), make sure you set the homeserver to `https://matrix.tomesh.net` under 'Use custom server options (advanced)'.
 
-2. Check out our [vision]({{ site.baseurl }}/about) and [code of conduct]({{ site.baseurl }}/code-of-conduct)
+2. Check out our [vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct)
 
 3. Join us at one of our [events]({{ site.baseurl }}/events)!
   - Events include in-person and virtual meetups and workshops
