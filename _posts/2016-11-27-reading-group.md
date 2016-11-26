@@ -3,8 +3,8 @@ layout: post
 title: November Reading Group
 slug: reading-group-nov
 text: Come talk about networks at our monthly reading group.
-location: HackLab.TO
-locationMap: http://osm.org/go/ZX6BIWF8Y--?m=
+location: Claude T. Bissell Lobby, 140 St. George St
+locationMap: http://osm.org/go/ZX6Bw~WNh--?m=
 date: 2016-11-27
 startTime: '13:00'
 endTime: '15:00'
