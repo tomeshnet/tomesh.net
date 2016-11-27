@@ -1,0 +1,27 @@
+<header class="announcement">
+  <div class="container">
+
+    <span>ANNOUNCEMENTS:
+      {% capture currentDate %}
+      {{ 'now' | date: '%s'}}
+      {% endcapture %}
+      {% assign eventCount = 0 %}
+      {% assign eventPosts = site.posts %}
+
+      {% for post in eventPosts %}
+        {% capture postDate %}
+          {{ post.date | date: '%s'}}
+        {% endcapture %}
+
+        {% if currentDate < postDate %}
+          {% assign eventCount = 1 %}
+          {{post.title}}, {{post.date | date: "%B %d, %Y"}}, {{post.startTime}} - {{post.endTime}}
+        {% endif %}
+      {% endfor %}
+
+      {% if eventCount == 0 %}
+        No events at the moment
+      {% endif %}
+    </span>
+  </div>
+</header>
