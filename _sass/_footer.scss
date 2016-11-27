@@ -18,6 +18,9 @@
       margin-top: 0;
       padding: 5px 0;
       position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       @media (max-width: $content-width) {
         flex-basis: 50%;
