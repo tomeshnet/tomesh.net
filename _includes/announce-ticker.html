@@ -3,20 +3,32 @@
 
     <span>ANNOUNCEMENTS:
       {% capture currentDate %}
-      {{ 'now' | date: '%s'}}
+        {{ site.time | date: '%s' }}
       {% endcapture %}
+
+      {% assign recentPosts = site.emptyArray %}
+      {% assign currentDate = currentDate | plus: 0 %}
       {% assign eventCount = 0 %}
-      {% assign eventPosts = site.posts %}
+      {% assign eventPosts = site.posts | reverse %}
+
 
       {% for post in eventPosts %}
         {% capture postDate %}
-          {{ post.date | date: '%s'}}
+          {{ post.date | date: '%s' }}
         {% endcapture %}
+
+        {% assign postDate = postDate | plus: 0 %}
 
         {% if currentDate < postDate %}
           {% assign eventCount = 1 %}
-          {{post.title}}, {{post.date | date: "%B %d, %Y"}}, {{post.startTime}} - {{post.endTime}}
+
+          <a href="{{post.url}}">{{post.title}}, {{post.date | date: "%B %d, %Y"}}, {{post.startTime}} - {{post.endTime}}</a>
         {% endif %}
+
+        {% if eventCount > 0 %}
+          {% break %}
+        {% endif %}
+
       {% endfor %}
 
       {% if eventCount == 0 %}
