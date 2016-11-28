@@ -1,0 +1,13 @@
+<!-- Event Logic -->
+<!-- initialize counters -->
+{% assign is_event = 0 %}
+{% assign is_prev_event = 0 %}
+{% assign event_count = 0 %}
+
+<!-- reverse-chronologically sorted posts -->
+{% assign event_posts = site.posts | reverse %}
+
+<!-- initialize 'nowday' for displaying posts -->
+{% capture now_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture now_day %}{{'now' | date: '%j'}}{% endcapture %}
+{% assign now_day = now_day | minus: 0 %}
