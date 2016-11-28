@@ -1,7 +1,7 @@
 <header class="announcement">
   <div class="container">
 
-    <span>ANNOUNCEMENTS:
+    <span> 
       {% capture currentDate %}
         {{ site.time | date: '%s' }}
       {% endcapture %}
@@ -28,7 +28,6 @@
         {% if eventCount > 0 %}
           {% break %}
         {% endif %}
-
       {% endfor %}
 
       {% if eventCount == 0 %}

@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    {% include announce-ticker.html %}
+{% include head.html %}
+<body>
+  {% include header.html %}
+  {% include announce-ticker.html %}
 
-      {{ content }}
+  {{ content }}
 
-    {% include footer.html %}
-  </body>
+  {% include footer.html %}
+
+  {% if page.title == "Timeline" %}
+    <script src="{{ "/javascripts/timeline.js" | prepend: site.baseurl }}"></script>
+  {% endif %}
+</body>
 </html>
