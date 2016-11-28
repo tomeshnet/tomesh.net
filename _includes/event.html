@@ -1,5 +1,19 @@
-<!-- Event Section: with description -->
-<header>
+<!-- Event Section: with description, previous vs. upcoming -->
+{% if include.event-type == "previous" %}
+  <header>
+    <h4 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <div class="event-time-location">
+      <div class="event-meta">
+        <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
+        <p class="event-time">{{ post.date | date: "%-d %B %Y"}}, {{post.startTime | date:"%-I:%M%P "}} – {{post.endTime | date:"%-I:%M%P "}}</p></div>
+      <div class="event-meta">
+        <i class="icon fa fa-map-marker" aria-hidden="true"></i>
+        <p class="event-location">{{ post.location }}</p>
+      </div>
+    </div>
+  </header>
+{% else %}
+  <header>
   <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
   <div class="event-time-location">
     <div class="event-meta">
@@ -10,5 +24,6 @@
       <p class="event-location">{{ post.location }}</p>
     </div>
   </div>
-</header>
-<div class="event-caption"><p>{{ post.text }}</p></div>
+  </header>
+  <div class="event-caption"><p>{{ post.text }}</p></div>
+{% endif %}
