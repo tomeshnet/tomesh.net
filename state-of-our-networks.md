@@ -56,9 +56,6 @@ Register by email, **$10** suggested donation at the door, no one turned away fo
 
 <br />
 
-
-
-
 ## Location
 
 Event and registration will be in the **Semaphore Demo Room, BL 417** on the fourth floor of the {% if page.locationLink %} <a href="{{page.locationLink}}" target="_blank">Claude T. Bissell building</a><!--_-->{% else %} Claude T. Bissell building{% endif %}.
