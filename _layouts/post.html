@@ -8,10 +8,10 @@ layout: default
       <div class="event-time-location">
         <div class="event-meta">
           <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-          <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> &ndash; <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
+          <p class="event-time event-meta-item">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> &ndash; <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
         <div class="event-meta">
           <i class="icon fa fa-map-marker" aria-hidden="true"></i>
-          <p class="event-location">
+          <p class="event-location event-meta-item">
           {% if page.locationLink %}
             <a href="{{page.locationLink}}" target="_blank">{{ page.location }}</a>
           {% else %}
