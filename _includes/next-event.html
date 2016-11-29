@@ -6,7 +6,6 @@
           {% include event-logic-loop.html %}
           {% if post_year > now_year or post_day >= now_day and post_year >= now_year %}
             {% if event_count < 1 %}
-              {% assign is_event = 1 %}
               {% assign event_count = event_count | plus: 1 %}
               {% include event.html %}
             {% endif %}
@@ -14,7 +13,7 @@
         {% endfor %}
       </div>
       <div class="row">
-          {% if is_event == 0 %}
+          {% if event_count == 0 %}
             <p>No upcoming events.</p>
           {% endif %}
       </div>
