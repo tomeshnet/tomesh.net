@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'State of Our Networks' 2017 Mini-conference"
+title: "State of Our Networks 2017 Mini-conference"
 slug: mini-conference
 text: 'A one-day hands-on conference about the past, present, and future of building our own network infrastructures to access the internet in our city.'
 location: Semaphore Demo Room, BL 417, Claude T. Bissell, 140 St. George St  
