@@ -1,6 +1,5 @@
-<!-- Event Logic: loop section -->
+{% comment %} Event Logic: loop section --  initialize 'postday' for displaying posts {% endcomment %}
 
-<!-- initialize 'postday' for displaying posts -->
 {% capture post_year %}{{post.date | date: '%Y'}}{% endcapture %}
 {% capture post_day %}{{post.date | date: '%j'}}{% endcapture %}
 {% assign post_day = post_day | plus: 0 %}
