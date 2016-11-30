@@ -1,6 +1,6 @@
 <!-- Event Section: with description -->
 <header>
-  <h3 class="event-title heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <h3 class="event-title heading"><a href="{% if post.redirect_to %}{{ post.redirect_to}}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></h3>
   <div class="event-time-location">
     <div class="event-meta">
       <i class="icon fa fa-calendar-o" aria-hidden="true"></i>

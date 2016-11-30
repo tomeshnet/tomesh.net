@@ -12,6 +12,6 @@ endTime: '13:00'
 
 Join us at our third planning session, where we will regroup and plan for the next few months.
 
-We will meet at {{page.startTime | date:"%-I:%M %P "}} in Studio 307 (Room BL307), [140 St. George Street]({{ page.locationMap }}). The Claude T. Bissell building is an accessible space.
+We will meet at {{page.startTime | date:"%-I:%M %P "}} in Studio 307 (Room BL307), [140 St. George Street]({{ page.locationLink }}). The Claude T. Bissell building is an accessible space.
 
 All are welcome to join, just send an email to [{{ site.email }}](mailto:{{ site.email }}) so we know you are coming!
