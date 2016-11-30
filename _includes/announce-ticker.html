@@ -1,12 +1,11 @@
 <header class="announcement">
   <div class="container">
 
-    <span> 
+    <span>
       {% capture currentDate %}
         {{ site.time | date: '%s' }}
       {% endcapture %}
 
-      {% assign recentPosts = site.emptyArray %}
       {% assign currentDate = currentDate | plus: 0 %}
       {% assign eventCount = 0 %}
       {% assign eventPosts = site.posts | reverse %}
