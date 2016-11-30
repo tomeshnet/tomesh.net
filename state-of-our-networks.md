@@ -13,16 +13,16 @@ order: 0
 <div class="event-time-location">
   <div class="event-meta">
     <i class="icon fa fa-ticket" aria-hidden="true"></i>
-    <p class="event-cost">$10 suggested donation, <a href="#registration">register below</a>
+    <p class="event-cost event-meta-item">$10 suggested donation, <a href="#registration">register below</a>
     </p>
   </div>
   <div class="event-meta">
     <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-    <p class="event-time">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{page.endTime | date:"%-I:%M%P"}}</strong>, <a href="#schedule">schedule below</a></p>
+    <p class="event-time event-meta-item">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> – <strong>{{page.endTime | date:"%-I:%M%P"}}</strong>, <a href="#schedule">schedule below</a></p>
   </div>
   <div class="event-meta">
     <i class="icon fa fa-map-marker" aria-hidden="true"></i>
-    <p class="event-location">
+    <p class="event-location event-meta-item">
     {% if page.locationLink %}
       <a href="{{page.locationLink}}" target="_blank">{{ page.location }}</a> <!--_-->
     {% else %}
