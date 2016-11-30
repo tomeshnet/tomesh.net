@@ -42,7 +42,9 @@ On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}
 - hear about the history of community networks in our city
 - discuss how we can build a resilient network that addresses barriers in the future
 
-Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct](https://tomesh.net/code-of-conduct/).
+Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct]({{ site.baseurl }}/code-of-conduct/).
+
+We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on {{ page.date | date: '%B %d, %Y' }}, all are welcome to attend and get to know the members of Toronto Mesh!
 
 This page will be updated with [full schedule](#schedule) closer to the event date.
 
@@ -50,7 +52,7 @@ This page will be updated with [full schedule](#schedule) closer to the event da
 
 Register by email, **$10** suggested donation at the door, no one turned away for lack of funds.
 
-<div class="">
+<div style="text-align: center;">
   <a class="button" href="mailto:{{ site.email }}?subject=State of Our Networks Registration" role="link"><i class="fa fa-ticket" aria-hidden="true"></i>&nbsp;&nbsp;Register Now</a>
 </div>
 
@@ -58,7 +60,7 @@ Register by email, **$10** suggested donation at the door, no one turned away fo
 
 ## Location
 
-Event and registration will be in the **Semaphore Demo Room, BL 417** on the fourth floor of the {% if page.locationLink %} <a href="{{page.locationLink}}" target="_blank">Claude T. Bissell building</a><!--_-->{% else %} Claude T. Bissell building{% endif %}.
+Event and registration will be in the **Semaphore Demo Room, BL 417** on the fourth floor of the {% if page.locationLink %} <a href="{{page.locationLink}}" target="_blank">Claude T. Bissell building, 140 St. George St</a><!--_-->{% else %} Claude T. Bissell building, 140 St. George St{% endif %}.
 
 The closest TTC Subway stop is St. George (at Bloor Street and St. George Street) and Streetcar stop is Spadina Ave at Sussex Street.
 
@@ -84,4 +86,4 @@ The venue is an accessible space, for more details please see the <a href="http:
 
 ***
 
-For more information or if you are interested in volunteering, email us at [{{ site.email }}](mailto:{{ site.email }})!
+For more information, or if you are interested in volunteering, email us at [{{ site.email }}](mailto:{{ site.email }})!
