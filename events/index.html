@@ -27,7 +27,7 @@ order: 3
         {% if event_count < 4 %}
         {% assign event_count = event_count | plus: 1 %}
           <section class="six columns event-item">
-            {% include event.html %}
+            {% include event.html event-type="upcoming" %}
           </section>
         {% endif %}
       {% endif %}
