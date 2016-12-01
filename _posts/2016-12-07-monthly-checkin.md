@@ -4,7 +4,7 @@ title: "Monthly Check-in"
 slug: monthly-checkin
 text: 'Our monthly meeting to check in on the status of Toronto Mesh working groups.'
 location: Northwood, 815 Bloor St W
-locationLink:
+locationLink: http://osm.org/go/ZX6BY4ke9--?m=
 date: 2016-12-07
 startTime: '19:00'
 endTime: '20:30'
