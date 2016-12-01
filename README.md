@@ -1,5 +1,7 @@
 # tomesh.net
 
+[![Build Status](https://travis-ci.org/tomeshnet/tomesh.net.svg?branch=master)](https://travis-ci.org/tomeshnet/tomesh.net)
+
 Website for [Toronto Mesh](https://www.tomesh.net/) ([https://www.tomesh.net/](https://www.tomesh.net/)), built with [Jekyll](https://jekyllrb.com/), [Font Awesome](http://fontawesome.io/) icons, and [Skeleton](http://getskeleton.com/) CSS.
 
 Copyright (C) 2016 Toronto Mesh contributors.

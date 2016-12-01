@@ -3,8 +3,8 @@ layout: post
 title: Build A Mesh Node
 slug: build-a-node
 text: Build a Raspberry Pi mesh node and join the tomesh testnet!
-location: HackLab.TO
-locationMap: http://osm.org/go/ZX6BIWF8Y--?m=
+location: HackLab.TO, 1266 Queen St
+locationLink: http://osm.org/go/ZX6BIWF8Y--?m=
 date: 2016-08-21
 startTime: '15:30'
 endTime: '19:00'

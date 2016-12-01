@@ -2,8 +2,8 @@
 layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
-location: Civic Tech TO, CSI Annex
-locationMap:
+location: Civic Tech TO, CSI Annex, 720 Bathurst St
+locationLink: http://osm.org/go/ZX6Ba5rpE?m=
 attendees: 7
 date: 2016-06-07
 startTime: '19:45'

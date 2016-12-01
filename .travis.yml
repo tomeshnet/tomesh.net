@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+rvm:
+  - 2.3.1
+
+before_install:
+  - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+install: gem install jekyll jekyll-paginate html-proofer
+
+script: jekyll build && htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
+
+notifications:
+  email: false

@@ -2,8 +2,8 @@
 layout: post
 title: Civic Tech Meetup
 text: Join us at Civic Tech Toronto's weekly Tuesday meetup.
-location: Civic Tech TO, Ryerson Urban Planning
-locationMap:
+location: Civic Tech TO, Ryerson Urban Planning, 105 Bond St
+locationLink: http://osm.org/go/ZX6Bttebr?m=
 attendees: 7
 date: 2016-05-10
 startTime: '19:30'

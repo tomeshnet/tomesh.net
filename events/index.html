@@ -5,17 +5,71 @@ order: 3
 ---
 
 <p>
-  We host a range of events, including in-person and virtual meetups as well as workshops to work on the mesh network and learn about networking. All are welcome and we have a <a href="{{ site.baseurl }}/code-of-conduct">code of conduct</a>.
+  We host a range of events, including in-person and virtual meetups as well as workshops to work on the mesh network and learn about networking. All are welcome and we have a <a href="{{ site.baseurl }}/code-of-conduct">Code of Conduct</a>.
 </p>
 
 <div class="events-subscribe-container">
-  <a href="{{ site.baseurl }}/events.ics" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Subcribe to our calendar (.ics)</a></div>
+  <a href="{{ site.baseurl }}/events.ics" class="button"><i class="icon fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Subscribe to our calendar (.ics)</a></div>
 </div>
 
 <br />
 
-{% include event-grid.html %}
+{% include event-logic-front.html %}
+
+<!-- Event Grid Section -->
+<section id="event-grid" class="site-section">
+  <h2>Upcoming Events</h2>
+  <!-- Default Events-->
+  <div class="row">
+    {% for post in event_posts %}
+      {% include event-logic-loop.html %}
+      {% if post_year > now_year or post_day >= now_day and post_year >= now_year %}
+        {% if event_count < 4 %}
+        {% assign event_count = event_count | plus: 1 %}
+          <section class="six columns event-item">
+            {% include event.html event-type="upcoming" %}
+          </section>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if event_count == 0 %}
+      <p>No upcoming events.<br />
+        <a href="mailto:{{ site.email }}">If you are interested in doing something, get in touch!</a>
+      </p>
+    {% endif %}
+  </div>
+</section> <!-- /.event-grid -->
 
 <hr>
 
-{% include previous-events.html %}
+<!-- Previous Section -->
+  <section id="previous-events" class="site-section">
+    <h2>Previous Events</h2>
+    <div class="row events-grid">
+      {% assign now_day = now_day | minus: 1 %}
+      {% assign is_prev_event = 0 %}
+      {% for post in paginator.posts %}
+        {% include event-logic-loop.html %}
+        {% if post_year < now_year or post_day <= now_day and post_year <= now_year %}
+          {% assign is_prev_event = 1 %}
+          <section class="six columns event-item">
+            {% include event.html event-type="previous" %}
+          </section>
+        {% endif %}
+      {% endfor %}
+
+      {% if is_prev_event == 0 %}
+        <p>No previous events.</p>
+      {% endif %}
+    </div>
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next button">Older Events</a>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous button">Newer Events</a>
+      {% endif %}
+    </div>
+  </section> <!-- /.previous-events -->

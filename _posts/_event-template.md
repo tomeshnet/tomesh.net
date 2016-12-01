@@ -4,7 +4,7 @@ title: Event Title
 slug: optional-url-path
 text: 'Short one sentence description'
 location: Building, Street Address, Postal Code  
-locationMap: http://osm.org/go/ZX6B8BeDV-?m=&way=28156063
+locationLink: http://osm.org/go/ZX6B8BeDV-?m=
 date:
 startTime: ''
 endTime: ''

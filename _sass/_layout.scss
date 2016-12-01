@@ -95,40 +95,44 @@
 
 // Events
 
-.event-item {
-  margin: 0;
-  padding-right: 20px;
+.events-grid {
   display: flex;
   flex-wrap: wrap;
-  height: 200px;
+}
+
+.event-item {
+  padding-right: 20px;
+  margin: 0 0 40px;
 
   @media screen and (max-width: $on-palm) {
     height: auto;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 }
 
 .event-time-location {
-
   .icon {
-    width: 0;
-    margin-right: 1.5em;
-  }
-
-  .event-time,
-  .event-location {
-    margin-bottom: 0;
+    min-width: 1.75em;
+    text-align: center;
   }
 }
 
 .event-meta {
   display: flex;
   margin-bottom: .5em;
+
+  .event-meta-item {
+    margin-bottom: 0;
+  }
 }
 
 .events-home-grid {
   padding: 0.5em 0;
   margin: 0.5em 0;
+}
+
+.event-title-previous {
+  font-size: 2.2rem; 
 }
 
 .events-subscribe-container {
@@ -190,6 +194,11 @@
     font-weight: normal;
     font-size: 2.7rem;
   }
+  img {
+    @media screen and (max-width: $on-palm) {
+      margin: 1em 0;
+    }
+  }
 }
 
 .featurette-events-row {
@@ -225,7 +234,8 @@
 // Notices
 
 .notice {
-  margin: 4em 0;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 // Pagination

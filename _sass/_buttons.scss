@@ -5,24 +5,22 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: 38px;
   padding: 0 30px;
   color: #555;
   text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.9em;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border: 1px solid #bbb;
   cursor: pointer;
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
   box-shadow: 2px 2px 0 0 rgba($black, 0.1);
 }
 .button:hover,
@@ -43,9 +41,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
-  background-color: $blue-color-light;
-  border-color: $blue-color-light; }
+  color: $white;
+  background-color: $brand-color;
+  border-color: $brand-color; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -56,6 +54,6 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: darken($blue-color-light, 5%);
-  border-color: darken($blue-color-light, 5%); }
+  color: $white;
+  background-color: darken($brand-color, 10%);
+  border-color: darken($brand-color, 10%); }
