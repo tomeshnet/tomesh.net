@@ -7,7 +7,7 @@
           {% if post_year > now_year or post_day >= now_day and post_year >= now_year %}
             {% if event_count < 1 %}
               {% assign event_count = event_count | plus: 1 %}
-              {% include event.html %}
+              {% include event.html event-type="upcoming" %}
             {% endif %}
           {% endif %}
         {% endfor %}
