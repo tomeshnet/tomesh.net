@@ -98,6 +98,6 @@
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent black transparent transparent;
+    border-color: transparent $brand-color transparent transparent;
   }
 }
