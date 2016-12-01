@@ -44,7 +44,7 @@ On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}
 
 Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct]({{ site.baseurl }}/code-of-conduct/).
 
-We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on {{ page.date | date: '%B %d, %Y' }}, all are welcome to attend and get to know the members of Toronto Mesh!
+We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on January 13, 2017, all are welcome to attend and get to know the members of Toronto Mesh!
 
 This page will be updated with [full schedule](#schedule) closer to the event date.
 
