@@ -29,7 +29,10 @@ order: 3
           <section class="six columns event-item">
             {% include event.html event-type="upcoming" %}
           </section>
+        {% elsif event_count >= 4 %}
+            {% assign more_events = more_events | push: post %}
         {% endif %}
+
       {% endif %}
     {% endfor %}
 
@@ -40,6 +43,17 @@ order: 3
     {% endif %}
   </div>
 </section> <!-- /.event-grid -->
+
+<!-- Show More Events -->
+<section id="show-more" class="site-section">
+  <label for="event-toggle" class="label-events">Show More</label>
+  <input id="event-toggle" type="checkbox">
+  <div id="expand">
+    <section class="six columns event-item">
+      {% include event.html event-type="upcoming" %}
+    </section>
+  </div>
+</section> <!-- /.show-more -->
 
 <hr>
 
