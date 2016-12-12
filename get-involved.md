@@ -19,7 +19,7 @@ Interested? You can start working with us in a few quick steps:
   - The current status of the project is tracked on our publicly-viewable [Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) and [GitHub account](https://github.com/tomeshnet)
 
 ## How do I work with you?
-{: #work-with-us}
+{:#work-with-us}
 
 ### Collaborate on our Kanban Board at [wekan.tomesh.net](https://wekan.tomesh.net)
 Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to keep track of ideas and progress. The software we use is the self-hosted open-source [Wekan](https://github.com/wekan/wekan). Anyone is free to create an account and participate.
