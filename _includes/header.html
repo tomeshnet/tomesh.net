@@ -19,7 +19,7 @@
              {% if page.order > 0 %}
                <li>
                  <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
-                    href="{{ page.url }}">
+                    href="{{ page.url }}" {% if page.descriptiveTitle %}aria-label="{{ page.descriptiveTitle }}"{% endif %}>
                     {{ page.title }}
                  </a>
                </li>
