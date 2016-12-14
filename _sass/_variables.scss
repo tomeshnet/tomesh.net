@@ -21,6 +21,7 @@ $black: #000;
 $yellow: #ffff00;
 $grey-color: #666;
 $grey-color-lighter: #f7f7f7;
+$grey-color-med-light: lighten($grey-color, 55%);
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 $black-color-transparent: rgba($black, 0.6);

@@ -1,14 +1,14 @@
 .timeline ul li {
   list-style-type: none;
   position: relative;
-  width: 6px;
+  width: 1px;
   margin: 0 auto;
   padding-top: 50px;
-  background: black;
+  background: $grey-color-light;
   transition: background .5s ease-in-out;
 
   &.in-view::after {
-    background: black;
+    background: $brand-color;
   }
   div {
     position: relative;
@@ -16,7 +16,7 @@
     width: 400px;
     padding: 15px;
     transition: all .5s ease-in-out;
-    background: $brand-color;
+    background-color: $grey-color-med-light;
     visibility: hidden;
     opacity: 0;
 
@@ -47,17 +47,18 @@
     &::before {
       left: -15px;
       border-width: 8px 16px 8px 0;
-      border-color: transparent $brand-color transparent transparent;
+      border-color: transparent lighten($grey-color, 55%) transparent transparent;
     }
   }
   &:nth-child(even) div {
+    text-align: right;
     transform: translate3d(-200px, 0, 0);
     left: -439px;
 
     &::before {
       right: -15px;
       border-width: 8px 0 8px 16px;
-      border-color: transparent transparent transparent  $brand-color;
+      border-color: transparent transparent transparent  lighten($grey-color, 55%);
     }
   }
   &.in-view div {
@@ -67,14 +68,11 @@
   }
   time {
     display: block;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
   }
   img {
     margin: 10px 0;
-  }
-  h5 {
-    font-style: italic;
   }
 }
 @media screen and (max-width: 900px) {
