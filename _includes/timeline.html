@@ -1,6 +1,7 @@
 <section class="timeline">
   <ul>
-    {% for post in site.timeline %}
+    {% assign timeline = site.timeline | reverse %}
+    {% for post in timeline %}
     <li>
       <div>
         <h1>{{ post.title }}</h1>

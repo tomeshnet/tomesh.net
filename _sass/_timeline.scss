@@ -8,7 +8,7 @@
   transition: background .5s ease-in-out;
 
   &.in-view::after {
-    background: $brand-color;
+    background: lighten($brand-color, 20%);
   }
   div {
     position: relative;
@@ -88,14 +88,16 @@
     margin-left: 20px;
   }
   .timeline ul li div {
-    width: calc(100vw - 91px);
+     width: 400px;
   }
   .timeline ul li:nth-child(even) div {
+    text-align: left;
     left: 45px;
   }
   .timeline ul li:nth-child(even) div::before {
+
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent $brand-color transparent transparent;
+    border-color: transparent $grey-color-med-light transparent transparent;
   }
 }
