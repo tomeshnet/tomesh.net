@@ -5,7 +5,9 @@
     <li>
       <div>
         <h1>{{ post.title }}</h1>
-        <img src="{{ post.image_path}}">
+        {% if post.image_path %}
+          <img src="{{ post.image_path}}" alt="{{ post.image_name }}">
+        {% endif %}
         {{ post.content }}
         <time>{{post.date | date: "%B %d, %Y"}}</time>
       </div>
