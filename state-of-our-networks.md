@@ -44,19 +44,19 @@ On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}
 
 Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct]({{ site.baseurl }}/code-of-conduct/).
 
-We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on {{ page.date | date: '%B %d, %Y' }}, all are welcome to attend and get to know the members of Toronto Mesh!
+We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on January 13, 2017, all are welcome to attend and get to know the members of Toronto Mesh!
 
 This page will be updated with [full schedule](#schedule) closer to the event date.
+
+***
 
 ## Registration
 
 Register by email, **$10** suggested donation at the door, no one turned away for lack of funds.
 
-<div style="text-align: center;">
-  <a class="button" href="mailto:{{ site.email }}?subject=State of Our Networks Registration" role="link"><i class="fa fa-ticket" aria-hidden="true"></i>&nbsp;&nbsp;Register Now</a>
-</div>
+<a class="button button-primary" href="mailto:{{ site.email }}?subject=State of Our Networks Registration" role="link"><i class="fa fa-ticket" aria-hidden="true"></i>&nbsp;&nbsp;Register Now</a>
 
-<br />
+***
 
 ## Location
 
@@ -68,6 +68,7 @@ The closest TTC Subway stop is St. George (at Bloor Street and St. George Street
 
 The venue is an accessible space, for more details please see the <a href="http://www.ace.utoronto.ca/website/accessibility/building_data/bl.pdf" target="_blank">building information sheet</a>.<!--_-->
 
+***
 
 ## Schedule
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+descriptiveTitle: About Toronto Mesh
 order: 1
 ---
 
