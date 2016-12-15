@@ -12,7 +12,6 @@
   }
   div {
     position: relative;
-    bottom: 0;
     width: 400px;
     padding: 15px;
     transition: all .5s ease-in-out;
@@ -23,7 +22,7 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: 7px;
+      top: 7px;
       width: 0;
       height: 0;
       border-style: solid;
@@ -33,7 +32,7 @@
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 50px;
     transform: translateX(-50%);
     width: 30px;
     height: 30px;
@@ -85,8 +84,17 @@
 }
 @media screen and (max-width: 600px) {
   .timeline ul li {
+    width: 0;
     margin-left: 20px;
+
+    &.in-view::after {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
   }
+
   .timeline ul li div {
      width: 400px;
   }
