@@ -1,37 +1,15 @@
-<header class="announcement">
-  <div class="container">
-
-    <span>Announcements:
-      {% capture currentDate %}
-        {{ site.time | date: '%s' }}
-      {% endcapture %}
-
-      {% assign currentDate = currentDate | plus: 0 %}
-      {% assign eventCount = 0 %}
-      {% assign eventPosts = site.announcements | reverse %}
-
-
-      {% for post in eventPosts %}
-        {% capture postDate %}
-          {{ post.dateUntil | date: '%s' }}
-        {% endcapture %}
-
-        {% assign postDate = postDate | plus: 0 %}
-
-        {% if currentDate < postDate %}
-          {% assign eventCount = 1 %}
-
-          <a href="{{post.url}}">Come join us at {{post.title}}, {{post.dateUntil | date: "%B %d, %Y"}} </a>
-        {% endif %}
-
-        {% if eventCount > 0 %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-
-      {% if eventCount == 0 %}
-        No announcements at the moment
-      {% endif %}
-    </span>
-  </div>
-</header>
+{% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
+{% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}
+{% for announcement in site.announcements reversed %}
+  {% capture announceyear %}{{announcement.dateUntil | date: '%Y'}}{% endcapture %}
+  {% capture announceday %}{{announcement.dateUntil | date: '%j'}}{% endcapture %}
+  {% assign announceday = announceday | plus: 0 %}
+  {% assign nowday = nowday | minus: 0 %}
+  {% if announceyear > nowyear or announceday >= nowday and announceyear >= nowyear %}
+    <div class ="announcement">
+      <div class="container">
+        {{announcement.output}}
+      </div>
+    </div> <!-- /.announcement -->
+  {% endif %}
+{% endfor %}

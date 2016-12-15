@@ -34,6 +34,3 @@ paginate_path: "events/page-:num"
 
 # Jekyll gems
 gems: [jekyll-paginate]
-
-# empty array
-emptyArray: []
