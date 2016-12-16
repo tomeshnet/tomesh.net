@@ -36,7 +36,7 @@ order: 0
 
 Brought to you by Toronto Mesh, '**State of our Networks**' is a one-day, hands-on conference about the past, present, and future of building our own network infrastructures to communicate and access the internet in our city.
 
-On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}} to {{page.endTime | date:"%-I:%M%P "}} join us for a one-day hands-on conference to:
+On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}} to {{page.endTime | date:"%-I:%M%P "}} join us to:
 
 - learn and participate in hands on workshops led by current networking projects in the city of Toronto
 - hear about the history of community networks in our city
