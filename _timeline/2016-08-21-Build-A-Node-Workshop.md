@@ -1,6 +1,6 @@
 ---
-title: 'Build a Node Workshop'
-date: 2016-07-21
+title: 'Built our First Mesh Nodes'
+date: 2016-08-21
 ---
 
-With funding from XXX, tomesh hosts a build a network node workshop to get tomesh members up and running with a working node, using our reference image
+With funding from XXX, Toronto Mesh hosted "[Build a Mesh Node](https://tomesh.net/2016-08-21/build-a-node/)," a free public workshop to get members up and running with a our first working node.

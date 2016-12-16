@@ -1,5 +1,5 @@
 ---
-title: "First Tomesh Community Meeting"
+title: "First Community Meeting"
 date: 2016-04-01
 ---
-tomesh holds its first community meeting and established our first roadmap, planning for the first six months of the project, you can check out our [meeting notes]!
+Toronto Mesh held our first community meeting and established the first roadmap and planned for the first six months of the project, all of which we captured in our [meeting notes](https://github.com/tomeshnet/documents/blob/master/meeting_notes/20160418_meeting-notes.md).

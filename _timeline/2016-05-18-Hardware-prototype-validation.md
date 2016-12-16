@@ -1,5 +1,5 @@
 ---
-title: "Hardware prototype validation"
+title: "Hardware Prototype Validation"
 date:  2016-05-18
 ---
-tomesh tests the first hardware prototype, it's a success!
+We tested our first [hardware prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), it's a success!
