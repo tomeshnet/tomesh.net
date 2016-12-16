@@ -34,19 +34,19 @@ order: 0
 
 ***
 
-Brought to you by Toronto Mesh, '**State of our Networks**' is a one-day, hands-on conference about the past, present, and future of building our own network infrastructures to communicate and access the internet in our city.
+Brought to you by Toronto Mesh, '**State of our Networks**' is a one-day, hands-on conference about the past, present, and future of building our own network infrastructures to communicate and access the internet in our city. Join us for:
 
-On {{ page.date | date: '%B %d, %Y' }} from {{page.startTime | date:"%-I:%M%P "}} to {{page.endTime | date:"%-I:%M%P "}} join us to:
+- hands-on workshops* to build mesh nodes and learn about low-power networks
+- talks about a history of Toronto's internet
+- planning how to build resilient and accessible communications networks and connections to the internet
 
-- learn and participate in hands on workshops led by current networking projects in the city of Toronto
-- hear about the history of community networks in our city
-- discuss how we can build a resilient network that addresses barriers in the future
+Please see our [schedule below](#schedule) for more details.
 
-Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct]({{ site.baseurl }}/code-of-conduct/).
+*_Note: Workshops require a laptop (any operating system), but attendees are also welcome to bring [Raspberry Pis](https://en.wikipedia.org/wiki/Raspberry_Pi) or other [single-board computers](https://en.wikipedia.org/wiki/Single-board_computer) pre-flashed with Linux._
 
 We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on January 13, 2017, all are welcome to attend and get to know the members of Toronto Mesh!
 
-This page will be updated with [full schedule](#schedule) closer to the event date.
+Toronto Mesh welcomes people from all backgrounds and technical skill levels and aims to provide a harassment-free environment. This event has a [Code of Conduct]({{ site.baseurl }}/code-of-conduct/).
 
 ***
 
@@ -76,7 +76,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 | --- | --- | --- |
 | 9:00 | **REGISTRATION OPENS** |
 | 9:15 &ndash; 9:45 | _Welcome_: Intro to mesh and community wireless |
-| 9:45 &ndash; 13:00 | _Workshops and Demos_ |
+| 9:45 &ndash; 13:00 | _Workshops and Demos_* |
 | 13:00 | **LUNCH** |
 | 14:00 &ndash; 15:30 | _Presentation and Panel_ |
 | 15:30 | **AFTERNOON BREAK** |  |
@@ -84,6 +84,8 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 17:30 &ndash; 18:00 | _Closing_: Wrap up and deployment steps |  
 
 <br />
+
+*_Note: Workshops require a laptop (any operating system), but attendees are also welcome to bring [Raspberry Pis](https://en.wikipedia.org/wiki/Raspberry_Pi) or other [single-board computers](https://en.wikipedia.org/wiki/Single-board_computer) pre-flashed with Linux._
 
 ***
 
