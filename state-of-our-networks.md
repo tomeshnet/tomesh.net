@@ -42,7 +42,7 @@ Brought to you by Toronto Mesh, '**State of our Networks**' is a one-day, hands-
 
 Please see our [schedule below](#schedule) for more details.
 
-*_Note: Workshops require a laptop (any operating system), but attendees are also welcome to bring [Raspberry Pis](https://en.wikipedia.org/wiki/Raspberry_Pi) or other [single-board computers](https://en.wikipedia.org/wiki/Single-board_computer) pre-flashed with Linux._
+*_Note: Workshops require a laptop (any operating system), but attendees are also welcome to bring a [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi) (pre-flashed with Raspbian Jessie Lite) or other [single-board computers](https://en.wikipedia.org/wiki/Single-board_computer) (pre-flashed with some Debian-based distro)._
 
 We are also [hosting a social]({{ site.baseurl }}/2017-01-13/social/) at A3 Napoli on January 13, 2017, all are welcome to attend and get to know the members of Toronto Mesh!
 
@@ -76,7 +76,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 | --- | --- | --- |
 | 9:00 | **REGISTRATION OPENS** |
 | 9:15 &ndash; 9:45 | _Welcome_: Intro to mesh and community wireless |
-| 9:45 &ndash; 13:00 | _Workshops and Demos_* |
+| 9:45 &ndash; 13:00 | _Workshops and Demos_ |
 | 13:00 | **LUNCH** |
 | 14:00 &ndash; 15:30 | _Presentation and Panel_ |
 | 15:30 | **AFTERNOON BREAK** |  |
@@ -84,8 +84,6 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 17:30 &ndash; 18:00 | _Closing_: Wrap up and deployment steps |  
 
 <br />
-
-*_Note: Workshops require a laptop (any operating system), but attendees are also welcome to bring [Raspberry Pis](https://en.wikipedia.org/wiki/Raspberry_Pi) or other [single-board computers](https://en.wikipedia.org/wiki/Single-board_computer) pre-flashed with Linux._
 
 ***
 
