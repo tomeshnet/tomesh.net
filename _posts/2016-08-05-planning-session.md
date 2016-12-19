@@ -13,3 +13,5 @@ endTime: '21:00'
 Join us at our regroup and planning session for the next few months. We are meeting at 7:00 pm at HackLab.TO, 1266 Queen St. West Suite #6. OpenStreetMap [directions](http://osm.org/go/ZX6BIWF8Y--?m=).
 
 All are welcome to join, email us so we know you are coming and to get the address: [{{ site.email }}](mailto:{{ site.email }})
+
+A recap of what we discussed is available in our [{{ page.date | date: '%B %d, %Y' }} planning meeting notes](https://github.com/tomeshnet/documents/blob/master/meeting_notes/{{ page.date | date: "%Y%m%d" }}_planning-meeting-notes.md).
