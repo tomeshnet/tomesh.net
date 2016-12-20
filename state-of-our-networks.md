@@ -75,15 +75,19 @@ The venue is an accessible space, for more details please see the <a href="http:
 | Start Time | Session |
 | --- | --- | --- |
 | 9:00 | **REGISTRATION OPENS** |
-| 9:15 &ndash; 9:45 | _Welcome_: Intro to mesh and community wireless |
-| 9:45 &ndash; 13:00 | _Workshops and Demos_ |
+| 9:15 &ndash; 9:45 | Introduction to mesh and community wireless |
+| 9:45 &ndash; 11:00 | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) _Workshop_ |
+| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) _Workshop_ |
+| 12:30 &ndash; 13:00 | MeshISP _Demo_ |
 | 13:00 | **LUNCH** |
-| 14:00 &ndash; 15:30 | _Presentation and Panel_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) _Panel Session_ |
 | 15:30 | **AFTERNOON BREAK** |  |
-| 16:00 &ndash; 17:30 | _Interactive Discussion_ |
-| 17:30 &ndash; 18:00 | _Closing_: Wrap up and deployment steps |  
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) _Interactive Discussion_ |
+| 17:30 &ndash; 18:00 | Wrap Up and Moving Forward |
 
 <br />
+
+
 
 ***
 
