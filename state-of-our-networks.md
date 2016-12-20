@@ -87,7 +87,54 @@ The venue is an accessible space, for more details please see the <a href="http:
 
 <br />
 
+***
 
+## Speakers
+
+**ansuz** is a Toronto-based hacker temporarily stuck in Paris.
+
+<div class="row">
+  <div class="one-third column"><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
+  <span class="website">transitiontech.ca</span>
+  </a></div>
+  <div class="one-third column"><a href="https://twitter.com/fc00ansuz" target="_blank">
+    <i class="icon fa fa-twitter" aria-hidden="true"></i>
+    <span class="username">@fc00ansuz</span>
+  </a></div>
+  <div class="one-third column"><a href="https://github.com/ansuz" target="_blank">
+    <i class="icon fa fa-github" aria-hidden="true"></i>
+    <span class="username">ansuz</span>
+  </a></div>
+</div>
+<br />
+
+**Benedict Lau** is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
+
+<div class="row">
+  <div class="one-third column"><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
+  <span class="website">groundupworks.com</span>
+  </a></div>
+  <div class="one-third column"><a href="https://twitter.com/LauBenedict" target="_blank">
+    <i class="icon fa fa-twitter" aria-hidden="true"></i>
+    <span class="username">@LauBenedict</span>
+  </a></div>
+  <div class="one-third column"><a href="https://github.com/benhylau" target="_blank">
+    <i class="icon fa fa-github" aria-hidden="true"></i>
+    <span class="username">benhylau</span>
+  </a></div>
+</div>
+<br />
+
+**Udit Vira** is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
+
+<div class="row">
+  <div class="one-third column"><a href="https://github.com/uditvira" target="_blank">
+    <i class="icon fa fa-github" aria-hidden="true"></i>
+    <span class="username">uditvira</span>
+  </a></div>
+  <div class="one-third column"></div>
+  <div class="one-third column"></div>
+</div>
 
 ***
 
