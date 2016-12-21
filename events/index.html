@@ -44,18 +44,19 @@ order: 3
   </div>
 </section> <!-- /.event-grid -->
 
-<!-- Show More Events -->
-<section id="show-more" class="site-section">
-  <label for="event-toggle" class="label-events">Show More</label>
-  <input id="event-toggle" type="checkbox">
-  <div id="expand">
-    {% for overflow_event in more_events %}
-      <section class="six columns event-item">
-      {% include event.html event=overflow_event event-type="upcoming" %}
-      </section>
-    {% endfor %}
-  </div>
-</section> <!-- /.show-more -->
+{% if more_events.size > 0 %}
+  <!-- Show More Events -->
+  <section id="more-events" class="site-section">
+    <div id="event-toggle" class="button">Show More</div>
+    <div id="show-more">
+      {% for overflow_event in more_events %}
+        <section class="six columns event-item">
+        {% include event.html event=overflow_event event-type="upcoming" %}
+        </section>
+      {% endfor %}
+    </div>
+  </section> <!-- /.show-more -->
+{% endif %}
 
 <hr>
 
