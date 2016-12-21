@@ -5,7 +5,7 @@
     <div class="event-time-location">
       <div class="event-meta">
         <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
-        <p class="event-meta-item">{{ include.event.date | date: "%-d %B %Y" }}, <strong>{{ include.event.startTime | date:"%-I:%M%P" }} – {{include.event.endTime | date:"%-I:%M%P"}}</strong></p></div>
+        <p class="event-meta-item">{{ include.event.date | date: "%-d %B %Y" }}, {% if include.event-type == "upcoming" %}<strong>{% endif %}{{ include.event.startTime | date:"%-I:%M%P" }} – {{include.event.endTime | date:"%-I:%M%P"}}{% if include.event-type == "upcoming" %}</strong>{% endif %}</p></div>
       <div class="event-meta">
         <i class="icon fa fa-map-marker" aria-hidden="true"></i>
         <p class="event-meta-item">{{ include.event.location }}</p>
