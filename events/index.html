@@ -24,12 +24,12 @@ order: 3
     {% for post in event_posts %}
       {% include event-logic-loop.html %}
       {% if post_year > now_year or post_day >= now_day and post_year >= now_year %}
-        {% if event_count < 4 %}
+        {% if event_count < 2 %}
         {% assign event_count = event_count | plus: 1 %}
           <section class="six columns event-item">
-            {% include event.html event-type="upcoming" %}
+            {% include event.html event=post event-type="upcoming" %}
           </section>
-        {% elsif event_count >= 4 %}
+        {% elsif event_count >= 2 %}
             {% assign more_events = more_events | push: post %}
         {% endif %}
 
@@ -49,9 +49,11 @@ order: 3
   <label for="event-toggle" class="label-events">Show More</label>
   <input id="event-toggle" type="checkbox">
   <div id="expand">
-    <section class="six columns event-item">
-      {% include event.html event-type="upcoming" %}
-    </section>
+    {% for overflow_event in more_events %}
+      <section class="six columns event-item">
+      {% include event.html event=overflow_event event-type="upcoming" %}
+      </section>
+    {% endfor %}
   </div>
 </section> <!-- /.show-more -->
 
@@ -68,7 +70,7 @@ order: 3
         {% if post_year < now_year or post_day <= now_day and post_year <= now_year %}
           {% assign is_prev_event = 1 %}
           <section class="six columns event-item">
-            {% include event.html event-type="previous" %}
+            {% include event.html event=post event-type="previous" %}
           </section>
         {% endif %}
       {% endfor %}
