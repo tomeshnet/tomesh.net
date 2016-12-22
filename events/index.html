@@ -47,7 +47,7 @@ order: 3
 {% if more_events.size > 0 %}
   <!-- Show More Events -->
   <section id="more-events" class="site-section">
-    <div id="event-toggle" class="button">Show More</div>
+    <div id="event-toggle" class="button" data-text-swap="Show Less">Show More</div>
     <div id="show-more">
       {% for overflow_event in more_events %}
         <section class="six columns event-item">
