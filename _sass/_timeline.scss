@@ -11,6 +11,7 @@
   transition: all 300ms ease-in-out;
   visibility: hidden;
   opacity: 0;
+  pointer-events: auto;
 
   time {
     display: block;
@@ -53,6 +54,7 @@
   width: 1px;
   margin: 0 auto;
   background: lighten($grey-color, 55%);
+  pointer-events: none;
 
   @media screen and (max-width: $on-palm) {
     width: 100%;
@@ -71,10 +73,15 @@
     height: 20px;
     border-radius: 50%;
     background: lighten($brand-color, 20%);
+    transition: background 300ms ease-in-out;
 
     @media screen and (max-width: $on-palm) {
       display: none;
     }
+  }
+
+  &:hover::after {
+    background: $brand-color;
   }
 
   &:nth-child(odd) .timeline-item {
