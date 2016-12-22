@@ -1,5 +1,5 @@
 ---
-title: 'Built our First Mesh Nodes'
+title: Built our First Mesh Nodes
 date: 2016-08-21
 ---
 

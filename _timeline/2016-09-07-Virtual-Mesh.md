@@ -1,5 +1,5 @@
 ---
-title: 'First Virtual Mesh'
+title: First Virtual Mesh
 date: 2016-09-07
 ---
 
