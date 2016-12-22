@@ -1,5 +1,5 @@
 ---
 title: Hyperboria
-date: 2015-01-01
+date: 2013-06-01
 ---
-Toronto-based individuals are involved with the international cjdns mesh networking community--[Hyperboria](https://hyperboria.net/).
+Toronto involvement as part of the global community formed around the cjdns mesh network--[Hyperboria](https://hyperboria.net/).
