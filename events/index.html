@@ -47,8 +47,9 @@ order: 3
 {% if more_events.size > 0 %}
   <!-- Show More Events -->
   <section id="more-events" class="site-section">
-    <div id="event-toggle" class="button" data-text-swap="Show Less">Show More</div>
-    <div id="show-more">
+    <button id="event-toggle" aria-expanded="false" aria-controls="show-more" data-text-swap="Show Less">Show More</button>
+
+    <div id="show-more" aria-hidden="true">
       {% for overflow_event in more_events %}
         <section class="six columns event-item">
         {% include event.html event=overflow_event event-type="upcoming" %}
