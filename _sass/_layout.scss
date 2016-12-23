@@ -144,16 +144,17 @@
 // Events 'Show More'
 
 #show-more {
-  display: none;
   margin-top: 1em;
-}
-
-#show-more.show {
-  display: block;
-  height: auto; // something about the transition isn't working :(
+  max-height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
+  -webkit-transition: max-height 500ms;
+  transition: max-height 500ms;
+
+  &.show {
+    max-height: 100vh;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
+  }
 }
 
 // Site main feature
