@@ -1,12 +1,13 @@
 {% comment %} Event Logic: initialize counters {% endcomment %}
 
 {% assign event_count = 0 %}
+{% assign more_events = "" | split:"|"  %}
 
 {% comment %} reverse-chronologically sort posts {% endcomment %}
 
 {% assign event_posts = site.posts | reverse %}
 
-{% comment %} initialize 'nowday' for displaying posts {% endcomment %}
+{% comment %} initialize 'now_day' for displaying posts {% endcomment %}
 
 {% capture now_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% capture now_day %}{{'now' | date: '%j'}}{% endcapture %}

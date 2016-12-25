@@ -132,12 +132,28 @@
 }
 
 .event-title-previous {
-  font-size: 2.2rem; 
+  font-size: 2.2rem;
 }
 
 .events-subscribe-container {
   @media screen and (max-width: $on-palm) {
     text-align: center;
+  }
+}
+
+// Events 'Show More'
+
+#show-more {
+  margin-top: 1em;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 500ms;
+  transition: max-height 500ms;
+
+  &.show {
+    max-height: 100vh;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
   }
 }
 

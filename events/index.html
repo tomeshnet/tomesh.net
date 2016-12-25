@@ -24,12 +24,15 @@ order: 3
     {% for post in event_posts %}
       {% include event-logic-loop.html %}
       {% if post_year > now_year or post_day >= now_day and post_year >= now_year %}
-        {% if event_count < 4 %}
+        {% if event_count < 2 %}
         {% assign event_count = event_count | plus: 1 %}
           <section class="six columns event-item">
-            {% include event.html event-type="upcoming" %}
+            {% include event.html event=post event-type="upcoming" %}
           </section>
+        {% elsif event_count >= 2 %}
+            {% assign more_events = more_events | push: post %}
         {% endif %}
+
       {% endif %}
     {% endfor %}
 
@@ -40,6 +43,21 @@ order: 3
     {% endif %}
   </div>
 </section> <!-- /.event-grid -->
+
+{% if more_events.size > 0 %}
+  <!-- Show More Events -->
+  <section id="more-events" class="site-section">
+    <button id="event-toggle" aria-expanded="false" aria-controls="show-more" data-text-swap="Show Less">Show More</button>
+
+    <div id="show-more" aria-hidden="true">
+      {% for overflow_event in more_events %}
+        <section class="six columns event-item">
+        {% include event.html event=overflow_event event-type="upcoming" %}
+        </section>
+      {% endfor %}
+    </div>
+  </section> <!-- /.show-more -->
+{% endif %}
 
 <hr>
 
@@ -54,7 +72,7 @@ order: 3
         {% if post_year < now_year or post_day <= now_day and post_year <= now_year %}
           {% assign is_prev_event = 1 %}
           <section class="six columns event-item">
-            {% include event.html event-type="previous" %}
+            {% include event.html event=post event-type="previous" %}
           </section>
         {% endif %}
       {% endfor %}
