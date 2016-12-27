@@ -33,6 +33,7 @@
   padding: 10px 0;
 
   @media screen and (max-width: $on-palm) {
+    width: 100%;
     text-align: center;
   }
 }
