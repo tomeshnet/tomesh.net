@@ -132,7 +132,7 @@
 }
 
 .event-title-previous {
-  font-size: 2.2rem; 
+  font-size: 2.2rem;
 }
 
 .events-subscribe-container {
@@ -242,4 +242,35 @@
 
 .pagination {
   text-align: center;
+}
+
+// Social Media Biography
+
+.bio-social-media {
+  ul {
+    margin-top: -$base-margin-bottom;
+    margin-bottom: $base-margin-bottom;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin-right: $spacing-unit / 2;
+    margin-top: 0;
+    padding: 5px 0;
+    float: left;
+    width: 30%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: $content-width) {
+      flex-basis: 50%;
+      margin: 0;
+    }
+  }
 }

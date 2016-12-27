@@ -78,14 +78,16 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 9:15 &ndash; 9:45 | Introduction to mesh and community wireless |
 | 9:45 &ndash; 11:00 | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_ |
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_ |
-| 12:30 &ndash; 13:00 | MeshISP _Demo_ |
+| 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_ |
 | 13:00 | **LUNCH** |
-| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Karen Louise Smith](#karen)_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Karen Louise Smith](#karen), [Dr. Zbigniew Stachniak](#zbigniew), and more_ |
 | 15:30 | **AFTERNOON BREAK** |  |
-| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) _Interactive Discussion_ |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_ |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward |
 
 <br />
+
+
 
 ***
 
@@ -95,65 +97,62 @@ The venue is an accessible space, for more details please see the <a href="http:
 **ansuz** is a Toronto-based hacker temporarily stuck in Paris.
 
 <div class="row">
-  <div class="one-third column"><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
-  <span class="website">transitiontech.ca</span>
-  </a></div>
-  <div class="one-third column"><a href="https://twitter.com/fc00ansuz" target="_blank">
-    <i class="icon fa fa-twitter" aria-hidden="true"></i>
-    <span class="username">@fc00ansuz</span>
-  </a></div>
-  <div class="one-third column"><a href="https://github.com/ansuz" target="_blank">
-    <i class="icon fa fa-github" aria-hidden="true"></i>
-    <span class="username">ansuz</span>
-  </a></div>
+  <div class="twelve columns bio-social-media">
+    <ul>
+      <li><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;transitiontech.ca</a></li>
+      <li><a href="https://twitter.com/fc00ansuz" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@fc00ansuz</a></li>
+      <li><a href="https://github.com/ansuz" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;ansuz</a></li>
+    </ul>
+  </div>
 </div>
-<br />
 
 <a name="benhylau"></a>
 **Benedict Lau** is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
 
 <div class="row">
-  <div class="one-third column"><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
-  <span class="website">groundupworks.com</span>
-  </a></div>
-  <div class="one-third column"><a href="https://twitter.com/LauBenedict" target="_blank">
-    <i class="icon fa fa-twitter" aria-hidden="true"></i>
-    <span class="username">@LauBenedict</span>
-  </a></div>
-  <div class="one-third column"><a href="https://github.com/benhylau" target="_blank">
-    <i class="icon fa fa-github" aria-hidden="true"></i>
-    <span class="username">benhylau</span>
-  </a></div>
+  <div class="twelve columns bio-social-media">
+    <ul>
+      <li><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;groundupworks.com </a></li>
+      <li><a href="https://twitter.com/LauBenedict" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@LauBenedict</a></li>
+      <li><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
+    </ul>
+  </div>
 </div>
-<br />
 
 <a name="karen"></a>
-**Dr. Karen Louise Smith** is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
+**Karen Louise Smith** is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
 
 <div class="row">
-  <div class="one-third column"><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
-  <span class="website">karenlouisesmith.net</span>
-  </a></div>
-  <div class="one-third column"><a href="https://twitter.com/smithisgeneric" target="_blank">
-    <i class="icon fa fa-twitter" aria-hidden="true"></i>
-    <span class="username">@smithisgeneric</span>
-  </a></div>
+  <div class="twelve columns bio-social-media">
+    <ul>
+      <li><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;karenlouisesmith.net</a></li>
+      <li><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
+    </ul>
+  </div>
 </div>
-<br />
 
 <a name="udit"></a>
 **Udit Vira** is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
 
 <div class="row">
-  <div class="one-third column"><a href="https://github.com/uditvira" target="_blank">
-    <i class="icon fa fa-github" aria-hidden="true"></i>
-    <span class="username">uditvira</span>
-  </a></div>
-  <div class="one-third column"></div>
-  <div class="one-third column"></div>
+  <div class="twelve columns bio-social-media">
+    <ul>
+      <li><a href="https://github.com/uditvira" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;uditvira</a></li>
+    </ul>
+  </div>
 </div>
 
+<a name="zbigniew"></a>
+**Zbigniew Stachniak** is an Associate Professor in the Department of Electrical Engineering and Computer Science at York University, Toronto. His main research areas are artificial intelligence, history of computing, and history of mathematics. He has published extensively in these fields. He is the founder and the curator of <a href="http://www.cs.yorku.ca/museum/" target="_blank">York University Computer Museum (YUCoM)</a>.
 
+<div class="row">
+  <div class="twelve columns bio-social-media">
+    <ul>
+      <li><a href="http://www.cse.yorku.ca/~zbigniew/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cse.yorku.ca/~zbigniew/</a></li>
+      <li><a href="http://www.cs.yorku.ca/museum/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;YUCoM</a></li>
+    </ul>
+  </div>
+</div>
 
 ***
 
