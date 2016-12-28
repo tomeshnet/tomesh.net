@@ -72,18 +72,18 @@ The venue is an accessible space, for more details please see the <a href="http:
 
 ## Schedule
 
-| Start Time | Session |
-| --- | --- | --- |
-| 9:00 | **REGISTRATION OPENS** |
-| 9:15 &ndash; 9:45 | Introduction to mesh and community wireless |
-| 9:45 &ndash; 11:00 | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_ |
-| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_ |
-| 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_ |
-| 13:00 | **LUNCH** |
+|      Start Time     |                                                                                                           Session                                                                                                            |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 9:00                | **REGISTRATION OPENS**                                                                                                                                                                                                       |
+| 9:15 &ndash; 9:45   | Introduction to mesh and community wireless                                                                                                                                                                                  |
+| 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
+| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
+| 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
+| 13:00               | **LUNCH**                                                                                                                                                                                                                    |
 | 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Karen Louise Smith](#karen), [Dr. Zbigniew Stachniak](#zbigniew), and more_ |
-| 15:30 | **AFTERNOON BREAK** |  |
-| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_ |
-| 17:30 &ndash; 18:00 | Wrap Up and Moving Forward |
+| 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_                                                                               |
+| 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
 
 <br />
 
