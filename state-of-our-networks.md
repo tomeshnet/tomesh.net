@@ -2,7 +2,7 @@
 layout: page
 title: "State of Our Networks 2017 <br /> Mini-Conference"
 excerpt: 'A one-day hands-on conference about the past, present, and future of building our own network infrastructures to access the internet in our city.'
-location: Semaphore Demo Room, BL 417, Claude T. Bissell, 140 St. George St  
+location: Semaphore Demo Room, BL 417, Claude T. Bissell, 140 St. George St
 locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
 date: 2017-01-14
 startTime: '9:00'
@@ -87,71 +87,54 @@ The venue is an accessible space, for more details please see the <a href="http:
 
 <br />
 
-
-
 ***
 
 ## Speakers
 
-<a name="ansuz"></a>
-**ansuz** is a Toronto-based hacker temporarily stuck in Paris.
+**ansuz**{:#ansuz} is a Toronto-based hacker temporarily stuck in Paris.
 
-<div class="row">
-  <div class="twelve columns bio-social-media">
-    <ul>
-      <li><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;transitiontech.ca</a></li>
-      <li><a href="https://twitter.com/fc00ansuz" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@fc00ansuz</a></li>
-      <li><a href="https://github.com/ansuz" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;ansuz</a></li>
-    </ul>
-  </div>
+<div class="bio-social-media">
+  <ul>
+    <li><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;transitiontech.ca</a></li>
+    <li><a href="https://twitter.com/fc00ansuz" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@fc00ansuz</a></li>
+    <li><a href="https://github.com/ansuz" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;ansuz</a></li>
+  </ul>
 </div>
 
-<a name="benhylau"></a>
-**Benedict Lau** is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
+**Benedict Lau**{:#benhylau} is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
 
-<div class="row">
-  <div class="twelve columns bio-social-media">
-    <ul>
-      <li><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;groundupworks.com </a></li>
-      <li><a href="https://twitter.com/LauBenedict" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@LauBenedict</a></li>
-      <li><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
-    </ul>
-  </div>
+<div class="bio-social-media">
+  <ul>
+    <li><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;groundupworks.com </a></li>
+    <li><a href="https://twitter.com/LauBenedict" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@LauBenedict</a></li>
+    <li><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
+  </ul>
 </div>
 
-<a name="karen"></a>
-**Karen Louise Smith** is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
+**Karen Louise Smith**{:#karen} is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
 
-<div class="row">
-  <div class="twelve columns bio-social-media">
-    <ul>
-      <li><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;karenlouisesmith.net</a></li>
-      <li><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
-    </ul>
-  </div>
+<div class="bio-social-media">
+  <ul>
+    <li><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;karenlouisesmith.net</a></li>
+    <li><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
+  </ul>
 </div>
 
-<a name="udit"></a>
-**Udit Vira** is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
+**Udit Vira**{:#udit} is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
 
-<div class="row">
-  <div class="twelve columns bio-social-media">
-    <ul>
-      <li><a href="https://github.com/uditvira" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;uditvira</a></li>
-    </ul>
-  </div>
+<div class="bio-social-media">
+  <ul>
+    <li><a href="https://github.com/uditvira" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;uditvira</a></li>
+  </ul>
 </div>
 
-<a name="zbigniew"></a>
-**Zbigniew Stachniak** is an Associate Professor in the Department of Electrical Engineering and Computer Science at York University, Toronto. His main research areas are artificial intelligence, history of computing, and history of mathematics. He has published extensively in these fields. He is the founder and the curator of <a href="http://www.cs.yorku.ca/museum/" target="_blank">York University Computer Museum (YUCoM)</a>.
+**Zbigniew Stachniak**{:#zbigniew} is an Associate Professor in the Department of Electrical Engineering and Computer Science at York University, Toronto. His main research areas are artificial intelligence, history of computing, and history of mathematics. He has published extensively in these fields. He is the founder and the curator of <a href="http://www.cs.yorku.ca/museum/" target="_blank">York University Computer Museum (YUCoM)</a>.
 
-<div class="row">
-  <div class="twelve columns bio-social-media">
-    <ul>
-      <li><a href="http://www.cse.yorku.ca/~zbigniew/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cse.yorku.ca/~zbigniew/</a></li>
-      <li><a href="http://www.cs.yorku.ca/museum/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;YUCoM</a></li>
-    </ul>
-  </div>
+<div class="bio-social-media">
+  <ul>
+    <li><a href="http://www.cse.yorku.ca/~zbigniew/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cse.yorku.ca/~zbigniew/</a></li>
+    <li><a href="http://www.cs.yorku.ca/museum/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cs.yorku.ca/museum/ (YUCoM)</a></li>
+  </ul>
 </div>
 
 ***
