@@ -246,27 +246,25 @@
 
 // Social Media Biography
 
-.bio-social-media {
-  ul {
-    margin-top: -$base-margin-bottom;
-    margin-bottom: $base-margin-bottom;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
+.bio-sm-list {
+  margin-top: -$base-margin-bottom;
+  margin-bottom: $base-margin-bottom;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  li {
-    margin-right: $spacing-unit / 2;
-    margin-top: 0;
-    padding: 5px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.bio-sm-list-item {
+  margin-right: $spacing-unit / 2;
+  margin-top: 0;
+  padding: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-    @media (max-width: $content-width) {
-      flex-basis: 50%;
-      margin: 0;
-    }
+  @media (max-width: $content-width) {
+    flex-basis: 50%;
+    margin: 0;
   }
 }
