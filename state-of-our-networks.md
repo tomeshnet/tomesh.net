@@ -2,7 +2,7 @@
 layout: page
 title: "State of Our Networks 2017 <br /> Mini-Conference"
 excerpt: 'A one-day hands-on conference about the past, present, and future of building our own network infrastructures to access the internet in our city.'
-location: Semaphore Demo Room, BL 417, Claude T. Bissell, 140 St. George St  
+location: Semaphore Demo Room, BL 417, Claude T. Bissell, 140 St. George St
 locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
 date: 2017-01-14
 startTime: '9:00'
@@ -72,18 +72,60 @@ The venue is an accessible space, for more details please see the <a href="http:
 
 ## Schedule
 
-| Start Time | Session |
-| --- | --- | --- |
-| 9:00 | **REGISTRATION OPENS** |
-| 9:15 &ndash; 9:45 | _Welcome_: Intro to mesh and community wireless |
-| 9:45 &ndash; 13:00 | _Workshops and Demos_ |
-| 13:00 | **LUNCH** |
-| 14:00 &ndash; 15:30 | _Presentation and Panel_ |
-| 15:30 | **AFTERNOON BREAK** |  |
-| 16:00 &ndash; 17:30 | _Interactive Discussion_ |
-| 17:30 &ndash; 18:00 | _Closing_: Wrap up and deployment steps |  
+|      Start Time     |                                                                                                           Session                                                                                                            |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 9:00                | **REGISTRATION OPENS**                                                                                                                                                                                                       |
+| 9:15 &ndash; 9:45   | Introduction to mesh and community wireless                                                                                                                                                                                  |
+| 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
+| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
+| 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
+| 13:00               | **LUNCH**                                                                                                                                                                                                                    |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Karen Louise Smith](#karen), [Dr. Zbigniew Stachniak](#zbigniew), and more_ |
+| 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_                                                                               |
+| 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
 
 <br />
+
+***
+
+## Speakers
+
+**ansuz**{:#ansuz} is a Toronto-based hacker temporarily stuck in Paris.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;transitiontech.ca</a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/fc00ansuz" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@fc00ansuz</a></li>
+  <li class="bio-sm-list-item"><a href="https://github.com/ansuz" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;ansuz</a></li>
+</ul>
+
+**Benedict Lau**{:#benhylau} is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;groundupworks.com </a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/LauBenedict" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@LauBenedict</a></li>
+  <li class="bio-sm-list-item"><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
+</ul>
+
+**Karen Louise Smith**{:#karen} is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;karenlouisesmith.net</a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
+</ul>
+
+**Udit Vira**{:#udit} is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="https://github.com/uditvira" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;uditvira</a></li>
+</ul>
+
+**Zbigniew Stachniak**{:#zbigniew} is an Associate Professor in the Department of Electrical Engineering and Computer Science at York University, Toronto. His main research areas are artificial intelligence, history of computing, and history of mathematics. He has published extensively in these fields. He is the founder and the curator of <a href="http://www.cs.yorku.ca/museum/" target="_blank">York University Computer Museum (YUCoM)</a>.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://www.cse.yorku.ca/~zbigniew/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cse.yorku.ca/~zbigniew/</a></li>
+  <li class="bio-sm-list-item"><a href="http://www.cs.yorku.ca/museum/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;cs.yorku.ca/museum/ (YUCoM)</a></li>
+</ul>
 
 ***
 
