@@ -80,7 +80,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
 | 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
-| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Karen Louise Smith](#karen), [Dr. Zbigniew Stachniak](#zbigniew), and more_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO collective](#tao)_ |
 | 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
 | 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_                                                                               |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
@@ -107,11 +107,29 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
 </ul>
 
+**Catherine Middleton**{:#catherine} is a Professor at the Ted Rogers School of Management. Dr. Middleton holds a Canada Research Chair in Communication Technologies in the Information Society and was named to the inaugural cohort of the Royal Society of Canada's College of New Scholars, Artists and Scientists in 2014. Her research focuses on the development and use of new communication technologies, with specific interests in mobile devices and fixed and wireless broadband networks. She is also interested in how Canadians use (or don't use) the internet in their daily lives.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://www.ryerson.ca/~cmiddlet/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;ryerson.ca/~cmiddlet/</a></li>
+</ul>
+
 **Karen Louise Smith**{:#karen} is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://karenlouisesmith.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;karenlouisesmith.net</a></li>
   <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
+</ul>
+
+**Lee MacNeill**{:#lee} is a Director and President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>
+</ul>
+
+**TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms") is a anarchist and radical online service provider, offering free email and web hosting to activists.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://tao.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;tao.ca</a></li>
 </ul>
 
 **Udit Vira**{:#udit} is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
