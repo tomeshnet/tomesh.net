@@ -80,9 +80,9 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
 | 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
-| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO collective](#tao)_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO Collective](#tao)_ |
 | 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
-| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion_                                                                               |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), XXX, and XXX_                         |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
 
 <br />
@@ -126,11 +126,13 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>
 </ul>
 
-**TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms") is a anarchist and radical online service provider, offering free email and web hosting to activists.
+**TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms"), is an anarchist and radical online service provider, offering free email and web hosting to activists.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://tao.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;tao.ca</a></li>
 </ul>
+
+**Toronto Community Networks**{:#tcn} is a not-for-profit, grassroots organization that creates local networks in order to increase access to technology and information for communities across the GTHA. These networks provide a platform for communities to generate and share knowledge collaboratively, identify and address local problems, and increase economic well-being. TCN aspires to build the capacity of community members, so that they have the literacies required to maintain and scale their local networks, and succeed in the 21st century. We believe in building relationships and creating engagement through efforts that utilize research, co-creation, and empathy building to reach out to disengaged youth.
 
 **Udit Vira**{:#udit} is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
 
