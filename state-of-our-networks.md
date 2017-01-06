@@ -80,7 +80,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
 | 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
-| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO Collective](#tao)_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO Collective](#tao). Moderated by [Garry Ing](#garry)_ |
 | 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
 | 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), XXX, and XXX_                         |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
@@ -113,6 +113,14 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="http://www.ryerson.ca/~cmiddlet/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;ryerson.ca/~cmiddlet/</a></li>
 </ul>
 
+**Garry Ing**{:#garry} is a designer and technologist residing in Toronto, contributing to Toronto Mesh. His previous work and collaborations has been with the Strategic Innovation Lab (sLab) at OCAD University, the Technologies for Aging Gracefully Lab at the University of Toronto, and Normative. He is a graduate of OCAD University, with a background in graphic design.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="https://garrying.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;garrying.com</a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/garrying" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@garrying</a></li>
+  <li class="bio-sm-list-item"><a href="https://github.com/garrying" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;garrying</a></li>
+</ul>
+
 **Karen Louise Smith**{:#karen} is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
 
 <ul class="bio-sm-list">
@@ -126,7 +134,7 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>
 </ul>
 
-**TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms"), is an anarchist and radical online service provider, offering free email and web hosting to activists.
+Conceived in 1996, **TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms"), is a Canada-based organization founded on anarchist principles of self-determination, cooperation, and liberty, values expressed by the empowerment of everyday activists in possessing non-corporate and non-state-controlled Internet tools. The scope of the project has changed over the years, once servicing radicals around the world and operating several geographical collectives, it now maintains resources for largely Toronto based activists and a small tech collective interested in security and activism.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://tao.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;tao.ca</a></li>
