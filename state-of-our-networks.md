@@ -75,14 +75,14 @@ The venue is an accessible space, for more details please see the <a href="http:
 |      Start Time     |                                                                                                           Session                                                                                                            |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 9:00                | **REGISTRATION OPENS**                                                                                                                                                                                                       |
-| 9:15 &ndash; 9:45   | Introduction to mesh and community wireless                                                                                                                                                                                  |
+| 9:15 &ndash; 9:45   | Introduction to mesh and community wireless <br /> _Intro led by [Dawn Walker](#dawn)_                                                                                                                                       |
 | 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
 | 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
-| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the [TAO Collective](#tao). Moderated by [Garry Ing](#garry)_ |
+| 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), <br /> [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the <br /> [TAO Collective](#tao). Moderated by [Garry Ing](#garry)_ |
 | 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
-| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), XXX, and XXX_                         |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), [Toronto Mesh](#tomesh), <br /> and MeshISP_ |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
 
 <br />
@@ -113,6 +113,15 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="http://www.ryerson.ca/~cmiddlet/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;ryerson.ca/~cmiddlet/</a></li>
 </ul>
 
+**Dawn Walker**{:#dawn} is a PhD student at the Faculty of Information, University of Toronto
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="http://dcwalker.ca" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;dcwalker.ca </a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/dcwalk_" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@dcwalk_</a></li>
+  <li class="bio-sm-list-item"><a href="https://github.com/dcwalk" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;dcwalk</a></li>
+</ul>
+
+
 **Garry Ing**{:#garry} is a designer and technologist residing in Toronto, contributing to Toronto Mesh. His previous work and collaborations has been with the Strategic Innovation Lab (sLab) at OCAD University, the Technologies for Aging Gracefully Lab at the University of Toronto, and Normative. He is a graduate of OCAD University, with a background in graphic design.
 
 <ul class="bio-sm-list">
@@ -141,6 +150,14 @@ Conceived in 1996, **TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Tel
 </ul>
 
 **Toronto Community Networks**{:#tcn} is a not-for-profit, grassroots organization that creates local networks in order to increase access to technology and information for communities across the GTHA. These networks provide a platform for communities to generate and share knowledge collaboratively, identify and address local problems, and increase economic well-being. TCN aspires to build the capacity of community members, so that they have the literacies required to maintain and scale their local networks, and succeed in the 21st century. We believe in building relationships and creating engagement through efforts that utilize research, co-creation, and empathy building to reach out to disengaged youth.
+
+**Toronto Mesh**{:#tomesh} is a grassroots and decentralized group of volunteers who started Toronto Mesh at CivicTechTO in early 2016. Through building community-owned infrastructure using off-the-shelf hardware and open-source technology, we are hoping to address barriers to internet access in our city.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="https://tomesh.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;tomesh.net</a></li>
+  <li class="bio-sm-list-item"><a href="https://twitter.com/tomeshnet" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@tomeshnet</a></li>
+  <li class="bio-sm-list-item"><a href="https://github.com/tomeshnet" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;tomeshnet</a></li>
+</ul>
 
 **Udit Vira**{:#udit} is an engineer and maker living in Toronto where he contributes to Steam Link Toronto and the Toronto Mesh project.
 
