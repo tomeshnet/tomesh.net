@@ -3,8 +3,8 @@ layout: post
 title: "Monthly Check-in"
 slug: monthly-checkin
 text: 'Our monthly meeting to check in on the status of Toronto Mesh working groups.'
-location: Nirvana, 434 College St
-locationLink: http://osm.org/go/ZX6BlHZC5?m=
+location: Wvrst, 609 King St W
+locationLink: http://osm.org/go/ZX6Bhj4Bq?node=2611092413
 date: 2016-02-16
 startTime: '19:00'
 endTime: '20:30'
