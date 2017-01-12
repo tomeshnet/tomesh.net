@@ -1,16 +1,16 @@
 <header class="header">
   <div class="container">
     <h3 class="site-title">
-    <a href="{{ site.baseurl }}/" rel="home">
-      {% if page.url == '/' %}
-        <img class="site-logo" src="/images/tomesh-icon.svg" alt="{{ site.title }} Logo" />
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </a>
-  </h3>
+      <a href="{{ site.baseurl }}/" rel="home">
+        {% if page.url == '/' %}
+          <img class="site-logo" src="/images/tomesh-icon.svg" alt="{{ site.title }} Logo" />
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </a>
+    </h3>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
       {% assign current = page.url | split: '/' %}
       {% assign sorted_pages = site.pages | sort: "order" %}
@@ -27,5 +27,5 @@
         {% endunless %}
       {% endfor %}
     </ul> <!-- .nav -->
-</div>
+  </div>
 </header>
