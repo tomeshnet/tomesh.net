@@ -11,21 +11,23 @@
     </h3>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu">
-      {% assign current = page.url | split: '/' %}
-      {% assign sorted_pages = site.pages | sort: "order" %}
-        {% for page in sorted_pages %}
-         {% unless page.url contains '/events/page'%}
-           {% if page.order > 0 %}
-             <li>
-               <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
-                  href="{{ page.url }}" aria-label="{% if page.descriptiveTitle %}{{ page.descriptiveTitle }}{% else %}{{ page.title }}{% endif %}">
-                  {{ page.title }}
-               </a>
-             </li>
-           {% endif %}
-        {% endunless %}
-      {% endfor %}
-    </ul> <!-- .nav -->
+    <nav class="nav" role="navigation" aria-label="Primary Menu">
+      <ul class="menu">
+        {% assign current = page.url | split: '/' %}
+        {% assign sorted_pages = site.pages | sort: "order" %}
+          {% for page in sorted_pages %}
+           {% unless page.url contains '/events/page'%}
+             {% if page.order > 0 %}
+               <li>
+                 <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
+                    href="{{ page.url }}" aria-label="{% if page.descriptiveTitle %}{{ page.descriptiveTitle }}{% else %}{{ page.title }}{% endif %}">
+                    {{ page.title }}
+                 </a>
+               </li>
+             {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ul> <!-- .nav -->
+    </nav>
   </div>
 </header>
