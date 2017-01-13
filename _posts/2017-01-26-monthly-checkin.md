@@ -5,7 +5,7 @@ slug: monthly-checkin
 text: 'Our monthly meeting to check in on the status of Toronto Mesh working groups.'
 location: Nirvana, 434 College St
 locationLink: http://osm.org/go/ZX6BlHZC5?m=
-date: 2016-01-26
+date: 2017-01-26
 startTime: '19:00'
 endTime: '20:30'
 ---
