@@ -77,7 +77,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 9:00                | **REGISTRATION OPENS**                                                                                                                                                                                                       |
 | 9:15 &ndash; 9:45   | Introduction to mesh and community wireless <br /> _Intro led by [Dawn Walker](#dawn)_                                                                                                                                       |
 | 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
-| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz) and [Benedict Lau](#benhylau)_                                                    |
+| 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz)_                                                    |
 | 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
 | 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), <br /> [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the <br /> [TAO Collective](#tao). Moderated by [Garry Ing](#garry)_ |
@@ -97,14 +97,6 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="https://transitiontech.ca/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;transitiontech.ca</a></li>
   <li class="bio-sm-list-item"><a href="https://twitter.com/fc00ansuz" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@fc00ansuz</a></li>
   <li class="bio-sm-list-item"><a href="https://github.com/ansuz" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;ansuz</a></li>
-</ul>
-
-**Benedict Lau**{:#benhylau} is a Toronto-based engineer who believes in knowledge sharing and appropriate technology principles. He enjoys building things that fascinate him, which on rare occasions turn out useful for other people. Lately he's been spending much time on mobile software and exploring the wonderful world of distributed systems.
-
-<ul class="bio-sm-list">
-  <li class="bio-sm-list-item"><a href="http://www.groundupworks.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;groundupworks.com </a></li>
-  <li class="bio-sm-list-item"><a href="https://twitter.com/LauBenedict" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@LauBenedict</a></li>
-  <li class="bio-sm-list-item"><a href="https://github.com/benhylau" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;benhylau</a></li>
 </ul>
 
 **Catherine Middleton**{:#catherine} is a Professor at the Ted Rogers School of Management. Dr. Middleton holds a Canada Research Chair in Communication Technologies in the Information Society and was named to the inaugural cohort of the Royal Society of Canada's College of New Scholars, Artists and Scientists in 2014. Her research focuses on the development and use of new communication technologies, with specific interests in mobile devices and fixed and wireless broadband networks. She is also interested in how Canadians use (or don't use) the internet in their daily lives.
