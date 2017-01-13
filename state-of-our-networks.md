@@ -78,11 +78,11 @@ The venue is an accessible space, for more details please see the <a href="http:
 | 9:15 &ndash; 9:45   | Introduction to mesh and community wireless <br /> _Intro led by [Dawn Walker](#dawn)_                                                                                                                                       |
 | 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz)_                                                    |
-| 12:30 &ndash; 13:00 | MeshISP <br /> _Demo_                                                                                                                                                                                                        |
+| 12:30 &ndash; 13:00 | [MeshISP](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-d.md) <br /> _Demo led by [Ethan Wilding](#ethan)_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
 | 14:00 &ndash; 15:30 | [A History of Toronto's Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-e.md) <br /> _Panel Session with [Dr. Catherine Middleton](#catherine), [Dr. Karen Louise Smith](#karen), <br /> [Lee MacNeill](#lee), [Dr. Zbigniew Stachniak](#zbigniew), and members of the <br /> [TAO Collective](#tao). Moderated by [Garry Ing](#garry)_ |
 | 15:30               | **AFTERNOON BREAK**                                                                                                                                                                                                          |
-| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), [Toronto Mesh](#tomesh), <br /> and MeshISP_ |
+| 16:00 &ndash; 17:30 | [Building the Networks We Want](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-f.md) <br /> _Interactive Discussion with [Toronto Community Networks](#tcn), [Toronto Mesh](#tomesh), <br /> and [MeshISP](#meshisp)_ |
 | 17:30 &ndash; 18:00 | Wrap Up and Moving Forward                                                                                                                                                                                                   |
 
 <br />
@@ -105,7 +105,7 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="http://www.ryerson.ca/~cmiddlet/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;ryerson.ca/~cmiddlet/</a></li>
 </ul>
 
-**Dawn Walker**{:#dawn} is a PhD student at the Faculty of Information, University of Toronto
+**Dawn Walker**{:#dawn} is a PhD student at the Faculty of Information, University of Toronto. Her research focuses on participatory design of civic environmental technologies. A keen gardener, Dawn has spent time building community gardens and urban agriculture projects.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://dcwalker.ca" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;dcwalker.ca </a></li>
@@ -113,6 +113,11 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="https://github.com/dcwalk" target="_blank"><i class="icon fa fa-github" aria-hidden="true"></i>&nbsp;dcwalk</a></li>
 </ul>
 
+**Ethan Wilding**{:#ethan} is a co-founder of Ledger Labs, the leading Canadian blockchain-focused firm. He has been working in the blockchain space since late 2012, held a foundational role with the Ethereum project and worked within the Ethereum Foundation intensely during its formative first year. Ethan is also the Chair of the Certified Bitcoin Professional exam, one of the first not-for-profit programs of its kind in the field of blockchain technologies. In addition to Ledger Labs, Ethan is working with experts on international affairs and humanitarian organizations to build a blockchain-based incentivized task management and campaign creation system that connects people with important causes. In 2010, Ethan earned a Ph.D. in Philosophy and taught philosophy at the Balsille School of International Affairs before leaving academia to focus on blockchain startups.
+
+<ul class="bio-sm-list">
+  <li class="bio-sm-list-item"><a href="https://twitter.com/ethanwilding" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@ethanwilding</a></li>
+</ul>
 
 **Garry Ing**{:#garry} is a designer and technologist residing in Toronto, contributing to Toronto Mesh. His previous work and collaborations has been with the Strategic Innovation Lab (sLab) at OCAD University, the Technologies for Aging Gracefully Lab at the University of Toronto, and Normative. He is a graduate of OCAD University, with a background in graphic design.
 
@@ -134,6 +139,8 @@ The venue is an accessible space, for more details please see the <a href="http:
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>
 </ul>
+
+**MeshISP**{:#meshisp} wants to bridge the digital divide by building the tools that will enable an easily deployable wireless internet sharing economy. Combining [Ethereum](https://www.ethereum.org/) smart contracts to automate many of the functions of a traditional ISP (access and payment) and an encrypted mesh routing protocol that can be run on low-cost wireless hardware, they seek to empower entrepreneurs worldwide to deploy affordable internet options in their communities.
 
 Conceived in 1996, **TAO Collective**{:#tao}, or OAT ("Organizing Autonomous Telecomms"), is a Canada-based organization founded on anarchist principles of self-determination, cooperation, and liberty, values expressed by the empowerment of everyday activists in possessing non-corporate and non-state-controlled Internet tools. The scope of the project has changed over the years, once servicing radicals around the world and operating several geographical collectives, it now maintains resources for largely Toronto based activists and a small tech collective interested in security and activism.
 
