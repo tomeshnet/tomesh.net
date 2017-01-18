@@ -21,11 +21,11 @@ END:DAYLIGHT
 END:VTIMEZONE
 {% for post in site.posts limit:20 %}BEGIN:VEVENT
 UID:{{ post.date | date: "%Y%m%d" }}@tomesh.net
-ORGANIZER;CN="Toronto Mesh":MAILTO:hello@tomesh.net
+ORGANIZER;CN="Toronto Mesh":MAILTO:{{ site.email }}
 LOCATION:{{ post.location }}
 SUMMARY:{{ post.title }}
-URL:https://tomesh.net{{ post.url|strip }}
-DESCRIPTION;ALTREP="{{ post.text|strip }}":{{ post.text|strip }}
+URL:{{ post.url|strip | prepend: site.url }}
+DESCRIPTION;ALTREP="{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}":{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}
 DTSTART;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
 DTEND;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
 DTSTAMP;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
