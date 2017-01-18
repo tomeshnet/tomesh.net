@@ -3,9 +3,9 @@ layout: post
 title: "Monthly Check-in"
 slug: monthly-checkin
 text: 'Our monthly meeting to check in on the status of Toronto Mesh working groups.'
-location: Bampot, 201 Harbord St
-locationLink: http://osm.org/go/ZX6BwPVYM?m=  
-date: 2017-03-16
+location: Wvrst, 609 King St W
+locationLink: http://osm.org/go/ZX6Bhj4Bq?node=2611092413
+date: 2017-02-23
 startTime: '19:00'
 endTime: '20:30'
 ---
