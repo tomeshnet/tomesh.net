@@ -4,46 +4,47 @@ title: Get Involved
 order: 2
 ---
 
-Interested? You can start working with us in a few quick steps:
+Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct), then:
 
-1. Come say hi on our {% include icon-matrix.html %} chat
-  - Create an account to join `#tomesh` and introduce yourself on our `#welcome` channel!
-  - If you plan on connecting via a [mobile app](https://riot.im/), make sure you set the homeserver to `https://matrix.tomesh.net` under 'Use custom server options (advanced)'.
+1. Say hi on our chat {% include icon-matrix.html %}
+    - Create an account to join `#tomesh` and introduce yourself on our `#welcome` channel!
+    - If you connect via the [Riot mobile app](https://riot.im/), select _Use custom server options (advanced)_ and set the homeserver to `https://matrix.tomesh.net`
 
-2. Check out our [vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct)
+1. Join one of our [events]({{ site.baseurl }}/events)
+    - Include in-person and virtual meetups and workshops
 
-3. Join us at one of our [events]({{ site.baseurl }}/events)!
-  - Events include in-person and virtual meetups and workshops
-
-4. If you have an idea or time to help, [work with us](#work-with-us)
-  - The current status of the project is tracked on our publicly-viewable [Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) and [GitHub account](https://github.com/tomeshnet)
+1. Review the current project status and [work with us](#work-with-us)
+    - [Publicly-viewable Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) keeps track of our many projects
+    - [GitHub](https://github.com/tomeshnet) hosts our open-source software and all important documents
 
 ## How do I work with you?
 {:#work-with-us}
 
-### Collaborate on our Kanban Board at [wekan.tomesh.net](https://wekan.tomesh.net)
-Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to keep track of ideas and progress. The software we use is the self-hosted open-source [Wekan](https://github.com/wekan/wekan). Anyone is free to create an account and participate.
-
-You can contribute to the project in many ways. Start by [creating an account](https://wekan.tomesh.net) for our Kanban, and then ask on {% include icon-matrix.html %} or email {% if site.email %}{% include icon-email.html %}{% endif %} for an invite to our main board.
+Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to keep track of ideas and progress. The software we use is the self-hosted open-source [Wekan](https://github.com/wekan/wekan). Create an account on [wekan.tomesh.net](https://wekan.tomesh.net), and then ask on {% include icon-matrix.html %} or email {% if site.email %}{% include icon-email.html %}{% endif %} for an invite to our board.
 
 #### Propose an Idea
 
 - Create a new card in the **Ideas** column by adding a short title
-- Include details in the description
-- Add appropriate labels for easy filtering
+- Include details in the description and add appropriate labels for easy filtering
 
 #### Participate in the Discussion
 
-- You can add a comment to an existing card, regardless of what column the card is in
-- Visit [tomesh.net/events]({{ site.baseurl }}/events) and our {% include icon-matrix.html %} chat channel to talk with us
+- You can add a comment to any card
+- Discuss a card on {% include icon-matrix.html %}
 
 #### Work on a Card
 
 - Find a card you would like to take ownership and add yourself as a member to that card
-- Move the card to the **In Progress** column, or **Discuss** column if that needs to happen first for the particular card
-- When completed, move the card to the **Done** column (typically for a task that leads to a Pull Request in one of our [GitHub repositories](https://github.com/tomeshnet/) is usually considered done when reviewed and merged)
+- Move the card to the **Discuss** or **In Progress** column, then **Done** when completed
 
-### Contribute to our Repositories on [github.com/tomeshnet](https://github.com/tomeshnet/)
-We use git, a version control tool, and GitHub to work on and share this [website](https://github.com/tomeshnet/tomesh.net), our technical prototypes ([Raspberry Pi](https://github.com/tomeshnet/prototype-cjdns-pi2), [ODROID](https://github.com/tomeshnet/prototype-cjdns-odroidc2)), and a record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes.
+### Contribute to our Git Repositories
 
-If you notice any errors, would like to submit changes, or add content, read our [Git workflow](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
+We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [git workflow](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
+
+### Funding the Project
+
+Toronto Mesh consists of a collective of people and does not currently hold legal status as an organization, nor do we have a bank account. Workshops, conferences, and deployments are generally paid out-of-pocket by the people organizating that particular initiative. You may find a donation jar at some events to help cover costs.
+
+Grant applications are generally applied in partnership with non-profit organizations, and each application is agreed upon using [our general method of establishing consensus](https://github.com/tomeshnet/documents/blob/master/governance/coordination-structure.md#decision-making), either at meetings or virtually on [#funding:tomesh.net](https://chat.tomesh.net/#/room/#funding:tomesh.net). We keep [a listing of all grants and sources of institutional funding](https://github.com/tomeshnet/documents/tree/master/governance/funding.md) that involve Toronto Mesh as a partner.
+
+If you would like to contribute to the Toronto Mesh project as an organization, or have any questions regarding our finances, please email [funding@tomesh.net](mailto:funding@tomesh.net) or join [#funding:tomesh.net](https://chat.tomesh.net/#/room/#funding:tomesh.net).
