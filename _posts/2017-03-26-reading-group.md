@@ -3,9 +3,9 @@ layout: post
 title: January Reading Group
 slug: reading-group
 text: Come talk about networks at our monthly reading group.
-location:
-locationLink:
-date: 2017-01-29
+location: Semaphore Studio 307, Claude T. Bissell, 140 St. George St  
+locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
+date: 2017-03-26
 startTime: '13:00'
 endTime: '15:00'
 ---
