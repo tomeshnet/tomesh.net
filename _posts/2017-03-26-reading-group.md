@@ -1,6 +1,6 @@
 ---
 layout: post
-title: January Reading Group
+title: March Reading Group
 slug: reading-group
 text: Come talk about networks at our monthly reading group.
 location: Semaphore Studio 307, Claude T. Bissell, 140 St. George St  
