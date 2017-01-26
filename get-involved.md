@@ -11,14 +11,16 @@ Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduc
     - If you connect via the [Riot mobile app](https://riot.im/), select _Use custom server options (advanced)_ and set the homeserver to `https://matrix.tomesh.net`
 
 1. Join one of our [events]({{ site.baseurl }}/events)
-    - Include in-person and virtual meetups and workshops
+    - We host in-person and virtual meetups and workshops
 
-1. Review the current project status and [work with us](#work-with-us)
-    - [Publicly-viewable Kanban board](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) keeps track of our many projects
-    - [GitHub](https://github.com/tomeshnet) hosts our open-source software and all important documents
+1. Review the current list of projects and [work with us](#work-with-us)
+    - Visit our [Kanban](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) used to track the status of our many projects
+    - Visit our [GitHub](https://github.com/tomeshnet) used to host our open-source software and all important documents
 
 ## How do I work with you?
 {:#work-with-us}
+
+### Collaborate on our Kanban Board
 
 Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to keep track of ideas and progress. The software we use is the self-hosted open-source [Wekan](https://github.com/wekan/wekan). Create an account on [wekan.tomesh.net](https://wekan.tomesh.net), and then ask on {% include icon-matrix.html %} or email {% if site.email %}{% include icon-email.html %}{% endif %} for an invite to our board.
 
@@ -39,11 +41,11 @@ Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to k
 
 ### Contribute to our Git Repositories
 
-We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [git workflow](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
+We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), our [educational materials on network literacy](https://github.com/tomeshnet/tomesh.101), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [Contribution Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
 
-### Funding the Project
+## Funding the Project
 
-Toronto Mesh consists of a collective of people and does not currently hold legal status as an organization, nor do we have a bank account. Workshops, conferences, and deployments are generally paid out-of-pocket by the people organizating that particular initiative. You may find a donation jar at some events to help cover costs.
+Toronto Mesh consists of a collective of people and does not currently hold legal status as an organization, nor do we have a bank account. Workshops, conferences, and deployments are generally paid out-of-pocket by the people organizing that particular initiative. You may find a donation jar at some events to help cover costs.
 
 Grant applications are generally applied in partnership with non-profit organizations, and each application is agreed upon using [our general method of establishing consensus](https://github.com/tomeshnet/documents/blob/master/governance/coordination-structure.md#decision-making), either at meetings or virtually on [#funding:tomesh.net](https://chat.tomesh.net/#/room/#funding:tomesh.net). We keep [a listing of all grants and sources of institutional funding](https://github.com/tomeshnet/documents/tree/master/governance/funding.md) that involve Toronto Mesh as a partner.
 
