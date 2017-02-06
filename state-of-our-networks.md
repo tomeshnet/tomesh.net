@@ -134,7 +134,7 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
 </ul>
 
-**Lee MacNeill**{:#lee} is a Director and President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>.
+**Lee MacNeill**{:#lee} is the President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>. He has been involved in computers and networking for 25 years as programmer, network administrator, support technician, and evangelist. His work has ranged from telecommunications to wearable computers&mdash;their practical applications, as well as their impact on democracy, culture, and freedom.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>
