@@ -76,7 +76,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 9:00                | **REGISTRATION OPENS**                                                                                                                                                                                                       |
 | 9:15 &ndash; 9:45   | Introduction to mesh and community wireless <br /> _Intro led by [Dawn Walker](#dawn)_                                                                                                                                       |
-| 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vera](#udit)_                                                                          |
+| 9:45 &ndash; 11:00  | [DIY Low Power Networks](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-b.md) <br /> _Workshop led by [Udit Vira](#udit)_                                                                          |
 | 11:00 &ndash; 12:30 | [Build a Mesh Node](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-c.md) <br /> _Workshop led by [ansuz](#ansuz)_                                                    |
 | 12:30 &ndash; 13:00 | [MeshISP](https://github.com/tomeshnet/mini-conf-2017/blob/master/sessions/session-d.md) <br /> _Demo led by [Ethan Wilding](#ethan)_                                                                                                                                                                                                        |
 | 13:00               | **LUNCH**                                                                                                                                                                                                                    |
@@ -134,7 +134,7 @@ The venue is an accessible space, for more details please see the <a href="http:
   <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i>&nbsp;@smithisgeneric</a></li>
 </ul>
 
-**Lee MacNeill**{:#lee} is a Director and President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>.
+**Lee MacNeill**{:#lee} is the President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>. He has been involved in computers and networking for 25 years as programmer, network administrator, support technician, and evangelist. His work has ranged from telecommunications to wearable computers&mdash;their practical applications, as well as their impact on democracy, culture, and freedom.
 
 <ul class="bio-sm-list">
   <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;torfree.net</a></li>

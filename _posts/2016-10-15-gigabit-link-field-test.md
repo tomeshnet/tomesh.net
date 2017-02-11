@@ -14,4 +14,4 @@ Let's test out the range and bandwidth of a pair of [Ubiquiti LiteBeam ac](https
 
 We are meeting at [this Tim Hortons](https://www.google.ca/maps/place/Tim+Hortons/@43.6596769,-79.3312397,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb9c427a69e1:0x183e595421b317d5!8m2!3d43.659673!4d-79.329051) on **October 15** at **9:00 am EST** to do some planning for the day, then head over to the nearby [Tommy Thompson Park](http://tommythompsonpark.ca) to do some Field Tests. Bring your phone, laptop, portable power, ethernet cables, antenna mounting equipment and tools, Raspberry Pi mesh nodes, USB WiFi radios, or whatever you feel is appropriate. See you there!
 
-Results of the field test are recapped in our [field test notes](https://github.com/tomeshnet/documents/blob/master/meeting_notes/{{ page.date | date: "%Y%m%d" }}_gigabit-link-field-test.md).
+Results of the field test are recapped in our [field test notes](https://github.com/tomeshnet/documents/blob/master/technical/{{ page.date | date: "%Y%m%d" }}_gigabit-link-field-test.md).
