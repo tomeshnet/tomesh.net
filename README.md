@@ -26,9 +26,11 @@ Our website content is primarily written in [markdown](https://github.com/adam-p
 ~~~
 Home Page (index.html)
 ├── About (about.md)
-├── Events (events.md)
-│   └── <each event has its own page under _posts/>
 ├── Get Involved (get-involved.md)
+├── Timeline (timeline.md)
+│   └── <each timeline item can be found under _timeline />
+├── Events (events.md)
+│   └── <each event has its own page under _posts />
 ├── Contact (contact.md)
 └── Code of Conduct (code-of-conduct.md)
 ~~~
@@ -36,9 +38,14 @@ Home Page (index.html)
 Much of the content does not change, we primarily add new events.
 
 ### Events
-New events are added as new `.md` files in the [`_posts/`](https://github.com/tomeshnet/tomesh.net/tree/master/_posts) directory using an [event template](https://github.com/tomeshnet/tomesh.net/tree/master/_posts/_event-template.md).
+New events are added as new `.md` files in the [`_posts/`](https://github.com/tomeshnet/tomesh.net/tree/master/_posts) directory using an [event template](https://github.com/tomeshnet/tomesh.net/tree/master/_posts/_event-template.md). We request you copy the template if you are submitting a new event.
 
-We request you copy the template if you are submitting  a new event.
+### Announcements
+Announcements are displayed at the top of each page up until a defined date and should be kept to a short line length. Announcements are added as new `.md` files in the [`_announcements/`](https://github.com/tomeshnet/tomesh.net/tree/master/_announcements) directory.
+
+### Timeline Posts
+Timeline posts are displayed in reverse chronological order on the [timeline page](https://tomesh.net/timeline). Timeline posts are added as new `.md` files in the [`_timeline/`](https://github.com/tomeshnet/tomesh.net/tree/master/_timeline) directory.
+
 
 ## Development
 
