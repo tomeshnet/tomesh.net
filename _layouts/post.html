@@ -4,6 +4,17 @@ layout: default
 <div class="container">
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
+      {% include event-logic-front.html %}
+
+      {% capture post_year %}{{page.date | date: '%Y'}}{% endcapture %}
+      {% capture post_day %}{{page.date | date: '%j'}}{% endcapture %}
+      {% assign post_day = post_day | plus: 0 %}
+
+      {% assign now_day = now_day | minus: 1 %}
+      {% if post_year < now_year or post_day <= now_day and post_year <= now_year %}
+        <p class="event-status"><span class="label">This event has ended.</span></p>
+      {% endif %}
+
       <h1 class="post-title heading" itemprop="name headline">{{ page.title }}</h1>
       <div class="event-time-location">
         <div class="event-meta">

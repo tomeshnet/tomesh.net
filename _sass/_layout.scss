@@ -126,6 +126,16 @@
   }
 }
 
+.event-status {
+  margin-bottom: 1.5em;
+
+  .label {
+    padding: 10px;
+    color: darken($brand-color, 5%);
+    background: rgba($brand-color, .1);
+  }
+}
+
 .events-home-grid {
   padding: 0.5em 0;
   margin: 0.5em 0;
