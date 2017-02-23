@@ -12,7 +12,7 @@ layout: default
 
       {% assign now_day = now_day | minus: 1 %}
       {% if post_year < now_year or post_day <= now_day and post_year <= now_year %}
-        <p class="event-status"><span class="label">This event has ended.</span></p>
+        <p class="event-status">This event has ended.</p>
       {% endif %}
 
       <h1 class="post-title heading" itemprop="name headline">{{ page.title }}</h1>
