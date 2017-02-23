@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-order: 4
+order: 5
 ---
 
 Come say hi...
