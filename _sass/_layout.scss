@@ -107,6 +107,7 @@
   @media screen and (max-width: $on-palm) {
     height: auto;
     margin-bottom: 1.5em;
+    padding-right: 0;
   }
 }
 
@@ -161,6 +162,15 @@
     max-height: 100vh;
     -webkit-transition: max-height 1s;
     transition: max-height 1s;
+
+    @media screen and (max-width: $on-palm) {
+      display: block;
+      max-height: none;
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    display: none;
   }
 }
 
