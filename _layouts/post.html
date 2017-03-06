@@ -18,10 +18,10 @@ layout: default
       <h1 class="post-title heading" itemprop="name headline">{{ page.title }}</h1>
       <div class="event-time-location">
         <div class="event-meta">
-          <i class="icon fa fa-calendar-o" aria-hidden="true"></i>
+          {% include_absolute _icons/calendar-o.svg class:icon %}
           <p class="event-time event-meta-item">{{ page.date | date: "%-d %B %Y"}}, <strong>{{page.startTime | date:"%-I:%M%P "}}</strong> &ndash; <strong>{{page.endTime | date:"%-I:%M%P "}}</strong></p></div>
         <div class="event-meta">
-          <i class="icon fa fa-map-marker" aria-hidden="true"></i>
+          {% include_absolute _icons/map-marker.svg class:icon %}
           <p class="event-location event-meta-item">
           {% if page.locationLink %}
             <a href="{{page.locationLink}}" target="_blank">{{ page.location }}</a>
