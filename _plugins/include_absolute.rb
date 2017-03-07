@@ -17,7 +17,7 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       super
       @file = markup.split(/\s+/).first
-      @class = markup.split(':')[-1]
+      @class = markup.split(':')[-1].strip
     end
 
     def render_variable(context)
