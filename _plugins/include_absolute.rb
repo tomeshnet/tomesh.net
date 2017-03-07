@@ -17,7 +17,7 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       super
       @file = markup.split(/\s+/).first
-      @class = markup.split(':')[-1].strip
+      @class = /(?<=:).+/.match(markup)
     end
 
     def render_variable(context)
@@ -39,8 +39,16 @@ module Jekyll
         partial = Liquid::Template.parse(read_file(path, context))
 
         context.stack do
+          svg_file_check = path.include? '.svg'
           context['include'] = parse_params(context) if @params
-          "<div class='#{@class}'>#{partial.render!(context)}</div>"
+          if (@class)
+            class_name = @class[0].strip
+            tag = svg_file_check ? 'span' : 'div'
+            output = "<#{tag} class='#{class_name}'>#{partial.render!(context)}</#{tag}>"
+          else
+            output = partial.render!(context)
+          end
+          output
         end
 
       rescue => e
