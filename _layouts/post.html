@@ -31,6 +31,20 @@ layout: default
           </p>
         </div>
       </div>
+      <div class="event-add">
+        <script type="text/javascript">
+          var event_data = {
+            LOCATION:'{{ page.location }}',
+            SUMMARY:'{{ page.title }}',
+            DESCRIPTION:'{{ page.text|strip }} For details, link here: {{ page.url|strip | prepend: site.url }}',
+            DTSTART:'{{ page.date | date: "%-m/%-d/%Y" }} {{ page.startTime | date: "%-I:%M %P" }}',
+            DTEND:'{{ page.date | date: "%-m/%-d/%Y" }} {{ page.endTime | date: "%-I:%M %P" }}',
+            DTSTAMP:'{{ page.date | date: "%-m/%-d/%Y" }} {{ page.date | date: "%-I:%M %P" }}'
+          }
+        </script>
+        <a href="#" class="button" id="event-add-button"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+  &nbsp;&nbsp;Add to Calendar</a>
+      </div>
     </header>
     <div class="post-content" itemprop="articleBody">
       {{ content }}
