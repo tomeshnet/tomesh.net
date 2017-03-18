@@ -8,7 +8,7 @@ before_install:
 
 install: gem install jekyll jekyll-paginate html-proofer
 
-script: jekyll build && htmlproofer --allow-hash-href --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
+script: jekyll build && htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
 
 notifications:
   email: false
