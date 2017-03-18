@@ -1,12 +1,11 @@
 .icon {
   display: inline-block;
-  line-height: 1em;
 
   svg {
     fill: currentColor;
     height: 1em;
-    vertical-align: bottom;
     width: 1em;
+    margin-bottom: -0.1em;
   }
 }
 
