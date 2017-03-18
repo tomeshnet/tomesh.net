@@ -42,7 +42,7 @@ layout: default
             DTSTAMP:'{{ page.date | date: "%-m/%-d/%Y" }} {{ page.date | date: "%-I:%M %P" }}'
           }
         </script>
-        <button id="event-add-button"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+        <button id="event-add-button">{% include_absolute _icons/calendar-plus-o.svg class:icon %}
   &nbsp;&nbsp;Add to Calendar</button>
       </div>
     </header>
