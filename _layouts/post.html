@@ -48,7 +48,7 @@ layout: default
         </script>
         {% capture googleCalendarLink %}text={{ event_title }}&location={{ event_location }}&dates={{ event_start }}/{{ event_end }}&details={{ event_description }}&ctz=America/Toronto&sf=true&output=xml{% endcapture %}
 
-        <button class="compact" id="event-add-button">{% include_absolute _icons/calendar-plus-o.svg class:icon %}&nbsp;&nbsp;Add to Calendar (.ics)</button>
+        <button download="event.ics" class="compact" id="event-add-button">{% include_absolute _icons/calendar-plus-o.svg class:icon %}&nbsp;&nbsp;Add to Calendar (.ics)</button>
         <a class="button compact" target="_blank" rel="noopener" href="https://www.google.com/calendar/render?action=TEMPLATE&{{ googleCalendarLink }}">
           {% include_absolute _icons/google_calendar.svg class:icon %}&nbsp;&nbsp;Add to Google Calendar
         </a>
