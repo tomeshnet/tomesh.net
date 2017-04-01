@@ -26,8 +26,8 @@ LOCATION:{{ post.location }}
 SUMMARY:{{ post.title }}
 URL:{{ post.url|strip | prepend: site.url }}
 DESCRIPTION;ALTREP="{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}":{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}
-DTSTART;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
-DTEND;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
-DTSTAMP;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
+DTSTART:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
+DTEND:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
+DTSTAMP:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
 END:VEVENT
 {% endfor %}END:VCALENDAR
