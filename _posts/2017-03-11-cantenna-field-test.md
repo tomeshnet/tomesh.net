@@ -17,3 +17,5 @@ We homemade a pair of cantennas and pigtail cables that connect to our [Raspberr
 <img src="/images/2017-03-11-cantenna-field-test-1.jpg" alt="Parallel bridges 280 m apart">
 
 Hop onto [#hardware:tomesh.net](https://chat.tomesh.net/#/room/#hardware:tomesh.net) for pre-planning. It'll be a cold morning. It'll be great!
+
+_Results of the field test are recapped in our [field test notes](https://github.com/tomeshnet/documents/blob/master/technical/{{ page.date | date: "%Y%m%d" }}_cantenna-field-test.md)._
