@@ -2,7 +2,7 @@
 layout: post
 title: Planning Session
 slug: planning-session
-text: Fall planning session for Toronto Mesh.
+text: Spring planning session for Toronto Mesh.
 location: Semaphore Studio 307, Claude T. Bissell, 140 St. George St  
 locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
 date: 2017-04-26
