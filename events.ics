@@ -6,18 +6,20 @@ PRODID://Toronto Mesh/Events//NONSGML v1.0//EN
 METHOD:PUBLISH
 BEGIN:VTIMEZONE
 TZID:America/Toronto
-BEGIN:STANDARD
-DTSTART:20161106T020000
-TZOFFSETFROM:-0400
-TZOFFSETTO:-0500
-TZNAME:EST
-END:STANDARD
 BEGIN:DAYLIGHT
-DTSTART:20160313T020000
 TZOFFSETFROM:-0500
 TZOFFSETTO:-0400
 TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
 END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+END:STANDARD
 END:VTIMEZONE
 {% for post in site.posts limit:20 %}BEGIN:VEVENT
 UID:{{ post.date | date: "%Y%m%d" }}@tomesh.net
@@ -26,8 +28,8 @@ LOCATION:{{ post.location }}
 SUMMARY:{{ post.title }}
 URL:{{ post.url|strip | prepend: site.url }}
 DESCRIPTION;ALTREP="{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}":{{ post.text|strip }} \n\nFor details, link here: {{ post.url|strip | prepend: site.url }}
-DTSTART;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
-DTEND;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
-DTSTAMP;TZID=America/Toronto;VALUE=DATE-TIME:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
+DTSTART;TZID=America/Toronto:{{ post.date | date: "%Y%m%d" }}T{{ post.startTime | date:"%H%M%S" }}
+DTEND;TZID=America/Toronto:{{ post.date | date: "%Y%m%d" }}T{{ post.endTime | date:"%H%M%S" }}
+DTSTAMP:{{ post.date | date: "%Y%m%d" }}T{{ post.date | date:"%H%M%S" }}
 END:VEVENT
 {% endfor %}END:VCALENDAR
