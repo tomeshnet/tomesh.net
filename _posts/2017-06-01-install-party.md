@@ -5,7 +5,7 @@ slug: install-party
 text: 'tomesh monthly install party and social'
 location: Semaphore Studio 307, Claude T. Bissell, 140 St. George St  
 locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
-date: 2017-05-18
+date: 2017-06-01
 startTime: '19:00'
 endTime: '20:30'
 ---
