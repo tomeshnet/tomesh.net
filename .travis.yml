@@ -1,10 +1,12 @@
 language: ruby
-sudo: false
+sudo: required
+dist: precise
 rvm:
-  - 2.3.1
+  - 2.3.3
 
-before_install:
-  - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 install: gem install jekyll jekyll-paginate html-proofer
 
