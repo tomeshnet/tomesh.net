@@ -5,7 +5,7 @@ slug: virtual-mesh
 text: Join our virtual mesh from anywhere and play with distributed services.
 location: "#virtualmesh:tomesh.net"
 locationLink: https://chat.tomesh.net/#/room/#virtualmesh:tomesh.net
-date: 2017-05-11
+date: 2017-05-18
 startTime: '19:00'
 endTime: '23:00'
 ---
