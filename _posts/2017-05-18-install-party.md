@@ -5,7 +5,7 @@ slug: install-party
 text: 'Bring your hardware to set up a mesh node'
 location: Semaphore Studio 307, Claude T. Bissell, 140 St. George St  
 locationLink: http://osm.org/go/ZX6Bw~WNh--?m=
-date: 2017-06-01
+date: 2017-05-18
 startTime: '19:00'
 endTime: '23:00'
 ---
