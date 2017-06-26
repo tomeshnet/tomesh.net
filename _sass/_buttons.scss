@@ -43,8 +43,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: $white;
-  background-color: $brand-color;
-  border-color: $brand-color; }
+  background-color: $tomeshgreen;
+  border-color: $tomeshgreen; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -56,5 +56,5 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: $white;
-  background-color: darken($brand-color, 10%);
-  border-color: darken($brand-color, 10%); }
+  background-color: lighten($tomeshgreen, 10%);
+  border-color: lighten($tomeshgreen, 10%); }

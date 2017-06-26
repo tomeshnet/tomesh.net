@@ -72,7 +72,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: lighten($brand-color, 20%);
+    background: lighten($tomeshgreen, 20%);
     transition: background 300ms ease-in-out;
 
     @media screen and (max-width: $on-palm) {
@@ -81,7 +81,7 @@
   }
 
   &:hover::after {
-    background: $brand-color;
+    background: $tomeshgreen;
   }
 
   &:nth-child(odd) .timeline-item {

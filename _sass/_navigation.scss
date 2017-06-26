@@ -9,7 +9,7 @@
   background-color: $tomeshgreen;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 50px;
+  line-height: 55px;
   width: 100%;
 
   @media (max-width: $on-palm) {
@@ -38,7 +38,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: rgba($white, 0.20);
+      background: rgba($white, 0.10);
     }
     &:focus {
       color: $white;
