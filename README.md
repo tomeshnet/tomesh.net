@@ -4,7 +4,7 @@
 
 Website for [Toronto Mesh](https://www.tomesh.net/) ([https://www.tomesh.net/](https://www.tomesh.net/)), built with [Jekyll](https://jekyllrb.com/), [Font Awesome](http://fontawesome.io/) icons, and [Skeleton](http://getskeleton.com/) CSS.
 
-Copyright (C) 2016 Toronto Mesh contributors.
+Copyright (C) 2017 Toronto Mesh contributors.
 
 All tomesh.net **code** at <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tomeshnet/tomesh.net/" property="cc:attributionName" rel="cc:attributionURL">github.com/tomeshnet/tomesh.net</a> is licensed under a <a rel="license" href="https://www.gnu.org/licenses/gpl.html">GNU General Public License v3.0</a>, the text of which is included in the repository [here](https://github.com/tomeshnet/tomesh.net/blob/master/LICENSE.md).
 
