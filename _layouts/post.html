@@ -32,11 +32,11 @@ layout: default
         </div>
       </div>
       <div class="event-add">
-        {% capture event_title %}{{ page.title | url_encode }}{% endcapture %}
+        {% capture event_title %}{{ page.title }}{% endcapture %}
         {% capture event_start %}{{ page.date | date: "%Y%m%d" }}T{{ page.startTime | date:"%H%M%S" }}{% endcapture %}
         {% capture event_end %}{{ page.date | date: "%Y%m%d" }}T{{ page.endTime | date:"%H%M%S" }}{% endcapture %}
-        {% capture event_location %}{{ page.location | url_encode }}{% endcapture %}
-        {% capture event_description %}{{ page.text | strip | url_encode }} For details, link here: {{ page.url|strip | prepend: site.url }}{% endcapture %}
+        {% capture event_location %}{{ page.location }}{% endcapture %}
+        {% capture event_description %}{{ page.text | strip }} For details, link here: {{ page.url|strip | prepend: site.url }}{% endcapture %}
         <script type="text/javascript">
           var event_data = {
             LOCATION:'{{ event_location }}',
@@ -46,7 +46,7 @@ layout: default
             DTEND:'{{ event_end }}'
           }
         </script>
-        {% capture googleCalendarLink %}text={{ event_title }}&location={{ event_location }}&dates={{ event_start }}/{{ event_end }}&details={{ event_description }}&ctz=America/Toronto&sf=true&output=xml{% endcapture %}
+        {% capture googleCalendarLink %}text={{ event_title | url_encode }}&location={{ event_location | url_encode }}&dates={{ event_start }}/{{ event_end }}&details={{ event_description | url_encode }}&ctz=America/Toronto&sf=true&output=xml{% endcapture %}
 
         <button download="event.ics" class="compact" id="event-add-button">{% include_absolute _icons/calendar-plus-o.svg class:icon %}&nbsp;&nbsp;Add to Calendar (.ics)</button>
         <a class="button compact" target="_blank" rel="noopener" href="https://www.google.com/calendar/render?action=TEMPLATE&{{ googleCalendarLink }}">
