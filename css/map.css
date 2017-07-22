@@ -1,0 +1,55 @@
+html, body, #map_canvas {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+#map {
+	/* 100% - height of header - height of fotter*/
+	height:calc( 100% - 55px );
+	width:100%;
+}
+h1 {
+	margin-bottom: 8px;
+	font-weight: 300;
+	font-size: 20px;
+}
+.markerPop {
+}
+.customMarker {
+	position: absolute;
+	padding: 5px;
+	border: 1px solid black;
+	bottom: 60px;
+	right: 50px;
+	width: 300px;
+	height: 270px;
+	background: white;
+	box-shadow: 2px  2px 1px #888888;
+}
+.toggles h2, .customMarker h2 {
+	margin: 0;
+	padding: 2px;
+	font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial, " sans-serif";
+	font-size: 14px;
+	font-weight: bold;
+	background: black;
+	color: white;
+	margin-bottom: 3px;
+}
+.customMarker a {
+	color:black;
+	font-weight: bold;
+}
+
+.toggles {
+	position: absolute;
+	padding: 5px;
+	border: 1px solid black;
+	top: 60px;
+	right: 50px;
+	width: 300px;
+	height: 250px;
+	background: white;
+	box-shadow: 2px  2px 1px #888888;
+}
