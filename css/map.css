@@ -22,8 +22,8 @@ h1 {
 	border: 1px solid black;
 	bottom: 60px;
 	right: 50px;
-	width: 300px;
-	height: 270px;
+	width: 400px;
+	height: 300px;
 	background: white;
 	box-shadow: 2px 2px 1px #888888;
 }
@@ -36,6 +36,7 @@ h1 {
 	background: black;
 	color: white;
 	margin-bottom: 3px;
+	text-align: left;
 }
 .customMarker a {
 	color: black;
