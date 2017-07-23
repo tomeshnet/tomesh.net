@@ -79,7 +79,7 @@ function addMarker(map, nodeResult, name, location) {
 		if (nodeResult['onlineStatus']=='Online') { nodeColor='green';  }
 		if (nodeResult['onlineStatus']=='Offline') { nodeColor='red'; }
 	    if (nodeResult['onlineStatus']=='Potential') { nodeColor='grey'; }
-	
+	    if ( nodeResult['cardinalDirection'].toLowerCase()=='none')  nodeResult['cardinalDirection']='omni';
 		var IMG= '/images/map/arrow-' + nodeResult['cardinalDirection'].toLowerCase().replace(" ","") + '-' + nodeColor + '.png';
 
 		var marker=findMarker(location.lat(), location.lng(), nodeResult['cardinalDirection'] );

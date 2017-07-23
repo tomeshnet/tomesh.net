@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Map
-order: 4
+order: 1
 ---
 <link rel="stylesheet" type="text/css" href="/css/map.css">
 <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
@@ -21,23 +21,23 @@ order: 4
     <input type="checkbox"  id="chkOffline" name="Offline" onChange="initialize()" checked />
     <label for="chkOffline"></label>
   </div>
-  Offline
+  Show Offline Nodes<br/>
   <div class="checkBoxSlider">
     <input onChange="initialize()" type="checkbox" name="Online" id="chkOnline" checked />
     <label for="chkOnline"></label>
   </div>
-  Active
+  Show Active Nodes<br/>
   <div class="checkBoxSlider">
     <input onChange="initialize()" type="checkbox" name="Proposed" id="chkProposed" checked />
     <label for="chkProposed"></label>
   </div>
-  Proposed <br>
-  <br>
+  Show Proposed Nodes<br/>
+  <br/>
   <div class="checkBoxSlider">
     <input onChange="initialize()" type="checkbox" name="Group" id="chkGroup" checked />
     <label for="chkGroup"></label>
   </div>
-  Zoom Group <br />
+  Group at higher zoom level <br />
 </div>
 <div class="customMarker" >
   <div id="customMarkerGeoCodeDiv" style="text-alignt:center">
