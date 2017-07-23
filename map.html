@@ -3,61 +3,95 @@ layout: default
 title: Map
 order: 4
 ---
-
 <link rel="stylesheet" type="text/css" href="/css/map.css">
-<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="/js/markerclusterer.js"></script>
-<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfjIeSSWeDLOYt7f_cHHG4GtgOowvQFBs"></script>
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script language="javascript" type="text/javascript" src="/js/markerclusterer.js"></script> 
+<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfjIeSSWeDLOYt7f_cHHG4GtgOowvQFBs"></script> 
 <script language="javascript" type="text/javascript" src="/js/map.js"></script>
 <div id="map">
-<div id="map_canvas"></div>
+  <div id="map_canvas"></div>
 </div>
-
-
 <div class="toggles">
-<h2>Options</h2>
-<b>Node URL:</b> <input width="200" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/darkdrgn2k/node-list/master/nodeList.json" onchange="initialize()" /><br>  
-<b>Filter Nodes</b><br>
- <label><input onChange="initialize()" type="checkbox" name="Offline" id="chkOffline" checked />Offline</label>
- <label><input onChange="initialize()" type="checkbox" name="Online" id="chkOnline" checked />Active</label>
- <label><input onChange="initialize()" type="checkbox" name="Proposed" id="chkProposed" checked />Proposed</label>
-   
-<label><input onChange="initialize()" type="checkbox" name="Group" id="chkGroup" checked />Zoom Group</label><br />
+  <h2>Options</h2>
+  <b>Node URL:</b>
+  <input width="200" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/darkdrgn2k/node-list/master/nodeList.json" onchange="initialize()" />
+  <br>
+  <b>Filter Nodes</b><br>
+  <div class="checkBoxSlider">
+    <input type="checkbox"  id="chkOffline" name="Offline" onChange="initialize()" checked />
+    <label for="chkOffline"></label>
+  </div>
+  Offline
+  <div class="checkBoxSlider">
+    <input onChange="initialize()" type="checkbox" name="Online" id="chkOnline" checked />
+    <label for="chkOnline"></label>
+  </div>
+  Active
+  <div class="checkBoxSlider">
+    <input onChange="initialize()" type="checkbox" name="Proposed" id="chkProposed" checked />
+    <label for="chkProposed"></label>
+  </div>
+  Proposed <br>
+  <br>
+  <div class="checkBoxSlider">
+    <input onChange="initialize()" type="checkbox" name="Group" id="chkGroup" checked />
+    <label for="chkGroup"></label>
+  </div>
+  Zoom Group <br />
 </div>
 <div class="customMarker" >
-
-<div id="customMarkerGeoCodeDiv" style="text-alignt:center">
-<h2>Starting Position <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div></h2>
-My Address: <input type="text" id="customMarkerAddress"><input type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/><br>
-<center>OR</center>
-<a href="#" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;">By Browser Location</a><br>
-<center>OR</center>
-<a href="#" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;'>Manual Position</a>
-</div>
-<div id="customMarkerLocationDiv" style="display:none;">
-  <h2>Fine Tune Position <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div></h2>
-Click and Drag the marker to the approximate position of your window/balcony/etc<br><br>
-
-<strong>Lng:</strong> <input style="width:70px" width="20" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
-<strong>Lat: </strong><input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="20" id="customMarkerLat"  type="text"><br
+  <div id="customMarkerGeoCodeDiv" style="text-alignt:center">
+    <h2>Starting Position
+      <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
+    </h2>
+    My Address:
+    <input type="text" id="customMarkerAddress">
+    <input type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/>
+    <br>
+    <center>
+      OR
+    </center>
+    <a href="#" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;">By Browser Location</a><br>
+    <center>
+      OR
+    </center>
+    <a href="#" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;'>Manual Position</a> </div>
+  <div id="customMarkerLocationDiv" style="display:none;">
+    <h2>Fine Tune Position
+      <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
+    </h2>
+    Click and Drag the marker to the approximate position of your window/balcony/etc<br>
+    <br>
+    <strong>Lng:</strong>
+    <input style="width:70px" width="20" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
+    <strong>Lat: </strong>
+    <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="20" id="customMarkerLat"  type="text">
+    <br
 <br>
-<b>Please provide the following:</b><br>
-<strong>Floor:</strong> <input ine Tune Positionvalue="1" id="customMarkerFloor" style="width:50px;"  type="text"> <strong>Facing:</strong> <select id="customMarkerDirection">
-<option>None</option>
-<option>North</option>
-<option>North East</option>
-<option>East</option>
-<option>South East</option>
-<option>South</option>
-<option>South West</option>
-<option>West</option>
-<option>North West</option>
-<option value="Omni">All Directions</option>
-</select> <br><br>
-<strong>Contact E-Mail Address:</strong> <input width="300" type="text" id="customMarkerEmail" ><br>
-<input type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
-</div>
-<div id="customMarkerJSONDiv" style="display:none;">
-<input type="button" value="Cancel" onClick="customCancel()" />
-</div>
+    <b>Please provide the following:</b><br>
+    <strong>Floor:</strong>
+    <input ine Tune Positionvalue="1" id="customMarkerFloor" style="width:50px;"  type="text">
+    <strong>Facing:</strong>
+    <select id="customMarkerDirection">
+      <option>None</option>
+      <option>North</option>
+      <option>North East</option>
+      <option>East</option>
+      <option>South East</option>
+      <option>South</option>
+      <option>South West</option>
+      <option>West</option>
+      <option>North West</option>
+      <option value="Omni">All Directions</option>
+    </select>
+    <br>
+    <br>
+    <strong>Contact E-Mail Address:</strong>
+    <input width="300" type="text" id="customMarkerEmail" >
+    <br>
+    <input type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
+  </div>
+  <div id="customMarkerJSONDiv" style="display:none;">
+    <input type="button" value="Cancel" onClick="customCancel()" />
+  </div>
 </div>
