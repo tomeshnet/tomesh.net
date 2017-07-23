@@ -81,9 +81,8 @@ h1 {
 	top: 4px;
 	left: 42px;
 	height: 1px;
-	color: #111;
+	color: #ff0000;
 	font-size: 8px;
-	color: red;
 }
 .checkBoxSlider label {
 	display: block;
