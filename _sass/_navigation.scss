@@ -6,7 +6,7 @@
 }
 
 .header {
-  background-color: $black;
+  background-color: $tomeshbrand;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 55px;
@@ -38,7 +38,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: rgba($white, 0.20);
+      background: rgba($white, 0.10);
     }
     &:focus {
       color: $white;
