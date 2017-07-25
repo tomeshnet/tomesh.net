@@ -26,7 +26,7 @@ markdown: kramdown
 future: true # for events set in the future to show up
 
 # Excluded folders
-exclude: [scripts, vendor]
+exclude: [Gemfile, Gemfile.lock, scripts, vendor]
 
 # Events pagination
 paginate: 8
