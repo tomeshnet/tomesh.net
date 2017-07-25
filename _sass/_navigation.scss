@@ -11,6 +11,8 @@
   -moz-osx-font-smoothing: grayscale;
   line-height: 55px;
   width: 100%;
+  position: fixed;
+  z-index: 100;
 
   @media (max-width: $on-palm) {
     line-height: 44px;
