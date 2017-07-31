@@ -26,11 +26,11 @@ markdown: kramdown
 future: true # for events set in the future to show up
 
 # Excluded folders
-exclude: [scripts, vendor]
+exclude: [Gemfile, Gemfile.lock, scripts, vendor]
 
 # Events pagination
 paginate: 8
 paginate_path: "events/page-:num"
 
 # Jekyll gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
