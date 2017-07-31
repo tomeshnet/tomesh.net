@@ -184,10 +184,12 @@
 .feature {
   background-image: url(/images/mesh.jpg);
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+	
   a {
     color: rgba($white, 0.75);
   }
