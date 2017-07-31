@@ -51,17 +51,23 @@ Timeline posts are displayed in reverse chronological order on the [timeline pag
 
 ### 1. Install Dependencies
 
-Install the Jekyll gem:
+Install the Jekyll and Bundler gems:
 
 ```bash
-$ gem install jekyll
+$ gem install jekyll bundler
 ```
 **Windows users:** [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)
+
+Install required gems:
+
+```bash
+$ bundle install
+```
 
 ### 2. Running Locally
 
 ```bash
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 
 A development server will run at `http://localhost:4000/`
