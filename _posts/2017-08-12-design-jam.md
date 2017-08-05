@@ -11,4 +11,4 @@ endTime: '17:00'
 
 Come to our {{ page.title }} to help us improve our website, update the overall look and feel, as well as prototype a new logo!
 
-We will meet at Robarts library on the **second floor** at {{page.startTime | date:"%-I:%M %P "}}, access to the Semaphore lab is restricted so let us know if you are running late in our chat: [#website:tomesh.net](https://chat.tomesh.net/#/room/#website:tomesh.net).
+We will meet at Robarts Library on the **second floor** by the escalators at {{page.startTime | date:"%-I:%M %P"}}, access to the Semaphore lab is restricted so let us know if you are running late in [#website:tomesh.net](https://chat.tomesh.net/#/room/#website:tomesh.net).
