@@ -6,7 +6,9 @@ html, body, #map_canvas {
 }
 #map {
 	/* 100% - height of header - height of fotter*/
-	height: calc( 100%  );	width: 100%;
+	height: calc( 100%  );
+	width: 100%;
+	padding-top: 55px;
 }
 h1 {
 	margin-bottom: 8px;
