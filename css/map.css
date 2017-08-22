@@ -5,9 +5,10 @@ html, body, #map_canvas {
 	width: 100%;
 }
 #map {
-	/* 100% - height of header - height of fotter*/
-	height: calc( 100% - 55px );
+	padding-top: 55px;
+	height: calc( 100% );
 	width: 100%;
+	min-height: 625px;
 }
 h1 {
 	margin-bottom: 8px;
@@ -22,7 +23,7 @@ h1 {
 	border: 1px solid black;
 	bottom: 60px;
 	right: 50px;
-	width: 400px;
+	width: 410px;
 	height: 300px;
 	background: white;
 	box-shadow: 2px 2px 1px #888888;

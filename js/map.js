@@ -7,8 +7,8 @@ var circle = null;
 function initialize() {
 	currentNodeListURL = document.getElementById("nodeURL").value + "?ramd=" + new Date();
 
-	filterOffline = document.getElementById("chkOffline").checked;
-	filterOnline = document.getElementById("chkOnline").checked;
+
+	filterActive = document.getElementById("chkActive").checked;
 	filterProposed = document.getElementById("chkProposed").checked;
 	zoomGroup = document.getElementById("chkGroup").checked;
 
@@ -34,12 +34,11 @@ function initialize() {
 		for (var key in data) {
 			var results = data[key];
 
-			//			console.log(results);
+			//console.log(results);
 			nodeVisible = 1;
-			if (results['onlineStatus'] == "Proposed") results['onlineStatus'] = 'Potential' //##TODO## Fix this need;
-			if (results['onlineStatus'] == 'Offline' && !filterOffline) nodeVisible = 0;
-			if (results['onlineStatus'] == 'Online' && !filterOnline) nodeVisible = 0;
-			if (results['onlineStatus'] == 'Potential' && !filterProposed) nodeVisible = 0; //##TODO fix Possible to Proposed
+
+			if (results['status'] == 'active' && !filterActive) nodeVisible = 0;
+			if (results['status'] == 'proposed' && !filterProposed) nodeVisible = 0;
 
 			if (nodeVisible) {
 				var lat = results['latitude'];
@@ -80,20 +79,29 @@ function findMarker(lat, lng, dir) {
 
 function addMarker(map, nodeResult, name, location) {
 	var nodecolor;
-	if (nodeResult['onlineStatus'] == 'Online') {
+	if (nodeResult['status'] == 'active') {
 		nodeColor = 'green';
 	}
-	if (nodeResult['onlineStatus'] == 'Offline') {
-		nodeColor = 'red';
-	}
-	if (nodeResult['onlineStatus'] == 'Potential') {
+	if (nodeResult['status'] == 'proposed') {
 		nodeColor = 'grey';
 	}
-	if (nodeResult['cardinalDirection'].toLowerCase() == 'none') nodeResult['cardinalDirection'] = 'omni';
-	var IMG = '/images/map/arrow-' + nodeResult['cardinalDirection'].toLowerCase().replace(" ", "") + '-' + nodeColor + '.png';
+	var ArrowDirection = 'omni'
+	if (nodeResult['cardinalDirection'] != null && nodeResult['cardinalDirection'] != undefined) ArrowDirection = nodeResult['cardinalDirection'];
 
-	var marker = findMarker(location.lat(), location.lng(), nodeResult['cardinalDirection']);
+	var IMG = '/images/map/arrow-' + ArrowDirection.toLowerCase().replace(" ", "") + '-' + nodeColor + '.png';
 
+	var marker = findMarker(location.lat(), location.lng(), ArrowDirection);
+
+
+	var Description = "";
+	Description = '<div class="markerPop">';
+	Description += '<h1>Name: ' + name + '</h1>';
+	Description += '<p>Status: ' + nodeResult['status'] + '</p>';
+	if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
+	if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
+	if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>'
+	Description += '<p>Added: ' + nodeResult['dateAdded'] + '</p>';
+	Description += '</div>';
 
 	//If marker does not exists in position and direction, create it
 	if (marker == undefined) {
@@ -101,7 +109,7 @@ function addMarker(map, nodeResult, name, location) {
 		//Establish anchor point based on direction of arrow so arrow images dont overlap each other
 		var x = 16;
 		var y = 16;
-		switch (nodeResult['cardinalDirection']) {
+		switch (ArrowDirection) {
 			case "North":
 			case "North East":
 			case "North West":
@@ -113,7 +121,7 @@ function addMarker(map, nodeResult, name, location) {
 				y = 0;
 				break;
 		}
-		switch (nodeResult['cardinalDirection']) {
+		switch (ArrowDirection) {
 			case "East":
 			case "North East":
 			case "South East":
@@ -128,6 +136,7 @@ function addMarker(map, nodeResult, name, location) {
 
 		var imageAnchor = new google.maps.Point(x, y);
 
+
 		marker = new google.maps.Marker({
 			position: location,
 			map: map,
@@ -137,15 +146,7 @@ function addMarker(map, nodeResult, name, location) {
 				anchor: imageAnchor
 			},
 			direction: nodeResult['cardinalDirection'],
-			html: '<div class="markerPop">' +
-				'<h1>Name: ' + name + '</h1>' + //substring removes distance from title
-				'<p>Online Status: ' + nodeResult['onlineStatus'] + '</p>' +
-				'<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>' +
-				'<p>Floor: ' + nodeResult['floor'] + '</p>' +
-				'<p>Hardware: ' + nodeResult['meshHardware'] + '</p>' +
-				'<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>' +
-				'</div>'
-
+			html: Description
 		});
 
 		google.maps.event.addListener(marker, 'click', function () {
@@ -188,16 +189,7 @@ function addMarker(map, nodeResult, name, location) {
 			}
 
 		}
-		marker.html = marker.html +
-
-			'<div class="markerPop">' +
-			'<h1>Name: ' + name + '</h1>' + //substring removes distance from title
-			'<p>Online Status: ' + nodeResult['onlineStatus'] + '</p>' +
-			'<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>' +
-			'<p>Floor: ' + nodeResult['floor'] + '</p>' +
-			'<p>Hardware: ' + nodeResult['meshHardware'] + '</p>' +
-			'<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>' +
-			'</div>'
+		marker.html = marker.html + Description;
 		return undefined;
 	}
 }
@@ -267,16 +259,18 @@ function customMarkerGenerateJSON() {
 	var lat = document.getElementById("customMarkerLat").value;
 	var floor = document.getElementById("customMarkerFloor").value;
 	var dir = document.getElementById("customMarkerDirection").value;
+	var name = document.getElementById("customMarkerName").value;
+
+
+	var currentJSONDate = (new Date()).toJSON();
 
 	var sJSON = '<pre style="white-space: pre-wrap;">{\n' +
 		'   "name": "Unnamed Node",\n' +
 		'   "latitude": ' + lat + ',\n' +
 		'   "longitude":' + lng + ',\n' +
-		'   "onlineStatus": "Offline",\n' +
 		'   "cardinalDirection": "' + dir + '",\n' +
 		'   "floor": ' + floor + ',\n' +
-		'   "meshHardware": "None",\n' +
-		'   "IPV6Addres": "None"\n' +
+		'   "dateAdded:" "' + currentJSONDate + '"\n' +
 		'}\n</pre>';
 
 	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Another Node" onclick="customMarkerNewNode()" />';

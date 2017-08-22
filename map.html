@@ -13,18 +13,10 @@ order: 1
 </div>
 <div class="toggles">
   <h2>Options</h2>
-  <b>Node URL:</b>
-  <input width="200" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/darkdrgn2k/node-list/master/nodeList.json" onchange="initialize()" />
-  <br>
   <b>Filter Nodes</b><br>
   <div class="checkBoxSlider">
-    <input type="checkbox"  id="chkOffline" name="Offline" onChange="initialize()" checked />
-    <label for="chkOffline"></label>
-  </div>
-  Show Offline Nodes<br/>
-  <div class="checkBoxSlider">
-    <input onChange="initialize()" type="checkbox" name="Online" id="chkOnline" checked />
-    <label for="chkOnline"></label>
+    <input onChange="initialize()" type="checkbox" name="Active" id="chkActive" checked />
+    <label for="chkActive"></label>
   </div>
   Show Active Nodes<br/>
   <div class="checkBoxSlider">
@@ -38,11 +30,14 @@ order: 1
     <label for="chkGroup"></label>
   </div>
   Group at higher zoom level <br />
+  <br>
+  <b>Node URL:</b>
+  <input width="200" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
+</div>
 </div>
 <div class="customMarker" >
   <div id="customMarkerGeoCodeDiv" style="text-align:center">
-    <h2>Starting Position
-    </h2>
+    <h2>New Node - Starting Position </h2>
     My Address:
     <input type="text" id="customMarkerAddress">
     <input type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/>
@@ -54,7 +49,7 @@ order: 1
     <input type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;' value="Manual Position">
   </div>
   <div id="customMarkerLocationDiv" style="display:none;">
-    <h2>Fine Tune Position
+    <h2>New Node - Fine Tune Position
       <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
     </h2>
     Click and Drag the marker to the approximate position of your window/balcony/etc<br>
@@ -62,13 +57,14 @@ order: 1
     <input style="width:70px" width="20" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
     <strong>Lat: </strong>
     <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="20" id="customMarkerLat"  type="text">
-    <br
+    <br>
     <b>Please provide the following:</b><br>
+    <strong>Node Name:</strong>
+    <input width="300" type="text" id="customMarkerName" value="UnNamed">
     <strong>Floor:</strong>
-    <input ine Tune Positionvalue="1" id="customMarkerFloor" style="width:40px;"  type="text">
+    <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
     <strong>Facing:</strong>
     <select id="customMarkerDirection">
-      <option>None</option>
       <option>North</option>
       <option>North East</option>
       <option>East</option>
@@ -79,9 +75,6 @@ order: 1
       <option>North West</option>
       <option value="Omni">All Directions</option>
     </select>
-    <br>
-    <strong>Contact E-Mail Address:</strong>
-    <input width="300" type="text" id="customMarkerEmail" >
     <br>
     <input type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
