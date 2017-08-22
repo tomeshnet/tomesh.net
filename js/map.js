@@ -5,13 +5,16 @@ var currentNodeListURL;
 var circle = null;
 
 function initialize() {
+	
+	//Current Node URL with random bits to make sure it doesnt get cached
 	currentNodeListURL = document.getElementById("nodeURL").value + "?ramd=" + new Date();
 
-
+	//Set options based on check box positions
 	filterActive = document.getElementById("chkActive").checked;
 	filterProposed = document.getElementById("chkProposed").checked;
 	zoomGroup = document.getElementById("chkGroup").checked;
 
+	//Prepare default view and create map
 	var mapOptions = {
 		zoom: 12,
 		center: new google.maps.LatLng(43.698136, -79.397593),
@@ -23,35 +26,46 @@ function initialize() {
 	});
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
+	//Reset markers array
 	markers = undefined;
 	markers = [];
 
-	//jQuery.getJSON("https://raw.githubusercontent.com/Pedro-on-a-bike/TOMeshNodeMap/master/nodeListTest.json", function(data){
+	//Pull and process node url
 	jQuery.getJSON(currentNodeListURL, function (data) {
 
 
 		var nodeVisible;
+		
+		//loop through each node
 		for (var key in data) {
 			var results = data[key];
 
 			//console.log(results);
-			nodeVisible = 1;
+			nodeVisible = 1; //Default all nodes to visible
 
+			//Adjust visibility based on value and option variable
 			if (results['status'] == 'active' && !filterActive) nodeVisible = 0;
 			if (results['status'] == 'proposed' && !filterProposed) nodeVisible = 0;
 
 			if (nodeVisible) {
+				
+				//prepare location point
 				var lat = results['latitude'];
 				var lng = results['longitude'];
 				var myNodeLatLng = new google.maps.LatLng(lat, lng);
 				var myNodeName = results['name'];
+				
+				//Call function to create (or update) marker
 				var newNode = addMarker(map, results, myNodeName, myNodeLatLng);
 
+				//If new node was created (rather then updated) add it to the marker array
 				if (newNode)
 					markers.push(newNode);
+								
 			}
 		}
 
+		//Clustering code to group markers that are very close together untill you zoom in (if option enabled)
 		if (zoomGroup) {
 			var mcOptions = {
 				gridSize: 20,
@@ -64,7 +78,7 @@ function initialize() {
 	});
 }
 
-//Find a marker witth a specific lat lng and dir.  Used so that we dont  create a new marker but rather add info to the existing one.
+//Find a marker witth a specific lat lng and dir combo.  Used so that we dont create a new marker but rather add info to the existing one.
 function findMarker(lat, lng, dir) {
 	for (var i = 0; i < markers.length; i++) {
 		if (markers[i].position.lat() == lat &&
@@ -74,10 +88,12 @@ function findMarker(lat, lng, dir) {
 		}
 	}
 	return undefined;
-
 }
 
+//Tries to find marker that already exists and updates it otherwise creates a new one
 function addMarker(map, nodeResult, name, location) {
+	
+	//Specify the colour of the marker based on the status
 	var nodecolor;
 	if (nodeResult['status'] == 'active') {
 		nodeColor = 'green';
@@ -85,14 +101,15 @@ function addMarker(map, nodeResult, name, location) {
 	if (nodeResult['status'] == 'proposed') {
 		nodeColor = 'grey';
 	}
+	
+	//Default to OMNI icon if no direction is given
 	var ArrowDirection = 'omni'
-	if (nodeResult['cardinalDirection'] != null && nodeResult['cardinalDirection'] != undefined) ArrowDirection = nodeResult['cardinalDirection'];
-
-	var IMG = '/images/map/arrow-' + ArrowDirection.toLowerCase().replace(" ", "") + '-' + nodeColor + '.png';
-
-	var marker = findMarker(location.lat(), location.lng(), ArrowDirection);
+	
+	//If direction is given set it to the correct direction
+	if (nodeResult['cardinalDirection'] != null) ArrowDirection = nodeResult['cardinalDirection'];
 
 
+	//Prepare the detail information for the marker
 	var Description = "";
 	Description = '<div class="markerPop">';
 	Description += '<h1>Name: ' + name + '</h1>';
@@ -103,10 +120,18 @@ function addMarker(map, nodeResult, name, location) {
 	Description += '<p>Added: ' + nodeResult['dateAdded'] + '</p>';
 	Description += '</div>';
 
+	
+	//Check to see if the currenty direction,lat,lng combo exists
+	var marker = findMarker(location.lat(), location.lng(), ArrowDirection);
+
+	//Prepare the image used to display the direction arrow and node color
+	var IMG = '/images/map/arrow-' + ArrowDirection.toLowerCase().replace(" ", "") + '-' + nodeColor + '.png';
+
+
 	//If marker does not exists in position and direction, create it
 	if (marker == undefined) {
 
-		//Establish anchor point based on direction of arrow so arrow images dont overlap each other
+		//Establish anchor point based on direction of arrow so arrow images dont overlap each other so that they dont fully overlap
 		var x = 16;
 		var y = 16;
 		switch (ArrowDirection) {
@@ -136,7 +161,7 @@ function addMarker(map, nodeResult, name, location) {
 
 		var imageAnchor = new google.maps.Point(x, y);
 
-
+		//Create a new marker
 		marker = new google.maps.Marker({
 			position: location,
 			map: map,
@@ -149,7 +174,11 @@ function addMarker(map, nodeResult, name, location) {
 			html: Description
 		});
 
+		//Add listener to the marker for click
 		google.maps.event.addListener(marker, 'click', function () {
+			
+			//Code adds a circle to identiy selected marker and 
+			//Maybe even present a possible range
 			if (typeof infowindow != 'undefined') infowindow.close();
 			infowindow.setContent(this.html);
 			infowindow.open(map, this);
@@ -167,17 +196,21 @@ function addMarker(map, nodeResult, name, location) {
 
 
 		});
+		//listeer to close window
 		google.maps.event.addListener(map, 'click', function () {
 			infowindow.close();
 		});
+		//Returns marker to identify it was created not modified
 		return marker;
 
-		//If marker already exists in direction and position, just add more information to the existing one.
+	//If marker already exists in direction and position, just add more information to the existing one.
 	} else {
 		if (marker.icon.url != IMG) {
+			
 			//Promot Scacked Marker is new node is better then the previous
 			//IE: if inactive and active in same macker make sure node color is green
 
+			//Update marker color if an active node exists in the "stack"
 			var markerLevel = 0;
 			if (marker.icon.url.search("-red.png") > 0) markerLevel = 1;
 			if (marker.icon.url.search("-green.png") > 0) markerLevel = 2;
@@ -189,10 +222,12 @@ function addMarker(map, nodeResult, name, location) {
 			}
 
 		}
+		//Update marker
 		marker.html = marker.html + Description;
 		return undefined;
 	}
 }
+
 
 /*******************
  Custom Marker Code
@@ -203,6 +238,7 @@ including GeoCoding and JSON Generation
 
 var customMarker = undefined;
 
+//Custom marker from entered coordinates
 function addCustomMarker() {
 	var lng = document.getElementById("customMarkerLng").value;
 	var lat = document.getElementById("customMarkerLat").value;
@@ -227,6 +263,7 @@ function addCustomMarker() {
 	map.setCenter(new google.maps.LatLng(lat, lng));
 }
 
+//Attempt to GeoCode the marker based on an address
 function customMarkerGeoCode() {
 	var address = document.getElementById('customMarkerAddress').value;
 	var geocoder = new google.maps.Geocoder();
