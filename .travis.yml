@@ -6,7 +6,9 @@ rvm:
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-script: bundle exec jekyll build && bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
+before_script: bundle exec jekyll build
+
+script: travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
 
 notifications:
   email: false

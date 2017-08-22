@@ -58,3 +58,16 @@ input[type="button"].button-primary:focus {
   color: $white;
   background-color: darken($brand-color, 10%);
   border-color: darken($brand-color, 10%); }
+
+.compact {
+  height: 33px;
+  font-size: 0.85em;
+  padding: 0 15px;
+  vertical-align: top;
+
+  @media screen and (max-width: $on-palm) {
+    height: 38px;
+    padding: 0 30px;
+    margin: 0 0 10px;
+  }
+}
