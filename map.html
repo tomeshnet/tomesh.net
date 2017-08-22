@@ -11,8 +11,8 @@ order: 1
 <div id="map">
   <div id="map_canvas"></div>
 </div>
-<div class="toggles">
-  <h2>Options</h2>
+<div class="toggles" id="mapToggles">
+  <h2>Options <div class="expand" onclick='optionExpand()'>=</div></h2>
   <b>Filter Nodes</b><br>
   <div class="checkBoxSlider">
     <input onChange="initialize()" type="checkbox" name="Active" id="chkActive" checked />

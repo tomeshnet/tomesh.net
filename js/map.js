@@ -316,5 +316,12 @@ function clearWindows() {
 
 
 }
+function optionExpand() { 
+	if ($("#mapToggles").hasClass('FullHeight')) { 
+		$("#mapToggles").removeClass('FullHeight');
+	} else {
+		$("#mapToggles").addClass('FullHeight');
+	}
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
