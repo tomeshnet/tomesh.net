@@ -36,29 +36,32 @@ order: 1
 </div>
 </div>
 <div class="customMarker" >
-  <div id="customMarkerGeoCodeDiv" style="text-align:center">
-    <h2>New Node - Starting Position </h2>
-    My Address:
-    <input type="text" id="customMarkerAddress">
-    <input type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/>
-    <br>
-    OR<br>
-    <input type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
-    <br>
-    OR<br>
-    <input type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;' value="Manual Position">
+  <div id="customMarkerGeoCodeDiv">   
+    <h2>Search</h2>
+    By Address:<br/>
+    <input type="text" id="customMarkerAddress"><input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/>
+    <div  style="text-align:center">
+    
+    <br/>
+    <br/>
+    OR
+    <br/>
+    <br/>
+    <input class="button button-primary" type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
+    <input class="button button-primary" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;' value="Manual Position">
+    </div>
   </div>
   <div id="customMarkerLocationDiv" style="display:none;">
-    <h2>New Node - Fine Tune Position
+    <h2>Search - Fine Tune
       <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
     </h2>
-    Click and Drag the marker to the approximate position of your window/balcony/etc<br>
+    A marker has been placed at your desired location. You can Click and Drag the marker to fine tune its position<br/>
     <strong>Lng:</strong>
     <input style="width:70px" width="20" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
     <strong>Lat: </strong>
     <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="20" id="customMarkerLat"  type="text">
     <br>
-    <b>Please provide the following:</b><br>
+    To generate a JSON Record of this marker please provide the following:<br>
     <strong>Node Name:</strong>
     <input width="300" type="text" id="customMarkerName" value="UnNamed">
     <strong>Floor:</strong>
@@ -76,9 +79,9 @@ order: 1
       <option value="Omni">All Directions</option>
     </select>
     <br>
-    <input type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
+    <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
   <div id="customMarkerJSONDiv" style="display:none;">
-    <input type="button" value="Cancel" onClick="customCancel()" />
+    <input class="button button-primary" type="button" value="Cancel" onClick="customCancel()" />
   </div>
 </div>
