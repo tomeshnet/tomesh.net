@@ -18,7 +18,12 @@ function initialize() {
 	var mapOptions = {
 		zoom: 12,
 		center: new google.maps.LatLng(43.698136, -79.397593),
-		mapTypeId: google.maps.MapTypeId.ROADMAP
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		fullscreenControl: false,
+		mapTypeControl: true,
+		mapTypeControlOptions: {
+			position: google.maps.ControlPosition.BOTTOM_RIGHT
+		}
 	}
 
 	infowindow = new google.maps.InfoWindow({
@@ -344,17 +349,13 @@ function clearWindows() {
 	$("div#customMarkerGeoCodeDiv").show();
 	$("div#customMarkerAddress").show();
 
-	document.getElementById("customMarkerLnt").value = -79.397593;
+	document.getElementById("customMarkerLng").value = -79.397593;
 	document.getElementById("customMarkerLat").value = 43.678136;
 
 	document.getElementById("customMarkerFloor").value = "";
 	document.getElementById("customMarkerDirection").value = "";	
 
-	$("div.customMarker").hide();
 
-}
-function ShowSearch() {
-	$("div.customMarker").show();
 }
 function ShowAdvanced(what) {
 	$('div#customAdvacned').show();

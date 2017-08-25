@@ -35,7 +35,6 @@ order: 1
   </div>
   Group at higher zoom level <br />
   <br>
-  <input  class="button button-primary"  type="button" value="Search" onclick="ShowSearch()"/><br>
   <a href="#" onclick="ShowAdvanced(this)">+Show Advanced</a>
   <div style="display:none" id="customAdvacned">
   <b>Node URL:</b>
@@ -44,23 +43,15 @@ order: 1
   
 </div>
 </div>
-<div class="customMarker" style="display:none;" >
-  <div id="customMarkerGeoCodeDiv">   
-    <h2>Search <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div></h2>
-    By Address:<br/>
-    <input type="text" id="customMarkerAddress"><input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode();"/>
-    <div  style="text-align:center">
-    
+<div class="customMarker" >
+  <div id="customMarkerGeoCodeDiv">       
+    <input type="text" placeholder="Search By Address" id="customMarkerAddress">&nbsp;&nbsp;&nbsp;<input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode();"/>
     <br/>
-    <br/>
-    OR
-    <br/>
-    <br/>
-    <input class="button button-primary" type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
+    <input style="margin-top:5px;" class="button button-primary" type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
     <input class="button button-primary" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker(); ; return false;' value="Manual Position">
-    </div>
+
   </div>
-  <div id="customMarkerLocationDiv" style="display:none;">
+  <div id="customMarkerLocationDiv" style="display:none;" class="customShadowBox">
     <h2>Search - Fine Tune
       <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
     </h2>
@@ -90,7 +81,7 @@ order: 1
     <br>
     <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
-  <div id="customMarkerJSONDiv" style="display:none;">
+  <div id="customMarkerJSONDiv" style="display:none;" class="customShadowBox">
     <input class="button button-primary" type="button" value="Cancel" onClick="customCancel()" />
   </div>
 </div>
