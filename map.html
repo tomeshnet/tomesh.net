@@ -43,12 +43,20 @@ order: 1
   
 </div>
 </div>
+<style>
+input[type="button"].MapButton, input[type="text"].MapButton {
+	box-shadow:none;
+	background-repeat: no-repeat;background-position: center;
+	border-radius: 0px;
+	border:none;
+	}</style>
 <div class="customMarker" >
-  <div id="customMarkerGeoCodeDiv">       
-    <input type="text" placeholder="Search By Address" id="customMarkerAddress">&nbsp;&nbsp;&nbsp;<input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode();"/>
-    <br/>
-    <input style="margin-top:5px;" class="button button-primary" type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
-    <input class="button button-primary" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker(); ; return false;' value="Manual Position">
+  <div id="customMarkerGeoCodeDiv" style="text-align: center;">       
+    <input title="Find Position Based On Browser Reported Location" style="border-radius: 5px 0px 0px 5px; border: 0px; background-color:white; border-right: solid grey 2px; background-image: url(/images/iconLocation.svg);    background-size: 25px 25px; 
+    " class="button button-primary MapButton" type="button" value="." onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" /><input type="text" placeholder="Search By Address" id="customMarkerAddress" class="MapButton"><input title="Find Position Based On Google Address Decoding" class="button button-primary MapButton" type="button" value="." onclick="customMarkerGeoCode();" style="border-radius: 0 5px 5px 0; color: #1f73e0; background-image: url(/images/iconSearch.png);   background-size: 25px 25px; "/><br>
+
+    
+    <input class="button button-primary MapButtonColor" style="margin-top:10px;" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker(); ; return false;' value="Manual Position">
 
   </div>
   <div id="customMarkerLocationDiv" style="display:none;" class="customShadowBox">
@@ -57,13 +65,14 @@ order: 1
     </h2>
     A marker has been placed at your desired location. You can Click and Drag the marker to fine tune its position<br/>
     <strong>Lng:</strong>
-    <input style="width:70px" width="20" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
+    <input style="width:70px" width="40" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
     <strong>Lat: </strong>
-    <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="20" id="customMarkerLat"  type="text">
+    <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="40" id="customMarkerLat"  type="text">
     <br>
     To generate a JSON Record of this marker please provide the following:<br>
     <strong>Node Name:</strong>
     <input width="300" type="text" id="customMarkerName" value="UnNamed">
+    <br>
     <strong>Floor:</strong>
     <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
     <strong>Facing:</strong>
