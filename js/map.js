@@ -344,14 +344,20 @@ function clearWindows() {
 	$("div#customMarkerGeoCodeDiv").show();
 	$("div#customMarkerAddress").show();
 
-	document.getElementById("customMarkerLng").value = -79.397593;
-	document.getElementById("customMarkerLng").value = 43.678136;
+	document.getElementById("customMarkerLnt").value = -79.397593;
+	document.getElementById("customMarkerLat").value = 43.678136;
 
 	document.getElementById("customMarkerFloor").value = "";
-	document.getElementById("customMarkerDirection").value = "";
-	document.getElementById("customMarkerEmail").value = "";
+	document.getElementById("customMarkerDirection").value = "";	
 
+	$("div.customMarker").hide();
 
+}
+function ShowSearch() {
+	$("div.customMarker").show();
+}
+function ShowAdvanced(what) {
+	$('div#customAdvacned').show();
 }
 function optionExpand() { 
 	if ($("#mapToggles").hasClass('FullHeight')) { 

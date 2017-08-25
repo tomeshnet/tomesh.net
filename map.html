@@ -31,15 +31,20 @@ order: 1
   </div>
   Group at higher zoom level <br />
   <br>
+  <input  class="button button-primary"  type="button" value="Search" onclick="ShowSearch()"/><br>
+  <a href="#" onclick="ShowAdvanced(this)">+Show Advanced</a>
+  <div style="display:none" id="customAdvacned">
   <b>Node URL:</b>
-  <input width="200" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
+  <input width="50" style="padding:0px" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
+	</div>
+  
 </div>
 </div>
-<div class="customMarker" >
+<div class="customMarker" style="display:none;" >
   <div id="customMarkerGeoCodeDiv">   
-    <h2>Search</h2>
+    <h2>Search <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div></h2>
     By Address:<br/>
-    <input type="text" id="customMarkerAddress"><input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode(); FixLocation()"/>
+    <input type="text" id="customMarkerAddress"><input class="button button-primary" type="button" value="Find Address" onclick="customMarkerGeoCode();"/>
     <div  style="text-align:center">
     
     <br/>
@@ -48,7 +53,7 @@ order: 1
     <br/>
     <br/>
     <input class="button button-primary" type="button" value="By Browser Location" onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide();  $('div#customMarkerLocationDiv').show(); return false;" />
-    <input class="button button-primary" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker();  FixLocation(); return false;' value="Manual Position">
+    <input class="button button-primary" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker(); ; return false;' value="Manual Position">
     </div>
   </div>
   <div id="customMarkerLocationDiv" style="display:none;">
