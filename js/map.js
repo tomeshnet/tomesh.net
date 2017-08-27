@@ -22,7 +22,7 @@ function initialize() {
 		fullscreenControl: false,
 		mapTypeControl: true,
 		mapTypeControlOptions: {
-			position: google.maps.ControlPosition.BOTTOM_RIGHT
+			position: google.maps.ControlPosition.RIGHT_BOTTOM
 		}
 	}
 
@@ -36,7 +36,7 @@ function initialize() {
 	markers = [];
 
 	//Pull and process node url
-	jQuery.getJSON(currentNodeListURL, function (data) {
+	$.getJSON(currentNodeListURL, function (data) {
 
 
 		var nodeVisible;

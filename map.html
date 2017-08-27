@@ -3,15 +3,10 @@ layout: default
 title: Map
 order: 1
 ---
-<link rel="stylesheet" type="text/css" href="/css/map.css">
-<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-<script language="javascript" type="text/javascript" src="/js/markerclusterer.js"></script> 
-<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfjIeSSWeDLOYt7f_cHHG4GtgOowvQFBs"></script> 
-<script language="javascript" type="text/javascript" src="/js/map.js"></script>
-<style>
-	html, body  { height:100%; width 100%}
-	body {overflow:hidden;}
-</style>
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/markerclusterer.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfjIeSSWeDLOYt7f_cHHG4GtgOowvQFBs"></script>
+<script type="text/javascript" src="/js/map.js"></script>
 <div id="map">
   <div id="map_canvas"></div>
 </div>
@@ -35,43 +30,36 @@ order: 1
   </div>
   Group at higher zoom level <br />
   <br>
-  <a href="#" onclick="ShowAdvanced(this)">+Show Advanced</a>
+  <button class="compact" onclick="ShowAdvanced(this)">+Show Advanced</button>
   <div style="display:none" id="customAdvacned">
   <b>Node URL:</b>
-  <input width="50" style="padding:0px" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
-	</div>
-  
+  <input style="width:100%;" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
+  </div>
 </div>
-</div>
-<style>
-input[type="button"].MapButton, input[type="text"].MapButton {
-	box-shadow:none;
-	background-repeat: no-repeat;background-position: center;
-	border-radius: 0px;
-	border:none;
-	}</style>
-<div class="customMarker" >
-  <div id="customMarkerGeoCodeDiv">       
-    <input title="Find Position Based On Browser Reported Location" style="border-radius: 2px 0px 0px 2px; border: 0px; background-color:white; border-right: solid #dadadb 2px; background-image: url(/images/iconLocation.svg);    background-size: 16px 16px; padding-left: 10px;
-    " class="button button-primary MapButton" type="button" value="." onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide(); 	 $('div#customMarkerLocationDiv').show(); return false;" /><input type="text" placeholder="Search By Address" id="customMarkerAddress" class="MapButton"><input title="Find Position Based On Google Address Decoding" class="button button-primary MapButton" type="button" value="." onclick="customMarkerGeoCode();" style="border-radius: 0 2px 2px 0; color: #1f73e0; background-image: url(/images/iconSearch.png);   background-size: 20px 20px; "/><br>
 
-    
+<div class="customMarker" >
+  <div id="customMarkerGeoCodeDiv">
+    <input title="Find Position Based On Browser Reported Location" style="border-radius: 2px 0px 0px 2px; border: 0px; background-color:white; border-right: solid #dadadb 2px; background-image: url(/images/iconLocation.svg);    background-size: 16px 16px; padding-left: 10px;
+    " class="button button-primary MapButton" type="button" value="." onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide(); 	 $('div#customMarkerLocationDiv').show(); return false;" /><input type="text" placeholder="Search By Address" id="customMarkerAddress" class="MapButton"><input title="Find Position Based On Google Address Decoding" class="button button-primary MapButton" type="button" value="." onclick="customMarkerGeoCode();" style="border-radius: 0 2px 2px 0; color: #1f73e0; background-image: url(/images/iconSearch.svg);   background-size: 20px 20px; "/><br>
+
+
     <input class="button button-primary MapButtonColor" style="margin-top:10px;" type="button" onclick='$("div#customMarkerGeoCodeDiv").hide();$("div#customMarkerLocationDiv").show(); addCustomMarker(); ; return false;' value="Manual Position">
 
   </div>
   <div id="customMarkerLocationDiv" style="display:none;" class="customShadowBox">
-    <h2>Search - Fine Tune
-      <div style="float:right;cursor: pointer;" onclick="clearWindows();">X</div>
+    <h2>Manual Position
+      <div style="float:right;cursor: pointer;" onclick="clearWindows();">×</div>
     </h2>
-    A marker has been placed at your desired location. You can Click and Drag the marker to fine tune its position<br/>
-    <strong>Lng:</strong>
-    <input style="width:70px" width="40" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
-    <strong>Lat: </strong>
-    <input style="width:70px"  onchange="addCustomMarker();"  value="43.678136" width="40" id="customMarkerLat"  type="text">
-    <br>
-    To generate a JSON Record of this marker please provide the following:<br>
+    <p>A marker has been placed at your desired location. You can Click and Drag the marker to fine tune its position</p>
+    <p>
+      <strong>Lat:</strong>
+      <input style="width:70px" onchange="addCustomMarker();" value="43.678136" id="customMarkerLat" type="text">
+      <strong>Long:</strong>
+      <input style="width:70px" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
+    </p>
+    <p>To generate a JSON Record of this marker please provide the following:</p>
     <strong>Node Name:</strong>
-    <input width="300" type="text" id="customMarkerName" value="UnNamed">
+    <input size="30" type="text" id="customMarkerName" value="UnNamed">
     <br>
     <strong>Floor:</strong>
     <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
@@ -87,6 +75,7 @@ input[type="button"].MapButton, input[type="text"].MapButton {
       <option>North West</option>
       <option value="Omni">All Directions</option>
     </select>
+    <br>
     <br>
     <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
