@@ -113,16 +113,22 @@ function addMarker(map, nodeResult, name, location) {
 	//If direction is given set it to the correct direction
 	if (nodeResult['cardinalDirection'] != null) ArrowDirection = nodeResult['cardinalDirection'];
 
+	//Return formatted date for display
+	var formattedDate = function () {
+		var date = new Date(nodeResult['dateAdded']);
+		var options = { year: 'numeric', month: 'long', day: 'numeric' };
+		return date.toLocaleDateString('en-US', options);
+	}
 
 	//Prepare the detail information for the marker
 	var Description = "";
 	Description = '<div class="markerPop">';
-	Description += '<h1>Name: ' + name + '</h1>';
+	Description += '<h1>' + name + '</h1>';
 	Description += '<p>Status: ' + nodeResult['status'] + '</p>';
 	if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
 	if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
 	if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>'
-	Description += '<p>Added: ' + nodeResult['dateAdded'] + '</p>';
+	Description += '<p>Added: ' + formattedDate() + '</p>';
 	Description += '</div>';
 
 	
@@ -306,7 +312,7 @@ function customMarkerGenerateJSON() {
 
 	var currentJSONDate = (new Date()).toJSON();
 
-	var sJSON = '<h2>JSON for node</h2><pre style="white-space: pre-wrap;">{\n' +
+	var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre style="white-space: pre-wrap;margin-bottom:10px;">{\n' +
 		'   "name": "Unnamed Node",\n' +
 		'   "latitude": ' + lat + ',\n' +
 		'   "longitude":' + lng + ',\n' +
