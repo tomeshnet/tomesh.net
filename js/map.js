@@ -306,7 +306,7 @@ function customMarkerGenerateJSON() {
 
 	var currentJSONDate = (new Date()).toJSON();
 
-	var sJSON = '<pre style="white-space: pre-wrap;">{\n' +
+	var sJSON = '<h2>JSON for node</h2><pre style="white-space: pre-wrap;">{\n' +
 		'   "name": "Unnamed Node",\n' +
 		'   "latitude": ' + lat + ',\n' +
 		'   "longitude":' + lng + ',\n' +
@@ -315,7 +315,7 @@ function customMarkerGenerateJSON() {
 		'   "dateAdded:" "' + currentJSONDate + '"\n' +
 		'}\n</pre>';
 
-	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Another Node" onclick="customMarkerNewNode()" />';
+	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Start Over" onclick="customMarkerNewNode()" />';
 
 
 }

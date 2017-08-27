@@ -19,45 +19,42 @@ h1 {
 }
 .customMarker {
 	position: absolute;
-	top: 60px;
-    left: 13px;	
+	top: 70px;
+	left: 13px;
 	width: 425px;
 	height: 300px;
-	
+}
+.toggles {
+	position: absolute;
+	padding: 5px;
+	top: 70px;
+	right: 13px;
+	width: 300px;
+	height: 270px;
 }
 .customShadowBox {
-	box-shadow: 2px 2px 1px #888888;
-	border: 1px solid black;
-	background:white;
-	padding:5px;
-	
-
+	padding: 5px;
+	background: white;
+	border-radius: 5px 5px 0 0;
+	font-family: "worksans", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 0.9em;
+	box-shadow: 5px 5px 5px #888888;
 }
 .toggles h2, .customMarker h2 {
-	margin: 0;
-	padding: 2px;
-	font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial, " sans-serif";
+	margin: -5px;
+	padding: 8px;
 	font-size: 14px;
 	font-weight: bold;
 	background: black;
 	color: white;
 	margin-bottom: 3px;
 	text-align: left;
+	border-radius: 5px 5px 0 0;
 }
 .customMarker a {
 	color: black;
 	font-weight: bold;
-}
-.toggles {
-	position: absolute;
-	padding: 5px;
-	border: 1px solid black;
-	top: 60px;
-	right: 50px;
-	width: 300px;
-	height: 300px;
-	background: white;
-	box-shadow: 2px 2px 1px #888888;
 }
 /* Check Boxes */
 	
@@ -108,26 +105,36 @@ h1 {
 	left: 30px;
 	background: #26ca28;
 }
-
 .expand {
-	display:none;
-	float:right;
+	display: none;
+	float: right;
 }
+
 @media (max-width: 550px) {
-	.customMarker {
-		display:none;
-	}
-	.toggles {
-		right:6px;
-		overflow: hidden;
-		height: 33px;
-		width: 135px;		
-	}
-	.expand {
-		display:inline;
-	}
-	.FullHeight {
-		width:calc(100% - 10px);
-		height:170px;
-	}
+.customMarker {
+	display: none;
+}
+.toggles {
+	right: 6px;
+	overflow: hidden;
+	height: 33px;
+	width: 135px;
+}
+.expand {
+	display: inline;
+}
+.FullHeight {
+	width: calc(100% - 10px);
+	height: 170px;
+}
+}
+#customMarkerAddress::placeholder {
+ color: #bbbbbb;
+ font-family: "worksans", Helvetica, Arial, sans-serif;
+ font-weight: normal;
+ font-size: 0.9em;
+ text-decoration: none;
+}
+#customMarkerAddress {
+	width: 300px
 }
