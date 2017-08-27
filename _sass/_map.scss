@@ -40,15 +40,19 @@ html, body, #map_canvas {
   box-shadow: 2px 2px 0 0 rgba($black, 0.1);
 }
 
-.toggles h2, .customMarker h2 {
-  margin: -5px;
+.box-header {
+  margin: -5px -5px 10px;
   padding: 8px;
-  font-size: 14px;
-  font-weight: bold;
   background: $black;
   color: $white;
-  margin-bottom: 3px;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1em;
+
+  h2 {
+    margin: 0;
+    font-size: 14px;
+  }
 }
 
 .customMarker a {
@@ -113,11 +117,6 @@ input[type="button"].MapButton, input[type="text"].MapButton {
   background-repeat: no-repeat;background-position: center;
   border-radius: 0px;
   border:none;
-}
-
-.expand {
-  display: none;
-  float: right;
 }
 
 @media (max-width: 550px) {

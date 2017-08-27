@@ -11,8 +11,12 @@ order: 1
   <div id="map_canvas"></div>
 </div>
 <div class="toggles customShadowBox" id="mapToggles">
-  <h2>Options <div class="expand" onclick='optionExpand()'>=</div></h2>
-  <b>Filter Nodes</b><br>
+  <div class="box-header">
+    <h2>Options</h2>
+  </div>
+  <p>
+    <strong>Filter Nodes</strong>
+  </p>
   <div class="checkBoxSlider">
     <input onChange="initialize()" type="checkbox" name="Active" id="chkActive" checked />
     <label for="chkActive"></label>
@@ -47,9 +51,10 @@ order: 1
 
   </div>
   <div id="customMarkerLocationDiv" style="display:none;" class="customShadowBox">
-    <h2>Manual Position
-      <div style="float:right;cursor: pointer;" onclick="clearWindows();">×</div>
-    </h2>
+    <div class="box-header">
+      <h2>Manual Position</h2>
+      <div style="cursor: pointer;" onclick="clearWindows();">×</div>
+    </div>
     <p>A marker has been placed at your desired location. You can Click and Drag the marker to fine tune its position</p>
     <p>
       <strong>Lat:</strong>
