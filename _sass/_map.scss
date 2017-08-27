@@ -7,6 +7,10 @@ html, body, #map_canvas {
   height: 100%;
   width: 100%;
   min-height: 625px;
+
+  @media (max-width: $on-palm) {
+    padding-top: 44px;
+  }
 }
 
 .markerPop {
@@ -118,7 +122,11 @@ input[type="button"].MapButton, input[type="text"].MapButton {
   border:none;
 }
 
-@media (max-width: 550px) {
+.expand {
+  display: none;
+}
+
+@media (max-width: $on-palm) {
   .customMarker {
     display: none;
   }
