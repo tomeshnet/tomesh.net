@@ -7,7 +7,7 @@ html, body, #map_canvas {
   height: 100%;
   width: 100%;
   min-height: 625px;
-
+  background-color: #e5e3df;
   @media (max-width: $on-palm) {
     padding-top: 44px;
   }
@@ -28,7 +28,7 @@ html, body, #map_canvas {
   height: 300px;
 }
 
-.toggles {
+.options {
   position: absolute;
   padding: 5px;
   top: 70px;
@@ -131,7 +131,7 @@ input[type="button"].MapButton, input[type="text"].MapButton {
     display: none;
   }
 
-  .toggles {
+  .options {
     right: 6px;
     overflow: hidden;
     height: 33px;

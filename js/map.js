@@ -24,7 +24,7 @@ function initialize() {
 		mapTypeControlOptions: {
 			position: google.maps.ControlPosition.RIGHT_BOTTOM
 		}
-	}
+	};
 
 	infowindow = new google.maps.InfoWindow({
 		content: "holding..."
@@ -119,12 +119,13 @@ function addMarker(map, nodeResult, name, location) {
 		var options = { year: 'numeric', month: 'long', day: 'numeric' };
 		return date.toLocaleDateString('en-US', options);
 	}
+	var nodeStatus = nodeResult['status'].charAt(0).toUpperCase() + nodeResult['status'].slice(1);
 
 	//Prepare the detail information for the marker
 	var Description = "";
 	Description = '<div class="markerPop">';
 	Description += '<h1>' + name + '</h1>';
-	Description += '<p>Status: ' + nodeResult['status'] + '</p>';
+	Description += '<p>Status: ' + nodeStatus + '</p>';
 	if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
 	if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
 	if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>'
@@ -243,13 +244,13 @@ function addMarker(map, nodeResult, name, location) {
 /*******************
  Custom Marker Code
 ********************
-Functions that deal with "ADD NODE" dialog
+Functions that deal with dialog box interaction
 including GeoCoding and JSON Generation
 */
 
 var customMarker = undefined;
 
-//Custom marker from entered coordinates
+//Plot new marker from entered coordinates
 function addCustomMarker() {
 	var lng = document.getElementById("customMarkerLng").value;
 	var lat = document.getElementById("customMarkerLat").value;
@@ -265,10 +266,11 @@ function addCustomMarker() {
 			draggable: true
 		});
 
+		//Event for marker after it has been dropped (end of drag and drop)
 		google.maps.event.addListener(customMarker, 'dragend', function () {
 			document.getElementById("customMarkerLng").value = customMarker.getPosition().lng();
 			document.getElementById("customMarkerLat").value = customMarker.getPosition().lat();
-			customMarkerGenerateJSON();
+			customMarkerGenerateJSON(); //Regenerate json data in case your looking at the json screen
 		});
 	}
 	map.setCenter(new google.maps.LatLng(lat, lng));
@@ -301,6 +303,7 @@ function customMarkerShowJsonDialog() {
 	customMarkerGenerateJSON();
 }
 
+//Updates the text for the JSON data on the JSON screen
 function customMarkerGenerateJSON() {
 
 	var lng = document.getElementById("customMarkerLng").value;
@@ -321,15 +324,9 @@ function customMarkerGenerateJSON() {
 		'   "dateAdded:" "' + currentJSONDate + '"\n' +
 		'}\n</pre>';
 
-	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Start Over" onclick="customMarkerNewNode()" />';
+	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Start Over" onclick="clearWindows();" />';
 
 
-}
-
-function customMarkerNewNode() {
-	$("div#customMarkerGeoCodeDiv").show();
-	$("div#customMarkerLocationDiv").hide();
-	$("div#customMarkerJSONDiv").hide();
 }
 
 function GeoLocationBrowser() {
@@ -364,15 +361,24 @@ function clearWindows() {
 
 }
 
+//Option Window Code
 function ShowAdvanced(what) {
-	$('div#customAdvacned').show();
+	if (what.innerHTML=="+Show Advanced") {
+		$('div#customAdvacned').show();	
+		what.innerHTML="-Hide Advanced";
+	} else {
+		$('div#customAdvacned').hide();
+		what.innerHTML="+Show Advanced";
+		
+	}
 }
 
+//Expand Option Window For Mobile
 function optionExpand() {
-	if ($("#mapToggles").hasClass('FullHeight')) { 
-		$("#mapToggles").removeClass('FullHeight');
+	if ($("#mapOptions").hasClass('FullHeight')) { 
+		$("#mapOptions").removeClass('FullHeight');
 	} else {
-		$("#mapToggles").addClass('FullHeight');
+		$("#mapOptions").addClass('FullHeight');
 	}
 }
 
