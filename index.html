@@ -2,6 +2,46 @@
 layout: default
 ---
 
+<style>
+	.featurette:nth-child(odd) { background:#fdfdfd; }
+	.featurette { background:#fdfdfd; }
+	.frontPageTile {
+		width: 32.5%;   
+		display:inline-block; 
+		vertical-align: top;
+		height:320px;
+	    text-align: center;
+	}
+	.frontPageTile img { 
+	    max-width: 80%;
+	    max-height: 154px;
+	
+	}
+	.frontPageTile .row {
+		height:170px;
+		display:block;
+	}
+	.tileButton  {
+	    font-size: 1em !important;
+	    width: 225px;
+	    text-align: center;
+	    margin: 0 auto;
+	    display: block;
+	    line-height: 31px;
+	}
+
+	.site-footer {
+	    margin: 3em 0;
+	    font-size: 0.85em;
+	    background-color: #eeeeff;
+	    padding-top: 50px;
+	}
+	@media (max-width: 850px) {
+		.frontPageTile { display:block; width:100%;}
+	}
+
+</style>
+
 <!-- About Section -->
 <section class="feature background-tint">
   <div class="container">
@@ -16,46 +56,48 @@ layout: default
 </section>
 
 
+
 <!-- Get Involved section  -->
-<section class="featurette">
+<section class="featurette layout3 frontPageTile">
   <div class="container">
     <div class="row">
-      <div class="six columns">
-        <h1><span class="heading-text">Join Us</span></h1>
-        <p>We welcome more people who want to be involved and learn about networking, mesh, and open-source technology regardless of background or skill level. We meet regularly in-person and online.
-        </p>
-        <a class="button button-primary" href="{{ site.baseurl }}/get-involved" role="button">Get Involved</a>
-      </div>
-      <div class="six columns">
-        <img src="/images/join-image-2x.jpg" srcset="/images/join-image.jpg 1x, /images/join-image-2x.jpg 2x" alt="Ubiquiti LiteBeam with cables and a computer">
-      </div>
+      <img src="/images/frontInvolved.jpg"  alt="Get involved with the community">
     </div>
+    <a class="button button-primary tileButton" href="{{ site.baseurl }}/get-involved" role="button">Get Involved</a>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="featurette layout3 frontPageTile">
+  <div class="container">
+    <div class="row">
+      <img src="/images/frontSeeMap.jpg"  alt="Find peopel in your area wanting to mesh!"><br/>
+    </div>
+    <a class="button button-primary tileButton" href="{{ site.baseurl }}/map" role="button">See Map</a>
+  </div>
+</section>
+
+<!-- Build Section -->
+<section class="featurette layout3 frontPageTile">
+  <div class="container">
+    <div class="row">
+		<img src="/images/frontBuild.jpg"  alt="Learn how to build a node"><br/>       
+    </div>
+    <a class="button button-primary tileButton"  href="{{ site.baseurl }}/build-a-node" role="button">Build A Node</a>
   </div>
 </section>
 
 
 <!-- Event section -->
-<section class="featurette">
-  <div class="container">
-    <div class="row featurette-events-row">
-      <div class="three columns featurette-events-column">
-        <a href="{{ site.baseurl }}/events" role="link" title="Toronto Mesh Calendar">{% include_absolute _icons/calendar.svg class:icon icon-5x %}</a>
-      </div>
-      <div class="nine columns">
-        <h1>Our Next Event</h1>
-        {% include next-event.html %}
-        <a class="button button-primary" href="{{ site.baseurl }}/events" role="link">More Events</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<div style="background:#eeeeee">
+  <section class="featurette layout3" style="width:33%; margin-left:33%; margin-right:33%; height:inherit; display:block; background-color:#eeeeee; text-align: center;">
+    <a href="{{ site.baseurl }}/events" role="link" title="Toronto Mesh Calendar">{% include_absolute _icons/calendar.svg class:icon icon-5x %}</a>
+    <h1>Our Next Event</h1>
+    <center>
+      {% include next-event.html %}
+    </center>
+    <a class="button button-primary" href="{{ site.baseurl }}/events" role="link">More Events</a>
+  </section>
+</div>
 
 <!-- Contact Section -->
-<section class="featurette">
-  <div class="container">
-    <h1>Have More Questions?</h1>
-    <p></p>
-    <a class="button button-primary" href="{{ site.baseurl }}/contact" role="button">Contact Us</a>
-  </div>
-</section>
