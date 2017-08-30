@@ -2,6 +2,7 @@
 layout: page
 title: Timeline
 order: 4
+parent: About
 ---
 
 <div class="timeline">

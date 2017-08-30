@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Code of Conduct
-order: 0
+order: 2
+parent: About
 ---
 
 ## Pledge
