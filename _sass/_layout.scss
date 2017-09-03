@@ -182,15 +182,16 @@
 }
 
 .feature {
-  background-image: url(/images/mesh.jpg);
+  color: $white;
+  background-image: url(/images/watercolour.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 55px;
 
   a {
-    color: rgba($white, 0.75);
+    color: $white;
   }
 
   .content {
@@ -210,10 +211,10 @@
   }
 
   .attribution {
-    color: rgba($white, 0.75);
+    opacity: 0.35;
     margin: 1em 0;
     display: inline-block;
-    font-size: 0.85em;
+    font-size: 0.75em;
   }
 }
 
