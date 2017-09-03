@@ -1,10 +1,11 @@
 language: ruby
 sudo: false
 rvm:
-  - 2.3.1
+  - 2.4.1
 
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - apt-get install libcurl3-dev
 
 before_script: bundle exec jekyll build
 
