@@ -5,7 +5,7 @@ rvm:
 
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - apt-get install libcurl3-dev
+  - sudo apt-get install libcurl3-dev
 
 before_script: bundle exec jekyll build
 
