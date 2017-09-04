@@ -13,6 +13,7 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <nav class="nav" role="navigation" aria-label="Primary Menu">
       <ul class="menu">
+        {% assign currentTitle = page.title %}
         {% assign current = page.url | split: '/' %}
         {% assign sorted_pages = site.pages | sort: "order" %}
           {% for page in sorted_pages %}
@@ -47,3 +48,13 @@
     </nav>
   </div>
 </header>
+<ul class="subNav">
+  <li style="font-weight:bold">{{ currentTitle }}:</li>
+
+    {% assign sorted2_pages = site.pages | sort: "order" %}
+    {% for page2 in sorted2_pages %}
+        {% if page.title == page2.parent %}
+            <li><a class= "{% if page2.url contains current[1] %}active{% endif %}" href="{{ page2.url }}" aria-label="{% if page2.descriptiveTitle %}{{ page2.descriptiveTitle }}{% else %}{{ page2.title }}{% endif %}">{{ page2.title }} </a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -195,3 +195,23 @@ input[type="checkbox"].menu-btn {
 .nav-item-sub  li  a:hover {
     background: rgba($white, 0.20);	
 }
+.subNav {
+    display: none;
+}
+@media (max-width: $on-palm) {
+ .subNav {
+    position: relative;
+    top:45px;
+    width: 100%;
+    display: block;
+    z-index: 1000;
+    vertical-align:top; 
+ }
+ .subNav  li {
+    display:inline-block;	
+    padding-right:30px;
+ }
+.post {
+    padding-top:40px !important;
+ }
+}
