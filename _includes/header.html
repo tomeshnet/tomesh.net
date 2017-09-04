@@ -50,11 +50,15 @@
 </header>
 <ul class="subNav">
   <li style="font-weight:bold">{{ currentTitle }}:</li>
-
+    {% assign exist = 0 %}
     {% assign sorted2_pages = site.pages | sort: "order" %}
     {% for page2 in sorted2_pages %}
         {% if page.title == page2.parent %}
+        {% assign exist = 1 %}
             <li><a class= "{% if page2.url contains current[1] %}active{% endif %}" href="{{ page2.url }}" aria-label="{% if page2.descriptiveTitle %}{{ page2.descriptiveTitle }}{% else %}{{ page2.title }}{% endif %}">{{ page2.title }} </a></li>
         {% endif %}
     {% endfor %}
 </ul>
+{% if exist == 0 %}
+<style>.subNav { display:none !important; }</style>
+{% endif %}
