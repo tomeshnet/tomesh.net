@@ -54,11 +54,11 @@
     {% assign sorted2_pages = site.pages | sort: "order" %}
     {% for page2 in sorted2_pages %}
     	{% if page2.parent != nil %}
-	        {% if page.title == page2.parent  %}
+	        {% if page.title == page2.parent or page.parent == page2.parent  %}
 	        {% assign exist = 1 %}
 	            <li><a class= "{% if page2.url contains current[1] %}active{% endif %}" href="{{ page2.url }}" aria-label="{% if page2.descriptiveTitle %}{{ page2.descriptiveTitle }}{% else %}{{ page2.title }}{% endif %}">{{ page2.title }} </a></li>
 	        {% endif %}
-        {% endif %}            
+        {% endif %}
     {% endfor %}
 </ul>
 {% if exist == 0 %}
