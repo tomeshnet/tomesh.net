@@ -3,9 +3,17 @@ var infowindow = null;
 var markers = [];
 var currentNodeListURL;
 var circle = null;
+var pingData;
 
 function initialize() {
 	
+	
+	
+	//Pull Ping Data
+	$.getJSON("http://cjdns1.networkedserver.net/ping.json", function (data) {
+		pingData=data;
+	});
+
 	//Current Node URL with random bits to make sure it doesnt get cached
 	currentNodeListURL = document.getElementById("nodeURL").value + "?ramd=" + new Date();
 
@@ -130,6 +138,28 @@ function addMarker(map, nodeResult, name, location) {
 	if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
 	if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>'
 	Description += '<p>Added: ' + formattedDate() + '</p>';
+	
+	//Hopefully it loaded by now!
+	if (pingData != undefined) {
+		if (nodeResult['IPV6Address']) {//If there is an IPV6 Address
+			if(pingData[nodeResult['IPV6Address']]) { //if there is data in the ping file
+				if(pingData[nodeResult['IPV6Address']]['status']=='ok') { //if node is alive
+					
+					Description += '<p>State: ONLINE</p>';
+					Description += '<p>RTT: ' + pingData[nodeResult['IPV6Address']]['pingAvg'] + '</p>';
+					Description += '<p>Check: ' + pingData[nodeResult['IPV6Address']]['lastPing'] + '</p>';
+				} else {
+					Description += '<p>State: DOWN</p>';
+					nodeColor = 'red';
+				}
+				
+			} else {
+					Description += '<p>State: No Data</p>';
+					nodeColor = 'red';
+			}
+		}
+		
+	}
 	Description += '</div>';
 
 	
