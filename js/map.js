@@ -321,7 +321,7 @@ function customMarkerGenerateJSON() {
 		'      "longitude":' + lng + ',\n' +
 		'      "cardinalDirection": "' + dir + '",\n' +
 		'      "floor": ' + floor + ',\n' +
-		'      "dateAdded" ": ' + currentJSONDate + '"\n' +
+		'      "dateAdded": "' + currentJSONDate + '"\n' +
 		'   }\n</pre>';
 
 	document.getElementById("customMarkerJSONDiv").innerHTML = sJSON + '<input type="button" value="Start Over" onclick="clearWindows();" />';
