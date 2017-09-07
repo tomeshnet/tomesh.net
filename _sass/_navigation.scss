@@ -132,7 +132,7 @@ input[type="checkbox"].menu-btn {
   display: none;
 
   &:checked ~ .nav {
-    max-height: 400px;
+    max-height: 100%;
   }
 
   &:checked ~ .menu-icon .navicon {
@@ -169,7 +169,7 @@ input[type="checkbox"].menu-btn {
     background-clip: padding-box;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 8px;
+    border-radius: 2px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .1);	
@@ -181,7 +181,6 @@ input[type="checkbox"].menu-btn {
 
 
 .nav-item-sub > li > a {
-	background: black;
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -189,29 +188,21 @@ input[type="checkbox"].menu-btn {
     line-height: 1.42857143;
     color: white;
     white-space: nowrap;
-	padding:5px;
-	margin:5px;
+    padding:10px 10px 10px 10px;
+}
+.nav-item-sub .active {
+    color: $white;
+    background: rgba($white, 0.3);
 }
 .nav-item-sub  li  a:hover {
     background: rgba($white, 0.20);	
 }
-.subNav {
-    display: none;
-}
 @media (max-width: $on-palm) {
- .subNav {
-    position: relative;
-    top:45px;
-    width: 100%;
-    display: block;
-    z-index: 99;
-    vertical-align:top; 
- }
- .subNav  li {
-    display:inline-block;	
-    padding-right:30px;
- }
- .post {
-    padding-top:45px !important;
- } 
+    .nav-item-sub {
+        display:block;
+        position:inherit;
+        width:100%;
+        float: none;
+        padding: 0 40px;
+    }
 }
