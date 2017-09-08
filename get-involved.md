@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Get Involved
-order: 2
+order: 4
 ---
 
 Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct), then:

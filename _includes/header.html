@@ -13,16 +13,31 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <nav class="nav" role="navigation" aria-label="Primary Menu">
       <ul class="menu">
+        {% assign currentTitle = page.title %}
         {% assign current = page.url | split: '/' %}
         {% assign sorted_pages = site.pages | sort: "order" %}
           {% for page in sorted_pages %}
            {% unless page.url contains '/events/page'%}
-             {% if page.order > 0 %}
+             {% if page.order > 0 and page.parent == nil %}
                <li>
                  <a class= "nav-item {% if page.url contains current[1] %}active{% endif %}"
                     href="{{ page.url }}" aria-label="{% if page.descriptiveTitle %}{{ page.descriptiveTitle }}{% else %}{{ page.title }}{% endif %}">
                     {{ page.title }}
                  </a>
+                 <ul class="nav-item-sub">
+                    {% assign sorted2_pages = site.pages | sort: "order" %}
+                    {% for page2 in sorted2_pages %}
+                      {% if page.title == page2.parent %}
+                      <li><a class= "{% if page2.url contains current[1] %}active{% endif %}" href="{{ page2.url }}" aria-label="{% if page2.descriptiveTitle %}{{ page2.descriptiveTitle }}{% else %}{{ page2.title }}{% endif %}">{{ page2.title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                    {% if page.title == 'Contact' %}
+                      <li>{% include icon-matrix.html %}</li>
+                      <li>{% include icon-email.html %}</li>
+                      <li>{% include icon-github.html username=site.github_username %}</li>
+                      <li>{% include icon-twitter.html username=site.twitter_username %}</li>
+                    {% endif %} 
+                 </ul>
                </li>
              {% endif %}
           {% endunless %}

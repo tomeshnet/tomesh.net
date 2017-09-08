@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Timeline
-order: 4
+order: 1
+parent: About
 ---
 
 <div class="timeline">
