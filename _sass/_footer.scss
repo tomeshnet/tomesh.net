@@ -1,8 +1,10 @@
 // Site footer
 
 .site-footer {
-  margin: 3em 0;
   font-size: 0.85em;
+  background:#eeeeee;
+  margin-bottom: 0px;
+  border-radius: 2px 2px 0px 0px;  
 
   .site-footer-contact {
     ul {
@@ -11,16 +13,16 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
+	  border-bottom: 1px inset $grey-color-dark;
     }
 
     li {
-      margin-right: 2em;
-      margin-top: 0;
       padding: 5px 0;
       position: relative;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+	  margin: 0 auto;
 
       @media (max-width: $content-width) {
         flex-basis: 50%;
@@ -29,10 +31,10 @@
     }
 
     a {
-      color: $grey-color;
+      color: $black;
 
       &:hover {
-        color: $grey-color-dark
+        color: $grey-color
       }
     }
   }
