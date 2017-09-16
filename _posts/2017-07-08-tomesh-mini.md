@@ -10,6 +10,6 @@ startTime: '09:00'
 endTime: '17:00'
 ---
 
-Join Toronto Mesh during the [Maker Festival Extravaganza](http://makerfestival.ca/extravaganza/) on **Saturday, July 8** and **Sunday, July 9** and check out our interactive game exploring how the internet works!
+Join Toronto Mesh during the [Maker Festival Extravaganza](http://makerfestival.ca/) on **Saturday, July 8** and **Sunday, July 9** and check out our interactive game exploring how the internet works!
 
 Email [hello@tomesh.net](mailto:hello@tomesh.net) to learn more or find us during the event!

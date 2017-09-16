@@ -15,7 +15,7 @@
   z-index: 100;
 
   @media (max-width: $on-palm) {
-    line-height: 44px;
+    line-height: 40px;
   }
 
   .container {
@@ -78,9 +78,9 @@
 
   .nav {
     @media (max-width: $on-palm) {
-      max-height: 0;
-      transition: max-height .5s ease-in-out;
-      overflow: hidden;
+      display: none;
+      overflow: scroll;
+      max-height: 100vh;
     }
   }
 }
@@ -103,9 +103,9 @@
 .navicon {
   background: $white;
   display: block;
-  height: 2px;
+  height: 1px;
   position: relative;
-  transition: background .5s ease-in-out;
+  transition: background .2s ease-in-out;
   width: 18px;
 
   &:before,
@@ -115,16 +115,16 @@
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
     width: 100%;
   }
 
   &:before {
-    top: 5px;
+    top: 6px;
   }
 
   &:after {
-    top: -5px;
+    top: -6px;
   }
 }
 
@@ -132,7 +132,7 @@ input[type="checkbox"].menu-btn {
   display: none;
 
   &:checked ~ .nav {
-    max-height: 400px;
+    display: block;
   }
 
   &:checked ~ .menu-icon .navicon {
@@ -147,5 +147,57 @@ input[type="checkbox"].menu-btn {
       top: 0;
       transform: rotate(45deg);
     }
+  }
+}
+
+
+/*Sub menu CSS*/
+
+.nav-item-sub {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background: $black;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+
+  & > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    line-height: 1.42857143;
+    color: $white;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  li  a:hover {
+    background: rgba($white, 0.2);
+  }
+
+  .active {
+    color: $white;
+    background: rgba($white, 0.3);
+  }
+}
+
+.header li:hover .nav-item-sub {
+  display: block;
+}
+
+@media (max-width: $on-palm) {
+  .nav-item-sub {
+    display:block;
+    position:inherit;
+    width:100%;
+    float: none;
+    padding: 0 25px;
   }
 }
