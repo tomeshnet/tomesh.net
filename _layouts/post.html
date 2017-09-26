@@ -57,9 +57,11 @@ layout: default
     <div class="post-content" itemprop="articleBody">
       {{ content }}
     </div>
+    <footer class="post-footer">
+      <div class="row">
+        <a href="{{ site.baseurl }}/events" class="button">{% include_absolute _icons/calendar.svg class:icon %}
+    &nbsp;&nbsp;Back to Events</a>
+      </div>
+    </footer>
   </article>
-  <div class="row">
-    <a href="{{ site.baseurl }}/events" class="button">{% include_absolute _icons/calendar.svg class:icon %}
-&nbsp;&nbsp;Back to Events</a>
-  </div>
 </div>
