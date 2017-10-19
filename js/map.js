@@ -8,7 +8,7 @@ var pingData;
 function initialize() {
 
 	//Pull Ping Data
-	$.getJSON("http://node2.e-mesh.net/ping.json", function (data) {
+	$.getJSON("http://node2.e-mesh.net/ping.json.php", function (data) {
 		pingData=data;
 	});
 
