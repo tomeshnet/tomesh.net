@@ -112,7 +112,7 @@ function addMarker(map, nodeResult, name, location) {
 	
 	//If direction is given set it to the correct direction
 	if (nodeResult['cardinalDirection'] != null) ArrowDirection = nodeResult['cardinalDirection'];
-    if (nodeResult['cardinalDirectionAntenna'] != null) ArrowDirection = nodeResult['cardinalDirectionAntenna'];
+	if (nodeResult['cardinalDirectionAntenna'] != null) ArrowDirection = nodeResult['cardinalDirectionAntenna'];
 	
 	//Return formatted date for display
 	var formattedDate = function () {
@@ -128,7 +128,7 @@ function addMarker(map, nodeResult, name, location) {
 	Description += '<h1>' + name + '</h1>';
 	Description += '<p>Status: ' + nodeStatus + '</p>';
 	if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
-	if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';	
+	if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';	
 	if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
 	if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>'
 	Description += '<p>Added: ' + formattedDate() + '</p>';
