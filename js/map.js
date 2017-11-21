@@ -177,7 +177,7 @@ function addMarker(map, nodeResult, name, location) {
         url: IMG,
         anchor: imageAnchor
       },
-      direction: nodeResult['cardinalDirection'],
+      direction: ArrowDirection,
       html: Description
     });
 
