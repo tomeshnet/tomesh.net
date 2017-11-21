@@ -172,7 +172,7 @@ function MarkerClusterer(map, opt_markers, opt_options) {
     var zoom = that.map_.getZoom();
     var minZoom = that.map_.minZoom || 0;
     var maxZoom = Math.min(that.map_.maxZoom || 100,
-                         that.map_.mapTypes[that.map_.getMapTypeId()].maxZoom);
+      that.map_.mapTypes[that.map_.getMapTypeId()].maxZoom);
     zoom = Math.min(Math.max(zoom,minZoom),maxZoom);
 
     if (that.prevZoom_ != zoom) {
@@ -507,7 +507,7 @@ MarkerClusterer.prototype.removeMarker = function(marker, opt_nodraw) {
     this.redraw();
     return true;
   } else {
-   return false;
+    return false;
   }
 };
 
@@ -631,9 +631,9 @@ MarkerClusterer.prototype.getExtendedBounds = function(bounds) {
 
   // Turn the bounds into latlng.
   var tr = new google.maps.LatLng(bounds.getNorthEast().lat(),
-      bounds.getNorthEast().lng());
+    bounds.getNorthEast().lng());
   var bl = new google.maps.LatLng(bounds.getSouthWest().lat(),
-      bounds.getSouthWest().lng());
+    bounds.getSouthWest().lng());
 
   // Convert the points to pixels and the extend out by the grid size.
   var trPix = projection.fromLatLngToDivPixel(tr);
@@ -798,7 +798,7 @@ MarkerClusterer.prototype.createClusters_ = function() {
   // Get our current map view bounds.
   // Create a new bounds object so we don't affect the map.
   var mapBounds = new google.maps.LatLngBounds(this.map_.getBounds().getSouthWest(),
-      this.map_.getBounds().getNorthEast());
+    this.map_.getBounds().getNorthEast());
   var bounds = this.getExtendedBounds(mapBounds);
 
   for (var i = 0, marker; marker = this.markers_[i]; i++) {
@@ -827,7 +827,7 @@ function Cluster(markerClusterer) {
   this.markers_ = [];
   this.bounds_ = null;
   this.clusterIcon_ = new ClusterIcon(this, markerClusterer.getStyles(),
-      markerClusterer.getGridSize());
+    markerClusterer.getGridSize());
 }
 
 /**
@@ -1309,10 +1309,10 @@ ClusterIcon.prototype['draw'] = ClusterIcon.prototype.draw;
 ClusterIcon.prototype['onRemove'] = ClusterIcon.prototype.onRemove;
 
 Object.keys = Object.keys || function(o) {  
-    var result = [];  
-    for(var name in o) {  
-        if (o.hasOwnProperty(name))  
-          result.push(name);  
-    }  
-    return result;  
+  var result = [];  
+  for(var name in o) {  
+    if (o.hasOwnProperty(name))  
+      result.push(name);  
+  }  
+  return result;  
 };
