@@ -1,6 +1,6 @@
 # tomesh.net
 
-[![Build Status](https://travis-ci.org/tomeshnet/tomesh.net.svg?branch=master)](https://travis-ci.org/tomeshnet/tomesh.net)
+[![Build Status](https://travis-ci.org/tomeshnet/tomesh.net.svg?branch=master)](https://travis-ci.org/tomeshnet/tomesh.net) [![Maintainability](https://api.codeclimate.com/v1/badges/f79aeccd728473735323/maintainability)](https://codeclimate.com/github/tomeshnet/tomesh.net/)
 
 Website for [Toronto Mesh](https://www.tomesh.net/) ([https://www.tomesh.net/](https://www.tomesh.net/)), built with [Jekyll](https://jekyllrb.com/), [Font Awesome](http://fontawesome.io/) icons, and [Skeleton](http://getskeleton.com/) CSS.
 
