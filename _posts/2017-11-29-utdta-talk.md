@@ -12,10 +12,10 @@ endTime: '20:00'
 
 Join us and the UofT Decentralized Tech Association (UTDTA) for a talk on decentralized tech and mesh networks!
 
-Topics:
+Guests:
 
-- Professor Peter Marbach: TBA
-- tomesh: Building a wireless mesh network
+- Professor Peter Marbach
+- tomesh
 
 This event will be hosted by the UTDTA at {{page.startTime | date:"%-I:%M %P "}} in Room BA1180, [40 St. George Street]({{ page.locationLink }}).  
 
