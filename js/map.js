@@ -311,7 +311,7 @@ function customMarkerGenerateJSON() {
   var currentJSONDate = (new Date()).toJSON();
 
   var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre style="white-space: pre;margin-bottom:10px;">   {\n' +
-    '     "name": "Unnamed Node",\n' +
+    '     "name": "' + name + '",\n' +
     '     "latitude": ' + lat + ',\n' +
     '     "longitude":' + lng + ',\n' +
     '     "cardinalDirection": "' + dir + '",\n' +
