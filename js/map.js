@@ -310,14 +310,15 @@ function customMarkerGenerateJSON() {
 
   var currentJSONDate = (new Date()).toJSON();
 
-  var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre style="white-space: pre;margin-bottom:10px;">{\n' +
-    '  "name": "Unnamed Node",\n' +
-    '  "latitude": ' + lat + ',\n' +
-    '  "longitude":' + lng + ',\n' +
-    '  "cardinalDirection": "' + dir + '",\n' +
-    '  "floor": ' + floor + ',\n' +
-    '  "dateAdded": "' + currentJSONDate + '"\n' +
-    '}\n</pre>';
+  var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre style="white-space: pre;margin-bottom:10px;">   {\n' +
+    '     "name": "Unnamed Node",\n' +
+    '     "latitude": ' + lat + ',\n' +
+    '     "longitude":' + lng + ',\n' +
+    '     "cardinalDirection": "' + dir + '",\n' +
+    '     "floor": ' + floor + ',\n' +
+    '     "status": "proposed",\n' +
+    '     "dateAdded": "' + currentJSONDate + '"\n' +
+    '   }\n</pre>';
 
   document.getElementById('customMarkerJSONDiv').innerHTML = sJSON + '<input type="button" value="Start Over" onclick="clearWindows();" />';
 
