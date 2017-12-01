@@ -9,9 +9,9 @@ function initialize() {
   currentNodeListURL = document.getElementById('nodeURL').value + '?ramd=' + new Date();
 
   //Set options based on check box positions
-  filterActive = document.getElementById('chkActive').checked;
-  filterProposed = document.getElementById('chkProposed').checked;
-  zoomGroup = document.getElementById('chkGroup').checked;
+  var filterActive = document.getElementById('chkActive').checked;
+  var filterProposed = document.getElementById('chkProposed').checked;
+  var zoomGroup = document.getElementById('chkGroup').checked;
 
   //Prepare default view and create map
   var mapOptions = {
@@ -94,7 +94,7 @@ function findMarker(lat, lng, dir) {
 function addMarker(map, nodeResult, name, location) {
 
   //Specify the colour of the marker based on the status
-  var nodecolor;
+  var nodeColor;
   if (nodeResult['status'] == 'active') {
     nodeColor = 'green';
   }
