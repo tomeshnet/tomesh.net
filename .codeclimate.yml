@@ -28,4 +28,5 @@ plugins:
   eslint:
     enabled: true
 exclude_patterns:
+  - '**/vendor/'
   - '_site/'
