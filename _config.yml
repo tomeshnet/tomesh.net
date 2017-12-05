@@ -28,8 +28,11 @@ future: true # for events set in the future to show up
 # Excluded folders
 exclude: [Gemfile, Gemfile.lock, scripts, vendor]
 
+# Include folders
+include: [.well-known]
+
 # Keep files (Dat files)
-keep_files: [dat.json, .dat, .well-known]
+keep_files: [dat.json, .dat]
 
 # Events pagination
 paginate: 8
