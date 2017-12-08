@@ -32,7 +32,7 @@ exclude: [Gemfile, Gemfile.lock, scripts, vendor]
 include: [.well-known]
 
 # Keep files (Dat files)
-keep_files: [dat.json, .dat]
+keep_files: [.dat]
 
 # Events pagination
 paginate: 8
