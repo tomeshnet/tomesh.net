@@ -23,5 +23,6 @@ The course will cover the following topics:
 * Tue May 08 - *Measuring networks*
 * Tue May 15 - *Living on a decentralized network*
 
-Full syllabus is [available here](https://github.com/tomeshnet/tpl-workshop). Capacity is limited. To enrol in this free workshop series, you must [register through the Library website](https://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT23011&R=EVT23011).
+Full syllabus is [available here](https://github.com/tomeshnet/tpl-workshop).
 
+Capacity is limited. To enrol in this free workshop series, you must [register through the Library website](https://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT23011&R=EVT23011).
