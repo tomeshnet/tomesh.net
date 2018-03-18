@@ -25,4 +25,4 @@ The course will cover the following topics:
 
 You can find the [full syllabus](https://github.com/tomeshnet/tpl-workshop) here.
 
-Capacity is limited and each class builds upon one another. To enrol in this free workshop series, you must [register through the Library website](https://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT23011&R=EVT23011) before the first workshop on April 10.
+Capacity is limited and each class builds upon the previous ones. To enrol in this free workshop series, you must [register through the Library website](https://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT23011&R=EVT23011) before the first workshop on April 10.
