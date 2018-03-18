@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Building the Peer-to-Peer Internet: Setting Up Your First Node'
+title: 'Building the Peer-to-Peer Internet: Setting up Your First Node'
 slug: peer-to-peer-internet
 text: Workshop series at the Toronto Public Library
 location: Toronto Public Library, Fort York branch

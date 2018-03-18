@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Building the Peer-to-Peer Internet: Living On A Decentralized Network'
+title: 'Building the Peer-to-Peer Internet: Living on a Decentralized Network'
 slug: peer-to-peer-internet
 text: Workshop series at the Toronto Public Library
 location: Toronto Public Library, Fort York branch

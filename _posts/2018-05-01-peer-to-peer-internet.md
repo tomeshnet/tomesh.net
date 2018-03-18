@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Building the Peer-to-Peer Internet: Planning A Network'
+title: 'Building the Peer-to-Peer Internet: Planning a Network'
 slug: peer-to-peer-internet
 text: Workshop series at the Toronto Public Library
 location: Toronto Public Library, Fort York branch
