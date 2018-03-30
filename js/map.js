@@ -327,7 +327,7 @@ function customMarkerGenerateJSON() {
 function submitJson() {
   var msg = 'I would like to add my node to the TOMesh node list.  I\'ve completed the JSON object below describing my node.\n\n```\n' + document.getElementById('jsonData').innerHTML + '```';
   var name = document.getElementById('customMarkerName').value;
-  name=encodeURI(msg);
+  name=encodeURI(name);
   document.location='https://github.com/tomeshnet/node-list/issues/new?title=New+node+report+' + name + '&body=' + encodeURI(msg);
 }
 function GeoLocationBrowser() {
