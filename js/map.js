@@ -310,7 +310,7 @@ function customMarkerGenerateJSON() {
 
   var currentJSONDate = (new Date()).toJSON();
 
-  var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre style="white-space: pre;margin-bottom:10px;">   {\n' +
+  var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre id="jsonData" style="white-space: pre;margin-bottom:10px;">   {\n' +
     '     "name": "' + name + '",\n' +
     '     "latitude": ' + lat + ',\n' +
     '     "longitude":' + lng + ',\n' +
@@ -320,11 +320,14 @@ function customMarkerGenerateJSON() {
     '     "dateAdded": "' + currentJSONDate + '"\n' +
     '   }\n</pre>';
 
-  document.getElementById('customMarkerJSONDiv').innerHTML = sJSON + '<input type="button" value="Start Over" onclick="clearWindows();" />';
+  document.getElementById('customMarkerJSONDiv').innerHTML = sJSON + '<input type="button" value="Submit Your Node" onclick="submitJson();"> <input style="margin-left:50px;" type="button" value="Start Over" onclick="clearWindows();" />';
 
 
 }
-
+function submitJson() {
+	msg="I would like to add my node to the TOMesh node list.  I've completed the JSON object below describing my node.\n\n```\n" + document.getElementById("jsonData").innerHTML + "```";
+	document.location="https://github.com/tomeshnet/node-list/issues/new?title=New+node+report&body=" + encodeURI(msg);
+}
 function GeoLocationBrowser() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showGeoLocatedPosition);
@@ -357,7 +360,7 @@ function clearWindows() {
 //Option Window Code
 function ShowAdvanced(what) {
   if (what.innerHTML=='+Show Advanced') {
-    $('div#customAdvacned').show();	
+    $('div#customAdvacned').show();
     what.innerHTML='-Hide Advanced';
   } else {
     $('div#customAdvacned').hide();
@@ -367,7 +370,7 @@ function ShowAdvanced(what) {
 
 //Expand Option Window For Mobile
 function optionExpand() {
-  if ($('#mapOptions').hasClass('FullHeight')) { 
+  if ($('#mapOptions').hasClass('FullHeight')) {
     $('#mapOptions').removeClass('FullHeight');
   } else {
     $('#mapOptions').addClass('FullHeight');
