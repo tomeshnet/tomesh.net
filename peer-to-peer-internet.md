@@ -34,15 +34,17 @@ Toronto Mesh will be running the workshop series **{{ page.title }}** each Tuesd
 
 Participants will learn about community networks, wireless mesh networks, distributed applications, and train their pet Raspberry Pi to do networking things. While this course assumes no technical expertise, all sessions contain a technical hands-on component and a reflection activity to explore the role of technologies on our society. A socially-minded tinkerer who enjoys a collaborative learning experience will be the ideal participant.
 
+Participants will be expected to bring their own laptop.
+
 The course will cover the following topics:
 
-* Tue Apr 10 - *What is mesh?*
-* Tue Apr 17 - *Setting up your first node*
-* Tue Apr 24 - *Building nodes (hardware)*
-* Tue May 01 - *Planning a network*
-* Tue May 08 - *Measuring networks*
-* Tue May 15 - *Living on a decentralized network*
+* Tue Apr 10 - [*What is mesh?*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-1.md)
+* Tue Apr 17 - [*Setting up your first node*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-2.md)
+* Tue Apr 24 - [*Building nodes (hardware)*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-3.md)
+* Tue May 01 - [*Planning a network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-4.md)
+* Tue May 08 - [*Measuring networks*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-5.md)
+* Tue May 15 - [*Living on a decentralized network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-6.md)
 
-You can find the [full syllabus](https://github.com/tomeshnet/tpl-workshop) here.
+You can find the [full syllabus](https://github.com/tomeshnet/p2p-internet-workshop) here.
 
 Capacity is limited and each class builds upon one another. To enrol in this free workshop series, you must [register through the Library website](https://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT23011&R=EVT23011) before the first workshop on April 10.
