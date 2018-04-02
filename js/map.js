@@ -320,7 +320,7 @@ function customMarkerGenerateJSON() {
     '     "dateAdded": "' + currentJSONDate + '"\n' +
     '   }\n</pre>';
 
-  document.getElementById('customMarkerJSONDiv').innerHTML = sJSON + '<input type="button" value="Submit Your Node" onclick="submitJson();"> <input style="margin-left:50px;" type="button" value="Start Over" onclick="clearWindows();" />';
+  document.getElementById('customMarkerJSONDiv').innerHTML = sJSON + '<input type="button" class="button-primary" value="Submit Your Node" onclick="submitJson();"> <input style="margin-left:50px;" type="button" value="Start Over" onclick="clearWindows();" />';
 
 
 }
