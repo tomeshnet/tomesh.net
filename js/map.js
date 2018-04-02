@@ -362,10 +362,10 @@ function clearWindows() {
 //Option Window Code
 function ShowAdvanced(what) {
   if (what.innerHTML=='+Show Advanced') {
-    $('div#customAdvacned').show();
+    $('div#customAdvanced').show();
     what.innerHTML='-Hide Advanced';
   } else {
-    $('div#customAdvacned').hide();
+    $('div#customAdvanced').hide();
     what.innerHTML='+Show Advanced';
   }
 }
