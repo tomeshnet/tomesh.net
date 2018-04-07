@@ -1,6 +1,5 @@
 ---
-title: Prototype release v0.1
+title: Prototype Release v0.1
 date: 2017-11-02
 ---
-Prototype script [v0.1](https://github.com/tomeshnet/prototype-cjdns-pi/releases) was released. It now supports some Armbian boards as well as the newest Raspbian.
-
+Released mesh node install script [v0.1](https://github.com/tomeshnet/prototype-cjdns-pi/releases/tag/v0.1), which supports the Raspbian "Stretch" and some Arbian boards.
