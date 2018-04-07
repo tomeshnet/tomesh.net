@@ -79,7 +79,9 @@ layout_footer: false
     <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
   <div id="customMarkerJSONDiv" style="display:none;" class="customShadowBox">
-    <input class="button button-primary" type="button" value="Cancel" onClick="customCancel()" />
+    <div id="customMakerJSONContent"></div>
+    <input type="button" class="button-primary" value="Submit Your Node" onclick="submitJson();" />
+    <input style="margin-left:50px;" type="button" value="Start Over" onclick="clearWindows();" />
   </div>
 </div>
 
