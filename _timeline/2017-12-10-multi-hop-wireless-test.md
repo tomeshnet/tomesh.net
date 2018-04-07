@@ -1,5 +1,6 @@
 ---
-title: First multi hop wireless test
+title: First Multi-Hop Wireless Test
 date: 2017-12-10
 ---
-We tried to deploy a multi-hop wireless network using the prototype nodes to discover how well a wireless mesh works over a connection spread across a larger area. [Our Results](https://github.com/tomeshnet/documents/blob/master/technical/20171210_multi-hop-wireless-test.md)
+Deployed a multi-hop wireless network using our prototype nodes. We [documented our findings](https://github.com/tomeshnet/documents/blob/master/technical/20171210_multi-hop-wireless-test.md)
+) on how well a wireless mesh works over a connection spread across a larger area.
