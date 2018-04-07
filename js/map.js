@@ -3,6 +3,7 @@ var infowindow = null;
 var markers = [];
 var currentNodeListURL;
 var circle = null;
+var mapStyle;
 
 function initialize() {
   //Current Node URL with random bits to make sure it doesnt get cached
@@ -12,9 +13,10 @@ function initialize() {
   var filterActive = document.getElementById('chkActive').checked;
   var filterProposed = document.getElementById('chkProposed').checked;
   var zoomGroup = document.getElementById('chkGroup').checked;
+  var filterBuildings = document.getElementById('chkTheme').checked;
 
   //mapStyling from https://mapstyle.withgoogle.com/
-  var mapStyle = [
+  mapStyle = [
     {
       'elementType': 'geometry.fill',
       'stylers': [
@@ -259,8 +261,7 @@ function initialize() {
     mapTypeControl: true,
     mapTypeControlOptions: {
       position: google.maps.ControlPosition.RIGHT_BOTTOM
-    },
-    styles: mapStyle
+    }
   };
 
   infowindow = new google.maps.InfoWindow({
@@ -268,7 +269,11 @@ function initialize() {
   });
 
   map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  //Store default theme
 
+  if (filterBuildings == false) {
+	  map.setOptions({styles: mapStyle});
+  }
   //Reset markers array
   markers = undefined;
   markers = [];
@@ -611,6 +616,5 @@ function optionExpand() {
     $('#mapOptions').addClass('FullHeight');
   }
 }
-
 
 google.maps.event.addDomListener(window, 'load', initialize);
