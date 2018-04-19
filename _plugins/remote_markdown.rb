@@ -21,7 +21,7 @@ module Jekyll
       res = Net::HTTP.get_response(uri)
       fail 'resource unavailable' unless res.is_a?(Net::HTTPSuccess)
 
-      @content = res.body.force_encoding("UTF-8")
+      @content = content_blobber(uri, res).force_encoding('UTF-8')
     end
 
     def render(_context)
@@ -30,13 +30,25 @@ module Jekyll
 
     private
 
+    def content_blobber(path, res)
+      path_reduced = Pathname.new(path.to_s).parent.to_s
+
+      if path_reduced.include? 'raw.githubusercontent'
+        uri_branch = path_reduced.to_s.split('/')[5]
+        path_reduced = path_reduced.sub('raw.githubusercontent', 'github')
+                                   .sub("/#{uri_branch}", "/blob/#{uri_branch}")
+      end
+
+      res.body.gsub(%r{][(][.]/}, "](#{path_reduced}/")
+    end
+
     def check_protocol(text)
       error_message = "remote_markdown: invalid URI given #{text}"
-      fail error_message unless text =~ URI.regexp(%w(http https ftp ftps))
+      fail error_message unless text =~ URI.regexp(%w[http https ftp ftps])
     end
 
     def check_extension(path)
-      mdexts = %w(.markdown .mkdown .mkdn .mkd .md)
+      mdexts = %w[.markdown .mkdown .mkdn .mkd .md]
       error_message = "remote_markdown: URI file extension not in #{mdexts}"
       fail error_message unless mdexts.include?(File.extname(path))
     end
