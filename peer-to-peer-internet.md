@@ -38,12 +38,12 @@ Participants will be expected to bring their own laptop.
 
 The course will cover the following topics:
 
-* Tue Apr 10 - [*What is mesh?*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-1.md)
-* Tue Apr 17 - [*Setting up your first node*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-2.md)
-* Tue Apr 24 - [*Building nodes (hardware)*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-3.md)
-* Tue May 01 - [*Planning a network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-4.md)
-* Tue May 08 - [*Measuring networks*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-5.md)
-* Tue May 15 - [*Living on a decentralized network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-6.md)
+* Tue Apr 10 - [*What is mesh?*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-1/README.md)
+* Tue Apr 17 - [*Setting up your first node*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-2/README.md)
+* Tue Apr 24 - [*Building nodes (hardware)*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-3/README.md)
+* Tue May 01 - [*Planning a network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-4/README.md)
+* Tue May 08 - [*Measuring networks*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-5/README.md)
+* Tue May 15 - [*Living on a decentralized network*](https://github.com/tomeshnet/p2p-internet-workshop/blob/master/module-6/README.md)
 
 You can find the [full syllabus](https://github.com/tomeshnet/p2p-internet-workshop) here.
 
