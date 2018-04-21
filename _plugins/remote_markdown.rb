@@ -36,7 +36,7 @@ module Jekyll
     def content_blobber(uri, res)
       path_reduced = Pathname.new(uri.to_s).parent.to_s
 
-      # Find cases of `](./*.md)` and include
+      # Find cases of `](./*.md)`
       rel_md_path = %r{][(][.]\/.*\.(?i)(markdown|mdown|mkdn|mkd|md)[)]}
 
       # Replace raw markdown with GitHub's rendered version
