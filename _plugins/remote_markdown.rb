@@ -3,6 +3,8 @@
 # notice you can do whatever you want with this stuff. If we meet some day, and
 # you think this stuff is worth it, you can buy me a beer in return.
 # Robin Hahling
+#
+# Modified by Garry Ing <hello@garrying.com>
 
 require 'net/http'
 
@@ -30,16 +32,22 @@ module Jekyll
 
     private
 
-    def content_blobber(path, res)
-      path_reduced = Pathname.new(path.to_s).parent.to_s
+    # Added to substitute out relative references in markdown files
+    def content_blobber(uri, res)
+      path_reduced = Pathname.new(uri.to_s).parent.to_s
 
+      # Find cases of `](./*.md)` and include
+      rel_md_path = %r{][(][.]\/.*\.(?i)(markdown|mdown|mkdn|mkd|md)[)]}
+
+      # Replace raw markdown with GitHub's rendered version
       if path_reduced.include? 'raw.githubusercontent'
         uri_branch = path_reduced.to_s.split('/')[5]
         path_reduced = path_reduced.sub('raw.githubusercontent', 'github')
                                    .sub("/#{uri_branch}", "/blob/#{uri_branch}")
       end
 
-      res.body.gsub(%r{][(][.]/}, "](#{path_reduced}/")
+      # Prepend complete parent path to file with extension
+      res.body.gsub(rel_md_path) { |s| "](#{path_reduced}/#{s.split('/')[-1]}" }
     end
 
     def check_protocol(text)
