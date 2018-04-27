@@ -272,7 +272,7 @@ function initialize() {
   //Store default theme
 
   if (filterBuildings == false) {
-	  map.setOptions({styles: mapStyle});
+	map.setOptions({styles: mapStyle});
   }
   //Reset markers array
   markers = undefined;
