@@ -12,4 +12,4 @@ endTime: '21:00'
 
 Join us at {{page.startTime | date:"%-I:%M%P "}} on {{ page.date | date: '%B %d, %Y' }} for our monthly install party. Come get your mesh node set up and play with distributed applications! This month we will be meeting at [{{ page.location }}]({{ page.locationLink }}) for a hands-on session.
 
-Planning on coming? Let us know through our [chat channel](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or email us at <hello@tomesh.net>.
+Planning on coming? Let us know through our [chat channel](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or email us at [{{ site.email }}](mailto:{{ site.email }}).
