@@ -3,7 +3,7 @@ layout: post
 title: "Install Party"
 slug: install-party
 text: 'Bring your hardware to set up a mesh node'
-location: Free Geek Toronto, 180 Sudbury St  
+location: Free Geek Toronto, 180 Sudbury St
 locationLink: https://osm.org/go/ZX6BI0AGy?node=4042949045
 date: 2018-06-21
 startTime: '19:00'

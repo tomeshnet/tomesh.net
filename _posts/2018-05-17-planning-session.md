@@ -14,7 +14,7 @@ Join us at our sixth planning session, where we regroup and plan for the summer!
 
 We will break off to discuss ongoing deployment efforts afterwards.
 
-We will meet at {{page.startTime | date:"%-I:%M %P "}} in [{{ page.location }}]({{ page.locationLink }}).  
+We will meet at {{page.startTime | date:"%-I:%M %P "}} in [{{ page.location }}]({{ page.locationLink }}).
 
 This event has a [code of conduct](/code-of-conduct/).
 
