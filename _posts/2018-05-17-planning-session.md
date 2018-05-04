@@ -10,12 +10,12 @@ startTime: '18:30'
 endTime: '21:30'
 ---
 
-Join us at our sixth planning session, where we regroup and plan for the summer! During this session we set priorities and projects, and form **working groups** for the next six months and identify those interested in leading projects. You can see our [current working groups and governance processes](https://github.com/tomeshnet/documents/blob/master/governance/coordination-structure.md) to get a sense of existing interests!
+Our sixth planning session, where we will regroup and plan for this summer and beyond! During this session we will be discussing general priorities for the next six months as well as locking down long term goals and developing a Toronto Mesh hardware/software design specification to work towards.
 
-We will break off to discuss ongoing deployment efforts afterwards.
+We will discuss ongoing efforts and current projects afterwards.
 
 We will meet at {{page.startTime | date:"%-I:%M %P "}} in [{{ page.location }}]({{ page.locationLink }}).
 
 This event has a [code of conduct](/code-of-conduct/).
 
-All are welcome to join, just send an email to [{{ site.email }}](mailto:{{ site.email }}) so we know you are coming!
+New to Toronto Mesh?  [Join us at one of our install nights!](/events/)
