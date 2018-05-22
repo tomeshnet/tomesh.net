@@ -24,6 +24,7 @@ module Jekyll
       fail 'resource unavailable' unless res.is_a?(Net::HTTPSuccess)
 
       @content = content_blobber(uri, res).force_encoding('UTF-8')
+                                          .sub("\xEF\xBB\xBF", '')
     end
 
     def render(_context)
