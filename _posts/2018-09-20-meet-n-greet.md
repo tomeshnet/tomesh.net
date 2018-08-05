@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meet and Greet"
-slug: meet and greet
+slug: meet-and-greet
 text: 'Meet the members of Toronto Mesh'
 location: HackLab.TO, 1266 Queen St
 locationLink: https://www.openstreetmap.org/node/3522641496
