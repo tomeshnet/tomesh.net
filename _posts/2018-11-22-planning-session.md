@@ -16,7 +16,6 @@ This us Toronto Mesh's seventh planning session. We will regroup and plan for th
 - Set the priorities and projects to work on for the next six months.
 - Assign working group leads for the next six months. You can see our current [working groups and governance processes here](https://github.com/tomeshnet/documents/blob/master/governance/coordination-structure.md)!
 
-
 We will meet at {{page.startTime | date:"%-I:%M %P "}} in [{{ page.location }}]({{ page.locationLink }}).
 
 This event has a [code of conduct](/code-of-conduct/).

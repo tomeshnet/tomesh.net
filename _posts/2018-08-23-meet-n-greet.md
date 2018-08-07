@@ -15,3 +15,5 @@ Join us at {{page.startTime | date:"%-I:%M%P "}} on {{ page.date | date: '%B %d,
 Do you have any e-waste you would like to donate to Free Geek? Bring it! See their list of [accepted electronics here](https://www.freegeektoronto.org/pick-up/).
 
 Planning on coming? Let us know through our [chat channel](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or email us at [{{ site.email }}](mailto:{{ site.email }}).
+
+This event has a [code of conduct](/code-of-conduct/).
