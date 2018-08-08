@@ -10,7 +10,7 @@ startTime: '18:30'
 endTime: '21:30'
 ---
 
-This us Toronto Mesh's seventh planning session. We will regroup and plan for the winter and beyond! During this session we will:
+This is Toronto Mesh's seventh planning session. We will regroup and plan for the winter and beyond! During this session we will:
 - Review all projects and efforts undertaken since April.
 - Re-evaluate our long-term goals.
 - Set the priorities and projects to work on for the next six months.
@@ -20,6 +20,6 @@ We will meet at {{page.startTime | date:"%-I:%M %P "}} in [{{ page.location }}](
 
 This event has a [code of conduct](/code-of-conduct/).
 
-New to Toronto Mesh?  
+**New to Toronto Mesh?**  
 You can skip the planning session if you are only looking to learn about mesh networking.  
 Come say hi on our [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or join one of our [monthly meetups](/events/) to meet the group and become familiar with ongoing activities!
