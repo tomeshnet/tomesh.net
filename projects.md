@@ -138,7 +138,7 @@ Community Networks and Outreach
 All deployment efforts and governance for a physical mesh network in Toronto.
 
 **Status:** Planning  
-We are setting up our first few permanent links.
+We are setting up our first few permanent test links.
 
 **Required Skills**  
 Network planning, radios, network configurations, community outreach, mechanical design, electrical expertise, working with building management.
