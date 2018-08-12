@@ -6,14 +6,34 @@ order: 1
 parent: Get Involved
 ---
 
----
-Node Technology and Mesh Applications
+This is a summary of ongoing activities at Toronto Mesh.  
+Want to learn more? Come chat with us at {% include icon-matrix.html %} or attend a [meetup](/events/)!
 
+**Node Technology and Mesh Applications**  
+- [Meshstream](#meshstream)
+- [Prototype Mesh Node](#prototype-mesh-node)
+- [Mesh Orange](#mesh-orange)
+- [Mapping & Monitoring Tools](#monitoring)
+
+**Collaboration Tools**
+- [Toronto Mesh Website](#website)
+- [Meshbot](#meshbot)
+- [Toronto Mesh Infrastructure](#infrastructure)
+- [IPFS Live Streaming](#ipfs-live-streaming)
+
+**Community Networks and Outreach**
+- [Test Deployments](#test-deployments)
+- [Building the Peer-to-Peer Internet Workshop](#p2p-workshop)
+
+
+# Node Technology and Mesh Applications
 ---
+
+{:#meshstream}
 
 ### Meshstream
 
-Meshstream is a collection of software and hardware that aims to show what can be accomplished with peer-to-peer applications running over a wireless mesh network that is completely isolated from the Internet.
+Meshstream is a collection of software and hardware demonstrating peer-to-peer and multimedia applications running over a wireless mesh network that is completely isolated from the Internet.
 
 Meshstream demonstrates:
 - Live video streaming over content addressable storage ([IPFS](https://ipfs.io/))
@@ -24,18 +44,20 @@ Meshstream demonstrates:
 Demo-quality software tested on LibreRouter prototype hardware.
 
 **Skills**  
-Flashing routers, OpenWrt, network configuration, programming peer-to-peer applications, shell scripts, web applications, web sockets, javascript, single-board computers, technical documentations, web design, user story design.
+Flashing routers, OpenWrt, network configuration, programming peer-to-peer applications, shell scripts, web applications, WebSockets, JavaScript, single-board computers, technical documentations, web design, User Experience.
 
-[Meshtream GitHub page](https://github.com/tomeshnet/meshstream)
+{% include icon-github.html username='tomeshnet/meshstream' %}
 
-### Prototype Node
+{:#prototype-mesh-node}
 
-The Prototye Node started as an installation script used to set network interfaces in mesh mode and install a variety of software to experiment with  [cjdns](https://github.com/cjdelisle/cjdns) routing and peer-to-peer applications on Raspberry Pis.
+### Prototype Mesh Node
+
+The Prototype Mesh Node started as an installation script used to set network interfaces in mesh mode and install a variety of software to experiment with  [cjdns](https://github.com/cjdelisle/cjdns) routing and peer-to-peer applications on Raspberry Pis.
 
 The Prototype Node now supports many single-board computers (SBCs) for similar use cases, and it offers a convenient way to install:
-- cjdns
-- Interplanetary Filesystem (IPFS)
-- Secure Scuttlebutt (SSB)
+- [cjdns](https://github.com/cjdelisle/cjdns)
+- [InterPlanetary File System](https://ipfs.io/) (IPFS)
+- [Secure Scuttlebutt](https://github.com/ssbc/secure-scuttlebutt) (SSB)
 - Network monitoring and configuration tools ([Grafana](https://grafana.com/) and [Prometheus](https://prometheus.io/), among others) 
 
 **Status:** Always in Beta  
@@ -44,7 +66,9 @@ This project will keep being actively developed to support ongoing research work
 **Skills**  
 Single-board computers, shell scripts, technical documentation, Debian systems, network configuration, test automation on ARM devices, cjdns, peer-to-peer applications.
 
-[Prototype Node GitHub page](https://github.com/tomeshnet/prototype-cjdns-pi)
+{% include icon-github.html username='tomeshnet/prototype-cjdns-pi' %}
+
+{:#mesh-orange}
 
 ### Mesh Orange
 
@@ -53,103 +77,113 @@ Mesh Orange is a small Debian-based operating system image that runs on single-b
 The custom build system allows us to create custom images for workshops, and we expect this to become the base operating system for production mesh nodes, with features such as over-the-air updates and reliable long-term operation.
 
 **Status:** Alpha  
-Mesh Orange gets new features as new use cases come up. Raspberry Pi and Orange Pi Zero boards are supported (board support is not as extensive as with  Prototype Node).
+Mesh Orange gets new features as new use cases come up. Raspberry Pi and Orange Pi Zero boards are supported (board support is not as extensive as with the Prototype Mesh Node).
 
 **Skills**  
 Single-board computers, shell scripts, technical documentation, Debian systems, network configuration, test automation on ARM devices, building operating systems for embedded targets.
 
-[Mesh Orange GitHub page](https://github.com/tomeshnet/mesh-orange)
+{% include icon-github.html username='tomeshnet/mesh-orange'%}
+
+{:#monitoring}
 
 ### Mapping & Monitoring Tools
 
 Software that runs on a Raspberry Pi and can be provisioned for cloud providers to monitor real-time status of the mesh network.
 
-The Monitored data includes geolocation mapping on a web interface with real-time information reported from nodes, and plotting logical mesh topology on a geographical map. This will be packaged in a way that makes it very easy for other mesh networks to adapt to their own monitoring needs.
+The monitored data includes geolocation mapping on a web interface with real-time information reported from nodes, and showing the topology of a mesh network on a geographical map. This will be packaged in a way that makes it very easy for other mesh networks to adapt to their own monitoring needs.
 
 **Status:** Concept  
 Lead required to further develop proof-of-concept work.
 
 **Skills**  
-Devops, Terraform, Docker, devops, Prometheus, mapping, data visualization, networking, web design, Google Maps, Open Street Maps, shell scripts, python, cjdns.
+DevOps, Terraform, Docker, DevOps, Prometheus, mapping, data visualization, networking, web design, Google Maps, Open Street Maps, shell scripts, python, cjdns.
 
-[Monitoring GitHub page](https://github.com/tomeshnet/monitoring)
+{% include icon-github.html username='tomeshnet/monitoring' %}
 
+# Collaboration Tools
 ---
-Collaboration and Outreach Tools
 
----
+{:#website}
 
 ### Toronto Mesh Website
 
-The primary digital space for people to learn about Toronto Mesh. It must represent the current focus of our organization and remain accessible to diverse audiences.
+The primary digital space for people to learn about Toronto Mesh. It represents the current focus of our organization and aims to be accessible to diverse audiences.
 
 **Status:** Production (live)  
-Need to be spun up with provisioning tools and served over cjdns, IPFS, DAT, etc.
+Work is ongoing in order to integrate provisioning tools and serve the website through decentralized protocols such as [cjdns](https://github.com/cjdelisle/cjdns), [IPFS](https://ipfs.io/), and [Dat](https://datproject.org/).
 
 **Skills**  
-Web design, user research, javascript, Terraform, peer-to-peer hosting.
+Web design, user research, JavaScript, Terraform, peer-to-peer hosting, HTML, CSS, Ruby, DevOps.
 
-[Toronto Mesh Website GitHub page](https://github.com/tomeshnet/tomesh.net)
+{% include icon-github.html username='tomeshnet/tomesh.net' %}  
+
+{:#meshbot}
 
 ### Meshbot
 
-The chat bot our Matrix chat uses to send event reminders and answer basic questions about the mesh.
+The chatbot our Matrix [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
 
-**Status:** Production
+**Status:** Production (live)
 
 **Skills**  
 Programming, user research, technical documentation
 
-[Meshbot GitHub page](https://github.com/tomeshnet/meshbot)
+{% include icon-github.html username='tomeshnet/meshbot' %}
 
-### Mesh Community Assets
+{:#infrastructure}
 
-Our tools and infrastructure, such as the Matrix chat and website, are available for other groups to adapt and easily deploy their own mesh network.
+### Toronto Mesh Infrastructure
 
-**Status:** Production  
-**Need experienced devops lead.**
+Our tools and infrastructure, such as the Matrix chat and website, are available for other groups to adapt and use to support their own mesh network.
+
+**Status:** Production (live)  
+**Need experienced DevOps lead.**
 
 **Skills**  
-Terraform, Docker, devops.
+Terraform, Docker, DevOps.
 
-Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/master/governance/tools-transfer.md) for an overview of our community assets.
+Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/master/governance/tools-transfer.md) for an overview of our infrastructure assets.
+
+{:#ipfs-live-streaming}
 
 ### IPFS Live Streaming
 
-A  live streaming solution built with IPFS that uses [Terraform](https://www.terraform.io/) to spin up a cluster on [Digital Ocean](https://www.digitalocean.com/).
+A live streaming solution built with [IPFS](https://ipfs.io/) that uses [Terraform](https://www.terraform.io/) to spin up a cluster on [Digital Ocean](https://www.digitalocean.com/).
 
-Work on this project began with Toronto Mesh members experimenting with HTTP Live Streaming on the IPFS network. This evolved into a production setup in order to support the live stream at [Our Networks 2018](https://ournetworks.ca/). The repository now contains documentation and all the necessary software to live stream a small conference, complete with authenticated publishing to an RTMP endpoint and embeddable video players tested on desktop and mobile browsers.
+Work on this project began with Toronto Mesh members experimenting with HTTP Live Streaming on the [IPFS](https://ipfs.io/) network. This evolved into a production setup in order to support the live stream at [Our Networks 2018](https://ournetworks.ca/2018). The repository now contains documentation and all the necessary software to live stream a small conference, complete with authenticated publishing to a [Real-Time Messaging Protocol](https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol) endpoint and embeddable video players tested on desktop and mobile browsers.
 
 **Status:** Production
-This solution was used at Our Networks 2018.
 
 **Skills**  
-Live video streaming, ffmpeg, Terraform, shell scripts, devops, web design.
+Live video streaming, FFmpeg, Terraform, shell scripts, DevOps, web design.
 
-[IPFS Live Streaming GitHub page](https://github.com/tomeshnet/ipfs-live-streaming)
+{% include icon-github.html username='tomeshnet/ipfs-live-streaming'%}
 
----
-Community Networks and Outreach
-
+# Community Networks and Outreach
 ---
 
-### Toronto Meshnet
+{:#test-deployments}
 
-All deployment efforts and governance for a physical mesh network in Toronto.
+### Test Deployments
+
+The primary driver for Toronto Mesh is to empower people to create spaces in which they can make decisions about the way they create, share, and access information. We are building the tools and know-how for people looking to build a community network.
 
 **Status:** Planning  
-We are setting up our first few permanent test links.
+We are setting up our first few permanent test nodes.
 
 **Required Skills**  
 Network planning, radios, network configurations, community outreach, mechanical design, electrical expertise, working with building management.
 
-Visit our [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or attend a [meetup](https://tomesh.net/events/) to find out more!
+Visit our chat {% include icon-matrix.html %} or attend a [meetup](/events/) to find out more!
+
+{:#p2p-workshop}
 
 ### Building The Peer-to-Peer Internet Workshop
 
-An open-source syllabus that aims to provide hands-on training and social context of decentralized systems, including mesh networks and peer-to-peer applications.
+An open-source syllabus that aims to provide hands-on training and social context of decentralized systems, including mesh networks and peer-to-peer applications.  
+Each session in the syllabus can be offered as a stand-alone module.
 
-We have completed one full series at the Toronto Public Library; modular sessions are run at conferences and adopted into other curriculums.
+We have completed one full series at the Toronto Public Library. 
 
 **Status:** Beta  
 Efforts are underway to improve reproducibility and packaging.
@@ -157,4 +191,4 @@ Efforts are underway to improve reproducibility and packaging.
 **Skills**  
 Curriculum development, moderating and facilitating discussions, wired and wireless networks, hardware sourcing.
 
-[P2P Internet Workshop GitHub page](https://github.com/tomeshnet/p2p-internet-workshop)
+{% include icon-github.html username='tomeshnet/p2p-internet-workshop' %}
