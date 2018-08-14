@@ -2,7 +2,7 @@
 layout: page
 title: Current Projects
 descriptiveTitle: Toronto Mesh Projects
-order: 1
+order: 2
 parent: Get Involved
 ---
 
@@ -10,43 +10,24 @@ This is a summary of ongoing activities at Toronto Mesh.
 Want to learn more? Come chat with us at {% include icon-matrix.html %} or attend a [meetup](/events/)!
 
 **Node Technology and Mesh Applications**  
-- [Meshstream](#meshstream)
 - [Prototype Mesh Node](#prototype-mesh-node)
 - [Mesh Orange](#mesh-orange)
+- [Meshstream](#meshstream)
 - [Mapping & Monitoring Tools](#monitoring)
-
-**Collaboration Tools**
-- [Toronto Mesh Website](#website)
-- [Meshbot](#meshbot)
-- [Toronto Mesh Infrastructure](#infrastructure)
-- [IPFS Live Streaming](#ipfs-live-streaming)
 
 **Community Networks and Outreach**
 - [Test Deployments](#test-deployments)
 - [Building the Peer-to-Peer Internet Workshop](#p2p-workshop)
 
+**Collaboration Tools**
+- [Toronto Mesh Website](#website)
+- [Toronto Mesh Infrastructure](#infrastructure)
+- [Meshbot](#meshbot)
+- [IPFS Live Streaming](#ipfs-live-streaming)
+
 
 # Node Technology and Mesh Applications
 ---
-
-{:#meshstream}
-
-### Meshstream
-
-Meshstream is a collection of software and hardware demonstrating peer-to-peer and multimedia applications running over a wireless mesh network that is completely isolated from the Internet.
-
-Meshstream demonstrates:
-- Live video streaming over content addressable storage ([IPFS](https://ipfs.io/))
-- Sharing multimedia content over a peer-to-peer social network ([SSB](https://github.com/ssbc/secure-scuttlebutt))
-- Mesh networking over long-range wireless links using open hardware ([LibreRouter](https://librerouter.org/))
-
-**Status**: Alpha  
-Demo-quality software tested on LibreRouter prototype hardware.
-
-**Skills**  
-Flashing routers, OpenWrt, network configuration, programming peer-to-peer applications, shell scripts, web applications, WebSockets, JavaScript, single-board computers, technical documentations, web design, User Experience.
-
-{% include icon-github.html username='tomeshnet/meshstream' %}
 
 {:#prototype-mesh-node}
 
@@ -84,6 +65,25 @@ Single-board computers, shell scripts, technical documentation, Debian systems, 
 
 {% include icon-github.html username='tomeshnet/mesh-orange'%}
 
+{:#meshstream}
+
+### Meshstream
+
+Meshstream is a collection of software and hardware demonstrating peer-to-peer and multimedia applications running over a wireless mesh network that is completely isolated from the Internet.
+
+Meshstream demonstrates:
+- Live video streaming over content addressable storage ([IPFS](https://ipfs.io/))
+- Sharing multimedia content over a peer-to-peer social network ([SSB](https://github.com/ssbc/secure-scuttlebutt))
+- Mesh networking over long-range wireless links using open hardware ([LibreRouter](https://librerouter.org/))
+
+**Status**: Alpha  
+Demo-quality software tested on LibreRouter prototype hardware.
+
+**Skills**  
+Flashing routers, OpenWrt, network configuration, programming peer-to-peer applications, shell scripts, web applications, WebSockets, JavaScript, single-board computers, technical documentations, web design, User Experience.
+
+{% include icon-github.html username='tomeshnet/meshstream' %}
+
 {:#monitoring}
 
 ### Mapping & Monitoring Tools
@@ -96,68 +96,9 @@ The monitored data includes geolocation mapping on a web interface with real-tim
 Lead required to further develop proof-of-concept work.
 
 **Skills**  
-DevOps, Terraform, Docker, DevOps, Prometheus, mapping, data visualization, networking, web design, Google Maps, Open Street Maps, shell scripts, python, cjdns.
+DevOps, Terraform, Docker, Prometheus, mapping, data visualization, networking, web design, Google Maps, Open Street Maps, shell scripts, python, cjdns.
 
 {% include icon-github.html username='tomeshnet/monitoring' %}
-
-# Collaboration Tools
----
-
-{:#website}
-
-### Toronto Mesh Website
-
-The primary digital space for people to learn about Toronto Mesh. It represents the current focus of our organization and aims to be accessible to diverse audiences.
-
-**Status:** Production (live)  
-Work is ongoing in order to integrate provisioning tools and serve the website through decentralized protocols such as [cjdns](https://github.com/cjdelisle/cjdns), [IPFS](https://ipfs.io/), and [Dat](https://datproject.org/).
-
-**Skills**  
-Web design, user research, JavaScript, Terraform, peer-to-peer hosting, HTML, CSS, Ruby, DevOps.
-
-{% include icon-github.html username='tomeshnet/tomesh.net' %}  
-
-{:#meshbot}
-
-### Meshbot
-
-The chatbot our Matrix [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
-
-**Status:** Production (live)
-
-**Skills**  
-Programming, user research, technical documentation
-
-{% include icon-github.html username='tomeshnet/meshbot' %}
-
-{:#infrastructure}
-
-### Toronto Mesh Infrastructure
-
-Our tools and infrastructure, such as the Matrix chat and website, are available for other groups to adapt and use to support their own mesh network.
-
-**Status:** Production (live)  
-**Need experienced DevOps lead.**
-
-**Skills**  
-Terraform, Docker, DevOps.
-
-Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/master/governance/tools-transfer.md) for an overview of our infrastructure assets.
-
-{:#ipfs-live-streaming}
-
-### IPFS Live Streaming
-
-A live streaming solution built with [IPFS](https://ipfs.io/) that uses [Terraform](https://www.terraform.io/) to spin up a cluster on [Digital Ocean](https://www.digitalocean.com/).
-
-Work on this project began with Toronto Mesh members experimenting with HTTP Live Streaming on the [IPFS](https://ipfs.io/) network. This evolved into a production setup in order to support the live stream at [Our Networks 2018](https://ournetworks.ca/2018). The repository now contains documentation and all the necessary software to live stream a small conference, complete with authenticated publishing to a [Real-Time Messaging Protocol](https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol) endpoint and embeddable video players tested on desktop and mobile browsers.
-
-**Status:** Production
-
-**Skills**  
-Live video streaming, FFmpeg, Terraform, shell scripts, DevOps, web design.
-
-{% include icon-github.html username='tomeshnet/ipfs-live-streaming'%}
 
 # Community Networks and Outreach
 ---
@@ -171,7 +112,7 @@ The primary driver for Toronto Mesh is to empower people to create spaces in whi
 **Status:** Planning  
 We are setting up our first few permanent test nodes.
 
-**Required Skills**  
+**Skills**  
 Network planning, radios, network configurations, community outreach, mechanical design, electrical expertise, working with building management.
 
 Visit our chat {% include icon-matrix.html %} or attend a [meetup](/events/) to find out more!
@@ -192,3 +133,64 @@ Efforts are underway to improve reproducibility and packaging.
 Curriculum development, moderating and facilitating discussions, wired and wireless networks, hardware sourcing.
 
 {% include icon-github.html username='tomeshnet/p2p-internet-workshop' %}
+
+# Collaboration Tools
+---
+
+{:#website}
+
+### Toronto Mesh Website
+
+The primary digital space for people to learn about Toronto Mesh. It represents the current focus of our organization and aims to be accessible to diverse audiences.
+
+**Status:** Production (live)  
+Work is ongoing in order to integrate provisioning tools and serve the website through decentralized protocols such as [cjdns](https://github.com/cjdelisle/cjdns), [IPFS](https://ipfs.io/), and [Dat](https://datproject.org/).
+
+**Skills**  
+Web design, user research, JavaScript, Terraform, peer-to-peer hosting, HTML, CSS, Ruby, DevOps.
+
+{% include icon-github.html username='tomeshnet/tomesh.net' %}  
+
+{:#infrastructure}
+
+### Toronto Mesh Infrastructure
+
+Our tools and infrastructure, such as the Matrix chat and website, are available for other groups to adapt and use to support their own mesh network.
+
+**Status:** Production (live)  
+**Need experienced DevOps lead.**
+
+**Skills**  
+Terraform, Docker, DevOps.
+
+Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/master/governance/tools-transfer.md) for an overview of our infrastructure assets.
+
+{:#meshbot}
+
+### Meshbot
+
+The chatbot our Matrix [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
+
+**Status:** Production (live)
+
+**Skills**  
+Programming, user research, technical documentation
+
+{% include icon-github.html username='tomeshnet/meshbot' %}
+
+{:#ipfs-live-streaming}
+
+### IPFS Live Streaming
+
+A live streaming solution built with [IPFS](https://ipfs.io/) that uses [Terraform](https://www.terraform.io/) to spin up a cluster on [Digital Ocean](https://www.digitalocean.com/).
+
+Work on this project began with Toronto Mesh members experimenting with HTTP Live Streaming on the [IPFS](https://ipfs.io/) network. This evolved into a production setup in order to support the live stream at [Our Networks 2018](https://ournetworks.ca/2018). The repository now contains documentation and all the necessary software to live stream a small conference, complete with authenticated publishing to a [Real-Time Messaging Protocol](https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol) endpoint and embeddable video players tested on desktop and mobile browsers.
+
+**Status:** Production
+
+**Skills**  
+Live video streaming, FFmpeg, Terraform, shell scripts, DevOps, web design.
+
+{% include icon-github.html username='tomeshnet/ipfs-live-streaming'%}
+
+
