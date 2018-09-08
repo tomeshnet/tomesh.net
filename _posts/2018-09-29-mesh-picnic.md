@@ -10,7 +10,7 @@ startTime: '13:00'
 endTime: '16:00'
 ---
 
-We are having our first Mesh Picnic! [FreeGeek Toronto](https://www.freegeektoronto.org/) is hosting.
+We are having our first Mesh Picnic! [Free Geek Toronto](https://www.freegeektoronto.org/) is hosting.
 
 Join us at {{page.startTime | date:"%-I:%M%P "}} on {{ page.date | date: '%B %d, %Y' }}. We will meet at [{{ page.location }}]({{ page.locationLink }}) and the adjacent parkette.
 
@@ -25,7 +25,7 @@ Bring a laptop or smartphone to join the mesh network!
 
 **Indoor activities**  
 - Computer components breakdown
-- FreeGeek Sale
+- Free Geek Sale
 
 Do you have any e-waste you would like to donate to Free Geek? Bring it! See their list of [accepted electronics here](https://www.freegeektoronto.org/pick-up/).
 
