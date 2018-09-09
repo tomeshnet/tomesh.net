@@ -21,11 +21,12 @@ What should you expect?
 - File sharing through the [InterPlanetary File System](https://ipfs.io/) (IPFS)
 - Proof-of-concept long-range wireless link
 
-Bring a laptop or smartphone to join the mesh network!
+Bring a laptop or smartphone to participate in these mesh network demos!
 
 **Indoor activities**  
-- Computer components breakdown
-- Free Geek Sale
+- Computer Disassembly and Hardware Check
+- Demonstrations of Free and Open Source Software
+- 1-Day Sale on Desktop and Thrift Shop items!
 
 Do you have any e-waste you would like to donate to Free Geek? Bring it! See their list of [accepted electronics here](https://www.freegeektoronto.org/pick-up/).
 
