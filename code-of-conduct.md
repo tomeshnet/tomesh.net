@@ -44,6 +44,6 @@ If a participant engages in harassing behaviour, the organizers may take any act
 
 If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a Toronto Mesh moderator or organizer immediately.
 
-Those who wish to report a violation but don't feel comfortable talking to the organizers online or at an event can email [coc@tomesh.net](mailto:coc@tomesh.net), which is **currently** monitored by [**Dawn**](http://dcwalker.ca) and **Anastasia**, and will be monitored by two people on a rotating basis.
+Those who wish to report a violation but don't feel comfortable talking to the organizers online or at an event can email [coc@tomesh.net](mailto:coc@tomesh.net), which is **currently** monitored by [**Benedict**](https://twitter.com/LauBenedict) and [**Hank**](https://github.com/Shrinks99), and will be monitored by two people on a rotating basis.
 
 Our [internal guidelines](https://github.com/tomeshnet/documents/blob/master/governance/conduct-guidelines.md) for enforcing our Code of Conduct are viewable online.
