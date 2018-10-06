@@ -19,21 +19,6 @@ Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduc
 ## How do I work with you?
 {:#work-with-us}
 
-#### Propose an Idea
-
-- Create a new card in the **Ideas** column by adding a short title
-- Include details in the description and add appropriate labels for easy filtering
-
-#### Participate in the Discussion
-
-- You can add a comment to any card
-- Discuss a card on {% include icon-matrix.html %}
-
-#### Work on a Card
-
-- Find a card you would like to take ownership and add yourself as a member to that card
-- Move the card to the **Discuss** or **In Progress** column, then **Done** when completed
-
 ### Contribute to our Git Repositories
 
 We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), our [educational materials on network literacy](https://github.com/tomeshnet/tomesh.101), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [Contribution Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
