@@ -14,15 +14,10 @@ Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduc
     - We host in-person and virtual meetups and workshops
 
 1. Review the current list of projects and [work with us](#work-with-us)
-    - Visit our [Kanban](https://wekan.tomesh.net/b/LWS8X7sGFXqDgZ7ag/tomesh-net) used to track the status of our many projects
     - Visit our [GitHub](https://github.com/tomeshnet) used to host our open-source software and all important documents
 
 ## How do I work with you?
 {:#work-with-us}
-
-### Collaborate on our Kanban Board
-
-Toronto Mesh uses a [Kanban (看板)](https://en.wikipedia.org/wiki/Kanban) to keep track of ideas and progress. The software we use is the self-hosted open-source [Wekan](https://github.com/wekan/wekan). Create an account on [wekan.tomesh.net](https://wekan.tomesh.net), and then ask on {% include icon-matrix.html %} or email {% if site.email %}{% include icon-email.html %}{% endif %} for an invite to our board.
 
 #### Propose an Idea
 
