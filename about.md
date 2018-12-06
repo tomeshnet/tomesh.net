@@ -14,6 +14,6 @@ Based in Toronto, we are a grassroots and decentralized group of volunteers who 
 
 This is our mission: 
 
-**Help communities create better networks that rely on open source and peer-to-peer technologies, while promoting digital literacy and personal privacy.**
+**Help communities create better networks with open source and peer-to-peer technologies, while promoting digital literacy and privacy.**
 
 Visit the [Projects page]({{ site.baseurl }}/projects) to learn more about our work. 
