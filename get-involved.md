@@ -13,7 +13,7 @@ Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduc
 1. Join one of our [events]({{ site.baseurl }}/events)
     - We host in-person and virtual meetups and workshops
 
-1. Review the current list of projects and [work with us](#work-with-us)
+1. Review the current list of [projects]({{ site.baseurl }}/projects) and [work with us](#work-with-us)
     - Visit our [GitHub](https://github.com/tomeshnet) used to host our open-source software and all important documents
 
 ## How do I work with you?
