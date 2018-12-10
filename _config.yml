@@ -8,7 +8,7 @@ sass:
 # Site settings
 title: Toronto Mesh
 email: hello@tomesh.net
-description: We are building a mesh network in Toronto.
+description: We help communities create better networks with open source and peer-to-peer technologies that promote digital literacy and privacy.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomesh.net" # the base hostname & protocol for your site
 github_username: tomeshnet
