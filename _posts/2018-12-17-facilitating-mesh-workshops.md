@@ -10,7 +10,7 @@ startTime: '18:30'
 endTime: '21:00'
 ---
 
-This is a session to prepare future facilitators to organize a _Building the Peer-to-Peer Internet_ workshop, in part or in full, and variations of it. Participants are assumed familiarity with social motivations and tensions around distributed systems, basic networking concepts, and are comfortable working in command line environments.
+This is a session to prepare future facilitators to organize a _Building the Peer-to-Peer Internet_ workshop, in part or in full, and variations of it. Participants should be familiar with social motivations and tensions around distributed systems, basic networking concepts, and are comfortable working in command line environments.
 
 **Agenda**
 
