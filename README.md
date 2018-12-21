@@ -17,7 +17,7 @@ If you notice any errors or would like to submit changes or add content to our w
 In addition, you can provide feedback by:
 * adding a comment to the [issue tracker](https://github.com/tomeshnet/tomesh.net/issues)
 * emailing us at [hello@tomesh.net](mailto:hello@tomesh.net)
-* speaking with us on our chat at [`#tomesh:chat.tomesh.net`](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
+* speaking with us on our chat at [`#tomesh:chat.tomesh.net`](https://chat.tomesh.net/#/group/+tomesh:tomesh.net)
 
 ## Content
 

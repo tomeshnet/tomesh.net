@@ -39,7 +39,7 @@ The Prototype Node now supports many single-board computers (SBCs) for similar u
 - [cjdns](https://github.com/cjdelisle/cjdns)
 - [InterPlanetary File System](https://ipfs.io/) (IPFS)
 - [Secure Scuttlebutt](https://github.com/ssbc/secure-scuttlebutt) (SSB)
-- Network monitoring and configuration tools ([Grafana](https://grafana.com/) and [Prometheus](https://prometheus.io/), among others) 
+- Network monitoring and configuration tools ([Grafana](https://grafana.com/) and [Prometheus](https://prometheus.io/), among others)
 
 **Status:** Always in Beta  
 This project will keep being actively developed to support ongoing research work and experimentation. It has been forked by many groups for their own single-board computer mesh network projects.
@@ -124,7 +124,7 @@ Visit our chat {% include icon-matrix.html %} or attend a [meetup](/events/) to 
 An open-source syllabus that aims to provide hands-on training and social context of decentralized systems, including mesh networks and peer-to-peer applications.  
 Each session in the syllabus can be offered as a stand-alone module.
 
-We have completed one full series at the Toronto Public Library. 
+We have completed one full series at the Toronto Public Library.
 
 **Status:** Beta  
 Efforts are underway to improve reproducibility and packaging.
@@ -169,7 +169,7 @@ Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/mas
 
 ### Meshbot
 
-The chatbot our Matrix [chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
+The chatbot our Matrix [chat](https://chat.tomesh.net/#/group/+tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
 
 **Status:** Production (live)
 
