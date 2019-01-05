@@ -66,7 +66,7 @@ The closest TTC Subway stop is St. George (at Bloor Street and St. George Street
 
 <iframe width="100%" height="250px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/dcwalk.27eme78b/attribution,zoompan.html?access_token=pk.eyJ1IjoiZGN3YWxrIiwiYSI6ImNpZ3NzaWljdzA1ajdzeGtudTNzM3NnanYifQ.kA_-f8oD-sPwjPXfqcv1og"></iframe>
 
-The venue is an accessible space, for more details please see the <a href="http://www.ace.utoronto.ca/website/accessibility/building_data/bl.pdf" target="_blank">building information sheet</a>.<!--_-->
+The venue is an accessible space.
 
 ***
 
@@ -130,7 +130,7 @@ The venue is an accessible space, for more details please see the <a href="http:
 **Karen Louise Smith**{:#karen} is an Assistant Professor in Communication, Popular Culture & Film at Brock University. Her research explores the tensions between openness, privacy, and participation in technologically mediated culture.
 
 <ul class="bio-sm-list">
-  <li class="bio-sm-list-item"><a href="http://karenlouisesmith.net/" target="_blank">{% include_absolute _icons/link.svg class:icon %}&nbsp;karenlouisesmith.net</a></li>
+  <li class="bio-sm-list-item"><a href="http://karenlouisesmith.net/wp/" target="_blank">{% include_absolute _icons/link.svg class:icon %}&nbsp;karenlouisesmith.net</a></li>
   <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank">{% include_absolute _icons/twitter.svg class:icon %}&nbsp;@smithisgeneric</a></li>
 </ul>
 
