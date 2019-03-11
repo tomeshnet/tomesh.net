@@ -7,7 +7,7 @@ order: 4
 Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct), then:
 
 1. Say hi on our chat {% include icon-matrix.html %}
-    - Create an account to join `#tomesh` and introduce yourself on our `#welcome` channel!
+    - Create an account and join the [Matrix community](https://chat.tomesh.net/#/group/+tomesh:tomesh.net)
     - If you connect via the [Riot mobile app](https://riot.im/), select _Use custom server options (advanced)_ and set the homeserver to `https://matrix.tomesh.net`
 
 1. Join one of our [events]({{ site.baseurl }}/events)
@@ -21,7 +21,7 @@ Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduc
 
 ### Contribute to our Git Repositories
 
-We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), our [educational materials on network literacy](https://github.com/tomeshnet/tomesh.101), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [Contribution Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
+We use git, a version control tool, and GitHub to work on this [website](https://github.com/tomeshnet/tomesh.net), our [Raspberry Pi prototype](https://github.com/tomeshnet/prototype-cjdns-pi2), our [educational materials on network literacy](https://github.com/tomeshnet/p2p-internet-workshop), and keep record of [important documents](https://github.com/tomeshnet/documents) like our meeting notes. Please see our [Contribution Guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) and contribute on [GitHub](https://github.com/tomeshnet/).
 
 ## Funding the Project
 
