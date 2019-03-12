@@ -134,11 +134,7 @@ The venue is an accessible space.
   <li class="bio-sm-list-item"><a href="https://twitter.com/smithisgeneric" target="_blank">{% include_absolute _icons/twitter.svg class:icon %}&nbsp;@smithisgeneric</a></li>
 </ul>
 
-**Lee MacNeill**{:#lee} is the President of <a href="http://www.torfree.net/" target="_blank">Toronto Free-Net</a>. He has been involved in computers and networking for 25 years as programmer, network administrator, support technician, and evangelist. His work has ranged from telecommunications to wearable computers&mdash;their practical applications, as well as their impact on democracy, culture, and freedom.
-
-<ul class="bio-sm-list">
-  <li class="bio-sm-list-item"><a href="http://www.torfree.net/" target="_blank">{% include_absolute _icons/link.svg class:icon %}&nbsp;torfree.net</a></li>
-</ul>
+**Lee MacNeill**{:#lee} is the President of Toronto Free-Net. He has been involved in computers and networking for 25 years as programmer, network administrator, support technician, and evangelist. His work has ranged from telecommunications to wearable computers&mdash;their practical applications, as well as their impact on democracy, culture, and freedom.
 
 **MeshISP**{:#meshisp} wants to bridge the digital divide by building the tools that will enable an easily deployable wireless internet sharing economy. Combining [Ethereum](https://www.ethereum.org/) smart contracts to automate many of the functions of a traditional ISP (access and payment) and an encrypted mesh routing protocol that can be run on low-cost wireless hardware, they seek to empower entrepreneurs worldwide to deploy affordable internet options in their communities.
 
