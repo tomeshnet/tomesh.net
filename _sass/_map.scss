@@ -25,9 +25,17 @@ html, body, #map_canvas {
   top: 70px;
   left: 13px;
   width: 425px;
-  height: 300px;
 }
-
+.customMarker h1 {
+  font-size:14px;
+}
+.dialogInline {
+  width:45%;
+  display:inline-block;
+}
+#customMarkerLng, #customMarkerLat {
+  width:125px;
+}
 .options {
   position: absolute;
   padding: 5px;
