@@ -10,7 +10,7 @@ layout_footer: false
 <div class="options customShadowBox" id="mapOptions">
   <div class="box-header">
     <h2>Options</h2>
-    <div class="expand" onclick="optionExpand()">=</div>
+    <div class="expand" onclick="toggleClass('mapOptions','FullHeight')">=</div>
   </div>
   <p>
     <strong>Filter Nodes</strong>
@@ -43,7 +43,7 @@ layout_footer: false
   </div>
 </div>
 <div class="InformationDialog">
-  <a href="#" onclick="showInfoDialog()">!</a>
+  <a href="#" onclick="toggleClass('infoDialog','isNotVisible')">!</a>
 </div>
 <div id="infoDialog" class="isNotVisible">
   Our network is currently still under construction. If you are interested in helping build out the network, live in Toronto, and/or are willing to host a wireless directional antenna please get in touch with us. We do not have the infrastructure to provide "free Internet" at this time. 
