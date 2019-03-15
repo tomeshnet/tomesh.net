@@ -614,7 +614,13 @@ function ShowAdvanced(what) {
     what.innerHTML='+Show Advanced';
   }
 }
-
+function showInfoDialog() {
+  if ($('#infoDialog').hasClass('isNotVisible')) {
+    $('#infoDialog').removeClass('isNotVisible');
+  } else {
+    $('#infoDialog').addClass('isNotVisible');
+  }
+}
 //Expand Option Window For Mobile
 function optionExpand() {
   if ($('#mapOptions').hasClass('FullHeight')) {

@@ -2,6 +2,34 @@ html, body, #map_canvas {
   height: 100%;
 }
 
+.InformationDialog {
+  position: absolute;
+  bottom: 20px;
+  left: 13px;
+  width: 10px;
+}
+.InformationDialog a {
+  font-size: 30px;
+  font-weight: bold;
+  color:#aaaa00;
+  text-decoration: none;
+}
+
+.isNotVisible {
+  display:none;
+  visibility: hidden;
+}
+#infoDialog {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  background: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: black 5px 5px 5px;
+  font-size: 12px;
+  width:90%;
+}
 #map {
   padding-top: 55px;
   height: 100%;

@@ -42,7 +42,13 @@ layout_footer: false
   <input style="width:100%;" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
   </div>
 </div>
-<div class="customMarker" >
+<div class="InformationDialog">
+  <a href="#" onclick="showInfoDialog()">!</a>
+</div>
+<div id="infoDialog" class="isNotVisible">
+  Our networks is currently still under construction. If you are interested in helping build out the network, live in toronto, and/or are willing to host a wireless directional antenna please get in touch with us. We do not have the infrastructure to provide "free internet" at this time.
+</div>
+<div class="customMarker">
   <div id="customMarkerGeoCodeDiv">
     <h1>Submit your node to our GitHub</h1>
     <input title="Find Position Based On Browser Reported Location" style="border-radius: 2px 0px 0px 2px; border: 0px; background-color:white; border-right: solid #dadadb 2px; background-image: url(/images/iconLocation.svg); background-size: 16px 16px; padding-left: 10px; padding-top:1px;" class="button button-primary MapButton" type="button" value="." onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide(); 	 $('div#customMarkerLocationDiv').show(); return false;" /><input type="text" placeholder="Search By Address" id="customMarkerAddress" class="MapButton"><input title="Find Position Based On Google Address Decoding" class="button button-primary MapButton" type="button" value="." onclick="customMarkerGeoCode();" style="border-radius: 0 2px 2px 0; color: #1f73e0; background-image: url(/images/iconSearch.svg);   background-size: 20px 20px; "/>
