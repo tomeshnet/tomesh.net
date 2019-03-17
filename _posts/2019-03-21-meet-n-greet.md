@@ -17,3 +17,12 @@ Do you have any e-waste you would like to donate to Free Geek? Bring it! See the
 Planning on coming? Let us know through our [chat channel](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or email us at [{{ site.email }}](mailto:{{ site.email }}).
 
 This event has a [code of conduct](/code-of-conduct/).
+
+#### Cory Doctorow conversation at the TRL 
+
+The Toronto Reference Library is hosting author Cory Doctorow to discuss his latest novel.  This is not a Toronto Mesh event, but some of us will be in attendance:
+
+[Cory Doctorow: Radicalized](https://www.torontopubliclibrary.ca/detail.jsp?Em=1&Entt=RDMEVT384995&R=EVT384995)  
+Thu Mar 21, 2019  
+7:00 p.m. - 8:00 p.m.  
+[Toronto Reference Library, 789 Yonge St.](https://www.openstreetmap.org/way/28156063)
