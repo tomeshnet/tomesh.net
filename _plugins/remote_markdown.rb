@@ -21,7 +21,7 @@ module Jekyll
       check_extension(uri.path)
 
       res = Net::HTTP.get_response(uri)
-      fail 'resource unavailable' unless res.is_a?(Net::HTTPSuccess)
+      raise 'resource unavailable' unless res.is_a?(Net::HTTPSuccess)
 
       @content = content_blobber(uri, res).force_encoding('UTF-8')
                                           .sub("\xEF\xBB\xBF", '')
@@ -37,29 +37,29 @@ module Jekyll
     def content_blobber(uri, res)
       path_reduced = Pathname.new(uri.to_s).parent.to_s
 
-      # Find cases of `](./*.md)`
-      rel_md_path = %r{][(][.]\/.*\.(?i)(markdown|mdown|mkdn|mkd|md)[)]}
+      # Find cases of `](./**)`
+      rel_md_path = %r{][(][.]\/.*[)]}
 
-      # Replace raw markdown with GitHub's rendered version
+      # Replace raw version with GitHub's rendered version
       if path_reduced.include? 'raw.githubusercontent'
         uri_branch = path_reduced.to_s.split('/')[5]
         path_reduced = path_reduced.sub('raw.githubusercontent', 'github')
                                    .sub("/#{uri_branch}", "/blob/#{uri_branch}")
       end
 
-      # Prepend complete parent path to file with extension
-      res.body.gsub(rel_md_path) { |s| "](#{path_reduced}/#{s.split('/')[-1]}" }
+      # Append file to parent path
+      res.body.gsub(rel_md_path) { |s| "](#{path_reduced}/#{s.gsub('](./', '')}" }
     end
 
     def check_protocol(text)
       error_message = "remote_markdown: invalid URI given #{text}"
-      fail error_message unless text =~ URI.regexp(%w[http https ftp ftps])
+      raise error_message unless text =~ URI.regexp(%w[http https ftp ftps])
     end
 
     def check_extension(path)
       mdexts = %w[.markdown .mkdown .mkdn .mkd .md]
       error_message = "remote_markdown: URI file extension not in #{mdexts}"
-      fail error_message unless mdexts.include?(File.extname(path))
+      raise error_message unless mdexts.include?(File.extname(path))
     end
   end
 end
