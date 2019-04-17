@@ -2,6 +2,40 @@ html, body, #map_canvas {
   height: 100%;
 }
 
+.InformationDialog {
+  position: absolute;
+  bottom: 0.4em;
+  left: 1em;
+  width: 1em;
+}
+.InformationDialog a {
+  font-size: 3.5em;
+  font-weight: bold;
+  color:#e3b205;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px rgba($black, 0.1);
+}
+
+.InformationDialog a:hover {
+  color: darken(#e3b205, 5);
+}
+
+.isNotVisible {
+  display:none;
+  visibility: hidden;
+}
+
+#infoDialog {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  background: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 2px 2px 1px 0 rgba($black, 0.1);
+  font-size: 12px;
+  width:80%;
+}
 #map {
   padding-top: 55px;
   height: 100%;
@@ -25,9 +59,17 @@ html, body, #map_canvas {
   top: 70px;
   left: 13px;
   width: 425px;
-  height: 300px;
 }
-
+.customMarker h1 {
+  font-size:14px;
+}
+.dialogInline {
+  width:45%;
+  display:inline-block;
+}
+#customMarkerLng, #customMarkerLat {
+  width:125px;
+}
 .options {
   position: absolute;
   padding: 5px;
@@ -40,7 +82,7 @@ html, body, #map_canvas {
   padding: 5px;
   background: $white;
   font-size: 0.9em;
-  box-shadow: 2px 2px 0 0 rgba($black, 0.1);
+  box-shadow: 2px 2px 1px 0 rgba($black, 0.1);
 }
 
 .box-header {
@@ -75,32 +117,12 @@ html, body, #map_canvas {
     visibility: hidden;
   }
 
-  &:before {
-    content: 'On';
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    height: 1px;
-    color: #26ca28;
-    font-size: 8px;
-  }
-
-  &:after {
-    content: 'Off';
-    position: absolute;
-    top: 4px;
-    left: 42px;
-    height: 1px;
-    color: #ff0000;
-    font-size: 8px;
-  }
-
   label {
     display: block;
     width: 26px;
     height: 11px;
     border-radius: 25px;
-    transition: all .5s ease;
+    transition: all .1s ease;
     cursor: pointer;
     position: absolute;
     top: 4px;

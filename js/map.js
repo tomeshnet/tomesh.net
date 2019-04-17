@@ -549,7 +549,7 @@ function customMarkerGenerateJSON() {
   var floor = document.getElementById('customMarkerFloor').value;
   var dir = document.getElementById('customMarkerDirection').value;
   var name = document.getElementById('customMarkerName').value;
-
+  var contact = document.getElementById('customMarkerContact').value;
 
   var currentJSONDate = (new Date()).toJSON();
 
@@ -558,8 +558,11 @@ function customMarkerGenerateJSON() {
     '     "latitude": ' + lat + ',\n' +
     '     "longitude":' + lng + ',\n' +
     '     "cardinalDirection": "' + dir + '",\n' +
+    '     "cardinalDirectionAntenna": "Omni",\n' +
     '     "floor": ' + floor + ',\n' +
     '     "status": "proposed",\n' +
+    '     "contact": "' + contact + '",\n' +
+    '     "IPV6Address": "",\n' +
     '     "dateAdded": "' + currentJSONDate + '"\n' +
     '   }\n</pre>';
 
@@ -611,13 +614,12 @@ function ShowAdvanced(what) {
     what.innerHTML='+Show Advanced';
   }
 }
-
 //Expand Option Window For Mobile
-function optionExpand() {
-  if ($('#mapOptions').hasClass('FullHeight')) {
-    $('#mapOptions').removeClass('FullHeight');
+function toggleClass(toggleID,toggleClass) {
+  if ($('#' + toggleID).hasClass(toggleClass)) {
+    $('#' + toggleID).removeClass(toggleClass);
   } else {
-    $('#mapOptions').addClass('FullHeight');
+    $('#' + toggleID).addClass(toggleClass);
   }
 }
 
