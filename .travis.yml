@@ -9,7 +9,7 @@ before_install:
 
 before_script: bundle exec jekyll build
 
-script: travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site
+script: travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href
 
 notifications:
   email: false
