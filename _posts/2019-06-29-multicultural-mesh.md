@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Celebrate Technology!"
-slug: mesh-picnic
-text: 'Mesh outdoors with Toronto Mesh and Free Geek'
+title: "Multicultural Mesh at Free Geek"
+slug: multicultural-mesh
+text: 'Mesh outdoors Toronto Mesh and Free Geek'
 location: Free Geek Toronto, 180 Sudbury St
 locationLink: https://osm.org/go/ZX6BI0AGy?node=4042949045
 date: 2019-06-29
@@ -10,7 +10,7 @@ startTime: '13:00'
 endTime: '16:00'
 ---
 
-[Free Geek Toronto](https://www.freegeektoronto.org/) is hosting a celebration combining Canada Day and and Multiculturalism Day!
+[Free Geek Toronto](https://www.freegeektoronto.org/) is hosting a celebration combining Canada Day and Multiculturalism Day!
 
 Come and learn about mesh networks, computers, and some of the Open Source Software that makes it all work.
 
