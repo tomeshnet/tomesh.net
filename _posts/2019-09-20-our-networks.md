@@ -10,7 +10,7 @@ startTime: '13:00'
 endTime: '22:00'
 ---
 
-🍃 The third iteration of Our Networks 🛠 RE: Infrastructures explores the collective care and maintenance of alternative networking practices—new protocols, peer-to-peer connections, offline-first computing, and community-based governance.
+🍃 The third iteration of Our Networks 🛠 RE: Infrastructures will be taking place in Toronto from September 20–22. The three-day conference explores the collective care and maintenance of alternative networking practices—new protocols, peer-to-peer connections, offline-first computing, and community-based governance.
 
 ⚐ CONFERENCE PROGRAM 
 
