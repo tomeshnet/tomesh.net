@@ -22,7 +22,7 @@ We are excited to announce the preliminary program for Our Networks is online! S
 
 ▶︎ Discussions on tech worker organizing and the future of work
 
-🎛 Check out the full schedule now on [http](https://ournetworks.ca/program/) or on `dat://ournetworks.ca/program/`.
+🎛 Check out the full schedule now on [ournetworks.ca/program](https://ournetworks.ca/program/) or on [Dat](dat://ournetworks.ca/program/).
 
 The event will take place at the [Toronto Media Arts Centre](https://www.tomediaarts.org/location). The venue is accessible with a range of options for getting to the venue and accommodations. We've created a page to [detail information for those visiting Toronto](https://ournetworks.ca/visiting/).
 
