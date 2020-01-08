@@ -18,6 +18,6 @@ New people are always welcome. Come say hi on our chat, or email us at [{{ site.
 
 Readings for {{ page.date | date: "%B"}}:
 
-- DC3. (2016). Declaration on Community Connectivity Working Definitions and Principles. Retrieved from [https://comconnectivity.org/article/dc3-working-definitions-and-principles/](https://comconnectivity.org/article/dc3-working-definitions-and-principles/)
+- DC3. (2016). Declaration on Community Connectivity Working Definitions and Principles. Retrieved from https://comconnectivity.org/article/dc3-working-definitions-and-principles/
 - Navarro, L. (2017). An IGF2016 report: notes and links around community networking. Retrieved from [http://people.ac.upc.edu/leandro/docs/igf2016.pdf](http://people.ac.upc.edu/leandro/docs/igf2016.pdf)
 - Powell, A., & Shade, L. R. (2012). Community and Municipal Wi-Fi Initiatives in Canada: Evolutions in Community Participation. In _Connecting Canadians: investigations in community informatics_. Retrieved from [http://books.scholarsportal.info/viewdoc.html?id=575081](http://books.scholarsportal.info/viewdoc.html?id=575081)
