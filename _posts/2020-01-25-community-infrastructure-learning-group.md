@@ -12,7 +12,7 @@ endTime: '15:00'
 
 Looking to build on last meeting by scoping out some projects related to the short term road map. Namely the pub setup script, the accompanying docs, and blog/tutorial style walk through.
 
-These seem interconnected enough that it might be good to scope them out together. open to feedback on this during the week leading up to Saturday.
+These seem interconnected enough that it might be good to scope them out together. Open to feedback on this during the week leading up to Saturday.
 
 All skill levels welcome and wanted.
 
