@@ -1,5 +1,3 @@
-2020-02-27-meet-n-greet.md
-
 ---
 layout: post
 title: "Meet and Greet"
