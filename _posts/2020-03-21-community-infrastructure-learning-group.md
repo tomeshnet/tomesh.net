@@ -5,7 +5,7 @@ slug: community-infrastructure-learning-group
 text: 'Learning p2p infrastructure management'
 location: Zoom Meeting ID 963940070
 locationLink: https://zoom.us/j/963940070
-date: 2020-02-21
+date: 2020-03-21
 startTime: '14:00'
 endTime: '15:00'
 ---
