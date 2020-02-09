@@ -103,9 +103,11 @@
 .event-item {
   padding-right: 20px;
   margin: 0 0 40px;
+  max-height: 142px;
 
   @media screen and (max-width: $on-palm) {
     height: auto;
+    max-height: auto;
     margin-bottom: 1.5em;
     padding-right: 0;
   }
