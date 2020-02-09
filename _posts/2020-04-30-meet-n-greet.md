@@ -17,3 +17,4 @@ Do you have any e-waste you would like to donate to Free Geek? Bring it! See the
 Planning on coming? Let us know through our [chat channel](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) or email us at [{{ site.email }}](mailto:{{ site.email }}).
 
 This event has a [code of conduct](/code-of-conduct/).
+ 
