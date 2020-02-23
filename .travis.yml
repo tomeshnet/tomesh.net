@@ -19,7 +19,7 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  local_dir: /home/travis/build/tomesh.net/tomesh.net/_site
+  local_dir: /home/travis/build/tomeshnet/tomesh.net/_site
   on:
     branch: githubpages
     
