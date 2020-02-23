@@ -23,7 +23,7 @@ deploy:
   repo: tomeshnet/tomeshnet.github.io
   target_branch: master
   on:
-    branch: githubpages
+    branch: master
     
 notifications:
   email: false
