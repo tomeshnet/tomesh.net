@@ -15,243 +15,7 @@ function initialize() {
   var zoomGroup = document.getElementById('chkGroup').checked;
   var filterBuildings = document.getElementById('chkTheme').checked;
 
-  //mapStyling from https://mapstyle.withgoogle.com/
-  mapStyle = [
-    {
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'weight': '2.00'
-        }
-      ]
-    },
-    {
-      'elementType': 'geometry.stroke',
-      'stylers': [
-        {
-          'color': '#9c9c9c'
-        }
-      ]
-    },
-    {
-      'elementType': 'labels',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'elementType': 'labels.text',
-      'stylers': [
-        {
-          'color': '#0e093f'
-        },
-        {
-          'saturation': '0'
-        },
-        {
-          'lightness': '0'
-        },
-        {
-          'visibility': 'on'
-        },
-        {
-          'weight': '0.4'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative',
-      'elementType': 'geometry',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative.land_parcel',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative.neighborhood',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape',
-      'stylers': [
-        {
-          'color': '#f2f2f2'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#fdfffc'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape.man_made',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#fdfffc'
-        }
-      ]
-    },
-    {
-      'featureType': 'poi',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'stylers': [
-        {
-          'saturation': -100
-        },
-        {
-          'lightness': 45
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#dde9e3'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.icon',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.text.fill',
-      'stylers': [
-        {
-          'color': '#7b7b7b'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.text.stroke',
-      'stylers': [
-        {
-          'color': '#ffffff'
-        }
-      ]
-    },
-    {
-      'featureType': 'road.arterial',
-      'elementType': 'labels.icon',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road.highway',
-      'stylers': [
-        {
-          'visibility': 'simplified'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit.line',
-      'elementType': 'labels',
-      'stylers': [
-        {
-          'saturation': '0'
-        },
-        {
-          'lightness': '0'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit.line',
-      'elementType': 'labels.text',
-      'stylers': [
-        {
-          'weight': '0.51'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'stylers': [
-        {
-          'color': '#46bcec'
-        },
-        {
-          'visibility': 'on'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#c4dfed'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'labels.text.fill',
-      'stylers': [
-        {
-          'color': '#070707'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'labels.text.stroke',
-      'stylers': [
-        {
-          'color': '#ffffff'
-        }
-      ]
-    }
-  ];
+
   //Prepare default view and create map
   var mapOptions = {
     zoom: 12,
@@ -272,7 +36,7 @@ function initialize() {
   //Store default theme
 
   if (filterBuildings == false) {
-    map.setOptions({styles: mapStyle});
+    map.setOptions({ styles: mapStyle });
   }
   //Reset markers array
   markers = undefined;
@@ -283,14 +47,20 @@ function initialize() {
 
     var nodeVisible;
 
+    var nodeData = new Array();
     //loop through each node
     for (var key in data) {
+      var nodeName = key;
       var results = data[key];
+
+      console.log(results);
 
       //console.log(results);
       nodeVisible = 1; //Default all nodes to visible
-
+      
+      nodeData[nodeName] = results;
       //Adjust visibility based on value and option variable
+      if (!results['status']) results['status']='active';
       if (results['status'] == 'active' && !filterActive) nodeVisible = 0;
       if (results['status'] == 'proposed' && !filterProposed) nodeVisible = 0;
 
@@ -299,13 +69,33 @@ function initialize() {
         var lat = results['latitude'];
         var lng = results['longitude'];
         var myNodeLatLng = new google.maps.LatLng(lat, lng);
-        var myNodeName = results['name'];
+        var myNodeName = nodeName;
         //Call function to create (or update) marker
         var newNode = addMarker(map, results, myNodeName, myNodeLatLng);
 
         //If new node was created (rather then updated) add it to the marker array
         if (newNode)
           markers.push(newNode);
+      }
+
+      if (results['antennaDirection']!=undefined) {
+        var antennaDegreas = results['antennaDegreas'];
+        var antennaDirection = results['antennaDirection'];
+        var antennaDistance = results['antennaDistance'];
+
+        var startArc = antennaDirection - (antennaDegreas / 2);
+        if (startArc < 0) startArc = startArc + 365;
+        var arcPts = drawArc(myNodeLatLng, startArc, startArc + antennaDegreas, antennaDistance);
+        console.log(arcPts);
+        var piePoly = new google.maps.Polygon({
+          paths: [arcPts],
+          strokeColor: "#0000FF",
+          strokeOpacity: 0.2,
+          strokeWeight: 1,
+          fillColor: "#0000cc",
+          fillOpacity: 0.10,
+          map: map
+        });
       }
     }
 
@@ -366,7 +156,9 @@ function addMarker(map, nodeResult, name, location) {
   Description += '<h1>' + name + '</h1>';
   Description += '<p>Status: ' + nodeStatus + '</p>';
   if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
-  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';	
+  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';  
+  if (nodeResult['antennaDirection']) Description += '<p>Antenna Direction: ' + nodeResult['antennaDirection'] + '</p>';
+  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';
   if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
   if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>';
   Description += '<p>Added: ' + formattedDate() + '</p>';
@@ -385,28 +177,28 @@ function addMarker(map, nodeResult, name, location) {
     var x = 16;
     var y = 16;
     switch (ArrowDirection) {
-    case 'North':
-    case 'North East':
-    case 'North West':
-      y = 32;
-      break;
-    case 'South':
-    case 'South East':
-    case 'South West':
-      y = 0;
-      break;
+      case 'North':
+      case 'North East':
+      case 'North West':
+        y = 32;
+        break;
+      case 'South':
+      case 'South East':
+      case 'South West':
+        y = 0;
+        break;
     }
     switch (ArrowDirection) {
-    case 'East':
-    case 'North East':
-    case 'South East':
-      x = 0;
-      break;
-    case 'West':
-    case 'North West':
-    case 'South West':
-      x = 32;
-      break;
+      case 'East':
+      case 'North East':
+      case 'South East':
+        x = 0;
+        break;
+      case 'West':
+      case 'North West':
+      case 'South West':
+        x = 32;
+        break;
     }
 
     var imageAnchor = new google.maps.Point(x, y);
@@ -572,8 +364,8 @@ function customMarkerGenerateJSON() {
 function submitJson() {
   var msg = 'I would like to add my node to the Toronto Mesh node list. I\'ve provided the data below describing my node.\n\n```\n' + document.getElementById('jsonData').innerHTML + '```';
   var name = document.getElementById('customMarkerName').value;
-  name=encodeURI(name);
-  document.location='https://github.com/tomeshnet/node-list/issues/new?labels=map+submission&title=New Map Submission+(' + name + ')&body=' + encodeURI(msg);
+  name = encodeURI(name);
+  document.location = 'https://github.com/tomeshnet/node-list/issues/new?labels=map+submission&title=New Map Submission+(' + name + ')&body=' + encodeURI(msg);
 }
 function GeoLocationBrowser() {
   if (navigator.geolocation) {
@@ -606,16 +398,16 @@ function clearWindows() {
 
 //Option Window Code
 function ShowAdvanced(what) {
-  if (what.innerHTML=='+Show Advanced') {
+  if (what.innerHTML == '+Show Advanced') {
     $('div#customAdvanced').show();
-    what.innerHTML='-Hide Advanced';
+    what.innerHTML = '-Hide Advanced';
   } else {
     $('div#customAdvanced').hide();
-    what.innerHTML='+Show Advanced';
+    what.innerHTML = '+Show Advanced';
   }
 }
 //Expand Option Window For Mobile
-function toggleClass(toggleID,toggleClass) {
+function toggleClass(toggleID, toggleClass) {
   if ($('#' + toggleID).hasClass(toggleClass)) {
     $('#' + toggleID).removeClass(toggleClass);
   } else {
