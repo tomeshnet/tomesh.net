@@ -53,9 +53,6 @@ function initialize() {
       var nodeName = key;
       var results = data[key];
 
-      console.log(results);
-
-      //console.log(results);
       nodeVisible = 1; //Default all nodes to visible
       
       nodeData[nodeName] = results;
@@ -86,7 +83,6 @@ function initialize() {
         var startArc = antennaDirection - (antennaDegreas / 2);
         if (startArc < 0) startArc = startArc + 365;
         var arcPts = drawArc(myNodeLatLng, startArc, startArc + antennaDegreas, antennaDistance);
-        console.log(arcPts);
         var piePoly = new google.maps.Polygon({
           paths: [arcPts],
           strokeColor: "#0000FF",
