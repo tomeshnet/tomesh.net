@@ -13,7 +13,7 @@ google.maps.LatLng.prototype.DestinationPoint = function (brng, dist) {
     Math.cos(dist / R) - Math.sin(lat1) * Math.sin(lat2));
 
   return new google.maps.LatLng(lat2.toDeg(), lon2.toDeg());
-}
+};
 
 // === A function which returns the bearing between two LatLng in radians ===
 // === If v1 is null, it returns the bearing between the first and last vertex ===
@@ -33,7 +33,7 @@ google.maps.LatLng.prototype.Bearing = function (otherLatLng) {
   if (angle < 0.0) angle += Math.PI * 2.0;
   if (angle > Math.PI) angle -= Math.PI * 2.0;
   return parseFloat(angle.toDeg());
-}
+};
 
 
 /**
@@ -90,4 +90,3 @@ function drawArc(center, initialBearing, finalBearing, radius) {
   }
   return extp;
 }
-
