@@ -85,10 +85,10 @@ function initialize() {
         var arcPts = drawArc(myNodeLatLng, startArc, startArc + antennaDegreas, antennaDistance);
         var piePoly = new google.maps.Polygon({
           paths: [arcPts],
-          strokeColor: "#0000FF",
+          strokeColor: '#0000FF',
           strokeOpacity: 0.2,
           strokeWeight: 1,
-          fillColor: "#0000cc",
+          fillColor: '#0000cc',
           fillOpacity: 0.10,
           map: map
         });
