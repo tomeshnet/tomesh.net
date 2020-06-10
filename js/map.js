@@ -82,16 +82,6 @@ function initialize() {
 
         var startArc = antennaDirection - (antennaDegreas / 2);
         if (startArc < 0) startArc = startArc + 365;
-        var arcPts = drawArc(myNodeLatLng, startArc, startArc + antennaDegreas, antennaDistance);
-        var piePoly = new google.maps.Polygon({
-          paths: [arcPts],
-          strokeColor: '#0000FF',
-          strokeOpacity: 0.2,
-          strokeWeight: 1,
-          fillColor: '#0000cc',
-          fillOpacity: 0.10,
-          map: map
-        });
       }
     }
 
@@ -410,26 +400,5 @@ function toggleClass(toggleID, toggleClass) {
     $('#' + toggleID).addClass(toggleClass);
   }
 }
-function drawArc(center, initialBearing, finalBearing, radius) {
-  var d2r = Math.PI / 180;   // degrees to radians 
-  var r2d = 180 / Math.PI;   // radians to degrees 
-
-  var points = 32;
-
-  // find the raidus in lat/lon 
-  var rlat = (radius / EarthRadiusMeters) * r2d;
-  var rlng = rlat / Math.cos(center.lat() * d2r);
-
-  var extp = new Array();
-
-  if (initialBearing > finalBearing) finalBearing += 360;
-  var deltaBearing = finalBearing - initialBearing;
-  deltaBearing = deltaBearing / points;
-  extp.push(center);
-  for (var i = 0; (i < points + 1); i++) {
-    extp.push(center.DestinationPoint(initialBearing + i * deltaBearing, radius));
-  }
-  return extp;
-} 
 
 google.maps.event.addDomListener(window, 'load', initialize);
