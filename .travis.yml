@@ -10,7 +10,20 @@ before_install:
 
 before_script: bundle exec jekyll build
 
-script: travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href
-
+script: 
+  - travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href
+  - bundle exec jekyll build
+  
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: /home/travis/build/tomeshnet/tomesh.net/_site
+  repo: tomeshnet/tomesh.net
+  target_branch: gh-pages
+  on:
+    branch: master
+    
 notifications:
   email: false
