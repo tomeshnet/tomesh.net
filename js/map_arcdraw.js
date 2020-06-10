@@ -5,7 +5,7 @@ var EarthRadiusMeters = 6378137.0; // meters
 */
 google.maps.LatLng.prototype.DestinationPoint = function (brng, dist) {
   var R = EarthRadiusMeters; // earth's mean radius in meters
-  var brng = brng.toRad();
+  brng = brng.toRad();
   var lat1 = this.lat().toRad(), lon1 = this.lng().toRad();
   var lat2 = Math.asin(Math.sin(lat1) * Math.cos(dist / R) +
     Math.cos(lat1) * Math.sin(dist / R) * Math.cos(brng));
@@ -66,27 +66,3 @@ Number.prototype.toBrng = function () {
   return (this.toDeg() + 360) % 360;
 };
 //end
-
-
-
-function drawArc(center, initialBearing, finalBearing, radius) {
-  var d2r = Math.PI / 180;   // degrees to radians 
-  var r2d = 180 / Math.PI;   // radians to degrees 
-
-  var points = 32;
-
-  // find the raidus in lat/lon 
-  var rlat = (radius / EarthRadiusMeters) * r2d;
-  var rlng = rlat / Math.cos(center.lat() * d2r);
-
-  var extp = new Array();
-
-  if (initialBearing > finalBearing) finalBearing += 360;
-  var deltaBearing = finalBearing - initialBearing;
-  deltaBearing = deltaBearing / points;
-  extp.push(center);
-  for (var i = 0; (i < points + 1); i++) {
-    extp.push(center.DestinationPoint(initialBearing + i * deltaBearing, radius));
-  }
-  return extp;
-}
