@@ -7,8 +7,8 @@ order: 4
 Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct), then:
 
 1. Say hi on our chat {% include icon-matrix.html %}
-    - Create an account and join the [Matrix community](https://chat.tomesh.net/#/group/+tomesh:tomesh.net)
-    - If you connect via the [Riot mobile or desktop app](https://about.riot.im/), select _Use custom server options (advanced)_ and set the homeserver to `https://matrix.tomesh.net`
+    - Create an account and join our [Matrix community](https://chat.tomesh.net/#/group/+tomesh:tomesh.net)
+    - Alternatively, if you are using the [Element mobile or desktop app](https://element.io/), select _Create Account_, select _Other_ as the , and enter `https://matrix.tomesh.net` as the homeserver URL. If you already have an account select _Sign In_, select _Change_ and enter our homeserver URL above.
 
 1. Join one of our [events]({{ site.baseurl }}/events)
     - We host in-person and virtual meetups and workshops
