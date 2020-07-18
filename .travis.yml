@@ -11,8 +11,7 @@ before_install:
 before_script: bundle exec jekyll build
 
 script: 
-  - if: not branch = master
-    travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href
+  - [[ $TRAVIS_BRANCH != 'MASTER' ]] && travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href
   - bundle exec jekyll build
   
 deploy:
