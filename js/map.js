@@ -134,10 +134,6 @@ function addMarker(map, nodeResult, name, location) {
   //Default to OMNI icon if no direction is given
   var ArrowDirection = 'omni';
 
-  //If direction is given set it to the correct direction
-  if (nodeResult['cardinalDirection'] != null) ArrowDirection = nodeResult['cardinalDirection'];
-  if (nodeResult['cardinalDirectionAntenna'] != null) ArrowDirection = nodeResult['cardinalDirectionAntenna'];
-
   //Return formatted date for display
   var formattedDate = function () {
     var date = new Date(nodeResult['dateAdded']);
@@ -151,12 +147,9 @@ function addMarker(map, nodeResult, name, location) {
   Description = '<div class="markerPop">';
   Description += '<h1>' + name + '</h1>';
   Description += '<p>Status: ' + nodeStatus + '</p>';
-  if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
-  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';  
-  if (nodeResult['antennaDirection']) Description += '<p>Antenna Direction: ' + nodeResult['antennaDirection'] + '</p>';
-  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';
-  if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
-  if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>';
+  if (nodeResult['antennaType']) Description += '<p>Type: ' + nodeResult['antennaType'] + '</p>';
+  if (nodeResult['antennaHeight']) Description += '<p>Height: ' + nodeResult['antennaHeight'] + '</p>';
+  if (nodeResult['IPv4']) Description += '<p>IP: ' + nodeResult['IPv4'] + '</p>';
   Description += '<p>Added: ' + formattedDate() + '</p>';
   Description += '</div>';
 
@@ -169,33 +162,8 @@ function addMarker(map, nodeResult, name, location) {
   //If marker does not exists in position and direction, create it
   if (marker == undefined) {
 
-    //Establish anchor point based on direction of arrow so arrow images dont overlap each other so that they dont fully overlap
     var x = 16;
     var y = 16;
-    switch (ArrowDirection) {
-    case 'North':
-    case 'North East':
-    case 'North West':
-      y = 32;
-      break;
-    case 'South':
-    case 'South East':
-    case 'South West':
-      y = 0;
-      break;
-    }
-    switch (ArrowDirection) {
-    case 'East':
-    case 'North East':
-    case 'South East':
-      x = 0;
-      break;
-    case 'West':
-    case 'North West':
-    case 'South West':
-      x = 32;
-      break;
-    }
 
     var imageAnchor = new google.maps.Point(x, y);
 
@@ -221,16 +189,16 @@ function addMarker(map, nodeResult, name, location) {
       infowindow.setContent(this.html);
       infowindow.open(map, this);
 
-      if (circle) {
-        circle.setMap(null);
-      }
+//      if (circle) {
+//        circle.setMap(null);
+//      }
       // Add circle overlay and bind to marker
-      circle = new google.maps.Circle({
-        map: map,
-        radius: 40, // 10 miles in metres
-        fillColor: '#AA0000'
-      });
-      circle.bindTo('center', marker, 'position');
+//      circle = new google.maps.Circle({
+//        map: map,
+//        radius: 40, // 10 miles in metres
+//        fillColor: '#AA0000'
+//      });
+//      circle.bindTo('center', marker, 'position');
 
 
     });
