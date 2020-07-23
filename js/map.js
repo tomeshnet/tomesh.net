@@ -95,7 +95,7 @@ function initialize() {
           fillOpacity: 0.10,
           map: map
         });
-        if (piePoly) { //Make code climate happy }
+        if (piePoly) { /*Make code climate happy*/ }
       }
     }
 

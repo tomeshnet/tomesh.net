@@ -235,4 +235,4 @@ var mapStyle = [
     ]
   }
 ];
-if (mapStyle) { //Make code climate happy }
+if (mapStyle) { /*Make code climate happy*/ }
