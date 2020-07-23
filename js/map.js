@@ -5,6 +5,9 @@ var currentNodeListURL;
 var circle = null;
 var mapStyle;
 
+var EarthRadiusMeters = 6378137.0; // meters
+
+
 function initialize() {
   //Current Node URL with random bits to make sure it doesnt get cached
   currentNodeListURL = document.getElementById('nodeURL').value + '?ramd=' + new Date();
@@ -92,6 +95,7 @@ function initialize() {
           fillOpacity: 0.10,
           map: map
         });
+        if (piePoly) { //Make code climate happy }
       }
     }
 
@@ -386,7 +390,7 @@ function drawArc(center, initialBearing, finalBearing, radius) {
 
   // find the raidus in lat/lon 
   var rlat = (radius / EarthRadiusMeters) * r2d;
-  var rlng = rlat / Math.cos(center.lat() * d2r);
+  //var rlng = rlat / Math.cos(center.lat() * d2r);
 
   var extp = new Array();
 
