@@ -47,14 +47,13 @@ function initialize() {
 
         var nodeVisible;
         var nodeData = new Array();
-
+        console.log(data);
         //loop through each node
-        for (var key in data) {
-            var nodeName = key;
-            var results = data[key];
+        for (var key in data.nodeList) {
+            var results = data.nodeList[key];
 
             nodeVisible = 1; //Default all nodes to visible
-            nodeData[nodeName] = results;
+            nodeData[results['name']] = results;
 
             //Adjust visibility based on value and option variable
             if (!results['status']) results['status'] = 'active';
@@ -65,16 +64,17 @@ function initialize() {
                 //prepare location point
                 var lat = results['latitude'];
                 var lng = results['longitude'];
-                var myNodeLatLng = new google.maps.LatLng(lat, lng);
-                var myNodeName = nodeName;
+                var nodeLatLng = new google.maps.LatLng(lat, lng);
+                var nodeName = results['name'];
                 //Call function to create (or update) marker
-                var newNode = addMarker(map, results, myNodeName, myNodeLatLng);
+                var newNode = addMarker(map, results, nodeName, nodeLatLng);
 
                 //If new node was created (rather then updated) add it to the marker array
                 if (newNode)
                     markers.push(newNode);
             }
 
+            //Draw cone
             if (results['antennaDirection'] != undefined) {
                 var antennaCone = results['antennaCone'];
                 var antennaDirection = results['antennaDirection'];
@@ -82,12 +82,12 @@ function initialize() {
 
                 var startArc = antennaDirection - (antennaCone / 2);
                 if (startArc < 0) startArc = startArc + 365;
-                var arcPts = drawArc(myNodeLatLng, startArc, startArc + antennaCone, antennaDistance);
+                var arcPts = drawArc(nodeLatLng, startArc, startArc + antennaCone, antennaDistance);
                 var piePoly = new google.maps.Polygon({
                     paths: [arcPts],
                     strokeColor: '#0000FF',
                     strokeOpacity: 0.2,
-                    strokeWeight: 1,
+                    strokeWeight: 2,
                     fillColor: '#0000cc',
                     fillOpacity: 0.10,
                     map: map
@@ -146,12 +146,14 @@ function addMarker(map, nodeResult, name, location) {
     //Prepare the detail information for the marker
     var description = '';
     description = '<div class="markerPop">';
-    description += '<h1>' + name + '</h1>';
+    description += '<h1>' + name + ' (' + nodeResult['type'] + ')</h1>';
     description += '<p>Status: ' + nodeStatus + '</p>';
-    if (nodeResult['antennaType']) description += '<p>Type: ' + nodeResult['antennaType'] + '</p>';
-    if (nodeResult['antennaProtocol']) description += '<p>Type: ' + nodeResult['antennaProtocol'] + '</p>';
-    if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
-    if (nodeResult['IPv4']) description += '<p>IP: ' + nodeResult['IPv4'] + '</p>';
+    if (nodeResult['type']=="antenna") { 
+        if (nodeResult['antennaProtocol']) description += '<p>Type: ' + nodeResult['antennaProtocol'] + '</p>';
+        if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
+        if (nodeResult['ipv4']) description += '<p>IP: ' + nodeResult['ipv4'] + '</p>';
+        if (nodeResult['antennaModel']) description += '<p>Model: ' + nodeResult['antennaModel'] + '</p>';
+    }
     description += '<p>Added: ' + formattedDate() + '</p>';
     description += '</div>';
 
