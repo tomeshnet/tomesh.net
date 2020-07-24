@@ -55,7 +55,7 @@ function initialize() {
       var results = data[key];
 
       nodeVisible = 1; //Default all nodes to visible
-      
+
       nodeData[nodeName] = results;
       //Adjust visibility based on value and option variable
       if (!results['status']) results['status']='active';
@@ -134,7 +134,7 @@ function addMarker(map, nodeResult, name, location) {
   }
 
   //Default to OMNI icon if no direction is given
-  var ArrowDirection = 'omni';
+  var arrowDirection = 'omni';
 
   //Return formatted date for display
   var formattedDate = function () {
@@ -145,21 +145,22 @@ function addMarker(map, nodeResult, name, location) {
   var nodeStatus = nodeResult['status'].charAt(0).toUpperCase() + nodeResult['status'].slice(1);
 
   //Prepare the detail information for the marker
-  var Description = '';
-  Description = '<div class="markerPop">';
-  Description += '<h1>' + name + '</h1>';
-  Description += '<p>Status: ' + nodeStatus + '</p>';
-  if (nodeResult['antennaType']) Description += '<p>Type: ' + nodeResult['antennaType'] + '</p>';
-  if (nodeResult['antennaHeight']) Description += '<p>Height: ' + nodeResult['antennaHeight'] + '</p>';
-  if (nodeResult['IPv4']) Description += '<p>IP: ' + nodeResult['IPv4'] + '</p>';
-  Description += '<p>Added: ' + formattedDate() + '</p>';
-  Description += '</div>';
+  var description = '';
+  description = '<div class="markerPop">';
+  description += '<h1>' + name + '</h1>';
+  description += '<p>Status: ' + nodeStatus + '</p>';
+  if (nodeResult['antennaType']) description += '<p>Type: ' + nodeResult['antennaType'] + '</p>';
+  if (nodeResult['antennaProtocol']) description += '<p>Type: ' + nodeResult['antennaProtocol'] + '</p>';
+  if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
+  if (nodeResult['IPv4']) description += '<p>IP: ' + nodeResult['IPv4'] + '</p>';
+  description += '<p>Added: ' + formattedDate() + '</p>';
+  description += '</div>';
 
   //Check to see if the currenty direction,lat,lng combo exists
-  var marker = findMarker(location.lat(), location.lng(), ArrowDirection);
+  var marker = findMarker(location.lat(), location.lng(), arrowDirection);
 
   //Prepare the image used to display the direction arrow and node color
-  var IMG = '/images/map/arrow-' + ArrowDirection.toLowerCase().replace(' ', '') + '-' + nodeColor + '.png';
+  var IMG = '/images/map/arrow-' + arrowDirection.toLowerCase().replace(' ', '') + '-' + nodeColor + '.png';
 
   //If marker does not exists in position and direction, create it
   if (marker == undefined) {
@@ -172,14 +173,15 @@ function addMarker(map, nodeResult, name, location) {
     //Create a new marker
     marker = new google.maps.Marker({
       position: location,
+      alt: nodeResult['altitude'],
       map: map,
       title: name,
       icon: {
         url: IMG,
         anchor: imageAnchor
       },
-      direction: ArrowDirection,
-      html: Description
+      direction: arrowDirection,
+      html: description
     });
 
     //Add listener to the marker for click
