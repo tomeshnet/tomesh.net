@@ -233,7 +233,7 @@ function addMarker(map, nodeResult, name, location) {
 
     }
     //Update marker
-    marker.html = marker.html + Description;
+    marker.html = marker.html + description;
     return undefined;
   }
 }
