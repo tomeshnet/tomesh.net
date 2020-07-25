@@ -1,6 +1,7 @@
 var map = null;
 var infowindow = null;
-var markers = [];
+var nodes = [];
+var links = [];
 var currentNodeListURL;
 var circle = null;
 var mapStyle;
@@ -39,8 +40,8 @@ function initialize() {
     }
 
     //Reset markers array
-    markers = undefined;
-    markers = [];
+    nodes = undefined;
+    nodes = [];
 
     //Pull and process node url
     $.getJSON(currentNodeListURL, function (data) {
@@ -71,7 +72,7 @@ function initialize() {
 
                 //If new node was created (rather then updated) add it to the marker array
                 if (newNode)
-                    markers.push(newNode);
+                    nodes.push(newNode);
             }
 
             //Draw cone
@@ -94,6 +95,26 @@ function initialize() {
                 });
                 if (piePoly) { /*Make code climate happy*/ }
             }
+
+            //Draw links
+            if (results['router'] != undefined) {
+                var routerNode = nodeData[results['router']];
+                if (routerNode != undefined) {
+                    var routerLink = [
+                        { lat: results['latitude'], lng: results['longitude'] },
+                        { lat: routerNode['latitude'], lng: routerNode['longitude'] },
+                    ];
+
+                    links[results['router'] + "-" + results['name']] = new google.maps.Polyline({
+                        path: routerLink,
+                        geodesic: true,
+                        strokeColor: "#FF0000",
+                        strokeOpacity: 1.0,
+                        strokeWeight: 2,
+                        map: map
+                    });
+                }
+            }
         }
 
         //Clustering code to group markers that are very close together untill you zoom in (if option enabled)
@@ -103,18 +124,18 @@ function initialize() {
                 maxZoom: 15,
                 imagePath: '/images/map/m'
             };
-            var mc = new MarkerClusterer(map, markers, mcOptions);
+            var mc = new MarkerClusterer(map, nodes, mcOptions);
         }
     });
 }
 
 //Find a marker witth a specific lat lng and dir combo.  Used so that we dont create a new marker but rather add info to the existing one.
 function findMarker(lat, lng, dir) {
-    for (var i = 0; i < markers.length; i++) {
-        if (markers[i].position.lat() == lat &&
-            markers[i].position.lng() == lng &&
-            markers[i].direction == dir) {
-            return markers[i];
+    for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].position.lat() == lat &&
+            nodes[i].position.lng() == lng &&
+            nodes[i].direction == dir) {
+            return nodes[i];
         }
     }
     return undefined;
@@ -148,8 +169,8 @@ function addMarker(map, nodeResult, name, location) {
     description = '<div class="markerPop">';
     description += '<h1>' + name + ' (' + nodeResult['type'] + ')</h1>';
     description += '<p>Status: ' + nodeStatus + '</p>';
-    if (nodeResult['type']=="antenna") { 
-        if (nodeResult['antennaProtocol']) description += '<p>Type: ' + nodeResult['antennaProtocol'] + '</p>';
+    if (nodeResult['type'] == "antenna") {
+        if (nodeResult['antennaProtocol']) description += '<p>Protocol: ' + nodeResult['antennaProtocol'] + '</p>';
         if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
         if (nodeResult['ipv4']) description += '<p>IP: ' + nodeResult['ipv4'] + '</p>';
         if (nodeResult['antennaModel']) description += '<p>Model: ' + nodeResult['antennaModel'] + '</p>';
@@ -290,14 +311,12 @@ function customMarkerShowJsonDialog() {
 
 //Updates the text for the JSON data on the JSON screen
 function customMarkerGenerateJSON() {
-
     var lng = document.getElementById('customMarkerLng').value;
     var lat = document.getElementById('customMarkerLat').value;
     var floor = document.getElementById('customMarkerFloor').value;
     var dir = document.getElementById('customMarkerDirection').value;
     var name = document.getElementById('customMarkerName').value;
     var contact = document.getElementById('customMarkerContact').value;
-
     var currentJSONDate = (new Date()).toJSON();
 
     var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre id="jsonData" style="white-space: pre;margin-bottom:10px;">   {\n' +
@@ -316,12 +335,14 @@ function customMarkerGenerateJSON() {
     document.getElementById('customMakerJSONContent').innerHTML = sJSON;
 
 }
+
 function submitJson() {
     var msg = 'I would like to add my node to the Toronto Mesh node list. I\'ve provided the data below describing my node.\n\n```\n' + document.getElementById('jsonData').innerHTML + '```';
     var name = document.getElementById('customMarkerName').value;
     name = encodeURI(name);
     document.location = 'https://github.com/tomeshnet/node-list/issues/new?labels=map+submission&title=New Map Submission+(' + name + ')&body=' + encodeURI(msg);
 }
+
 function GeoLocationBrowser() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showGeoLocatedPosition);
@@ -369,8 +390,8 @@ function toggleClass(toggleID, toggleClass) {
         $('#' + toggleID).addClass(toggleClass);
     }
 }
-function drawArc(center, initialBearing, finalBearing, radius) {
 
+function drawArc(center, initialBearing, finalBearing, radius) {
     var points = 32;
     var extp = new Array();
 
