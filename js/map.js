@@ -105,7 +105,7 @@ function initialize() {
             { lat: routerNode['latitude'], lng: routerNode['longitude'] },
           ];
 
-          links[results["router"] + "-" + results["name"]] = new google.maps.Polyline({
+          links[results['router'] + "-" + results['name']] = new google.maps.Polyline({
             path: routerLink,
             geodesic: true,
             strokeColor: '#FF0000',
@@ -169,7 +169,7 @@ function addMarker(map, nodeResult, name, location) {
   description = '<div class="markerPop">';
   description += '<h1>' + name + ' (' + nodeResult['type'] + ')</h1>';
   description += '<p>Status: ' + nodeStatus + '</p>';
-  if (nodeResult["type"] == "antenna") {
+  if (nodeResult['type'] == 'antenna') {
     if (nodeResult['antennaProtocol']) description += '<p>Protocol: ' + nodeResult['antennaProtocol'] + '</p>';
     if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
     if (nodeResult['ipv4']) description += '<p>IP: ' + nodeResult['ipv4'] + '</p>';
