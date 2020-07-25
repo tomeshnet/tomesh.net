@@ -105,7 +105,7 @@ function initialize() {
             { lat: routerNode['latitude'], lng: routerNode['longitude'] },
           ];
 
-          links[results['router'] + "-" + results['name']] = new google.maps.Polyline({
+          links[results['router'] + '-' + results['name']] = new google.maps.Polyline({
             path: routerLink,
             geodesic: true,
             strokeColor: '#FF0000',
