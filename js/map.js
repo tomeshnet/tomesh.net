@@ -5,10 +5,12 @@ var links = [];
 var currentNodeListURL;
 var circle = null;
 var mapStyle;
+var urlBase = "";
 
 function initialize() {
   //Current Node URL with random bits to make sure it doesnt get cached
   currentNodeListURL = document.getElementById('nodeURL').value + '?ramd=' + new Date();
+  urlBase=currentNodeListURL.substring(0,currentNodeListURL.lastIndexOf("/"));
 
   //Set options based on check box positions
   var filterActive = document.getElementById('chkActive').checked;
@@ -168,6 +170,7 @@ function addMarker(map, nodeResult, name, location) {
   var description = '';
   description = '<div class="markerPop">';
   description += '<h1>' + name + ' (' + nodeResult['type'] + ')</h1>';
+  description += '<div class="makerContent">';
   description += '<p>Status: ' + nodeStatus + '</p>';
   if (nodeResult['type'] == 'antenna') {
     if (nodeResult['antennaProtocol']) description += '<p>Protocol: ' + nodeResult['antennaProtocol'] + '</p>';
@@ -175,6 +178,17 @@ function addMarker(map, nodeResult, name, location) {
     if (nodeResult['ipv4']) description += '<p>IP: ' + nodeResult['ipv4'] + '</p>';
     if (nodeResult['antennaModel']) description += '<p>Model: ' + nodeResult['antennaModel'] + '</p>';
   }
+  if (nodeResult['images']){
+    description += "</div><div class='markerImage'>";
+    for (var i=0; i< nodeResult['images'].length; i++) {
+      var imageClass="nodeImageLarge";
+      if (i!=0) imageClass="nodeImageSmall";
+      description +="<a href='" + urlBase + "/images/" + nodeResult['images'][i] + "' target='_blank'><img  class='" + imageClass + "' src='" + urlBase + "/images/" + nodeResult['images'][i] + "'></a>";
+    }
+  } else {
+      description +="<style> .makerContent { width:100%; }</style>";
+  }
+  description += "</div>";
   description += '<p>Added: ' + formattedDate() + '</p>';
   description += '</div>';
 
