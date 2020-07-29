@@ -5,7 +5,7 @@ slug: meet-and-greet
 text: 'Meet the members of Toronto Mesh - Virtually'
 location: Big Blue Button Video Chat
 locationLink: https://bbb.hypha.coop/b/tom-ygc-ttm
-date: 2020-08-06
+date: 2020-08-13
 startTime: '19:00'
 endTime: '21:00'
 ---
