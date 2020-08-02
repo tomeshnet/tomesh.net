@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Timeline
-order: 1
+order: 2
 parent: About
 ---
 
