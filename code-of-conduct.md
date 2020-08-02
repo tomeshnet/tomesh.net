@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Code of Conduct
-order: 2
+order: 3
 parent: About
 ---
 
