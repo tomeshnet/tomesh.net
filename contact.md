@@ -20,4 +20,4 @@ Come say hi...
 - {% include icon-twitter.html username=site.twitter_username %} on twitter
 {% endif %}
 
-We also maintain {% include icon-slack.html %} and {% include icon-irc.html %}
+We also maintain a{% include icon-slack.html %} and {% include icon-irc.html %}
