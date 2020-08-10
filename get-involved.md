@@ -6,15 +6,15 @@ order: 4
 
 Start by checking out our [Vision]({{ site.baseurl }}/about) and [Code of Conduct]({{ site.baseurl }}/code-of-conduct), then:
 
-1. Say hi on our chat {% include icon-matrix.html %}
+1. Check out the [main readme](https://github.com/tomeshnet/toronto-community-network/blob/master/README.md) for information on how to join one of our community network working groups and follow the instructions at the bottom of the page. If you wish to submit content to our Git repositories without joining a working group please see our [contribution guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) before submitting.
+
+2. Say hi on our chat {% include icon-matrix.html %}
     - Create an account and join [our Matrix chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
     - Alternatively, if you are using the [Element mobile or desktop app](https://element.io/), select _Create Account_, select _Other_ as the homeserver, and enter `https://matrix.tomesh.net` as the homeserver URL. If you already have an account select _Sign In_, select _Change_ and enter our homeserver URL above.
     - You can also join our chat through a{% include icon-slack.html %} if you really love Slack, note that private messaging only currently works between other Slack users.
 
-2. Join one of our [events]({{ site.baseurl }}/events)
+3. Join one of our [events]({{ site.baseurl }}/events)
     - We host in-person and virtual meetups and workshops
-
-3. Check out the [main readme](https://github.com/tomeshnet/toronto-community-network/blob/master/README.md) for information on how to join one of our community network working groups and follow the instructions at the bottom of the page. If you wish to submit content to our Git repositories without joining a working group please see our [contribution guidelines](https://github.com/tomeshnet/documents/blob/master/CONTRIBUTING.md) before submitting.
 
 ## Funding the Project
 
