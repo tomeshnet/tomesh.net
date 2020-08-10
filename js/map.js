@@ -1,6 +1,7 @@
 var map = null;
 var infowindow = null;
-var markers = [];
+var nodes = [];
+var links = [];
 var currentNodeListURL;
 var circle = null;
 var mapStyle;
@@ -15,243 +16,6 @@ function initialize() {
   var zoomGroup = document.getElementById('chkGroup').checked;
   var filterBuildings = document.getElementById('chkTheme').checked;
 
-  //mapStyling from https://mapstyle.withgoogle.com/
-  mapStyle = [
-    {
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'weight': '2.00'
-        }
-      ]
-    },
-    {
-      'elementType': 'geometry.stroke',
-      'stylers': [
-        {
-          'color': '#9c9c9c'
-        }
-      ]
-    },
-    {
-      'elementType': 'labels',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'elementType': 'labels.text',
-      'stylers': [
-        {
-          'color': '#0e093f'
-        },
-        {
-          'saturation': '0'
-        },
-        {
-          'lightness': '0'
-        },
-        {
-          'visibility': 'on'
-        },
-        {
-          'weight': '0.4'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative',
-      'elementType': 'geometry',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative.land_parcel',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'administrative.neighborhood',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape',
-      'stylers': [
-        {
-          'color': '#f2f2f2'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#fdfffc'
-        }
-      ]
-    },
-    {
-      'featureType': 'landscape.man_made',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#fdfffc'
-        }
-      ]
-    },
-    {
-      'featureType': 'poi',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'stylers': [
-        {
-          'saturation': -100
-        },
-        {
-          'lightness': 45
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#dde9e3'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.icon',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.text.fill',
-      'stylers': [
-        {
-          'color': '#7b7b7b'
-        }
-      ]
-    },
-    {
-      'featureType': 'road',
-      'elementType': 'labels.text.stroke',
-      'stylers': [
-        {
-          'color': '#ffffff'
-        }
-      ]
-    },
-    {
-      'featureType': 'road.arterial',
-      'elementType': 'labels.icon',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'road.highway',
-      'stylers': [
-        {
-          'visibility': 'simplified'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit.line',
-      'elementType': 'labels',
-      'stylers': [
-        {
-          'saturation': '0'
-        },
-        {
-          'lightness': '0'
-        }
-      ]
-    },
-    {
-      'featureType': 'transit.line',
-      'elementType': 'labels.text',
-      'stylers': [
-        {
-          'weight': '0.51'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'stylers': [
-        {
-          'color': '#46bcec'
-        },
-        {
-          'visibility': 'on'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'geometry.fill',
-      'stylers': [
-        {
-          'color': '#c4dfed'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'labels.text.fill',
-      'stylers': [
-        {
-          'color': '#070707'
-        }
-      ]
-    },
-    {
-      'featureType': 'water',
-      'elementType': 'labels.text.stroke',
-      'stylers': [
-        {
-          'color': '#ffffff'
-        }
-      ]
-    }
-  ];
   //Prepare default view and create map
   var mapOptions = {
     zoom: 12,
@@ -269,28 +33,31 @@ function initialize() {
   });
 
   map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-  //Store default theme
 
+  //Store default theme
   if (filterBuildings == false) {
-    map.setOptions({styles: mapStyle});
+    map.setOptions({ styles: mapStyle });
   }
+
   //Reset markers array
-  markers = undefined;
-  markers = [];
+  nodes = undefined;
+  nodes = [];
 
   //Pull and process node url
   $.getJSON(currentNodeListURL, function (data) {
 
     var nodeVisible;
+    var nodeData = new Array();
 
     //loop through each node
-    for (var key in data) {
-      var results = data[key];
+    for (var key in data.nodeList) {
+      var results = data.nodeList[key];
 
-      //console.log(results);
       nodeVisible = 1; //Default all nodes to visible
+      nodeData[results['name']] = results;
 
       //Adjust visibility based on value and option variable
+      if (!results['status']) results['status'] = 'active';
       if (results['status'] == 'active' && !filterActive) nodeVisible = 0;
       if (results['status'] == 'proposed' && !filterProposed) nodeVisible = 0;
 
@@ -298,14 +65,55 @@ function initialize() {
         //prepare location point
         var lat = results['latitude'];
         var lng = results['longitude'];
-        var myNodeLatLng = new google.maps.LatLng(lat, lng);
-        var myNodeName = results['name'];
+        var nodeLatLng = new google.maps.LatLng(lat, lng);
+        var nodeName = results['name'];
         //Call function to create (or update) marker
-        var newNode = addMarker(map, results, myNodeName, myNodeLatLng);
+        var newNode = addMarker(map, results, nodeName, nodeLatLng);
 
         //If new node was created (rather then updated) add it to the marker array
         if (newNode)
-          markers.push(newNode);
+          nodes.push(newNode);
+      }
+
+      //Draw cone
+      if (results['antennaDirection'] != undefined) {
+        var antennaCone = results['antennaCone'];
+        var antennaDirection = results['antennaDirection'];
+        var antennaDistance = results['antennaDistance'];
+
+        var startArc = antennaDirection - (antennaCone / 2);
+        if (startArc < 0) startArc = startArc + 365;
+        var arcPts = drawArc(nodeLatLng, startArc, startArc + antennaCone, antennaDistance);
+        var piePoly = new google.maps.Polygon({
+          paths: [arcPts],
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.2,
+          strokeWeight: 2,
+          fillColor: '#0000cc',
+          fillOpacity: 0.10,
+          map: map
+        });
+        if (piePoly) { /*Make code climate happy*/ }
+      }
+
+      //Draw links
+      if (results['router'] != undefined) {
+        var routerNode = nodeData[results['router']];
+        if (routerNode != undefined) {
+          var routerLink = [
+            { lat: results['latitude'], lng: results['longitude'] },
+            { lat: routerNode['latitude'], lng: routerNode['longitude'] },
+          ];
+
+          links[results['router'] + '-' + results['name']] = new google.maps.Polyline({
+            path: routerLink,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+            map: map
+          });
+        }
       }
     }
 
@@ -316,18 +124,18 @@ function initialize() {
         maxZoom: 15,
         imagePath: '/images/map/m'
       };
-      var mc = new MarkerClusterer(map, markers, mcOptions);
+      var mc = new MarkerClusterer(map, nodes, mcOptions);
     }
   });
 }
 
 //Find a marker witth a specific lat lng and dir combo.  Used so that we dont create a new marker but rather add info to the existing one.
 function findMarker(lat, lng, dir) {
-  for (var i = 0; i < markers.length; i++) {
-    if (markers[i].position.lat() == lat &&
-      markers[i].position.lng() == lng &&
-      markers[i].direction == dir) {
-      return markers[i];
+  for (var i = 0; i < nodes.length; i++) {
+    if (nodes[i].position.lat() == lat &&
+      nodes[i].position.lng() == lng &&
+      nodes[i].direction == dir) {
+      return nodes[i];
     }
   }
   return undefined;
@@ -346,11 +154,7 @@ function addMarker(map, nodeResult, name, location) {
   }
 
   //Default to OMNI icon if no direction is given
-  var ArrowDirection = 'omni';
-
-  //If direction is given set it to the correct direction
-  if (nodeResult['cardinalDirection'] != null) ArrowDirection = nodeResult['cardinalDirection'];
-  if (nodeResult['cardinalDirectionAntenna'] != null) ArrowDirection = nodeResult['cardinalDirectionAntenna'];
+  var arrowDirection = 'omni';
 
   //Return formatted date for display
   var formattedDate = function () {
@@ -361,90 +165,54 @@ function addMarker(map, nodeResult, name, location) {
   var nodeStatus = nodeResult['status'].charAt(0).toUpperCase() + nodeResult['status'].slice(1);
 
   //Prepare the detail information for the marker
-  var Description = '';
-  Description = '<div class="markerPop">';
-  Description += '<h1>' + name + '</h1>';
-  Description += '<p>Status: ' + nodeStatus + '</p>';
-  if (nodeResult['cardinalDirection']) Description += '<p>Direction: ' + nodeResult['cardinalDirection'] + '</p>';
-  if (nodeResult['cardinalDirectionAntenna']) Description += '<p>Antenna Direction: ' + nodeResult['cardinalDirectionAntenna'] + '</p>';	
-  if (nodeResult['floor']) Description += '<p>Floor: ' + nodeResult['floor'] + '</p>';
-  if (nodeResult['IPV6Address']) Description += '<p>IPV6: ' + nodeResult['IPV6Address'] + '</p>';
-  Description += '<p>Added: ' + formattedDate() + '</p>';
-  Description += '</div>';
+  var description = '';
+  description = '<div class="markerPop">';
+  description += '<h1>' + name + ' (' + nodeResult['type'] + ')</h1>';
+  description += '<p>Status: ' + nodeStatus + '</p>';
+  if (nodeResult['type'] == 'antenna') {
+    if (nodeResult['antennaProtocol']) description += '<p>Protocol: ' + nodeResult['antennaProtocol'] + '</p>';
+    if (nodeResult['altitude']) description += '<p>Height: ' + nodeResult['altitude'] + '</p>';
+    if (nodeResult['ipv4']) description += '<p>IP: ' + nodeResult['ipv4'] + '</p>';
+    if (nodeResult['antennaModel']) description += '<p>Model: ' + nodeResult['antennaModel'] + '</p>';
+  }
+  description += '<p>Added: ' + formattedDate() + '</p>';
+  description += '</div>';
 
   //Check to see if the currenty direction,lat,lng combo exists
-  var marker = findMarker(location.lat(), location.lng(), ArrowDirection);
+  var marker = findMarker(location.lat(), location.lng(), arrowDirection);
 
   //Prepare the image used to display the direction arrow and node color
-  var IMG = '/images/map/arrow-' + ArrowDirection.toLowerCase().replace(' ', '') + '-' + nodeColor + '.png';
+  var IMG = '/images/map/arrow-' + arrowDirection.toLowerCase().replace(' ', '') + '-' + nodeColor + '.png';
 
   //If marker does not exists in position and direction, create it
   if (marker == undefined) {
 
-    //Establish anchor point based on direction of arrow so arrow images dont overlap each other so that they dont fully overlap
     var x = 16;
     var y = 16;
-    switch (ArrowDirection) {
-    case 'North':
-    case 'North East':
-    case 'North West':
-      y = 32;
-      break;
-    case 'South':
-    case 'South East':
-    case 'South West':
-      y = 0;
-      break;
-    }
-    switch (ArrowDirection) {
-    case 'East':
-    case 'North East':
-    case 'South East':
-      x = 0;
-      break;
-    case 'West':
-    case 'North West':
-    case 'South West':
-      x = 32;
-      break;
-    }
 
     var imageAnchor = new google.maps.Point(x, y);
 
     //Create a new marker
     marker = new google.maps.Marker({
       position: location,
+      alt: nodeResult['altitude'],
       map: map,
       title: name,
       icon: {
         url: IMG,
         anchor: imageAnchor
       },
-      direction: ArrowDirection,
-      html: Description
+      direction: arrowDirection,
+      html: description
     });
 
     //Add listener to the marker for click
     google.maps.event.addListener(marker, 'click', function () {
-
       //Code adds a circle to identiy selected marker and 
       //Maybe even present a possible range
       if (typeof infowindow != 'undefined') infowindow.close();
       infowindow.setContent(this.html);
       infowindow.open(map, this);
-
-      if (circle) {
-        circle.setMap(null);
-      }
-      // Add circle overlay and bind to marker
-      circle = new google.maps.Circle({
-        map: map,
-        radius: 40, // 10 miles in metres
-        fillColor: '#AA0000'
-      });
-      circle.bindTo('center', marker, 'position');
-
-
     });
     //listeer to close window
     google.maps.event.addListener(map, 'click', function () {
@@ -473,7 +241,7 @@ function addMarker(map, nodeResult, name, location) {
 
     }
     //Update marker
-    marker.html = marker.html + Description;
+    marker.html = marker.html + description;
     return undefined;
   }
 }
@@ -543,38 +311,38 @@ function customMarkerShowJsonDialog() {
 
 //Updates the text for the JSON data on the JSON screen
 function customMarkerGenerateJSON() {
-
   var lng = document.getElementById('customMarkerLng').value;
   var lat = document.getElementById('customMarkerLat').value;
   var floor = document.getElementById('customMarkerFloor').value;
   var dir = document.getElementById('customMarkerDirection').value;
   var name = document.getElementById('customMarkerName').value;
   var contact = document.getElementById('customMarkerContact').value;
-
   var currentJSONDate = (new Date()).toJSON();
 
   var sJSON = '<div class="box-header"><h2>JSON for node</h2></div><pre id="jsonData" style="white-space: pre;margin-bottom:10px;">   {\n' +
-    '     "name": "' + name + '",\n' +
-    '     "latitude": ' + lat + ',\n' +
-    '     "longitude":' + lng + ',\n' +
-    '     "cardinalDirection": "' + dir + '",\n' +
-    '     "cardinalDirectionAntenna": "Omni",\n' +
-    '     "floor": ' + floor + ',\n' +
-    '     "status": "proposed",\n' +
-    '     "contact": "' + contact + '",\n' +
-    '     "IPV6Address": "",\n' +
-    '     "dateAdded": "' + currentJSONDate + '"\n' +
+    '   "name": "' + name + '",\n' +
+    '   "latitude": ' + lat + ',\n' +
+    '   "longitude":' + lng + ',\n' +
+    '   "cardinalDirection": "' + dir + '",\n' +
+    '   "cardinalDirectionAntenna": "Omni",\n' +
+    '   "floor": ' + floor + ',\n' +
+    '   "status": "proposed",\n' +
+    '   "contact": "' + contact + '",\n' +
+    '   "IPV6Address": "",\n' +
+    '   "dateAdded": "' + currentJSONDate + '"\n' +
     '   }\n</pre>';
 
   document.getElementById('customMakerJSONContent').innerHTML = sJSON;
 
 }
+
 function submitJson() {
   var msg = 'I would like to add my node to the Toronto Mesh node list. I\'ve provided the data below describing my node.\n\n```\n' + document.getElementById('jsonData').innerHTML + '```';
   var name = document.getElementById('customMarkerName').value;
-  name=encodeURI(name);
-  document.location='https://github.com/tomeshnet/node-list/issues/new?labels=map+submission&title=New Map Submission+(' + name + ')&body=' + encodeURI(msg);
+  name = encodeURI(name);
+  document.location = 'https://github.com/tomeshnet/node-list/issues/new?labels=map+submission&title=New Map Submission+(' + name + ')&body=' + encodeURI(msg);
 }
+
 function GeoLocationBrowser() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showGeoLocatedPosition);
@@ -606,21 +374,35 @@ function clearWindows() {
 
 //Option Window Code
 function ShowAdvanced(what) {
-  if (what.innerHTML=='+Show Advanced') {
+  if (what.innerHTML == '+Show Advanced') {
     $('div#customAdvanced').show();
-    what.innerHTML='-Hide Advanced';
+    what.innerHTML = '-Hide Advanced';
   } else {
     $('div#customAdvanced').hide();
-    what.innerHTML='+Show Advanced';
+    what.innerHTML = '+Show Advanced';
   }
 }
 //Expand Option Window For Mobile
-function toggleClass(toggleID,toggleClass) {
+function toggleClass(toggleID, toggleClass) {
   if ($('#' + toggleID).hasClass(toggleClass)) {
     $('#' + toggleID).removeClass(toggleClass);
   } else {
     $('#' + toggleID).addClass(toggleClass);
   }
+}
+
+function drawArc(center, initialBearing, finalBearing, radius) {
+  var points = 32;
+  var extp = new Array();
+
+  if (initialBearing > finalBearing) finalBearing += 360;
+  var deltaBearing = finalBearing - initialBearing;
+  deltaBearing = deltaBearing / points;
+  extp.push(center);
+  for (var i = 0; (i < points + 1); i++) {
+    extp.push(center.DestinationPoint(initialBearing + i * deltaBearing, radius));
+  }
+  return extp;
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
