@@ -169,7 +169,7 @@ Visit the [Tools Transfer Guide](https://github.com/tomeshnet/documents/blob/mas
 
 ### Meshbot
 
-The chatbot our Matrix [chat](https://chat.tomesh.net/#/group/+tomesh:tomesh.net) uses to send event reminders and answer basic questions about the mesh.
+The chatbot used on our [Matrix chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net) to send event reminders and answer basic questions about the mesh.
 
 **Status:** Production (live)
 
