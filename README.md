@@ -76,8 +76,10 @@ A development server will run at `http://localhost:4000/`
 
 Commits and merges into `master` will be deployed automatically to the production web server through webhook posts from GitHub.
 
-[jekyll-hook](https://github.com/developmentseed/jekyll-hook) listens for incoming webhook posts from GitHub and runs `jekyll build`.
+[travis-ci](https://travis-ci.org) listens for incoming commits from GitHub and runs `jekyll build`. The build is committed to the `gh-pages` branch. Github pages are used to host the resulting build.
+
+Configuration can be found in [.travis.yml](https://github.com/tomeshnet/tomesh.net/blob/master/.travis.yml).
 
 ### Daily Builds
 
-A cron task runs `jekyll build` daily at midnight, Eastern Standard Time. The build task can be found in the [scripts directory](scripts/tomesh-build.sh). The cron task can be edited with `sudo crontab -e`
+A travis-ci cron job re-runs the travis build daily at midnight, Eastern Standard Time. 
