@@ -17,7 +17,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  keep_history: false
   local_dir: /home/travis/build/tomeshnet/tomesh.net/_site
   repo: tomeshnet/tomesh.net
   target_branch: gh-pages
