@@ -76,7 +76,7 @@ A development server will run at `http://localhost:4000/`
 
 Commits and merges into `master` will be deployed automatically to the production web server through webhook posts from GitHub.
 
-[travis-ci](https://travis-ci.org) listens for incoming commits from GitHub and runs `jekyll build`. The build is committed to the `gh-pages` branch. Github pages are used to host the resulting build.
+[travis-ci](https://travis-ci.org) listens for incoming commits from GitHub and runs `jekyll build`. The build is committed to the `gh-pages` branch. GitHub Pages is used to host the resulting build.
 
 Configuration can be found in [.travis.yml](https://github.com/tomeshnet/tomesh.net/blob/master/.travis.yml).
 
