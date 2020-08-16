@@ -7,16 +7,39 @@ var circle = null;
 var mapStyle;
 var urlBase = '';
 
+// Process URL params
+function getURLParam(key) {
+  return new URLSearchParams(window.location.search).get(key);
+}
+
 function initialize() {
   //Current Node URL with random bits to make sure it doesnt get cached
-  currentNodeListURL = document.getElementById('nodeURL').value + '?ramd=' + new Date();
-  urlBase=currentNodeListURL.substring(0,currentNodeListURL.lastIndexOf('/'));
+  currentNodeListURL = document.getElementById('nodeURL').value;
+  
 
   //Set options based on check box positions
   var filterActive = document.getElementById('chkActive').checked;
   var filterProposed = document.getElementById('chkProposed').checked;
+  var filterBuildings = document.getElementById('chkTheme').checked;  
   var zoomGroup = document.getElementById('chkGroup').checked;
-  var filterBuildings = document.getElementById('chkTheme').checked;
+
+  //Set any url modifiers
+  var param;
+  if (getURLParam('nodeURL')) {
+    document.getElementById('nodeURL').value=currentNodeListURL=getURLParam('nodeURL');
+  }
+  if (getURLParam('active')) {
+    document.getElementById('chkActive').checked=filterActive=getURLParam('active');
+  }
+  if (getURLParam('proposed')) {
+    document.getElementById('chkProposed').checked=filterProposed=getURLParam('proposed');
+  }
+  if (getURLParam('buildings')) {
+    document.getElementById('chkTheme').checked=filterBuildings=getURLParam('buildings');
+  }
+  
+  //Find base url for images
+  urlBase=currentNodeListURL.substring(0,currentNodeListURL.lastIndexOf('/'));  
 
   //Prepare default view and create map
   var mapOptions = {
@@ -186,7 +209,7 @@ function addMarker(map, nodeResult, name, location) {
       description +='<a href="' + urlBase + '/images/' + nodeResult['images'][i] + '" target="_blank"><img  class="' + imageClass + '" src="' + urlBase + '/images/' + nodeResult['images'][i] + '"></a>';
     }
   } else {
-      description +='<style> .makerContent { width:100%; }</style>';
+    description +='<style> .makerContent { width:100%; }</style>';
   }
   description += '</div>';
   description += '<p>Added: ' + formattedDate() + '</p>';
