@@ -146,9 +146,9 @@ function initialize() {
             });
           }
         }
-        //Draw links ssid-client to ssid
-        if (results['ssid-client'] != undefined) {
-          var parentNode = nodeDataBySSID[results['ssid-client']];
+        //Draw links ssid station to ssid ap
+        if (results['mode'] == 'station' && results['ssid'] != undefined) {
+          var parentNode = nodeDataBySSID[results['ssid']];
           if (parentNode != undefined) {
             var parentLink = [
               { lat: results['latitude'], lng: results['longitude'] },
