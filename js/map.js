@@ -1,6 +1,7 @@
 var map = null;
 var infowindow = null;
 var nodes = [];
+var markers = [];
 var links = [];
 var currentNodeListURL;
 var circle = null;
@@ -73,20 +74,21 @@ function initialize() {
 
     var nodeVisible;
     var nodeData = new Array();
-
+    var nodeDataBySSID = new Array();
     //loop through each node
     for (var key in data.nodeList) {
       var results = data.nodeList[key];
 
       nodeVisible = 1; //Default all nodes to visible
-      nodeData[results['name']] = results;
-
       //Adjust visibility based on value and option variable
       if (!results['status']) results['status'] = 'active';
-      if (results['status'] == 'active' && !filterActive) nodeVisible = 0;
-      if (results['status'] == 'proposed' && !filterProposed) nodeVisible = 0;
+      if (results['status'] == 'active' && !filterActive) results['status']='invisible';
+      if (results['status'] == 'proposed' && !filterProposed) results['status']='invisible';
 
-      if (nodeVisible) {
+      nodeData[results['name']] = results;
+      if (results['ssid']!=undefined) nodeDataBySSID[results['ssid']]=results;
+
+      if (results['status']!='invisible') {
         //prepare location point
         var lat = results['latitude'];
         var lng = results['longitude'];
@@ -96,11 +98,12 @@ function initialize() {
         var newNode = addMarker(map, results, nodeName, nodeLatLng);
 
         //If new node was created (rather then updated) add it to the marker array
-        if (newNode)
+        if (newNode) 
           nodes.push(newNode);
+        markers[results['name']]=newNode
 
         //Draw cone
-        if (results['antennaDirection'] != undefined) {
+        if (results['antennaCone'] != undefined) {
           var antennaCone = results['antennaCone'];
           var antennaDirection = results['antennaDirection'];
           var antennaDistance = results['antennaDistance'];
@@ -119,7 +122,12 @@ function initialize() {
           });
           if (piePoly) { /*Make code climate happy*/ }
         }
-        //Draw links
+      }
+    }
+    for (var key in data.nodeList) {
+      var results = data.nodeList[key];
+      if (results['status']!='invisible') {
+        //Draw links Router-AntennaRouter
         if (results['router'] != undefined) {
           var routerNode = nodeData[results['router']];
           if (routerNode != undefined) {
@@ -138,6 +146,28 @@ function initialize() {
             });
           }
         }
+        //Draw links ssid-client to ssid
+        if (results['ssid-client'] != undefined) {
+          var parentNode = nodeDataBySSID[results['ssid-client']];
+          if (parentNode != undefined) {
+            var parentLink = [
+              { lat: results['latitude'], lng: results['longitude'] },
+              { lat: parentNode['latitude'], lng: parentNode['longitude'] },
+            ];
+
+            links[parentNode['name'] + '-' + results['name']] = new google.maps.Polyline({
+              path: parentLink,
+              geodesic: true,
+              strokeColor: '#00FF00',
+              strokeOpacity: 1.0,
+              strokeWeight: 2,
+              map: map
+            });
+          }
+        }
+        if (getURLParam('node')==results['name']) {
+          google.maps.event.trigger(markers[getURLParam("node")], 'click');          
+        }  
       }
     }
 
