@@ -86,7 +86,7 @@ function initialize() {
       if (results['status'] == 'proposed' && !filterProposed) results['status']='invisible';
 
       nodeData[results['name']] = results;
-      if (results['ssid']!=undefined) nodeDataBySSID[results['ssid']]=results;
+      if (results['mode'] != 'station' && results['ssid']!=undefined) nodeDataBySSID[results['ssid']]=results;
 
       if (results['status']!='invisible') {
         //prepare location point
