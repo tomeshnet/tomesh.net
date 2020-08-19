@@ -37,7 +37,7 @@ layout_footer: false
   Group at higher zoom level <br />
   <br/>
   <button class="compact" onclick="ShowAdvanced(this)">+Show Advanced</button>
-  <div style="display: hidden" id="customAdvanced">
+  <div style="display:none" id="customAdvanced">
   <b>Node URL:</b>
   <input style="width:100%;" type="text" id="nodeURL" name="nodeURL" value="https://raw.githubusercontent.com/tomeshnet/node-list/master/nodeList.json" onchange="initialize()" />
   </div>
@@ -69,7 +69,7 @@ This map estimates the distance the antennas can go. This may not be the case in
       <input size="16" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
     </p>
     <!--disabled until it is corrected-->
-    <div style="display:hidden">
+    <div style="display:none">
       <p>To generate a JSON Record of this marker please provide the following:</p>
       <strong>Floor:</strong>
       <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
