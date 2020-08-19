@@ -51,7 +51,7 @@ This map estimates the distance the antennas can go. This may not be the case in
 </div>
 <div class="customMarker">
   <div id="customMarkerGeoCodeDiv">
-    <h1>Submit your node to our GitHub</h1>
+    <h1>Find a location on the map</h1>
     <input title="Find Position Based On Browser Reported Location" style="border-radius: 2px 0px 0px 2px; border: 0px; background-color:white; border-right: solid #dadadb 2px; background-image: url(/images/iconLocation.svg); background-size: 16px 16px; padding-left: 10px; padding-top:1px;" class="button button-primary MapButton" type="button" value="." onclick="GeoLocationBrowser(); $('div#customMarkerGeoCodeDiv').hide(); 	 $('div#customMarkerLocationDiv').show(); return false;" /><input type="text" placeholder="Search For Location" id="customMarkerAddress" class="MapButton"><input title="Find Position Based On Google Address Decoding" class="button button-primary MapButton" type="button" value="." onclick="customMarkerGeoCode();" style="border-radius: 0 2px 2px 0; color: #1f73e0; background-image: url(/images/iconSearch.svg);   background-size: 20px 20px; "/>
     <br/>
     <input class="button button-primary MapButtonColor" style="margin-top:10px;" type="button" onclick="$('div#customMarkerGeoCodeDiv').hide();$('div#customMarkerLocationDiv').show(); addCustomMarker(); return false;" value="Manual Position">
@@ -68,31 +68,34 @@ This map estimates the distance the antennas can go. This may not be the case in
       <strong>Long:</strong>
       <input size="16" type="text" id="customMarkerLng" onchange="addCustomMarker();" value="-79.397593">
     </p>
-    <p>To generate a JSON Record of this marker please provide the following:</p>
-    <strong>Floor:</strong>
-    <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
-    <strong>Facing:</strong>
-    <select id="customMarkerDirection">
-      <option>North</option>
-      <option>North East</option>
-      <option>East</option>
-      <option>South East</option>
-      <option>South</option>
-      <option>South West</option>
-      <option>West</option>
-      <option>North West</option>
-      <option value="Omni">All Directions</option>
-    </select>
-    <div class="dialogInline">
-      <strong>Node Name:</strong><br />
-      <input size="13" type="text" id="customMarkerName" value="UnNamed">
+    <!--disabled until it is corrected-->
+    <div style="display:none">
+      <p>To generate a JSON Record of this marker please provide the following:</p>
+      <strong>Floor:</strong>
+      <input value="1" id="customMarkerFloor" style="width:40px;"  type="text">
+      <strong>Facing:</strong>
+      <select id="customMarkerDirection">
+        <option>North</option>
+        <option>North East</option>
+        <option>East</option>
+        <option>South East</option>
+        <option>South</option>
+        <option>South West</option>
+        <option>West</option>
+        <option>North West</option>
+        <option value="Omni">All Directions</option>
+      </select>
+      <div class="dialogInline">
+        <strong>Node Name:</strong><br />
+        <input size="13" type="text" id="customMarkerName" value="UnNamed">
+      </div>
+      <div class="dialogInline">
+        <strong>Contact:</strong><br />
+        <input size="13" type="text" id="customMarkerContact" value="">
+      </div>
+      <br/><br/>
+      <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
     </div>
-    <div class="dialogInline">
-      <strong>Contact:</strong><br />
-      <input size="13" type="text" id="customMarkerContact" value="">
-    </div>
-    <br/><br/>
-    <input class="button button-primary" type="button" value="Generate JSON" onClick="customMarkerShowJsonDialog()" />
   </div>
   <div id="customMarkerJSONDiv" style="display:none;" class="customShadowBox">
     <div id="customMakerJSONContent"></div>
