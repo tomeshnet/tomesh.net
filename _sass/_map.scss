@@ -60,6 +60,29 @@ html, body, #map_canvas {
   left: 13px;
   width: 425px;
 }
+.makerContent {
+  vertical-align: top;
+  display: inline-block;
+  width: calc( 100% - 210px );
+  min-width:135px;
+}
+.markerImage {
+  vertical-align: top;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+.markerImage img.nodeImageLarge {
+   max-width:200px;
+   max-height:200px;
+   padding-bottom:3px;
+}
+.markerImage img.nodeImageSmall {
+   display:inline-block;
+   vertical-align: top;
+   max-width:100px;
+   height:50px;
+}
 .customMarker h1 {
   font-size:14px;
 }
