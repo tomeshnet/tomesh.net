@@ -4,7 +4,6 @@ var nodes = [];
 var markers = [];
 var links = [];
 var currentNodeListURL;
-var circle = null;
 var mapStyle;
 var urlBase = '';
 
@@ -72,20 +71,19 @@ function initialize() {
   //Pull and process node url
   $.getJSON(currentNodeListURL, function (data) {
 
-    var nodeVisible;
     var nodeData = new Array();
     var nodeDataBySSID = new Array();
     //loop through each node
     for (var key in data.nodeList) {
       var results = data.nodeList[key];
 
-      nodeVisible = 1; //Default all nodes to visible
       //Adjust visibility based on value and option variable
       if (!results['status']) results['status'] = 'active';
       if (results['status'] == 'active' && !filterActive) results['status']='invisible';
       if (results['status'] == 'proposed' && !filterProposed) results['status']='invisible';
 
       nodeData[results['name']] = results;
+      // If node is not a station add it to a list of possible endpoints to show wireless links
       if (results['mode'] != 'station' && results['ssid']!=undefined) nodeDataBySSID[results['ssid']]=results;
 
       if (results['status']!='invisible') {
@@ -146,7 +144,7 @@ function initialize() {
             });
           }
         }
-        //Draw links ssid station to ssid ap
+        //If node is a station draw a wireless link to non-sation nodes with the same SSID
         if (results['mode'] == 'station' && results['ssid'] != undefined) {
           var parentNode = nodeDataBySSID[results['ssid']];
           if (parentNode != undefined) {
@@ -166,7 +164,7 @@ function initialize() {
           }
         }
         if (getURLParam('node')==results['name']) {
-          google.maps.event.trigger(markers[getURLParam("node")], 'click');          
+          google.maps.event.trigger(markers[getURLParam('node')], 'click');          
         }  
       }
     }
@@ -274,8 +272,7 @@ function addMarker(map, nodeResult, name, location) {
 
     //Add listener to the marker for click
     google.maps.event.addListener(marker, 'click', function () {
-      //Code adds a circle to identiy selected marker and 
-      //Maybe even present a possible range
+      //Display info box
       if (typeof infowindow != 'undefined') infowindow.close();
       infowindow.setContent(this.html);
       infowindow.open(map, this);
