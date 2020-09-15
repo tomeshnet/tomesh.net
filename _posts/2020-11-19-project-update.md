@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Project Update"
+title: "Meet and Greet/Project Update"
 slug: project-update
 text: 'Meet the members of Toronto Mesh - Virtually'
 location: Big Blue Button Video Chat
