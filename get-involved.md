@@ -35,4 +35,4 @@ Other contact information (e.g. Signal, Matrix):
 Say hi on our chat {% include icon-matrix.html %}
 - Create an account and join [our Matrix chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
 - Alternatively, if you are using the [Element mobile or desktop app](https://element.io/), select _Create Account_, select _Other_ as the homeserver, and enter `https://matrix.tomesh.net` as the homeserver URL. If you already have an account select _Sign In_, select _Change_ and enter our homeserver URL above.
-- You can also join our chat through a{% include icon-slack.html %} if you really love Slack, note that private messaging only currently works between other Slack users.
+- You can also join our chat through {% include icon-slack.html %} if you really love Slack. Note that the Matrix-Slack bridge only supports basic features.
