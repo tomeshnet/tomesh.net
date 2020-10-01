@@ -36,3 +36,14 @@ Say hi on our chat {% include icon-matrix.html %}
 - Create an account and join [our Matrix chat](https://chat.tomesh.net/#/room/#tomesh:tomesh.net)
 - Alternatively, if you are using the [Element mobile or desktop app](https://element.io/), select _Create Account_, select _Other_ as the homeserver, and enter `https://matrix.tomesh.net` as the homeserver URL. If you already have an account select _Sign In_, select _Change_ and enter our homeserver URL above.
 - You can also join our chat through our{% include icon-slack.html %} if you really love Slack. Note that the Matrix-Slack bridge only supports basic features.
+
+## Mailing list
+
+Sign up for our low-volume mailing list to keep informed of happenings of Toronto Mesh and the Toronto Community Network.
+
+<form style="line-height:1;" method="post" action="https://lists.hypha.coop/cgi-bin/mailman/subscribe/tomeshnet">
+  <input style="width:100%; margin-bottom:8px;" type="email" name="email" value="" placeholder="email@example.com">
+  <input style="width:100%; margin-bottom:8px;" type="text" name="fullname" value="" placeholder="Your Name (optional)">
+  <input type="hidden" name="digest" value="1">
+  <input style="width:30%; float:right;" type="submit" name="email-button" value="Subscribe">
+</form>
