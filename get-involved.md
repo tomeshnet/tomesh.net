@@ -42,8 +42,8 @@ Say hi on our chat {% include icon-matrix.html %}
 Sign up for our low-volume mailing list to keep informed of happenings of Toronto Mesh and the Toronto Community Network.
 
 <form style="line-height:1;" method="post" action="https://lists.hypha.coop/cgi-bin/mailman/subscribe/tomeshnet">
-  <input style="width:100%; margin-bottom:8px;" type="email" name="email" value="" placeholder="email@example.com">
-  <input style="width:100%; margin-bottom:8px;" type="text" name="fullname" value="" placeholder="Your Name (optional)">
+  <input style="width:calc(50% - 3px); margin-bottom:8px;" type="email" name="email" value="" placeholder="email@example.com">
+  <input style="width:calc(50% - 3px); margin-bottom:8px;" type="text" name="fullname" value="" placeholder="Your Name (optional)">
   <input type="hidden" name="digest" value="1">
-  <input style="width:30%; float:right;" type="submit" name="email-button" value="Subscribe">
+  <input style="width:30%;" type="submit" name="email-button" value="Subscribe">
 </form>
