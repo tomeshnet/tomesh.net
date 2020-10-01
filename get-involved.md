@@ -39,7 +39,7 @@ Say hi on our chat {% include icon-matrix.html %}
 
 ## Mailing list
 
-Sign up for our low-volume mailing list to keep informed of happenings of Toronto Mesh and the Toronto Community Network.
+Sign up for our low-volume mailing list to keep informed about Toronto Mesh and the Toronto Community Network.
 
 <form style="line-height:1;" method="post" action="https://lists.hypha.coop/cgi-bin/mailman/subscribe/tomeshnet">
   <input style="width:calc(50% - 3px); margin-bottom:8px;" type="email" name="email" value="" placeholder="email@example.com">
