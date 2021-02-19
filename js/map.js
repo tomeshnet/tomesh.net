@@ -101,7 +101,7 @@ function initialize() {
         markers[results['name']]=newNode
 
         //Draw cone
-        if (results['antennaCone'] != undefined) {
+        if (results['antennaCone'] != undefined && (results['antennaType'] != undefined && results['antennaType'] != 'narrow') ) {
           var antennaCone = results['antennaCone'];
           var antennaDirection = results['antennaDirection'];
           var antennaDistance = results['antennaDistance'];
@@ -112,7 +112,7 @@ function initialize() {
           var piePoly = new google.maps.Polygon({
             paths: [arcPts],
             strokeColor: '#0000FF',
-            strokeOpacity: 0.2,
+            strokeOpacity: 0.1,
             strokeWeight: 2,
             fillColor: '#0000cc',
             fillOpacity: 0.10,
