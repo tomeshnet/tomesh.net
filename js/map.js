@@ -15,12 +15,12 @@ function getURLParam(key) {
 function initialize() {
   //Current Node URL with random bits to make sure it doesnt get cached
   currentNodeListURL = document.getElementById('nodeURL').value;
-  
+
 
   //Set options based on check box positions
   var filterActive = document.getElementById('chkActive').checked;
   var filterProposed = document.getElementById('chkProposed').checked;
-  var filterBuildings = document.getElementById('chkTheme').checked;  
+  var filterBuildings = document.getElementById('chkTheme').checked;
   var zoomGroup = document.getElementById('chkGroup').checked;
 
   //Set any url modifiers
@@ -37,14 +37,14 @@ function initialize() {
   if (getURLParam('buildings')) {
     document.getElementById('chkTheme').checked=filterBuildings=getURLParam('buildings');
   }
-  
+
   //Find base url for images
-  urlBase=currentNodeListURL.substring(0,currentNodeListURL.lastIndexOf('/'));  
+  urlBase=currentNodeListURL.substring(0,currentNodeListURL.lastIndexOf('/'));
 
   //Prepare default view and create map
   var mapOptions = {
     zoom: 12,
-    center: new google.maps.LatLng(43.72 -79.33),
+    center: new google.maps.LatLng(43.698136, -79.397593),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     fullscreenControl: false,
     mapTypeControl: true,
@@ -96,7 +96,7 @@ function initialize() {
         var newNode = addMarker(map, results, nodeName, nodeLatLng);
 
         //If new node was created (rather then updated) add it to the marker array
-        if (newNode) 
+        if (newNode)
           nodes.push(newNode);
         markers[results['name']]=newNode
 
@@ -164,8 +164,8 @@ function initialize() {
           }
         }
         if (getURLParam('node')==results['name']) {
-          google.maps.event.trigger(markers[getURLParam('node')], 'click');          
-        }  
+          google.maps.event.trigger(markers[getURLParam('node')], 'click');
+        }
       }
     }
 
