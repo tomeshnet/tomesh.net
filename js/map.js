@@ -44,7 +44,7 @@ function initialize() {
   //Prepare default view and create map
   var mapOptions = {
     zoom: 12,
-    center: new google.maps.LatLng(43.698136, -79.397593),
+    center: new google.maps.LatLng(43.72, -79.33),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     fullscreenControl: false,
     mapTypeControl: true,
