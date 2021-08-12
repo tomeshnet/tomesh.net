@@ -1,7 +1,7 @@
 language: ruby
 sudo: true
 rvm:
-  - 2.4.1
+  - 2.7.3
 
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -10,7 +10,7 @@ before_install:
 
 before_script: bundle exec jekyll build
 
-script: 
+script:
   - if [ "$TRAVIS_BRANCH" != "master" ]; then travis_retry bundle exec htmlproofer --url-ignore "/www.tomesh.net/,/tomesh.net/" ./_site --allow-hash-href; fi
   - bundle exec jekyll build
 deploy:
@@ -23,6 +23,6 @@ deploy:
   target_branch: gh-pages
   on:
     branch: master
-    
+
 notifications:
   email: false
