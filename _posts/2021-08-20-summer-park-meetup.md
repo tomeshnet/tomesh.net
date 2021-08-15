@@ -9,7 +9,7 @@ startTime: '18:00'
 endTime: '21:00'
 ---
 
-Turns out it's hard to start a community network without being able to go out into the community... But now that it's the summer and we have a reasonably good rate of vaccination so perhaps it's time to start doing that again!
+Turns out it's hard to start a community network without being able to go out into the community... But now it's the summer and we have a reasonably good rate of vaccination, so perhaps it's time to start doing that again!
 
 Join us for our first in-person meetup since the pandemic started!  We'll be outside at Christie Pits Park [around the picnic tables in between the pool and the playground](https://www.openstreetmap.org/node/6917209565).  This meetup is open to everybody so come on down, say hello, and talk to us about building a community network in Toronto!
 
