@@ -10,9 +10,7 @@ The Toronto Mesh Meshtastic project hopes to create an innovative communication 
 
 The network operates at a slower data rate then WiFi. Users can exchange text messages, share GPS coordinates, and track device locations, or report sensor data within the Meshtastic mesh network. Whether it's for outdoor adventures, disaster response, or rural connectivity, the Toronto Mesh Meshtastic Network ensures reliable communication throughout the city without relying on traditional infrastructure.
 
-By combining the benefits of Meshtastic firmware and LoRa technology, the network empowers individuals and communities to establish a resilient, low-cost communication network. Whether connecting in remote areas or bridging communication gaps in urban environments, the Toronto Mesh Meshtastic Network provides an affordable solution for long-range, non-line-of-sight communication needs.
-
-## Joining the Netowrk
+## Joining the Network
 
 ### Hardware/Software required
 
@@ -23,4 +21,3 @@ To get started you need hardware that is capable of joining the Meshtastic LoRa 
 The tomesh LoRa channel is as follows:
 
 channel: tomesh  
-psk: tomeshloranetwork  
