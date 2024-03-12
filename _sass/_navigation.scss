@@ -12,7 +12,7 @@
   line-height: 55px;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top:0px;
 
   @media (max-width: $on-palm) {
@@ -156,7 +156,7 @@ input[type="checkbox"].menu-btn {
 
 .nav-item-sub {
   position: absolute;
-  z-index: 1000;
+  z-index: 1001;
   display: none;
   float: left;
   min-width: 160px;
