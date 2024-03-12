@@ -1,0 +1,128 @@
+---
+layout: default
+title: Meshtastic Map
+order: 2
+layout_footer: false
+---
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+<body>
+
+    <div id="map"></div>
+
+    <script>
+
+        function createColoredIcon(color) {
+            size = 16
+            return L.divIcon({
+                className: 'custom-marker',
+                iconSize: [size, size],
+                iconAnchor: [size / 4, size / 4],
+                popupAnchor: [0, size / 2 * -1],
+                html: `<div style="background-color: ${color}; border-radius: 50%; width: 16px; height: 16px; border:1px dotted blue;"></div>`
+            });
+        }
+
+
+        let nodes = {};
+        function checkBounds(pos) {
+            if (pos.longitude < -80 || pos.longitude > -78) {
+                return false;
+            }
+            return true;
+        }
+        async function get() {
+            let res = await fetch("https://node2.e-mesh.net/meshtastic_nodes.json");
+            nodes = await res.json();
+
+
+
+            // Initialize the map
+            const map = L.map('map').setView([43.642152499999995, -79.3745474], 13);
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Loop through nodes and add markers to the map
+            for (const nodeId in nodes) {
+                const node = nodes[nodeId];
+                if (node.position && checkBounds(node.position)) {
+
+                    // Age point
+                    const lastHeard = node.lastHeard;
+                    const currentTime = Math.floor(Date.now() / 1000);
+                    const secondsPassed = currentTime - lastHeard;
+                    let C = "00"
+                    let D = 0;
+                    //console.log(secondsPassed)
+                    MAX = 3600;
+                    if (secondsPassed > MAX) {
+                        C = "33"
+                        D = 0;
+                    } else {
+                        C = Math.floor(255 - ((204 * secondsPassed / MAX) + 51)).toString(16);
+                        D = 1 - (secondsPassed / MAX);
+                    }
+                    if (D < 0.1) D = .1;
+                    //console.log(D)
+                    const coloredIcon = createColoredIcon("rgba(33,33,255," + D + ")");
+
+
+                    /*
+                    for (const linked in node.linked) {
+                        if (node.position.latitude && nodes[linked].position.latitude &&  checkBounds(nodes[linked].position)  && checkBounds(node.position)) {
+                            console.log(node.position);
+                            let c= [
+                                [node.position.latitude,node.position.longitude],
+                                [nodes[linked].position.latitude,nodes[linked].position.longitude],
+                                [node.position.latitude,node.position.longitude]
+                            ]
+                            console.log(c);
+                            var line = L.polyline(c, { color: 'rgba(99,99,99,.1)' }).addTo(map);
+                        }
+                    }*/
+                    //var line = L.polyline([], { color: 'red' }).addTo(map);
+
+                    //console.log(node.linked);
+                    const latitude = node.position.latitude;
+                    const longitude = node.position.longitude;
+
+                    if (latitude && longitude) {
+                        let EXTRA = ""
+                        if (node.deviceMetrics) {
+                            if (node.deviceMetrics.batteryLevel) {
+                                EXTRA = "&#128267;</b>" + node.deviceMetrics.batteryLevel + "%";
+                            }
+                            if (node.deviceMetrics.airUtilTx) {
+                                EXTRA += "&#128225;</b>" + Math.round(node.deviceMetrics.airUtilTx * 10) / 10 + "%";
+                            }
+                        }
+                        if (node.snr) {
+                            EXTRA += "&#128246;</b>" + Math.round(node.snr, 2 * 100) / 100 + "dbi";
+                        }
+
+                        L.marker([latitude, longitude], { icon: coloredIcon }).addTo(map)
+                            .bindPopup(`<b>${node.user.shortName} <div style='text-align:right; float: right;'>${EXTRA}</div></b><br/>${node.user.longName}<br/><b>Last Seen</b>: ${new Date(lastHeard * 1000).toLocaleString()}<br><b>Hardware: </b>${node.user.hwModel}`);
+                    }
+                }
+            }
+        }
+        get();
+    </script>
