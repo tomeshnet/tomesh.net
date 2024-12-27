@@ -6,8 +6,9 @@ order: 5
 
 Come say hi...
 
-- {% include icon-matrix.html %} on our chat
-
+- {% include icon-irc.html %} on our chat (IRC)
+  - {% include icon-matrix.html %}  (Matrix)
+  - {% include icon-slack.html %} (Slack)
 {% if site.email %}
 - {% include icon-email.html %} by email
 {% endif %}
@@ -19,5 +20,3 @@ Come say hi...
 {% if site.twitter_username %}
 - {% include icon-twitter.html username=site.twitter_username %} on twitter
 {% endif %}
-
-We also maintain a{% include icon-slack.html %} and {% include icon-irc.html %}
