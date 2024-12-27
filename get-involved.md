@@ -24,4 +24,4 @@ Say hi on our [chat](https://web.libera.chat/?nick=WebGuest?#tomesh).
 
 *Important update*
 
-We fanally lost the battle in keeing our Matrix instance alive. In 2024 we where  forced to reset our Matrix Database. If you had an old account you want to claim please contact us. If you want a new account please contact us. For now public registrations are currently closed.
+We finally lost the battle in keeping our Matrix instance alive. In 2025 we were forced to reset our Matrix Database. If you had an old account you want to claim please contact us. If you want a new account please contact us. For now, public registrations are currently closed.
